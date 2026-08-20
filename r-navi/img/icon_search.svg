@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="5.7323237mm" height="5.7326626mm" version="1.1" viewBox="0 0 16.2491069 16.2500676">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="_レイヤー_1" data-name="レイヤー_1">
+      <path class="cls-1" d="M10.1060791,2.5629883c2.0849609,2.0830078,2.0849609,5.4611816,0,7.5432129-2.0841064,2.0839844-5.4610596,2.0839844-7.5430908,0C.4790039,8.0241699.4790039,4.6459961,2.5629883,2.5629883,4.6450195.4790039,8.0219727.4790039,10.1060791,2.5629883Z"/>
+      <line class="cls-1" x1="10.1060791" y1="10.1069336" x2="15.5419922" y2="15.5429688"/>
+    </g>
+  </g>
+</svg>
