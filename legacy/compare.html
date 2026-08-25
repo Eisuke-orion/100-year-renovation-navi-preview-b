@@ -115,6 +115,7 @@
     .pane-title { margin: 0 0 8px; font-size: 14px; font-weight: 800; }
     .pane-title.before { color: var(--before); }
     .pane-title.after { color: var(--after); }
+    .highlight-status { margin: -2px 0 8px; color: var(--muted); font-size: 12px; }
     iframe {
       display: block;
       width: 100%;
@@ -167,15 +168,95 @@
     const beforeBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview/legacy/";
     const afterBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/";
     const items = [
-      { label: "著者紹介", path: "index.html", focus: "連載トップの著者欄", note: "著者名に「住宅と教育の専門家」を復元しました。" },
-      { label: "第12回", path: "column-12.dc.html", focus: "タイトル・導入・返済額グラフ注記", note: "住宅ローンを明記し、完済まで同一金利の比較モデルで、将来予測ではないことを補足しました。" },
-      { label: "第13回", path: "column-13.dc.html", focus: "木材統計と補助制度の説明", note: "「建築用材等」の統計用語を正確に扱い、改修・性能向上を前向きに検討する表現へ整えました。" },
-      { label: "第14回", path: "column-14.dc.html", focus: "マンションの音対策", note: "マンションの上下階・隣戸、管理規約・使用細則、施工相談への配慮を追加しました。" },
-      { label: "第15回", path: "column-15.dc.html", focus: "相談内容に合う専門家", note: "税務・登記・相続人間の調整について、相談先を分かりやすく整理しました。" },
-      { label: "第16回", path: "column-16.dc.html", focus: "家族と専門家の役割分担", note: "家族が判断することと、資格・許可の確認が必要なことを分けました。" },
-      { label: "第17回", path: "column-17.dc.html", focus: "AIの4つの使い方と確認境界", note: "AIへの入力、得られる結果、回答の限界、公式情報・専門家確認の境界を具体化しました。" },
-      { label: "第20回", path: "column-20.dc.html", focus: "本人・保護者・家族への配慮", note: "本人と保護者の希望を中心に、家族の無理のない支え方を考える表現へ整えました。" }
+      {
+        label: "著者紹介", path: "index.html", focus: "連載トップの著者欄", note: "著者名に「住宅と教育の専門家」を復元しました。",
+        beforeHighlights: [{ selector: "strong", needle: "この連載を書いた人｜エイスケ" }],
+        afterHighlights: [{ selector: "strong", needle: "この連載を書いた人｜エイスケ（住宅と教育の専門家）" }]
+      },
+      {
+        label: "第12回", path: "column-12.dc.html", focus: "タイトル・導入・返済額グラフ注記", note: "住宅ローンを明記し、完済まで同一金利の比較モデルで、将来予測ではないことを補足しました。",
+        beforeHighlights: [{ selector: "h1", needle: "変動金利が上がる前に" }, { selector: "p", needle: "具体的に試算してみましょう" }],
+        afterHighlights: [{ selector: "h1", needle: "住宅ローンの変動金利が1％違うと" }, { selector: "p", needle: "返済開始から完済まで金利が変わらない比較モデル" }, { selector: "p", needle: "将来の金利推移を予測するものではありません" }]
+      },
+      {
+        label: "第13回", path: "column-13.dc.html", focus: "木材統計と補助制度の説明", note: "「建築用材等」の統計用語を正確に扱い、改修・性能向上を前向きに検討する表現へ整えました。",
+        beforeHighlights: [{ selector: "h1", needle: "円安が続くと、家はどうなる" }],
+        afterHighlights: [{ selector: "p", needle: "用途区分としての「建築用材等」" }, { selector: "p", needle: "住まいの改修・性能向上をするとき" }]
+      },
+      {
+        label: "第14回", path: "column-14.dc.html", focus: "マンションの音対策", note: "マンションの上下階・隣戸、管理規約・使用細則、施工相談への配慮を追加しました。",
+        beforeHighlights: [{ selector: "h1", needle: "5000万円以下でも、相続はもめる" }],
+        afterHighlights: [{ selector: "p", needle: "マンションでは、自宅に入ってくる音だけでなく" }]
+      },
+      {
+        label: "第15回", path: "column-15.dc.html", focus: "相談内容に合う専門家", note: "税務・登記・相続人間の調整について、相談先を分かりやすく整理しました。",
+        beforeHighlights: [{ selector: "p", needle: "実際の申告・対策は必ず税理士等の専門家" }],
+        afterHighlights: [{ selector: "li", needle: "税理士：相続税の試算" }, { selector: "li", needle: "司法書士：不動産の相続登記" }, { selector: "li", needle: "弁護士：相続人間で意見が対立" }]
+      },
+      {
+        label: "第16回", path: "column-16.dc.html", focus: "家族と専門家の役割分担", note: "家族が判断することと、資格・許可の確認が必要なことを分けました。",
+        beforeHighlights: [{ selector: "h1", needle: "50年ローンは本当に大丈夫か" }],
+        afterHighlights: [{ selector: "p", needle: "家庭ごみの収集運搬を依頼する場合" }, { selector: "p", needle: "家族にしかできないこと" }]
+      },
+      {
+        label: "第17回", path: "column-17.dc.html", focus: "AIの4つの使い方と確認境界", note: "AIへの入力、得られる結果、回答の限界、公式情報・専門家確認の境界を具体化しました。",
+        beforeHighlights: [{ selector: "h1", needle: "賃貸か持ち家か、結局どっちが得なのか" }],
+        afterHighlights: [{ selector: "h1", needle: "住まいの悩みを生成AIで整理する" }, { selector: "p", needle: "という4つの使い方を、入力例と得られる結果" }, { selector: "p", needle: "制度・補助金・製品仕様は所管官庁やメーカーなどの公式情報" }]
+      },
+      {
+        label: "第20回", path: "column-20.dc.html", focus: "本人・保護者・家族への配慮", note: "本人と保護者の希望を中心に、家族の無理のない支え方を考える表現へ整えました。",
+        beforeHighlights: [{ selector: "li", needle: "家族に共有する" }],
+        afterHighlights: [{ selector: "p", needle: "本人と保護者の希望に沿って" }, { selector: "p", needle: "特定の親族に経済的・物理的な支援" }]
+      }
     ];
+
+    const highlightCss = `
+      .revision-highlight {
+        position: relative !important;
+        display: block !important;
+        margin-top: 18px !important;
+        padding: 34px 14px 12px !important;
+        border-left: 5px solid !important;
+        border-radius: 8px !important;
+        scroll-margin-top: 18px;
+      }
+      .revision-highlight::before {
+        content: attr(data-revision-label);
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        line-height: 1.6;
+        letter-spacing: .02em;
+      }
+      .revision-highlight-before { background: #f8f3ed !important; border-color: #a78161 !important; }
+      .revision-highlight-before::before { color: #5f4938; background: #eadbcf; }
+      .revision-highlight-after { background: #edf8f1 !important; border-color: #3a8b61 !important; }
+      .revision-highlight-after::before { color: #165738; background: #d2eedc; }
+    `;
+
+    const applyHighlights = (frame, specs, side) => {
+      const status = frame.closest(".pane").querySelector(".highlight-status");
+      try {
+        const doc = frame.contentDocument;
+        const style = doc.createElement("style");
+        style.textContent = highlightCss;
+        doc.head.appendChild(style);
+        const marked = specs.map(spec => [...doc.querySelectorAll(spec.selector)].find(node => node.textContent.includes(spec.needle))).filter(Boolean);
+        marked.forEach(node => {
+          node.classList.add("revision-highlight", `revision-highlight-${side}`);
+          node.dataset.revisionLabel = side === "before" ? "修正箇所（修正前）" : "修正箇所（修正後）";
+        });
+        status.textContent = marked.length === specs.length ? `修正箇所を${marked.length}件表示中` : `修正箇所を${marked.length}/${specs.length}件表示中`;
+        marked[0]?.scrollIntoView({ block: "center" });
+      } catch (error) {
+        status.textContent = "修正箇所の強調表示を読み込めませんでした。上のリンクから本文を確認してください。";
+      }
+    };
 
     const list = document.querySelector("#comparison-list");
     const desktopToc = document.querySelector("#toc-desktop");
@@ -200,17 +281,21 @@
           <div class="frames">
             <section class="pane">
               <p class="pane-title before">修正前（テストサイトA）</p>
+              <p class="highlight-status">修正箇所を読み込み中</p>
               <iframe title="${item.label}の修正前" data-src="${beforeUrl}" loading="lazy"></iframe>
             </section>
             <section class="pane">
               <p class="pane-title after">修正後（テストサイトB）</p>
+              <p class="highlight-status">修正箇所を読み込み中</p>
               <iframe title="${item.label}の修正後" data-src="${afterUrl}" loading="lazy"></iframe>
             </section>
           </div>
         </div>`;
       details.addEventListener("toggle", () => {
         if (!details.open) return;
-        details.querySelectorAll("iframe[data-src]").forEach(frame => {
+        details.querySelectorAll("iframe[data-src]").forEach((frame, frameIndex) => {
+          const side = frameIndex === 0 ? "before" : "after";
+          frame.addEventListener("load", () => applyHighlights(frame, item[`${side}Highlights`], side), { once: true });
           frame.src = frame.dataset.src;
           frame.removeAttribute("data-src");
         });
