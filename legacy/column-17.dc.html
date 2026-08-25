@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/common.css" rel="stylesheet" />
+<link href="css/column-overrides.css" rel="stylesheet" />
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/column-publication.js" defer></script>
+<title>賃貸か持ち家か、結局どっちが得なのか──損得を、最後まで計算してみた</title>
+<meta name="description" content="賃貸と持ち家を同じ前提で試算し、費用以外の価値とリスクも整理します。">
+<meta name="keywords" content="賃貸 持ち家 どっち／賃貸 持ち家 生涯コスト／持ち家 メリット デメリット／一生賃貸 老後／賃貸 老後 借りられない／家 買うべきか 迷う／持ち家 資産価値">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-17.dc.html">
+<meta property="og:title" content="賃貸か持ち家か、結局どっちが得なのか──損得を、最後まで計算してみた">
+<meta property="og:description" content="賃貸と持ち家を同じ前提で試算し、費用以外の価値とリスクも整理します。">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-10-08">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-17.dc.html">
+<meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep17_fv_rent_or_own.png">
+<meta property="og:image:alt" content="戸建て住宅と集合住宅が同じ街に並ぶ様子">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="ext-resource-dependency" content="uploads/ep17_fv_rent_or_own.png">
+<meta name="ext-resource-dependency" content="uploads/ep17_body01_lifetime_cost.png">
+<meta name="ext-resource-dependency" content="uploads/ep17_body02_moving_freedom.png">
+<meta name="ext-resource-dependency" content="uploads/ep17_body03_height_marks.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "賃貸か持ち家か、結局どっちが得なのか──損得を、最後まで計算してみた",
+  "description": "賃貸と持ち家を同じ前提で試算し、費用以外の価値とリスクも整理します。",
+  "datePublished": "2026-10-08",
+  "inLanguage": "ja",
+  "mainEntityOfPage": "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-17.dc.html",
+  "image": "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep17_fv_rent_or_own.png",
+  "author": {
+    "@type": "Person",
+    "name": "エイスケ"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "一般財団法人ベターリビング"
+  }
+}
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; background:oklch(0.98 0.014 85); }
+  a { color:oklch(0.42 0.1 155); text-decoration:none; }
+  a:hover { color:oklch(0.34 0.1 155); text-decoration:underline; }
+  * { box-sizing:border-box; }
+  details > summary { cursor:pointer; list-style:none; }
+  details > summary::-webkit-details-marker { display:none; }
+  details > summary:hover { background:oklch(0.98 0.02 150); }
+  details[open] .faq-chevron { transform:rotate(45deg); }
+  .column-article-body h2 { font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; line-height:1.6; margin:40px 0 16px; }
+  .column-article-body p { font-size:16.5px; line-height:1.95; margin:0 0 16px; }
+  .column-article-body ul,.column-article-body ol { margin:0 0 18px; padding-left:24px; font-size:16px; line-height:1.9; }
+  .column-article-body li { margin-bottom:8px; }
+  .column-article-body blockquote { margin:18px 0; padding:16px 20px; border-left:4px solid oklch(0.7 0.08 155); background:#fff; border-radius:0 12px 12px 0; }
+  .column-article-body blockquote p { margin:0; font-size:15.5px; }
+  .column-article-body table { width:100%; border-collapse:collapse; margin:18px 0 24px; font-size:14px; background:#fff; }
+  .column-article-body th,.column-article-body td { border:1px solid oklch(0.86 0.02 85); padding:10px 12px; text-align:left; vertical-align:top; }
+  .column-article-body th { background:oklch(0.95 0.03 150); }
+  .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
+  @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
+</style>
+</helmet>
+<?php include 'parts_header.html'; ?>
+<?php include 'parts_nav.html'; ?>
+<dc-import name="SiteHeader" hint-size="100%,120px"></dc-import>
+
+<div style="font-family:'Noto Sans JP',sans-serif; color:oklch(0.27 0.015 90); max-width:760px; margin:0 auto; padding:0 24px 100px;">
+  <nav class="column-breadcrumb" aria-label="パンくず" style="display:flex;align-items:center;gap:8px;padding:26px 0 6px;font-size:13.5px;color:oklch(0.52 0.015 90);flex-wrap:wrap;">
+    <a href="https://www.cbl.or.jp/r-navi/" style="color:oklch(0.52 0.015 90);">ホーム</a><span aria-hidden="true">›</span><a href="index.html" style="color:oklch(0.52 0.015 90);">コラム - ちょっと深い住まいの話</a><span aria-hidden="true">›</span><span aria-current="page" style="color:oklch(0.35 0.015 90);">第17回</span>
+  </nav>
+
+  <header style="padding:18px 0 28px;">
+    <span style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;letter-spacing:0.1em;color:#fff;background:oklch(0.47 0.1 155);border-radius:999px;padding:6px 16px;margin-bottom:16px;">第17回</span>
+    <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.55;margin:0 0 14px;">賃貸か持ち家か、結局どっちが得なのか──損得を、最後まで計算してみた</h1>
+    <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">生涯コストだけでは決まらない。移動の自由と暮らしの蓄積まで並べて選ぶ</p>
+    <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年10月8日</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
+      <image-slot id="ep17-author-avatar" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
+    </div>
+  </header>
+
+  <image-slot id="ep17-fv" src="uploads/ep17_fv_rent_or_own.png" shape="rounded" radius="18" alt="戸建て住宅と集合住宅が同じ街に並ぶ様子" placeholder="戸建て住宅と集合住宅が同じ街に並ぶ様子" style="width:100%;aspect-ratio:16/9;"></image-slot>
+
+  <div class="column-article-body" style="margin-top:32px;"><p>「賃貸か、持ち家か」――住まいをめぐる、最も古くて、最も決着のつかないテーマです。</p>
+<p>インターネットには両陣営の主張があふれています。「家賃は毎月捨てているようなもの」「いや、持ち家は固定資産税と修繕費で結局同じ」「ローンを組むリスクが……」「でも老後に部屋を借りられなかったら……」。読めば読むほど、迷いは深まるばかり。</p>
+<p>なぜ決着がつかないのか。理由は単純で、<strong>多くの議論が「前提を揃えずに」比較しているから</strong>です。都心の高額賃貸と地方の安い持ち家を比べたり、片方だけ修繕費を計上したり。これでは結論が人によって変わるのも当然です。</p>
+<p>そこで今回は、<strong>前提をきちんと揃えて、生涯コストを最後まで計算します。</strong>そして、その結果を見たうえで――ここが本題なのですが――<strong>お金では測れない三つの軸</strong>で考え直します。『DIE WITH ZERO』が投げかける「お金を残す量だけでなく、いつ、どんな経験へ換えるか」という問いを、住まい選びに置き換えて考えます（出典1）。</p>
+<p>先にお伝えしておきます。この記事は「持ち家をおすすめする記事」ではありません。私は住宅の世界にいた人間ですが、だからこそ、<strong>どちらにも向き不向きがある</strong>ことを知っています。読み終えたとき、あなたが「わが家はこっち」と静かに納得できる――そんな記事を目指します。</p>
+<hr></div>
+
+  <aside style="background:oklch(0.95 0.03 150);border-radius:16px;padding:24px 26px;margin:0 0 36px;">
+    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;color:oklch(0.35 0.09 155);">この記事のポイント</p>
+    <ul style="margin:0;padding-left:20px;font-size:15.5px;line-height:1.9;"><li><strong>前提を揃えて50年で試算すると、生涯コストの差はごくわずか。</strong> 本記事のモデルでは賃貸約6,552万円、持ち家約6,651万円。差は約100万円、50年分では誤差の範囲です（試算・出典2）。</li>
+<li><strong>数字で決着がつかないなら、決め手は別のところにある。</strong> 判断軸は<strong>①柔軟性 ②安心 ③自由度（住まいをつくり変えられるか）</strong>の三つ。</li>
+<li><strong>賃貸の最大の価値は「住み替えられること」。</strong> 転職・家族構成の変化・老いに合わせて住まいを変えられます。ただし高齢期の入居のしやすさという課題があります（出典3）。</li></ul>
+  </aside>
+
+  <p class="column-caution"><strong>ご確認ください：</strong>本記事は一般的な情報提供を目的としています。金利・税・制度・費用は条件や時点で変わります。金融・法律・税務上の判断は、最新の一次情報を確認し、必要に応じて専門家へご相談ください。</p>
+
+  <article><section class="column-article-body">
+<h2>1. 前提を揃える──フェアな比較のためのルール</h2>
+<p>まず、比較のルールを決めます。ここを曖昧にすると、どんな結論でも作れてしまうからです。本記事では次のモデルで統一します（出典2・目安）。</p>
+<ul>
+<li><strong>期間</strong>：30歳から80歳までの<strong>50年間</strong></li>
+<li><strong>地域</strong>：都市近郊。同等の広さ・立地の物件で比較</li>
+<li><strong>賃貸</strong>：現役期の家賃 月11万円、老後（55歳以降）は住み替えて月10万円。更新料は2年に1回1ヶ月分</li>
+<li><strong>持ち家</strong>：物件価格4,500万円（頭金500万円＋借入3,500万円・35年・金利1.5%）。固定資産税・都市計画税 年12万円、火災保険等 50年で150万円、修繕・リフォーム費 50年で900万円</li>
+</ul>
+<p>なお、この試算には<strong>購入時の諸費用（登記・仲介手数料等）や、賃貸の引っ越し費用</strong>は含めていません。また、家の売却益・資産価値は計上していません。「住み続けて、使い切る」前提の比較です。</p>
+<hr>
+</section>
+
+<section class="column-article-body">
+<h2>2. 計算結果──50年で、差は約100万円</h2>
+<p>では、結果です（試算・出典2）。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>賃貸</th>
+<th>持ち家</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>家賃（50年）</td>
+<td>約6,300万円</td>
+<td>―</td>
+</tr>
+<tr>
+<td>更新料（50年）</td>
+<td>約250万円</td>
+<td>―</td>
+</tr>
+<tr>
+<td>頭金</td>
+<td>―</td>
+<td>500万円</td>
+</tr>
+<tr>
+<td>ローン総返済額（35年・1.5%）</td>
+<td>―</td>
+<td>約4,501万円</td>
+</tr>
+<tr>
+<td>固定資産税・都市計画税（50年）</td>
+<td>―</td>
+<td>約600万円</td>
+</tr>
+<tr>
+<td>火災保険等（50年）</td>
+<td>―</td>
+<td>約150万円</td>
+</tr>
+<tr>
+<td>修繕・リフォーム（50年）</td>
+<td>―</td>
+<td>約900万円</td>
+</tr>
+<tr>
+<td><strong>合計</strong></td>
+<td><strong>約6,552万円</strong></td>
+<td><strong>約6,651万円</strong></td>
+</tr>
+</tbody></table>
+<p><strong>差はおよそ100万円。</strong>50年で6,600万円規模の支出における100万円ですから、割合にして1.5%程度です。前提を少し変えれば、簡単に逆転します。家賃が月5,000円違えば50年で300万円動きますし、修繕費が想定より膨らめば持ち家が不利になる。逆に、ローン完済後の20年近くを住居費ほぼゼロで過ごせる持ち家の効果は、期間が延びるほど効いてきます。</p>
+<p>つまり、<strong>「どちらが得か」は、条件次第でどちらにも転ぶ。</strong>これが、前提を揃えて計算した正直な結論です。</p>
+<p>だとすれば、答えは金額の外にあります。ここからが本題です。</p>
+<hr>
+</section>
+<image-slot id="ep17-body1" src="uploads/ep17_body01_lifetime_cost.png" shape="rounded" radius="16" alt="条件次第で近づく生涯コストを二本の棒で表したイラスト" placeholder="条件次第で近づく生涯コストを二本の棒で表したイラスト" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+
+<section class="column-article-body">
+<h2>3. 軸その1「柔軟性」──人生の変化に、住まいを合わせられるか</h2>
+<p>第1回でご紹介した『LIFE SHIFT』は、100年時代には人生が「教育→仕事→引退」の三段階では収まらず、転職・学び直し・移住などを繰り返す<strong>マルチステージ</strong>になると説きました（出典4）。</p>
+<p>この考え方に立つと、<strong>賃貸の「住み替えられる」という性質は、極めて価値の高い資産</strong>です。</p>
+<ul>
+<li>転職・転勤に合わせて動ける</li>
+<li>子どもの独立後、身の丈に合った広さへ移れる</li>
+<li>気候や医療環境の良い土地へ移住できる</li>
+<li>隣人トラブルや災害リスクから、比較的容易に離れられる</li>
+</ul>
+<p>一方で、賃貸には高齢期の課題があります。高齢の単身者が入居審査で断られやすいという指摘は以前からあり、国も家賃債務保証や見守りサービスと組み合わせた住宅セーフティネット制度の整備を進めています（出典3）。「一生借り続けられるか」という不安は、根拠のない心配ではありません。ただし、制度も市場も動いており、<strong>「絶対に借りられない」と決めつけるのも正確ではない</strong>、というのが公平な見方でしょう。</p>
+<hr>
+</section>
+
+<section class="column-article-body">
+<h2>4. 軸その2「安心」──完済後の住居費と、老後の家計</h2>
+<p>持ち家の強みが最も光るのは、<strong>ローン完済後</strong>です。</p>
+<p>先ほどのモデルなら、65歳でローンは終わります。そこから80歳までの15年間、住居費は固定資産税と修繕費だけ。年間30万円前後です。同じ期間、賃貸なら年間120万円の家賃が発生し続けます。<strong>この差は15年で1,000万円以上</strong>。年金生活の家計にとって、この違いは決して小さくありません。</p>
+<p>老後2000万円問題が話題になったとき（第18回で詳しく取り上げます）、多くの試算が「持ち家・住宅ローン完済済み」を前提にしていたことは、あまり知られていません（出典5）。つまり、<strong>日本の老後資金の議論は、暗黙のうちに持ち家を前提にしている</strong>面があるのです。賃貸を選ぶなら、その前提のズレを自分で埋めておく必要があります。</p>
+<p>もっとも、持ち家の「安心」にも条件がつきます。<strong>修繕費を計画的に積み立てていること</strong>、そして<strong>災害への備えがあること</strong>です。持ち家は資産であると同時に、リスクの受け皿でもあります。地震・水害への備え（第9回参照）と保険の見直しは、持ち家派の宿題です。</p>
+<hr>
+</section>
+<image-slot id="ep17-body2" src="uploads/ep17_body02_moving_freedom.png" shape="rounded" radius="16" alt="引っ越し用の箱をそばに置き地図を見ながら話す夫婦" placeholder="引っ越し用の箱をそばに置き地図を見ながら話す夫婦" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+
+<section class="column-article-body">
+<h2>5. 軸その3「自由度」──住まいを、自分に合わせてつくり変えられるか</h2>
+<p>そして、住宅の連載として最も強調したいのが、この三つ目です。</p>
+<p>持ち家には、<strong>「家のほうを、自分に合わせて変えられる」</strong>という決定的な特徴があります。</p>
+<ul>
+<li>寒い家なら、断熱改修して暖かくできる（第6回・第12回）</li>
+<li>年齢を重ねたら、手すりをつけ、段差をなくせる</li>
+<li>家族が変われば、間取りを変えられる（第10回で扱った、家族構成の変化と住まいの見直しにもつながります）</li>
+<li>設備を、自分の使いやすいものに更新できる</li>
+</ul>
+<p>賃貸では、原則としてこれができません。寒い部屋なら、寒いまま暮らすか、引っ越すかの二択です。</p>
+<p>人生100年時代、<strong>住まいに求めるものは加齢とともに確実に変わります。</strong>50代で快適だった家が、80代でも快適とは限らない。そのとき、「家を変える（賃貸）」か「家を変える（持ち家の改修）」か。同じ言葉ですが、中身はまったく違います。</p>
+<p>そして――ここが本連載の立場ですが――<strong>持ち家であっても、手を入れなければこの自由度は活かせません。</strong>「持ち家だから安心」ではなく、「持ち家を、時々の自分に合わせて手入れし続けるから安心」なのです。家を持つことは、ゴールではなくスタートです。</p>
+<hr>
+</section>
+<image-slot id="ep17-body3" src="uploads/ep17_body03_height_marks.png" shape="rounded" radius="16" alt="長く住んだ家の柱に残る子どもの背比べの跡" placeholder="長く住んだ家の柱に残る子どもの背比べの跡" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+
+<section class="column-article-body">
+<h2>6. 「得」より先に、どんな暮らしを買いたいか</h2>
+<p>最後に、視点をひとつ変えましょう。</p>
+<p>ビル・パーキンスの『DIE WITH ZERO』は、「資産を最大化すること」ではなく、「人生の経験を最大化すること」を勧める本です（出典1）。お金は、経験に変えて初めて価値を持つ。使わないまま貯めて死ぬのは、人生の使い残しである――という、少し挑発的で、しかし説得力のある主張です。</p>
+<p>この視点で「賃貸か持ち家か」を見ると、問いの形が変わります。</p>
+<p><strong>「どちらが得か」ではなく、「どんな暮らしを買いたいか」。</strong></p>
+<ul>
+<li>身軽に動き、いろいろな土地で暮らす経験にお金を使いたい → 賃貸の柔軟性が活きる</li>
+<li>一つの場所に根を張り、家族の思い出と手入れの跡を積み重ねたい → 持ち家の蓄積が活きる</li>
+</ul>
+<p>どちらも立派な人生設計です。優劣はありません。大事なのは、<strong>「なんとなく」で決めないこと</strong>。周りが買うから買う、不安だから借り続ける――理由が「なんとなく」だと、どちらを選んでも納得が残りません。</p>
+<p>50年で100万円の差しかない選択に、これ以上損得で悩むのは、時間がもったいない。数字で決められないなら、<strong>自分がどう生きたいかで決めていい</strong>。それが、私の出した答えです。</p>
+<p>※住宅取得・賃貸契約は個々の家計状況で最適解が異なります。大きな決断の前には、ファイナンシャルプランナー等の専門家への相談もご検討ください。</p>
+<hr>
+</section></article>
+
+  <section style="margin:44px 0;">
+    <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+        <details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;">
+          <summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span class="faq-chevron" aria-hidden="true" style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform .2s;">＋</span></summary>
+          <p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+        </details>
+      </sc-for>
+    </div>
+  </section>
+
+  <aside style="background:oklch(0.96 0.025 70);border-radius:16px;padding:24px 26px;margin-bottom:36px;">
+    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 12px;color:oklch(0.4 0.1 60);">この記事のまとめ</p>
+    <p style="font-size:15.5px;line-height:1.9;margin:0;">前提を揃えて50年で試算すると、賃貸約6,552万円・持ち家約6,651万円と、差はごくわずか。条件次第でどちらにも転ぶ。 決め手は金額ではなく、①柔軟性（賃貸の強み） ②完済後の安心（持ち家の強み） ③つくり変えられる自由度（持ち家の強み）。 老後資金の一般的な議論は、暗黙のうちに持ち家・完済済みを前提にしていることが多い。賃貸派はその差を自分で埋める設計を。 「どちらが得か」だけでなく「どんな暮らしを買いたいか」で決める。ただし持ち家を選ぶなら、手入れの覚悟とセットで。</p>
+  </aside>
+
+  <details style="margin-bottom:36px;">
+    <summary style="font-size:13.5px;color:oklch(0.5 0.015 90);">出典・参考資料を見る</summary>
+    <ol style="font-size:12.5px; line-height:1.8; color:oklch(0.5 0.015 90); padding-left:20px; margin-top:10px;">
+<li>ビル・パーキンス『DIE WITH ZERO 人生が豊かになりすぎる究極のルール』（児島修訳、ダイヤモンド社、2020年）。資産の最大化ではなく経験の最大化という考え方等。</li>
+<li>生涯コストの試算（50年間・都市近郊モデル：賃貸＝家賃月11万円→老後月10万円・更新料2年に1ヶ月分で合計約6,552万円／持ち家＝物件4,500万円・頭金500万円・借入3,500万円35年金利1.5%〔総返済約4,501万円〕・固定資産税等年12万円・保険150万円・修繕900万円で合計約6,651万円）。編集部試算。<strong>注意：</strong> 購入諸費用・引っ越し費用・売却益は不算入。前提により結果は容易に逆転する。</li>
+<li>高齢者等の住宅確保要配慮者に関する制度（住宅確保要配慮者に対する賃貸住宅の供給の促進に関する法律〔住宅セーフティネット法〕に基づくセーフティネット登録住宅、家賃債務保証、居住サポート等）。国土交通省。<strong>注意：</strong> 入居のしやすさは地域・物件により異なり、一律の断定はできない。</li>
+<li>リンダ・グラットン、アンドリュー・スコット『LIFE SHIFT―100年時代の人生戦略』（池村千秋訳、東洋経済新報社、2016年）。マルチステージの人生、変身資産等。</li>
+<li>金融審議会 市場ワーキング・グループ報告書「高齢社会における資産形成・管理」（2019年）。いわゆる「老後2000万円」の根拠となった試算の前提（高齢夫婦無職世帯のモデル。持ち家を前提とした住居費の水準を含む）。金融庁。<strong>注意：</strong> 報告書の位置づけと前提条件に留意。</li>
+</ol>
+<hr>
+  </details>
+
+  <section style="margin-bottom:36px;">
+    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連する住まいの機能・設備を探す</p>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14.5px;"><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/ijikanri/">維持管理費の負担を少なく</a>
+<a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/suikonetsuhi/">家計のムダをなくしたい（水光熱費）</a>
+<a href="https://www.cbl.or.jp/r-navi/search_theme/kenko/idou/">住居内を移動しやすく</a>
+<a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
+  </section>
+
+  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
+    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
+<a href="column-10.dc.html">【第10回】50代から考える、家族構成の変化に対応できる住まい</a>
+<a href="column-16.dc.html">【第16回】50年ローンは本当に大丈夫か──住宅のプロが、真剣に検証してみた</a>
+<a href="column-18.dc.html">【第18回】「老後2000万円」より怖い、家の修繕費問題──一生でいくらかかるのか、部位別に積み上げてみた</a>
+<a href="column-04.dc.html">【第4回】実家じまいは、親が元気なうちに。家族で考えるこれからの住まい</a></div>
+  </section>
+
+  <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
+    <image-slot id="ep17-author-box" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
+  </div>
+
+  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
+    <a href="column-16.dc.html">← 前の回</a>
+    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
+    <a href="column-18.dc.html">次の回 →</a>
+  </nav>
+</div>
+<?php include 'parts_footer.html'; ?>
+<dc-import name="SiteFooter" hint-size="100%,300px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tags: ['賃貸 持ち家 どっち', '賃貸 持ち家 生涯コスト', '持ち家 メリット デメリット', '一生賃貸 老後'],
+      faqs: [
+        { q: '持ち家は売れば資産が残るのでは？ 試算に入っていないのはなぜですか。', a: '「住み続けて使い切る」前提で揃えたためです。売却まで含めれば持ち家が有利になる可能性はありますが、それは立地と維持管理の状態次第です（第1回参照）。売れない立地・手入れのされていない家では、資産は残りません。この不確実性を数字にすると、比較が恣意的になるため除外しました。' },
+        { q: '老後に賃貸を借りられないというのは本当ですか？', a: '高齢の単身者が入居を断られやすい傾向は指摘されており、国も住宅セーフティネット制度で対応を進めています（出典3）。一方で、高齢者を受け入れる物件や保証サービスも増えています。「絶対に借りられない」わけではありませんが、選択肢が狭まる可能性は見込んでおくのが現実的です。' },
+        { q: '今は賃貸ですが、50代から持ち家に切り替えるのはアリですか？', a: '選択肢としてあり得ます。この場合、返済期間が短くなるため月々の負担は重くなりますが、頭金を厚くできる年代でもあります。ポイントは「終の棲家として本当に合っているか」。広さより、断熱・段差・立地（医療機関やお店への距離）を重視して選ぶことをおすすめします。' },
+        { q: '結局、著者はどちら派なのですか？', a: 'どちらの派でもありません。ただ一つだけ意見を言うなら、「持ち家を選ぶなら、手入れをする覚悟とセットで」ということです。手入れをしない持ち家は、賃貸の気楽さも、持ち家の快適さも得られません。それが、現場で数多くの家を見てきた私の、一番正直な感想です。' }
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
