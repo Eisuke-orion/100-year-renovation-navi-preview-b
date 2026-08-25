@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>修正確認ページ｜テストサイトB</title>
+  <style>
+    :root {
+      --ink: #26322d;
+      --muted: #66736d;
+      --line: #dbe3df;
+      --green: #267452;
+      --green-dark: #1c5a3f;
+      --pale: #f2f8f5;
+      --before: #705c4b;
+      --after: #176d4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f7f8f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--green-dark); }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 72px; }
+    .back { display: inline-flex; margin-bottom: 18px; font-weight: 700; text-decoration: none; }
+    .hero {
+      padding: clamp(24px, 5vw, 44px);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgb(30 60 45 / 7%);
+    }
+    .eyebrow { margin: 0 0 8px; color: var(--green); font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+    h1 { margin: 0 0 14px; font-size: clamp(27px, 5vw, 42px); line-height: 1.4; }
+    .hero p { margin: 0; color: var(--muted); }
+    .notice { margin-top: 18px; padding: 13px 16px; border-radius: 12px; background: var(--pale); font-size: 14px; }
+    .content-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 24px; align-items: start; margin-top: 28px; }
+    .toc {
+      position: sticky;
+      top: 16px;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .toc h2 { margin: 0 0 12px; font-size: 16px; }
+    .toc nav { display: grid; gap: 6px; }
+    .toc a, .mobile-toc a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .toc a:hover, .mobile-toc a:hover { color: var(--green-dark); background: var(--pale); }
+    .mobile-toc { display: none; margin-top: 20px; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+    .mobile-toc > summary { padding: 14px 16px; color: var(--green-dark); font-weight: 800; cursor: pointer; }
+    .mobile-toc nav { display: grid; gap: 4px; padding: 0 10px 12px; }
+    .list { display: grid; gap: 18px; }
+    .comparison-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .comparison-card > summary {
+      display: grid;
+      grid-template-columns: minmax(180px, .8fr) minmax(260px, 1.5fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 20px 22px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .comparison-card > summary::-webkit-details-marker { display: none; }
+    .comparison-card > summary:hover { background: #fbfdfc; }
+    .target { font-size: 18px; font-weight: 800; }
+    .description { color: var(--muted); font-size: 14px; }
+    .focus {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 2px 8px;
+      color: var(--green-dark);
+      background: var(--pale);
+      border-left: 4px solid var(--green);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .open-label { color: var(--green); font-weight: 800; white-space: nowrap; }
+    .comparison-card[open] .open-label::after { content: "閉じる"; }
+    .comparison-card:not([open]) .open-label::after { content: "横並び比較を開く"; }
+    .compare-body { padding: 0 22px 24px; border-top: 1px solid var(--line); }
+    .direct-links { display: flex; flex-wrap: wrap; gap: 10px; padding: 18px 0; }
+    .direct-links a {
+      display: inline-flex;
+      justify-content: center;
+      min-width: 170px;
+      padding: 10px 15px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .direct-links .before-link { color: var(--before); }
+    .direct-links .after-link { color: var(--after); background: var(--pale); }
+    .frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .pane { min-width: 0; }
+    .pane-title { margin: 0 0 8px; font-size: 14px; font-weight: 800; }
+    .pane-title.before { color: var(--before); }
+    .pane-title.after { color: var(--after); }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 640px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .footnote { margin: 26px 0 0; color: var(--muted); font-size: 13px; }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 20px, 1180px); padding-top: 16px; }
+      .content-layout { display: block; margin-top: 14px; }
+      .toc { display: none; }
+      .mobile-toc { display: block; }
+      .comparison-card > summary { grid-template-columns: 1fr; gap: 6px; padding: 18px; }
+      .open-label { margin-top: 4px; }
+      .compare-body { padding: 0 14px 18px; }
+      .direct-links { display: grid; grid-template-columns: 1fr; }
+      .direct-links a { width: 100%; }
+      .frames { grid-template-columns: 1fr; }
+      iframe { height: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <a class="back" href="index.html">← コラム一覧へ戻る</a>
+    <section class="hero">
+      <p class="eyebrow">TEST SITE B / BEFORE &amp; AFTER</p>
+      <h1>修正確認ページ</h1>
+      <p>修正前のテストサイトAと、修正後のテストサイトBを、対象ごとに確認できます。</p>
+      <div class="notice">このページとリンク先はいずれも確認用テストサイトです。検索エンジンには登録しない設定です。</div>
+    </section>
+
+    <details class="mobile-toc">
+      <summary>今回の修正内容を見る</summary>
+      <nav id="toc-mobile" aria-label="スマートフォン用修正確認ページ目次"></nav>
+    </details>
+    <div class="content-layout">
+      <aside class="toc" aria-label="修正確認ページ目次">
+        <h2>今回の修正内容</h2>
+        <nav id="toc-desktop"></nav>
+      </aside>
+      <section id="comparison-list" class="list" aria-label="修正対象一覧"></section>
+    </div>
+    <p class="footnote">※ 第11回・第18回、目次リンク、出典番号などの保留項目は比較対象に含めていません。</p>
+  </main>
+
+  <script>
+    const beforeBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview/legacy/";
+    const afterBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/";
+    const items = [
+      { label: "著者紹介", path: "index.html", focus: "連載トップの著者欄", note: "著者名に「住宅と教育の専門家」を復元しました。" },
+      { label: "第12回", path: "column-12.dc.html", focus: "タイトル・導入・返済額グラフ注記", note: "住宅ローンを明記し、完済まで同一金利の比較モデルで、将来予測ではないことを補足しました。" },
+      { label: "第13回", path: "column-13.dc.html", focus: "木材統計と補助制度の説明", note: "「建築用材等」の統計用語を正確に扱い、改修・性能向上を前向きに検討する表現へ整えました。" },
+      { label: "第14回", path: "column-14.dc.html", focus: "マンションの音対策", note: "マンションの上下階・隣戸、管理規約・使用細則、施工相談への配慮を追加しました。" },
+      { label: "第15回", path: "column-15.dc.html", focus: "相談内容に合う専門家", note: "税務・登記・相続人間の調整について、相談先を分かりやすく整理しました。" },
+      { label: "第16回", path: "column-16.dc.html", focus: "家族と専門家の役割分担", note: "家族が判断することと、資格・許可の確認が必要なことを分けました。" },
+      { label: "第17回", path: "column-17.dc.html", focus: "AIの4つの使い方と確認境界", note: "AIへの入力、得られる結果、回答の限界、公式情報・専門家確認の境界を具体化しました。" },
+      { label: "第20回", path: "column-20.dc.html", focus: "本人・保護者・家族への配慮", note: "本人と保護者の希望を中心に、家族の無理のない支え方を考える表現へ整えました。" }
+    ];
+
+    const list = document.querySelector("#comparison-list");
+    const desktopToc = document.querySelector("#toc-desktop");
+    const mobileToc = document.querySelector("#toc-mobile");
+    items.forEach((item, index) => {
+      const beforeUrl = beforeBase + item.path;
+      const afterUrl = afterBase + item.path;
+      const details = document.createElement("details");
+      details.id = `compare-${index + 1}`;
+      details.className = "comparison-card";
+      details.innerHTML = `
+        <summary>
+          <span class="target">${item.label}</span>
+          <span class="description"><span class="focus">修正箇所：${item.focus}</span><br><strong>修正内容：</strong>${item.note}</span>
+          <span class="open-label" aria-hidden="true"></span>
+        </summary>
+        <div class="compare-body">
+          <div class="direct-links">
+            <a class="before-link" href="${beforeUrl}" target="_blank" rel="noopener">修正前を見る</a>
+            <a class="after-link" href="${afterUrl}" target="_blank" rel="noopener">修正後を見る</a>
+          </div>
+          <div class="frames">
+            <section class="pane">
+              <p class="pane-title before">修正前（テストサイトA）</p>
+              <iframe title="${item.label}の修正前" data-src="${beforeUrl}" loading="lazy"></iframe>
+            </section>
+            <section class="pane">
+              <p class="pane-title after">修正後（テストサイトB）</p>
+              <iframe title="${item.label}の修正後" data-src="${afterUrl}" loading="lazy"></iframe>
+            </section>
+          </div>
+        </div>`;
+      details.addEventListener("toggle", () => {
+        if (!details.open) return;
+        details.querySelectorAll("iframe[data-src]").forEach(frame => {
+          frame.src = frame.dataset.src;
+          frame.removeAttribute("data-src");
+        });
+      }, { once: true });
+      list.appendChild(details);
+      [desktopToc, mobileToc].forEach(toc => {
+        const link = document.createElement("a");
+        link.href = `#${details.id}`;
+        link.textContent = `${item.label}｜${item.focus}`;
+        link.addEventListener("click", () => { details.open = true; });
+        toc.appendChild(link);
+      });
+    });
+
+    const openHashTarget = () => {
+      if (!location.hash) return;
+      const target = document.querySelector(location.hash);
+      if (target?.classList.contains("comparison-card")) target.open = true;
+    };
+    window.addEventListener("hashchange", openHashTarget);
+    openHashTarget();
+  </script>
+</body>
+</html>
