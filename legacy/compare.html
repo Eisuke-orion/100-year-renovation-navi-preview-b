@@ -97,19 +97,23 @@
     .comparison-card[open] .open-label::after { content: "閉じる"; }
     .comparison-card:not([open]) .open-label::after { content: "横並び比較を開く"; }
     .compare-body { padding: 0 22px 24px; border-top: 1px solid var(--line); }
-    .direct-links { display: flex; flex-wrap: wrap; gap: 10px; padding: 18px 0; }
-    .direct-links a {
+    .expand-button {
       display: inline-flex;
+      align-items: center;
       justify-content: center;
-      min-width: 170px;
-      padding: 10px 15px;
+      margin: 0 0 10px;
+      min-width: 190px;
+      padding: 9px 15px;
       border: 1px solid currentColor;
       border-radius: 999px;
+      background: #fff;
+      font: inherit;
       font-weight: 800;
-      text-decoration: none;
+      cursor: pointer;
     }
-    .direct-links .before-link { color: var(--before); }
-    .direct-links .after-link { color: var(--after); background: var(--pale); }
+    .expand-button.before { color: var(--before); }
+    .expand-button.after { color: var(--after); background: var(--pale); }
+    .expand-button:hover { filter: brightness(.97); }
     .frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
     .pane { min-width: 0; }
     .pane-title { margin: 0 0 8px; font-size: 14px; font-weight: 800; }
@@ -134,6 +138,24 @@
       border-radius: 12px;
     }
     .footnote { margin: 26px 0 0; color: var(--muted); font-size: 13px; }
+    .article-modal[hidden] { display: none; }
+    .article-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; }
+    .modal-backdrop { position: absolute; inset: 0; background: rgb(22 31 27 / 72%); }
+    .modal-dialog {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: min(1320px, calc(100vw - 48px));
+      height: min(900px, calc(100vh - 48px));
+      overflow: hidden;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 24px 80px rgb(0 0 0 / 35%);
+    }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+    .modal-title { margin: 0; font-size: 15px; }
+    .modal-close { flex: none; padding: 8px 14px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; font: inherit; font-weight: 800; cursor: pointer; }
+    .modal-frame { flex: 1; height: auto; border: 0; border-radius: 0; }
     @media (max-width: 760px) {
       .shell { width: min(100% - 20px, 1180px); padding-top: 16px; }
       .content-layout { display: block; margin-top: 14px; }
@@ -142,10 +164,13 @@
       .comparison-card > summary { grid-template-columns: 1fr; gap: 6px; padding: 18px; }
       .open-label { margin-top: 4px; }
       .compare-body { padding: 0 14px 18px; }
-      .direct-links { display: grid; grid-template-columns: 1fr; }
-      .direct-links a { width: 100%; }
+      .expand-button { width: 100%; }
       .frames { grid-template-columns: 1fr; }
       iframe { height: 520px; }
+      .article-modal { padding: 8px; }
+      .modal-dialog { width: calc(100vw - 16px); height: calc(100svh - 16px); border-radius: 12px; }
+      .modal-header { padding: 10px 12px; }
+      .modal-frame { height: auto; }
     }
   </style>
 </head>
@@ -172,6 +197,17 @@
     </div>
     <p class="footnote">※ 第11回・第18回、目次リンク、出典番号などの保留項目は比較対象に含めていません。</p>
   </main>
+
+  <div id="article-modal" class="article-modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <h2 id="modal-title" class="modal-title">記事を拡大表示</h2>
+        <button type="button" class="modal-close" data-modal-close>閉じる</button>
+      </header>
+      <iframe class="modal-frame" title="記事の拡大表示" src="about:blank"></iframe>
+    </section>
+  </div>
 
   <script>
     const beforeBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview/legacy/";
@@ -227,17 +263,15 @@
           <span class="open-label" aria-hidden="true"></span>
         </summary>
         <div class="compare-body">
-          <div class="direct-links">
-            <a class="before-link" href="${beforeUrl}" target="_blank" rel="noopener">修正前を見る</a>
-            <a class="after-link" href="${afterUrl}" target="_blank" rel="noopener">修正後を見る</a>
-          </div>
           <div class="frames">
             <section class="pane">
               <p class="pane-title before">修正前（テストサイトA）</p>
+              <button type="button" class="expand-button before" data-modal-url="${beforeUrl}" data-modal-label="${item.label}｜テストサイトA">テストサイトAを拡大して見る</button>
               <iframe title="${item.label}の修正前" data-src="${beforeUrl}" loading="lazy"></iframe>
             </section>
             <section class="pane">
               <p class="pane-title after">修正後（テストサイトB）</p>
+              <button type="button" class="expand-button after" data-modal-url="${afterUrl}" data-modal-label="${item.label}｜テストサイトB">テストサイトBを拡大して見る</button>
               <iframe title="${item.label}の修正後" data-src="${afterUrl}" loading="lazy"></iframe>
             </section>
           </div>
@@ -270,6 +304,42 @@
     };
     window.addEventListener("hashchange", openHashTarget);
     openHashTarget();
+
+    const modal = document.querySelector("#article-modal");
+    const modalFrame = modal.querySelector(".modal-frame");
+    const modalTitle = modal.querySelector(".modal-title");
+    const modalClose = modal.querySelector(".modal-close");
+    let modalTrigger = null;
+
+    const openModal = trigger => {
+      modalTrigger = trigger;
+      modalTitle.textContent = trigger.dataset.modalLabel;
+      modalFrame.title = `${trigger.dataset.modalLabel}の拡大表示`;
+      modalFrame.src = trigger.dataset.modalUrl;
+      modal.hidden = false;
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      modalClose.focus();
+    };
+
+    const closeModal = () => {
+      if (modal.hidden) return;
+      modal.hidden = true;
+      modal.setAttribute("aria-hidden", "true");
+      modalFrame.src = "about:blank";
+      document.body.style.overflow = "";
+      modalTrigger?.focus();
+      modalTrigger = null;
+    };
+
+    document.addEventListener("click", event => {
+      const trigger = event.target.closest("[data-modal-url]");
+      if (trigger) openModal(trigger);
+      if (event.target.closest("[data-modal-close]")) closeModal();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeModal();
+    });
   </script>
 </body>
 </html>
