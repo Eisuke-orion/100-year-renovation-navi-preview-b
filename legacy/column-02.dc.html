@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/common.css" rel="stylesheet" />
+<meta name="robots" content="noindex,nofollow">
+<link href="../css/common.css" rel="stylesheet" />
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/column-publication.js" defer></script>
+<script src="../js/common.js"></script>
+<script src="js/publication-config.js"></script>
+<script src="js/column-publication.js"></script>
 <title>片づかないのは、あなたのせいじゃない。収納と動線で変わる家</title>
 <meta name="description" content="片づかない理由を家族の性格ではなく、収納と動線の設計から考えます。暮らしの流れを整えて、無理なく片づく住まいへ。">
 <meta property="og:title" content="片づかないのは、あなたのせいじゃない。収納と動線で変わる家">
 <meta property="og:description" content="片づかない理由を収納と動線の設計から考え、無理なく片づく住まいを探ります。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-02.dc.html">
-<meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep02_fv_storage_flow_v2.png">
+<meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep02_fv_storage_flow_v2.webp">
 <script src="./support.js"></script>
+<script src="./column-nav.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -36,9 +38,259 @@
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
 </helmet>
-<?php include 'parts_header.html'; ?>
-<?php include 'parts_nav.html'; ?>
-<dc-import name="SiteHeader" hint-size="100%,120px"></dc-import>
+<header>
+	<div class="inner">
+		<div class="wrap_search">
+			<script async src="https://cse.google.com/cse.js?cx=d0dde822ecfe64816">
+			</script>
+			<div class="gcse-search"></div>
+			<div class="btn_close_search"></div>
+		</div>
+		<div class="nav_open" role="button" tabindex="0" aria-label="メニューを開く" aria-controls="site-global-nav" aria-expanded="false"></div>
+		<div class="box_logo">
+			<a href="https://www.cbl.or.jp/r-navi/">
+				<div class="logo_main">人生100年時代の<br class="only_sp">リフォーム応援ナビサイト</div>
+				<div class="logo_sub">50代からのリフォームを知って探して⾒つける</div>
+			</a>
+		</div>
+		<div class="box_btn">
+			<div class="search_area">
+				<img src="https://www.cbl.or.jp/r-navi/img/icon_search.svg">
+			</div>
+			<div class="history_area">
+				<a href="https://www.cbl.or.jp/r-navi/history/"><img src="https://www.cbl.or.jp/r-navi/img/icon_history.svg"></a>
+			</div>
+		</div>
+</div>
+	<div class="fix_header">
+		<div class="inner">
+		<div class="wrap_search">
+			<script async src="https://cse.google.com/cse.js?cx=d0dde822ecfe64816">
+			</script>
+			<div class="gcse-search"></div>
+			<div class="btn_close_search"></div>
+		</div>
+		<div class="nav_open" role="button" tabindex="0" aria-label="メニューを開く" aria-controls="site-global-nav" aria-expanded="false"></div>
+		<div class="box_logo">
+			<a href="https://www.cbl.or.jp/r-navi/">
+				<div class="logo_main">人生100年時代の<br class="only_sp">リフォーム応援ナビサイト</div>
+				<div class="logo_sub">50代からのリフォームを知って探して⾒つける</div>
+			</a>
+		</div>
+		<div class="box_btn">
+			<div class="search_area">
+				<img src="https://www.cbl.or.jp/r-navi/img/icon_search.svg">
+			</div>
+			<div class="history_area">
+				<a href="https://www.cbl.or.jp/r-navi/history/"><img src="https://www.cbl.or.jp/r-navi/img/icon_history.svg"></a>
+			</div>
+		</div>
+</div>
+	</div>
+</header>
+
+<nav id="site-global-nav" class="site-global-nav" aria-label="メインメニュー" aria-hidden="true">
+	<div class="wrap_nav_inner">
+		<div class="nav_header">
+			<div class="main_title">人生100年時代の<br>リフォーム<br>応援ナビサイト</div>
+			<div class="sub_title">50代からのリフォームを<br>知って探して⾒つける</div>
+			<div class="col_search"></div>
+		</div>
+		<div class="nav_body">
+			<div class="nav_close" role="button" tabindex="0" aria-label="メニューを閉じる"></div>
+			<ul class="main_nav">
+				<li><a href="https://www.cbl.or.jp/r-navi/">HOME</a></li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">テーマからさがす</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/">テーマからさがす</a>
+					</div>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/kind/">身体にやさしく暮らしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kind/temp/">快適な温度で身体にやさしく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kind/hot/">快適な入浴で身体にやさしく</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/clean/">住まいも身体も清潔でいたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/souji/">汚れにくく、掃除しやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/touchless/">触れずにムダなく清潔に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/water/">除菌水等でより衛生的に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/air/">空気環境も清潔に</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/kajiraku/">家事をラクにこなしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kajiraku/jitan/">家事は時短でラクに快適に</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/life/">住まいを使いやすくしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/bathroom/">浴室・洗面室を使いやすく・快適に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/toilet/">トイレを使いやすく・快適に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/kitchen/">キッチンを便利に使いやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/living/">居室を便利に使いやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/easymove/">住居内を移動しやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/entrance/">住居への出入りをしやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/gate/">敷地への出入りをしやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/monitoring/">住宅をモニタリング・遠隔で操作</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/">家計のムダをなくしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">水光熱費の負担を少なく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/ijikanri/">維持管理費の負担を少なく</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/watch/">家族を見守りたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/watch/separation/">離れて暮らす家族を見守る</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/watch/cohabitation/">一緒に暮らす家族を見守る</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/">多様な暮らしを実現したい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/enjoy/">仕事や趣味を楽しむ</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/pet/">ペットと暮らす</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/">防災や防犯に配慮したい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/earthquake/">地震時の安全性</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/fire/">火災時の安全性</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/typhoon/">台風時の安全性</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/poweroutage/">停電時等の自立性確保</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/security/">日常の防犯対策</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">部屋、建材・設備からさがす</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_part/">部屋、建材・設備からさがす</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/bathroom/">浴室</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/powderroom/">洗面・脱衣室</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/toilet/">トイレ</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/kitchen/">キッチン</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/living/">リビング・居室</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/window/">窓</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/entrance/">玄関</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/stairs/">廊下・階段</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">給湯器</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">答えてさがす</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_check/">答えてさがす</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_check/problem/">住まいや暮らしの「困った」に関するチェックリスト</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_check/want/">「こんな住まい・暮らしにしたい」に関するチェックリスト</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">お役立ち情報</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/">お役立ち情報</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム検索、SNSなど）</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/blparts/">優良住宅部品（BL部品）等</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/living_guide">高齢期の健康で快適な暮らしのための住まいの改修ガイドライン</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/support/">リフォームに関する補助制度等</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/selection/">事業者の選び方</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/datas/">機能・製品データベース・リスト ダウンロード</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title topic">
+				<div class="search_title_inner">&nbsp;</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/column/">コラム：リフォームを考えはじめた時に読みたい記事</a>
+					</div>
+				</li>
+			</ul>
+			<div class="search_title topic">
+				<div class="search_title_inner">&nbsp;</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/topic/life/">健康で快適、安心・安全に暮らす住まいのポイント</a>
+					</div>
+				</li>
+			</ul>
+			<div class="search_title topic">
+				<div class="search_title_inner">&nbsp;</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/info/">お知らせ</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
 
 
 <div style="font-family:'Noto Sans JP',sans-serif; color: oklch(0.27 0.015 90); max-width:760px; margin:0 auto; padding:0 24px 100px;">
@@ -58,12 +310,12 @@
       </sc-for>
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep02-fv" src="uploads/ep02_fv_storage_flow_v2.png" shape="rounded" radius="18" alt="玄関収納からリビング・ダイニングへ無理なく移動できる住まいで、収納を見直す夫婦" placeholder="FV｜収納と動線を見直し、暮らしを整える夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <image-slot id="ep02-fv" src="uploads/ep02_fv_storage_flow_v2.webp" shape="rounded" radius="18" alt="玄関収納からリビング・ダイニングへ無理なく移動できる住まいで、収納を見直す夫婦" placeholder="FV｜収納と動線を見直し、暮らしを整える夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     「また散らかってる……。どうして私は片づけられないんだろう」――そう自分を責めてしまうこと、ありませんか。私自身、子どもの頃から片づけが苦手で「自分は片づけられない人間だ」と思い込んでいました。ところが収納がたっぷりあるマンションに住んだ途端、まったく散らからなくなったのです。「片づけられない"人"がいるんじゃない。片づく"家"があるだけなんだ」――今回は、この確信を裏づけてくれた一冊を軸に、家の"仕組み"という視点をお話しします。
@@ -88,7 +340,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">片づけの定番書が教えてくれるのは主に「モノとの向き合い方」。私が足したいのは「そのモノを、家のどこに、どう収めるか」という設計・動線の話です。定位置が使う場所のすぐ近くにあるかどうかで、片づく家になるかが決まります。「モノを選ぶ技術」と「家の仕組み」は、片づけの両輪なのです。</p>
   </article>
 
-  <image-slot id="ep02-img1" src="uploads/ep02_body01_storage_flow_v2.png" shape="rounded" radius="16" alt="キッチンとダイニングの近くに日用品をしまえる収納を設けた住まい" placeholder="使う場所の近くに収納を設けた、キッチン・ダイニング" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <image-slot id="ep02-img1" src="uploads/ep02_body01_storage_flow_v2.webp" shape="rounded" radius="16" alt="キッチンとダイニングの近くに日用品をしまえる収納を設けた住まい" placeholder="使う場所の近くに収納を設けた、キッチン・ダイニング" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">3. 散らかる家に共通する、3つの落とし穴</h2>
@@ -110,14 +362,14 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">築年数の古いお家は、そもそも収納が少なかったり、コンセントの数が足りなかったりします。まずは収納ラックで足せないかを検討し、コンセントも配置換えや電源タップで当面しのげます。それでも毎日ストレスに感じるなら「リフォームしたらいくらかかるか」だけでも概算を出しておく。今すぐやらなくても"予算を知っておく"だけで心の整理がつきます（信頼できる業者の選び方は第7回で）。</p>
   </article>
 
-  <image-slot id="ep02-img2" src="uploads/ep02_body02_entry_storage_v2.png" shape="rounded" radius="16" alt="玄関扉のすぐそばの収納へ、帰宅後に外出用品をしまう女性" placeholder="玄関近くに収納を設け、帰宅後すぐにしまえる動線" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <image-slot id="ep02-img2" src="uploads/ep02_body02_entry_storage_v2.webp" shape="rounded" radius="16" alt="玄関扉のすぐそばの収納へ、帰宅後に外出用品をしまう女性" placeholder="玄関近くに収納を設け、帰宅後すぐにしまえる動線" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">7. 片づく家は、家族の心にも効く</h2>
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">「片づけなさい！」ではなく「見える化」を。おもちゃ箱に"きれいに片づいた状態の写真"を貼っておくと、子どもは「いつも、この状態にすればいい」とひと目で理解できます。片づく仕組みは、家族のイライラを減らし、子どもの自立心を育て、気軽に人を招ける家をつくります。第1回でお伝えした「人が集まる家」も、実は片づけと無関係ではないのです。</p>
   </article>
 
-  <image-slot id="ep02-img3" src="uploads/ep02_body03_living_storage_v2.png" shape="rounded" radius="16" alt="リビングで日用品を手の届きやすい高さの収納へ戻す夫婦" placeholder="日用品を低い収納に戻し、リビングを整える夫婦" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <image-slot id="ep02-img3" src="uploads/ep02_body03_living_storage_v2.webp" shape="rounded" radius="16" alt="リビングで日用品を手の届きやすい高さの収納へ戻す夫婦" placeholder="日用品を低い収納に戻し、リビングを整える夫婦" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
 
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
@@ -168,7 +420,7 @@
   </section>
 
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
@@ -182,8 +434,98 @@
   </nav>
 
 </div>
-<?php include 'parts_footer.html'; ?>
-<dc-import name="SiteFooter" hint-size="100%,300px"></dc-import>
+<section class="check_history"></section>
+<div class="btn_totop"></div>
+<footer>
+		<div class="box_btn"><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/howto/">本サイトの便利な使い方</a></div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/search_theme/">テーマからさがす</a></div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kind/">身体にやさしく暮らしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/">住まいも身体も清潔でいたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kajiraku/">家事をラクにこなしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/">住まいを使いやすくしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/">家計のムダをなくしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/watch/">家族を見守りたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/">多様な暮らしを実現したい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/">防災や防犯に配慮したい</a></li>
+				</ul>
+			</div>
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/search_part/">部屋、建材・設備からさがす</a></div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/bathroom/">浴室</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/powderroom/">洗面・脱衣室</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/toilet/">トイレ</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/kitchen/">キッチン</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/living/">リビング・居室</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/window/">窓</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/entrance/">玄関</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/stairs/">廊下・階段</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">給湯器</a></li>
+				</ul>
+			</div>
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/search_check/">答えてさがす</a></div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_check/problem/">住まいや暮らしの「困った」に関するチェックリスト</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_check/want/">「こんな住まい・暮らしにしたい」に関するチェックリスト</a></li>
+				</ul>
+			</div>
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/contents/tips/">お役立ち情報</a></div>
+				<ul>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム検索、SNSなど）</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/blparts/">優良住宅部品（BL部品）等</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/living_guide">高齢期の健康で快適な暮らしのための住まいの改修ガイドライン</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/selection">事業者の選び方</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/support">リフォームに<br>関する補助制度等</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/datas/">機能・製品リストダウンロード</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/contents/column/">コラム：<br class="only_sp">リフォームを考えはじめた時に読みたい記事</a></div>
+			</div>
+		</div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/contents/topic/life/">健康で快適、安心・安全に暮らす<br class="only_sp">住まいのポイント</a></div>
+			</div>
+		</div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title">本サイトについて</div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/info/">お知らせ</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/policy/">サイトポリシー</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/studygp/">人生100年対応住宅部品研究会</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/ask/">お問い合わせ先</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="wrap_sns">
+			<ul>
+				<li><a href="https://www.instagram.com/r.navi.100/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/Instagram_Glyph_White.svg"></a></li>
+			</ul>
+		</div>
+		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
+</footer>
+
 
 
 </x-dc>

@@ -3,39 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/common.css" rel="stylesheet" />
+<link href="../css/common.css" rel="stylesheet" />
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/common.js"></script>
-<script src="js/column-publication.js" defer></script>
-<title>新NISAと住宅ローン、どっちが先？──50代の「お金の置き場所」を、住まいの目線で考える</title>
-<meta name="description" content="繰り上げ返済・新NISA・住まいへの投資を、確実性と目的から整理します。">
-<meta name="keywords" content="新NISA 繰り上げ返済 どっち／住宅ローン 投資 どっちが先／50代 資産形成 住宅ローン／繰り上げ返済 メリット デメリット／新NISA 50代 いつまで／リフォーム 投資 価値／お金の置き場所">
+<script src="../js/common.js"></script>
+<script src="js/publication-config.js"></script>
+<script src="js/column-publication.js"></script>
+<title>50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？</title>
+<meta name="description" content="50代人口約1,845万人に対し、NISA口座は約553万口座。3人に1人に近い規模を入口に、住宅ローン・修繕費との優先順位を考えます。">
+<meta name="keywords" content="資産・お金／人生100年時代のリフォームナビ／第11回">
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-11.dc.html">
-<meta property="og:title" content="新NISAと住宅ローン、どっちが先？──50代の「お金の置き場所」を、住まいの目線で考える">
-<meta property="og:description" content="繰り上げ返済・新NISA・住まいへの投資を、確実性と目的から整理します。">
+<meta property="og:title" content="50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？">
+<meta property="og:description" content="50代人口約1,845万人に対し、NISA口座は約553万口座。3人に1人に近い規模を入口に、住宅ローン・修繕費との優先順位を考えます。">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-09-17">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-11.dc.html">
-<meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep11_fv_finance_table.png">
-<meta property="og:image:alt" content="家計の資料を見ながら穏やかに相談する50代の夫婦">
+<meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep11_fv_finance_table.webp">
+<meta property="og:image:alt" content="住宅ローンと資産形成の優先順位を考える50代">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="ext-resource-dependency" content="uploads/ep11_fv_finance_table.png">
-<meta name="ext-resource-dependency" content="uploads/ep11_body01_three_choices.png">
-<meta name="ext-resource-dependency" content="uploads/ep11_body02_certainty_balance.png">
-<meta name="ext-resource-dependency" content="uploads/ep11_body03_insulated_window.png">
+<meta name="ext-resource-dependency" content="uploads/ep11_fv_finance_table.webp">
+<meta name="ext-resource-dependency" content="uploads/ep11_body01_nisa_account_share_chart_v2.webp">
+<meta name="ext-resource-dependency" content="uploads/ep11_body02_certainty_balance.webp">
+<meta name="ext-resource-dependency" content="uploads/ep11_body03_insulated_window.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "新NISAと住宅ローン、どっちが先？──50代の「お金の置き場所」を、住まいの目線で考える",
-  "description": "繰り上げ返済・新NISA・住まいへの投資を、確実性と目的から整理します。",
+  "headline": "50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？",
+  "description": "50代人口約1,845万人に対し、NISA口座は約553万口座。3人に1人に近い規模を入口に、住宅ローン・修繕費との優先順位を考えます。",
   "datePublished": "2026-09-17",
   "inLanguage": "ja",
   "mainEntityOfPage": "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-11.dc.html",
-  "image": "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep11_fv_finance_table.png",
+  "image": "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep11_fv_finance_table.webp",
   "author": {
     "@type": "Person",
     "name": "エイスケ"
@@ -47,6 +48,7 @@
 }
 </script>
 <script src="./support.js"></script>
+<script src="./column-nav.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -77,9 +79,259 @@
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
 </helmet>
-<?php include 'parts_header.html'; ?>
-<?php include 'parts_nav.html'; ?>
-<dc-import name="SiteHeader" hint-size="100%,120px"></dc-import>
+<header>
+	<div class="inner">
+		<div class="wrap_search">
+			<script async src="https://cse.google.com/cse.js?cx=d0dde822ecfe64816">
+			</script>
+			<div class="gcse-search"></div>
+			<div class="btn_close_search"></div>
+		</div>
+		<div class="nav_open" role="button" tabindex="0" aria-label="メニューを開く" aria-controls="site-global-nav" aria-expanded="false"></div>
+		<div class="box_logo">
+			<a href="https://www.cbl.or.jp/r-navi/">
+				<div class="logo_main">人生100年時代の<br class="only_sp">リフォーム応援ナビサイト</div>
+				<div class="logo_sub">50代からのリフォームを知って探して⾒つける</div>
+			</a>
+		</div>
+		<div class="box_btn">
+			<div class="search_area">
+				<img src="https://www.cbl.or.jp/r-navi/img/icon_search.svg">
+			</div>
+			<div class="history_area">
+				<a href="https://www.cbl.or.jp/r-navi/history/"><img src="https://www.cbl.or.jp/r-navi/img/icon_history.svg"></a>
+			</div>
+		</div>
+</div>
+	<div class="fix_header">
+		<div class="inner">
+		<div class="wrap_search">
+			<script async src="https://cse.google.com/cse.js?cx=d0dde822ecfe64816">
+			</script>
+			<div class="gcse-search"></div>
+			<div class="btn_close_search"></div>
+		</div>
+		<div class="nav_open" role="button" tabindex="0" aria-label="メニューを開く" aria-controls="site-global-nav" aria-expanded="false"></div>
+		<div class="box_logo">
+			<a href="https://www.cbl.or.jp/r-navi/">
+				<div class="logo_main">人生100年時代の<br class="only_sp">リフォーム応援ナビサイト</div>
+				<div class="logo_sub">50代からのリフォームを知って探して⾒つける</div>
+			</a>
+		</div>
+		<div class="box_btn">
+			<div class="search_area">
+				<img src="https://www.cbl.or.jp/r-navi/img/icon_search.svg">
+			</div>
+			<div class="history_area">
+				<a href="https://www.cbl.or.jp/r-navi/history/"><img src="https://www.cbl.or.jp/r-navi/img/icon_history.svg"></a>
+			</div>
+		</div>
+</div>
+	</div>
+</header>
+
+<nav id="site-global-nav" class="site-global-nav" aria-label="メインメニュー" aria-hidden="true">
+	<div class="wrap_nav_inner">
+		<div class="nav_header">
+			<div class="main_title">人生100年時代の<br>リフォーム<br>応援ナビサイト</div>
+			<div class="sub_title">50代からのリフォームを<br>知って探して⾒つける</div>
+			<div class="col_search"></div>
+		</div>
+		<div class="nav_body">
+			<div class="nav_close" role="button" tabindex="0" aria-label="メニューを閉じる"></div>
+			<ul class="main_nav">
+				<li><a href="https://www.cbl.or.jp/r-navi/">HOME</a></li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">テーマからさがす</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/">テーマからさがす</a>
+					</div>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/kind/">身体にやさしく暮らしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kind/temp/">快適な温度で身体にやさしく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kind/hot/">快適な入浴で身体にやさしく</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/clean/">住まいも身体も清潔でいたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/souji/">汚れにくく、掃除しやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/touchless/">触れずにムダなく清潔に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/water/">除菌水等でより衛生的に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/air/">空気環境も清潔に</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/kajiraku/">家事をラクにこなしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kajiraku/jitan/">家事は時短でラクに快適に</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/life/">住まいを使いやすくしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/bathroom/">浴室・洗面室を使いやすく・快適に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/toilet/">トイレを使いやすく・快適に</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/kitchen/">キッチンを便利に使いやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/living/">居室を便利に使いやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/easymove/">住居内を移動しやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/entrance/">住居への出入りをしやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/gate/">敷地への出入りをしやすく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/monitoring/">住宅をモニタリング・遠隔で操作</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/">家計のムダをなくしたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">水光熱費の負担を少なく</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/ijikanri/">維持管理費の負担を少なく</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/watch/">家族を見守りたい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/watch/separation/">離れて暮らす家族を見守る</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/watch/cohabitation/">一緒に暮らす家族を見守る</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/">多様な暮らしを実現したい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/enjoy/">仕事や趣味を楽しむ</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/pet/">ペットと暮らす</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/">防災や防犯に配慮したい</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/earthquake/">地震時の安全性</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/fire/">火災時の安全性</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/typhoon/">台風時の安全性</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/poweroutage/">停電時等の自立性確保</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/security/">日常の防犯対策</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">部屋、建材・設備からさがす</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_part/">部屋、建材・設備からさがす</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/bathroom/">浴室</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/powderroom/">洗面・脱衣室</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/toilet/">トイレ</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/kitchen/">キッチン</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/living/">リビング・居室</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/window/">窓</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/entrance/">玄関</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/stairs/">廊下・階段</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">給湯器</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">答えてさがす</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/search_check/">答えてさがす</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/search_check/problem/">住まいや暮らしの「困った」に関するチェックリスト</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/search_check/want/">「こんな住まい・暮らしにしたい」に関するチェックリスト</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title">
+				<div class="search_title_inner">お役立ち情報</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/">お役立ち情報</a>
+						<div class="btn_subnav_open"></div>
+					</div>
+					<ul class="sub_nav">
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム検索、SNSなど）</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/blparts/">優良住宅部品（BL部品）等</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/living_guide">高齢期の健康で快適な暮らしのための住まいの改修ガイドライン</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/support/">リフォームに関する補助制度等</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/selection/">事業者の選び方</a></li>
+						<li><a href="https://www.cbl.or.jp/r-navi/contents/tips/datas/">機能・製品データベース・リスト ダウンロード</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="search_title topic">
+				<div class="search_title_inner">&nbsp;</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/column/">コラム：リフォームを考えはじめた時に読みたい記事</a>
+					</div>
+				</li>
+			</ul>
+			<div class="search_title topic">
+				<div class="search_title_inner">&nbsp;</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/topic/life/">健康で快適、安心・安全に暮らす住まいのポイント</a>
+					</div>
+				</li>
+			</ul>
+			<div class="search_title topic">
+				<div class="search_title_inner">&nbsp;</div>
+			</div>
+			<ul class="main_nav">
+				<li>
+					<div class="col_item_main">
+						<a href="https://www.cbl.or.jp/r-navi/contents/info/">お知らせ</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
 
 <div style="font-family:'Noto Sans JP',sans-serif; color:oklch(0.27 0.015 90); max-width:760px; margin:0 auto; padding:0 24px 100px;">
   <nav class="column-breadcrumb" aria-label="パンくず" style="display:flex;align-items:center;gap:8px;padding:26px 0 6px;font-size:13.5px;color:oklch(0.52 0.015 90);flex-wrap:wrap;">
@@ -88,152 +340,111 @@
 
   <header style="padding:18px 0 28px;">
     <span style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;letter-spacing:0.1em;color:#fff;background:oklch(0.47 0.1 155);border-radius:999px;padding:6px 16px;margin-bottom:16px;">第11回</span>
-    <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.55;margin:0 0 14px;">新NISAと住宅ローン、どっちが先？──50代の「お金の置き場所」を、住まいの目線で考える</h1>
-    <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">新NISA、繰り上げ返済、住まいへの投資。三つの置き場所を、順番から考える</p>
+    <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.55;margin:0 0 14px;">50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？</h1>
+    <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">「3人に1人に近い」規模を入口に、自分の家計の優先順位を考えます。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年9月17日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
       <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep11-author-avatar" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
-      <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
+      <image-slot id="ep11-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ</span>
     </div>
   </header>
 
-  <image-slot id="ep11-fv" src="uploads/ep11_fv_finance_table.png" shape="rounded" radius="18" alt="家計の資料を見ながら穏やかに相談する50代の夫婦" placeholder="家計の資料を見ながら穏やかに相談する50代の夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <image-slot id="ep11-fv" src="uploads/ep11_fv_finance_table.webp" shape="rounded" radius="18" alt="住宅ローンと資産形成の優先順位を考える50代" placeholder="住宅ローンと資産形成の優先順位を考える50代" style="width:100%;aspect-ratio:16/9;"></image-slot>
 
-  <div class="column-article-body" style="margin-top:32px;"><p>9月に入りました。朝晩の風が少しやわらいで、家計簿やマネー誌に手が伸びる方も多い季節です。今月からの数回、この連載では<strong>「住まい×お金」</strong>を集中的に取り上げます。金利、税、相続、ローン――どれも「いつか考えなきゃ」と思いながら、つい後回しにしてきたテーマばかりです。</p>
-<p>その第1回として、最近ご相談でも本当によく聞かれる質問から始めましょう。</p>
-<p><strong>「新NISA、やったほうがいいんですよね？　でもうち、住宅ローンがまだ残っていて……どっちが先ですか？」</strong></p>
-<p>わかります。テレビでも雑誌でも「新NISA」の文字を見ない日はありません。2024年に始まった新しいNISA制度で、証券口座の数は大きく伸びました（出典1）。一方で、日本銀行の利上げが続き、住宅ローンの金利も「上がる時代」に入りました（出典2）。<strong>投資は魅力的に見える。でも借金の金利も上がっていく。手元の限られたお金を、どこに置くのが正解なのか</strong>――これが今、50代の家計の一番の悩みどころだと思います。</p>
-<p>先に、この記事の結論を言ってしまいます。<strong>「新NISAか、繰り上げ返済か」の二択で考えると、答えを間違えやすい</strong>、ということです。お金の置き場所は、実は三つあります。三つ目の選択肢まで含めて考えると、順番はすっきり整理できます。</p>
-<p>山崎元・水瀬ケンイチ『ほったらかし投資術』が繰り返し伝えるのは、商品を選ぶ前に生活防衛資金を確保し、長期・分散・低コストという順序を守ることです（出典3）。この「順番」を、住宅ローンと住まいへの投資にも当てはめて考えます。</p>
-<hr></div>
+  <div class="column-article-body" style="margin-top:32px;"><p>50代人口は約1,845万人。それに対し、50歳代のNISA口座は約553万口座です。基準日は異なりますが、単純比較すると約30.0％。「50代の3人に1人に近い」規模で、NISAはぐっと身近なお金のテーマになっています。ただし、これは人口と口座数の比較であり、新NISAで実際に投資している人数や、2024年以降に新しく始めた人数を示すものではありません。この記事では、この身近な数字を入口に、住宅ローンや修繕費との優先順位を整理します。</p></div>
 
   <aside style="background:oklch(0.95 0.03 150);border-radius:16px;padding:24px 26px;margin:0 0 36px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;color:oklch(0.35 0.09 155);">この記事のポイント</p>
-    <ul style="margin:0;padding-left:20px;font-size:15.5px;line-height:1.9;"><li><strong>お金の置き場所は「繰り上げ返済」「投資」の二択ではなく、「住まいへの投資」を加えた三択で考える。</strong> 三つ目を忘れると、家計全体の最適解を見誤ります。</li>
-<li><strong>考える順番は「①生活防衛資金 → ②金利の比較 → ③目的の整理」。</strong> 『ほったらかし投資術』が説く大原則「まず生活のお金を確保し、借金の金利と運用の期待リターンを比べる」が出発点です。</li>
-<li><strong>繰り上げ返済の利息軽減は「確実」、投資のリターンは「不確実」。</strong> 例えば残り25年・金利1.0%のローンを100万円繰り上げると、利息軽減は約28万円。これは相場に左右されない“確定リターン”です（試算・出典4）。</li></ul>
+    <ul style="margin:0;padding-left:20px;font-size:15.5px;line-height:1.9;"><li>50代人口約1,845万人に対し、NISA口座は約553万口座。単純比較で約30.0％と「3人に1人に近い」規模。</li>
+<li>比べる前に、まず自分の借入金利、家計の余力、修繕費の見込みという3つの数字を確認する。</li>
+<li>「絶対の正解」はなく、金利水準や家計の状況によって優先順位は変わる。</li></ul>
   </aside>
 
-  <p class="column-caution"><strong>ご確認ください：</strong>本記事は一般的な情報提供を目的としています。金利・税・制度・費用は条件や時点で変わります。金融・法律・税務上の判断は、最新の一次情報を確認し、必要に応じて専門家へご相談ください。</p>
-
-  <article><section class="column-article-body">
-<h2>1. 「新NISAブーム」と「金利ある世界」が、同時に来た</h2>
-<p>まず、いま何が起きているのかを整理します。</p>
-<p>2024年1月、NISA（少額投資非課税制度）が大きく生まれ変わりました。年間の投資枠は「つみたて投資枠」120万円と「成長投資枠」240万円の合計360万円。生涯の非課税限度額は1,800万円。制度は恒久化され、非課税期間は無期限になりました（出典1）。「これなら」と口座を開いた方は多く、金融庁は2026年7月にもNISA口座の利用状況を更新しており、制度の利用が広がっていることがわかります（出典1）。一部の投資好きだけの話ではなくなりました。</p>
-<p>一方その裏で、もう一つの大きな変化が進みました。<strong>金利の復活</strong>です。日本銀行は2024年にマイナス金利政策を解除し、以後段階的に利上げを進めてきました。政策金利は2026年6月に1.0％程度へ引き上げられました（出典2）。連動して、住宅ローンの変動金利も静かに上がり始めています。</p>
-<p>つまり、いまの50代は<strong>「投資で増やせるかもしれない時代」と「借金の利息が膨らんでいく時代」に同時に足を踏み入れた</strong>わけです。手元に100万円あったとき、それを新NISAに入れるべきか、ローン返済に充てるべきか――この問いが急に重みを持ち始めた背景が、ここにあります。</p>
-<hr>
+<article><section class="column-article-body">
+<h2>1. 50代人口とNISA口座を比べると、約30％</h2>
+<p>総務省統計局の人口推計では、2026年2月1日現在の50〜54歳は976万0千人、55〜59歳は868万9千人で、50代人口は合計1,844万9千人です（出典2）。一方、金融庁の2025年12月末調査では、50歳代のNISA口座数は553万1,813口座でした（出典1）。</p>
+<p>この二つを単純に比べると、NISA口座数は50代人口の約30.0％に相当します。言い換えれば「3人に1人に近い」規模です。NISAが、一部の投資に詳しい人だけではなく、50代にとっても身近なテーマになっていることを感じさせる数字です。</p>
+<p>両資料の基準日は約1か月ずれています。また、口座数は買付けの有無や新規開始人数を示しません。ここでは、50代にとってNISAが身近な検討テーマになっている規模感として捉えます。</p>
 </section>
 
 <section class="column-article-body">
-<h2>2. お金の置き場所は、実は「三つ」ある</h2>
-<p>ここで、この記事の一番大事な視点をお伝えします。</p>
-<p>50代の持ち家世帯にとって、まとまったお金の置き場所は、二つではなく<strong>三つ</strong>あります。</p>
+<h2>2. 身近になったからこそ、家計の順番を考える</h2>
+<p>子どもの学費や習い事にかかっていたお金が一段落し、退職金や年金の輪郭も見え始める50代。同時に、住宅ローンの残高、家の修繕費、老後の生活費という、これから確実にかかる支出も視野に入ってきます。手元にできた「お金の余白」を新NISAに回すべきか、住宅ローンの繰り上げ返済に充てるべきか、家の修繕費として取っておくべきかは、家庭ごとに判断が必要です。</p>
+<p>新NISA（少額投資非課税制度）は2024年に制度が拡充され、年間投資枠や非課税保有期間が広がりました。ただし、50代全体の口座規模と、「自分の家計にとって今それが最優先か」という判断は分けて考える必要があります。</p>
+<p>周囲の利用状況は、資産形成を考え始めるきっかけにはなります。しかし、住宅ローンを返済しながらの資産形成では、ローンの金利、家の維持費、「元本割れしても取り返せる時間があるか」という年齢的な事情まで、あわせて考える必要があります。</p>
+</section>
+<image-slot id="ep11-body1" src="uploads/ep11_body01_nisa_account_share_chart_v2.webp" shape="rounded" radius="16" alt="50代人口約1,845万人とNISA口座約553万口座を比較し、口座数が人口の約30.0％に相当することを示す横棒グラフ" placeholder="50代人口約1,845万人とNISA口座約553万口座を比較し、口座数が人口の約30.0％に相当することを示す横棒グラフ" style="width:100%;aspect-ratio:16/9;margin:8px 0 10px;"></image-slot>
+<p data-column-chart-note="11" style="font-size:13px;line-height:1.75;color:oklch(0.48 0.025 75);margin:0 0 36px;">出典：金融庁「NISA口座の利用状況調査（2025年12月末時点）」、総務省統計局「人口推計（2026年2月1日現在）」。注：553万1,813口座÷1,844万9千人＝約30.0％。人口は2020年国勢調査基準の確定値で、2025年国勢調査集計後に更新予定です。基準日は異なり、口座数は実際の投資人数・新規開始人数・投資状況を示すものではありません。</p>
+
+<section class="column-article-body">
+<h2>3. 繰り上げ返済・投資・修繕費を比べる前に</h2>
+<p>新NISA、住宅ローンの繰り上げ返済、生活防衛資金、家の修繕費への備え。これらは性質がまったく異なるお金の置き場所です。</p>
+<ul>
+<li><strong>新NISAでの投資</strong>：非課税というメリットがある一方、値動きがあり、必ず増える保証はありません。</li>
+<li><strong>繰り上げ返済</strong>：将来支払うはずだった利息の負担を、確実に減らせます。ただし、手元資金が減ることや、住宅ローン控除を受けている期間は効果の出方が変わる点に注意が必要です。</li>
+<li><strong>生活防衛資金</strong>：病気や失業など不測の事態に備える、すぐに引き出せるお金です。これが不足したまま投資や繰り上げ返済を進めるのは避けたいところです。</li>
+<li><strong>家の修繕費</strong>：外壁、屋根、給湯設備など、いずれ確実に発生する費用です。金額も時期もある程度予測できます。</li>
+</ul>
+<p>どれか一つが常に正しいわけではなく、家庭ごとの借入条件や資産状況によって優先順位は変わります。</p>
+</section>
+
+<section class="column-article-body">
+<h2>4. まず確認したい3つの数字</h2>
+<p>判断の前に、次の3つを確認しておくことをおすすめします。</p>
+<p><strong>① 住宅ローンの金利と残高</strong>
+金利が高いほど、繰り上げ返済で「確実に減らせる負担」は大きくなります。逆に低金利で借りている場合、無理に繰り上げ返済を急ぐ必要は薄れます。金利のタイプ（変動・固定）や、今後の返済予定表を一度手元に用意しましょう。</p>
+<p><strong>② 生活防衛資金の有無</strong>
+必要な金額は、収入の安定性、家族構成、毎月の支出によって異なります。急な支出にも対応できる手元資金があるかを、投資や繰り上げ返済より先に確認します。</p>
+<p><strong>③ 家の修繕費の見込み</strong>
+築年数や設備の状況によって、今後数年でどの程度の修繕費がかかりそうか、大まかにでも把握しておくことが重要です。見込みが立たないまま資金を投資に回すと、いざというときに住宅ローンとは別の借り入れが必要になることもあります。</p>
+</section>
+<image-slot id="ep11-body2" src="uploads/ep11_body02_certainty_balance.webp" shape="rounded" radius="16" alt="住宅ローン残高と家計を確認する様子" placeholder="住宅ローン残高と家計を確認する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+
+<section class="column-article-body">
+<h2>5. 自分の優先順位を決める</h2>
+<p>3つの数字が見えてきたら、次のような順番で考えると整理しやすくなります。</p>
 <ol>
-<li><strong>繰り上げ返済</strong>――住宅ローンの残高を減らし、将来払うはずだった利息を「確実に」減らす。</li>
-<li><strong>投資（新NISAなど）</strong>――非課税の制度を使い、長期・分散でお金の成長を「期待する」。</li>
-<li><strong>住まいへの投資</strong>――断熱・水回り・維持修繕など、家の性能と資産価値を高め、<strong>光熱費の削減という“配当”と、暮らしの質という“無形のリターン”</strong>を得る。</li>
+<li>生活防衛資金が不足していれば、まずそこを優先する。</li>
+<li>住宅ローンの金利が高め、あるいは変動金利で今後の上昇が不安な場合は、繰り上げ返済も選択肢に入れる。</li>
+<li>修繕費の見込みが立っていない場合は、その分を別枠で確保する。</li>
+<li>そのうえで余力があれば、新NISAなど資産形成に回す。</li>
 </ol>
-<p>マネー誌の特集は、たいてい①と②の比較で終わります。しかし持ち家に住む人にとって、③は決して脇役ではありません。第1回でご紹介した『LIFE SHIFT』の言葉を借りれば、家は<strong>有形資産であると同時に、健康や家族との時間という無形資産を生み出す装置</strong>でもあるからです（出典5）。しかも③には、後で見るように「確実性の高いリターン」という、投資にはない性質があります。</p>
-<p>では、三つの置き場所に、どういう順番でお金を振り分ければいいのか。ここで頼りになるのが、『ほったらかし投資術』の考え方です。</p>
+<p>この順番は絶対的なものではなく、家計の状況、リスクへの考え方、住宅ローン控除の残り期間などによって変わります。判断に迷う場合は、特定の金融商品を売る立場にない、独立系のファイナンシャルプランナーや、住宅金融支援機構の相談窓口など、中立な立場の専門家に相談することをおすすめします。</p>
 <hr>
 </section>
-<image-slot id="ep11-body1" src="uploads/ep11_body01_three_choices.png" shape="rounded" radius="16" alt="返済・投資・住まいの三つへ資金を分ける考え方を表したイラスト" placeholder="返済・投資・住まいの三つへ資金を分ける考え方を表したイラスト" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<image-slot id="ep11-body3" src="uploads/ep11_body03_insulated_window.webp" shape="rounded" radius="16" alt="修繕費と資産形成の配分を考える様子" placeholder="修繕費と資産形成の配分を考える様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
 
-<section class="column-article-body">
-<h2>3. 商品選びより先に、家計の「順番」を整える</h2>
-<p>山崎元さんと水瀬ケンイチさんの『ほったらかし投資術』は、2010年の初版以来読み継がれ、2022年に全面改訂された、個人の資産運用の入門書です（出典3）。ここで住まいの家計に生かしたいのは、商品や利回りを比べる前に、使う時期と目的に応じてお金の置き場所を分けるという考え方です。</p>
-<p><strong>第一に、生活防衛資金を確保する。</strong> 病気や失業など「もしも」に備えるお金（生活費の数ヶ月〜2年分など、考え方は人それぞれ）を、すぐ引き出せる預金で確保する。投資はその後の話、という大原則です。</p>
-<p><strong>第二に、「借金の金利」と「運用の期待リターン」を比べる。</strong> 同書の考え方をひとことで言えば、<strong>確実に取られる利息を減らすことは、同じ利率の“確実な運用”と同じ価値がある</strong>、ということです。たとえば金利1.0%のローンを繰り上げ返済することは、「元本保証・利回り1.0%の金融商品」を買うのと似た効果を持ちます。世の中に、元本保証で1%を約束してくれる商品はまずありません。金利が上がるほど、繰り上げ返済という“地味な選択”の価値は上がっていくのです。</p>
-<p><strong>第三に、投資をするなら、低コストで幅広く分散されたものを、長く続ける。</strong> 個別の商品名はここでは挙げませんが、要は「当てにいく」のではなく「世界経済の成長に相乗りする」という姿勢です。</p>
-<p>この三段構えを、住まいの視点で拡張したのが次の章です。</p>
-<hr>
+  <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
+<h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
+<ol>
+<li>我が家の住宅ローンは、今どのくらいの金利・残高で、返済はいつまで続くか、家族で確認したことがありますか。</li>
+<li>万が一の備え（生活防衛資金）は、今の家計にとって十分と言える水準にありますか。</li>
+<li>家の修繕（外壁、屋根、給湯設備など）について、今後どのくらいの費用がかかりそうか、話し合ったことがありますか。</li>
+</ol>
 </section>
-
-<section class="column-article-body">
-<h2>4. 「確実」と「期待」を分けて考える──繰り上げ返済の実力</h2>
-<p>繰り上げ返済の効果を、具体的な数字で見てみましょう。</p>
-<p><strong>残高3,000万円・残り25年・金利1.0%</strong>の住宅ローンがあるとします。ここで100万円を期間短縮型で繰り上げ返済すると、<strong>将来払うはずだった利息が約28万円減り、返済期間は約11ヶ月短くなります</strong>（試算・出典4）。もし金利が1.5%なら、同じ100万円で利息軽減は<strong>約45万円</strong>に膨らみます。</p>
-<p>大事なのは、この「28万円」「45万円」が<strong>相場に関係なく確定する</strong>ことです。株式市場が好調でも不調でも、この効果は変わりません。一方、新NISAで期待するリターンは、長期的にはプラスが期待できるとしても、<strong>保証はどこにもありません</strong>。10年持っても元本を割れる可能性はゼロではない。これが「確実」と「期待」の違いです。</p>
-<p>では繰り上げ返済が常に正解かというと、そうも言い切れません。注意点が三つあります。</p>
-<ul>
-<li><strong>手元資金が薄くなる。</strong> 繰り上げ返済したお金は、二度と引き出せません。生活防衛資金を削ってまで返すのは本末転倒です。</li>
-<li><strong>住宅ローン控除との兼ね合い。</strong> 控除期間中は、ローン残高に応じた税の還付があります。控除率と支払金利の関係次第では、急いで返さないほうが有利な場合もあります（制度の適用条件は個々に異なるため）。</li>
-<li><strong>団体信用生命保険（団信）の保障が減る。</strong> ローン残高は、万一のときに保険で消える「保障付きの借金」という側面があります。完済を急ぐことは、その保障を手放すことでもあります。</li>
-</ul>
-<p>このあたりの損得は年齢・残期間・家族構成で変わります。判断に迷う場合は、商品販売と利害関係のない専門家に相談するのが安心です。</p>
-<hr>
-</section>
-<image-slot id="ep11-body2" src="uploads/ep11_body02_certainty_balance.png" shape="rounded" radius="16" alt="確実な利息軽減と期待リターンを比べる天秤のイラスト" placeholder="確実な利息軽減と期待リターンを比べる天秤のイラスト" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
-
-<section class="column-article-body">
-<h2>5. 三つ目の選択肢──「住まいへの投資」には配当がある</h2>
-<p>さて、いよいよ三つ目の置き場所です。</p>
-<p>私が住宅の現場にいた頃から、ずっと感じてきたことがあります。<strong>日本の家計は、金融商品への投資は熱心に議論するのに、自分が毎日暮らす「家」への投資は“出費”としか見ない</strong>、ということです。でも、考えてみてください。</p>
-<p>たとえば<strong>窓の断熱改修</strong>。夏の暑さ・冬の寒さの多くは窓から出入りします（第6回でお話しした通りです）。内窓の設置などで家の断熱性能を高めると、冷暖房費が下がります。この光熱費の削減は、<strong>一度の工事で毎年繰り返し受け取れる、いわば“配当”</strong>です。国の大型補助制度が窓改修を後押ししている年もあり、実質負担を抑えられる場合があります（制度の有無・内容は年度で変わるため・出典6）。</p>
-<p>しかも、住まいへの投資のリターンはお金だけではありません。</p>
-<ul>
-<li><strong>健康というリターン</strong>：家の中の温度差が小さくなると、冬のヒートショックのリスク低減や血圧の安定など、健康面の便益が期待できるという調査研究が積み重なっています（相関を示す研究であり、効果には個人差があります・出典7）。</li>
-<li><strong>資産価値というリターン</strong>：省エネ性能が住宅の評価に反映される流れは、制度面でも着実に進んでいます（第1回参照・出典5）。</li>
-<li><strong>暮らしの質というリターン</strong>：夏涼しく冬暖かい家で過ごす毎日の心地よさは、数字にできませんが、確かに人生の質を上げます。</li>
-</ul>
-<p>金融商品と違い、住まいへの投資は<strong>「使いながら受け取れる」</strong>のが特徴です。50代でリフォームすれば、その快適さを享受できる期間は、人生100年時代なら30年、40年と続きます。早いほど“配当”を受け取る期間は長いのです。</p>
-<hr>
-</section>
-<image-slot id="ep11-body3" src="uploads/ep11_body03_insulated_window.png" shape="rounded" radius="16" alt="断熱性を高めた明るい窓辺でくつろぐ50代の夫婦" placeholder="断熱性を高めた明るい窓辺でくつろぐ50代の夫婦" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
-
-<section class="column-article-body">
-<h2>6. 結論──「どっちが先？」への、私の答え</h2>
-<p>三つの置き場所を踏まえて、冒頭の質問に答えます。考える順番は、こうです。</p>
-<p><strong>ステップ1：生活防衛資金は足りているか。</strong>
-足りていなければ、繰り上げ返済も投資もリフォームも、その前にまず預金です。</p>
-<p><strong>ステップ2：ローンの金利と、投資の期待リターン、住まい投資の“配当”を並べて比べる。</strong>
-金利が高めのローン（あるいは今後の上昇が見込まれる変動金利）を抱えているなら、繰り上げ返済の「確実なリターン」の優先度は上がります。逆に、ごく低い固定金利で借りているなら、急いで返す理由は薄れます。そして、光熱費の高さや冬の寒さに悩んでいる家なら、断熱改修の“配当利回り”が投資に見劣りしないケースは珍しくありません。</p>
-<p><strong>ステップ3：お金の「目的」に立ち返る。</strong>
-新NISAは何のためでしょうか。老後資金なら、その老後を<strong>どの家で過ごすのか</strong>とセットで考える必要があります。資産残高が増えても、寒くて使いにくい家で我慢する老後では、本末転倒です。第1回でお話しした通り、<strong>お金は人生を豊かにする手段であって、目的ではありません</strong>。</p>
-<p>「全部に少しずつ」も、立派な答えです。ボーナスの一部を繰り上げ返済に、毎月の積立を新NISAに、そして数年計画で住まいの改修資金を積み立てる。<strong>三つの置き場所に目的別に振り分ける</strong>ことで、「どっちが先？」の焦りは、「わが家はこの配分」という納得に変わります。</p>
-<p>※投資・ローン・税に関わる最終判断は、ご自身の状況を踏まえ、必要に応じてファイナンシャルプランナー・税理士など専門家にご相談ください。</p>
-<hr>
-</section></article>
-
-  <section style="margin:44px 0;">
-    <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
-        <details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span class="faq-chevron" aria-hidden="true" style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform .2s;">＋</span></summary>
-          <p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p>
-        </details>
-      </sc-for>
-    </div>
-  </section>
 
   <aside style="background:oklch(0.96 0.025 70);border-radius:16px;padding:24px 26px;margin-bottom:36px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 12px;color:oklch(0.4 0.1 60);">この記事のまとめ</p>
-    <p style="font-size:15.5px;line-height:1.9;margin:0;">新NISAブームと「金利ある世界」が同時に来た今、50代のお金の置き場所は「繰り上げ返済」「投資」「住まいへの投資」の三択で考える。 順番は①生活防衛資金 → ②金利とリターンの比較 → ③目的の整理。繰り上げ返済の利息軽減は「確実」、投資のリターンは「期待」。この性質の違いを混ぜない。 住まいへの投資には、光熱費削減という毎年の“配当”と、健康・資産価値・暮らしの質というリターンがある。使いながら受け取れるのが金融商品との違い。 「どっちが先？」に万人共通の正解はない。目的別に三つへ振り分けることで、焦りは納得に変わる。最終判断は専門家への相談を。</p>
-  </aside>
+    <p style="font-size:15.5px;line-height:1.9;margin:0;">50歳代のNISA口座数は、50代人口の約30.0％に相当する「3人に1人に近い」規模です。この数字を自分の家計の正解とせず、住宅ローンの金利と残高、生活防衛資金、家の修繕費の見込みを確認し、家族の状況に合った優先順位を考えることが大切です。</p>
+</aside>
 
   <details style="margin-bottom:36px;">
     <summary style="font-size:13.5px;color:oklch(0.5 0.015 90);">出典・参考資料を見る</summary>
-    <ol style="font-size:12.5px; line-height:1.8; color:oklch(0.5 0.015 90); padding-left:20px; margin-top:10px;">
-<li>金融庁「NISA口座の利用状況調査」（NISA口座数：2025年6月末時点で約2,700万口座）、および新しいNISA制度の概要（年間投資枠360万円・非課税保有限度額1,800万円・制度恒久化、2024年1月開始）。<a href="https://www.fsa.go.jp/policy/nisa2/">https://www.fsa.go.jp/policy/nisa2/</a></li>
-<li>日本銀行の金融政策（2024年3月のマイナス金利政策解除以降の段階的利上げ、2026年の政策金利水準約1%・約31年ぶり）。日本銀行「金融政策決定会合」公表資料 <a href="https://www.boj.or.jp/">https://www.boj.or.jp/</a></li>
-<li>山崎元・水瀬ケンイチ『全面改訂 第3版 ほったらかし投資術』（朝日新書、2022年）。生活防衛資金の考え方、借金返済と運用の比較の原則等。</li>
-<li>繰り上げ返済の利息軽減試算（残高3,000万円・残り25年・元利均等・金利1.0%で100万円を期間短縮型で繰り上げた場合：利息軽減約28万円・期間短縮約11ヶ月／金利1.5%の場合：約45万円）。編集部試算。<strong>注意：</strong> 借入条件・返済方式により変動する目安。</li>
-<li>リンダ・グラットン、アンドリュー・スコット『LIFE SHIFT―100年時代の人生戦略』（池村千秋訳、東洋経済新報社、2016年）。有形資産・無形資産の概念。および国土交通省による省エネ性能表示制度・建物評価改善の取り組み。</li>
-<li>住宅省エネ関連の補助制度（窓の断熱改修等への国の支援事業）。経済産業省・環境省・国土交通省の各年度事業。</li>
-<li>断熱改修と居住者の健康に関する調査研究（国土交通省スマートウェルネス住宅等推進事業「断熱改修等による居住者の健康への影響調査」等：室温と血圧等の関連を示す報告）。<strong>注意：</strong> 相関を示す研究であり、効果は住宅・個人により異なる。</li>
+<ol style="font-size:12.5px;line-height:1.8;color:oklch(0.5 0.015 90);padding-left:20px;margin-top:10px;">
+<li>金融庁「NISA口座の利用状況調査（2025年12月末時点、2026年7月3日公表）」。<a href="https://www.fsa.go.jp/policy/nisa/20260703.html">https://www.fsa.go.jp/policy/nisa/20260703.html</a></li>
+<li>総務省統計局「人口推計（2026年2月1日現在、2026年7月21日公表）」50〜54歳976万0千人、55〜59歳868万9千人。2020年国勢調査基準の確定値で、2025年国勢調査の人口等基本集計公表後に更新予定。<a href="https://www.stat.go.jp/data/jinsui/pdf/202607.pdf">https://www.stat.go.jp/data/jinsui/pdf/202607.pdf</a></li>
+
 </ol>
-<hr>
-  </details>
+<p>※本記事は特定の金融商品・投資行動を推奨するものではありません。個別の資産配分・税務の判断は、ファイナンシャルプランナーや税理士など専門家にご相談ください。</p>
+</details>
 
   <section style="margin-bottom:36px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連する住まいの機能・設備を探す</p>
-    <div style="display:flex;flex-direction:column;gap:8px;font-size:14.5px;"><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/suikonetsuhi/">家計のムダをなくしたい（水光熱費）</a>
-<a href="https://www.cbl.or.jp/r-navi/contents/tips/subsidy/">リフォームに関する補助制度等</a>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14.5px;"><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">家計のムダをなくしたい（水光熱費）</a>
+<a href="https://www.cbl.or.jp/r-navi/contents/tips/support/">リフォームに関する補助制度等</a>
 <a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム・SNS等）</a>
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
   </section>
@@ -241,15 +452,14 @@
   <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
     <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a>
-<a href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a>
-<a href="column-10.dc.html">【第10回】50代から考える、家族構成の変化に対応できる住まい</a>
-<a href="column-12.dc.html">【第12回】変動金利が上がる前に──繰り上げ返済か、価値を上げるリフォームか</a></div>
+<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
+<a href="column-10.dc.html">【第10回】子どもが巣立ったあと、家はどう変える？──50代から考える夫婦の居場所</a>
+<a href="column-12.dc.html">【第12回】変動金利の「1％」で家計はどう変わる？</a></div>
   </section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep11-author-box" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
-    <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
+    <image-slot id="ep11-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
   <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
@@ -258,20 +468,105 @@
     <a href="column-12.dc.html">次の回 →</a>
   </nav>
 </div>
-<?php include 'parts_footer.html'; ?>
-<dc-import name="SiteFooter" hint-size="100%,300px"></dc-import>
+<section class="check_history"></section>
+<div class="btn_totop"></div>
+<footer>
+		<div class="box_btn"><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/howto/">本サイトの便利な使い方</a></div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/search_theme/">テーマからさがす</a></div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kind/">身体にやさしく暮らしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/clean/">住まいも身体も清潔でいたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kajiraku/">家事をラクにこなしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/life/">住まいを使いやすくしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/">家計のムダをなくしたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/watch/">家族を見守りたい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/lifestyles/">多様な暮らしを実現したい</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_theme/disaster/">防災や防犯に配慮したい</a></li>
+				</ul>
+			</div>
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/search_part/">部屋、建材・設備からさがす</a></div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/bathroom/">浴室</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/powderroom/">洗面・脱衣室</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/toilet/">トイレ</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/kitchen/">キッチン</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/living/">リビング・居室</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/window/">窓</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/entrance/">玄関</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/stairs/">廊下・階段</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">給湯器</a></li>
+				</ul>
+			</div>
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/search_check/">答えてさがす</a></div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_check/problem/">住まいや暮らしの「困った」に関するチェックリスト</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/search_check/want/">「こんな住まい・暮らしにしたい」に関するチェックリスト</a></li>
+				</ul>
+			</div>
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/contents/tips/">お役立ち情報</a></div>
+				<ul>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム検索、SNSなど）</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/blparts/">優良住宅部品（BL部品）等</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/living_guide">高齢期の健康で快適な暮らしのための住まいの改修ガイドライン</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/selection">事業者の選び方</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/support">リフォームに<br>関する補助制度等</a>
+					</li>
+					<li>
+						<a href="https://www.cbl.or.jp/r-navi/contents/tips/datas/">機能・製品リストダウンロード</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/contents/column/">コラム：<br class="only_sp">リフォームを考えはじめた時に読みたい記事</a></div>
+			</div>
+		</div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title"><a href="https://www.cbl.or.jp/r-navi/contents/topic/life/">健康で快適、安心・安全に暮らす<br class="only_sp">住まいのポイント</a></div>
+			</div>
+		</div>
+		<div class="footer_menu">
+			<div class="col_menu">
+				<div class="menu_title">本サイトについて</div>
+				<ul>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/info/">お知らせ</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/policy/">サイトポリシー</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/studygp/">人生100年対応住宅部品研究会</a></li>
+					<li><a href="https://www.cbl.or.jp/r-navi/contents/aboutus/ask/">お問い合わせ先</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="wrap_sns">
+			<ul>
+				<li><a href="https://www.instagram.com/r.navi.100/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/Instagram_Glyph_White.svg"></a></li>
+			</ul>
+		</div>
+		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
+</footer>
+
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   renderVals() {
     return {
-      tags: ['新NISA 繰り上げ返済 どっち', '住宅ローン 投資 どっちが先', '50代 資産形成 住宅ローン', '繰り上げ返済 メリット デメリット'],
-      faqs: [
-        { q: '50代から新NISAを始めるのは、もう遅いのでは？', a: '「遅いかどうか」は運用期間で決まりますが、人生100年時代の50代には、まだ数十年の時間があります。ただし、退職金など大きなお金を一度に投じるのは慎重に。少額から、生活防衛資金とローンの状況を整えたうえで、が基本です。' },
-        { q: '退職金で住宅ローンを一括返済すべきですか？', a: '一概には言えません。完済の安心感は大きい一方、手元資金が急に薄くなるリスク、団信の保障がなくなる点、老後の医療・介護資金との兼ね合いなど、考える要素が多い決断です。金額が大きいだけに、実行前に中立の専門家に相談することを強くおすすめします。' },
-        { q: 'リフォームに使うお金は「消費」では？ 投資と呼ぶのは言い過ぎでは？', a: '趣味性の高い改装は消費に近い面もあります。ただ、断熱・耐震・水回りの更新・計画的な修繕のように、光熱費や将来の修繕費を減らし、家の評価や暮らしの質を高める支出は、リターンのある投資として考えるのが実態に合っています。大事なのは「何のための支出か」を分けて考えることです。' },
-        { q: '変動金利が怖いので、投資よりまず全額繰り上げ返済したいのですが。', a: '不安を減らすこと自体に価値があるので、間違いではありません。ただし生活防衛資金まで投じるのは危険です。また、金利の先行きに合わせて「毎年少しずつ繰り上げる」という中間の選択肢もあります。変動金利との付き合い方は、次回・第12回で詳しくお話しします。' }
-      ],
+      tags: ['資産・お金', '第11回'],
+      faqs: [],
     };
   }
 }
