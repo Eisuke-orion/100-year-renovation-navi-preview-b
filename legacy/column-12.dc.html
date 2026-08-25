@@ -8,30 +8,30 @@
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/column-publication.js" defer></script>
-<title>変動金利が上がる前に──繰り上げ返済か、価値を上げるリフォームか</title>
-<meta name="description" content="変動金利の仕組みを確かめ、繰り上げ返済と性能向上を同じ家計で考えます。">
-<meta name="keywords" content="変動金利 今後／変動金利 上がったら／住宅ローン 金利上昇 対策／5年ルール 125%ルール 落とし穴／繰り上げ返済 タイミング／未払利息とは／変動 固定 借り換え">
+<title>住宅ローンの変動金利が1％違うと、家計はどう変わる？</title>
+<meta name="description" content="住宅ローンの変動金利1％の差を試算し、5年ルール・125％ルールの有無を含めて契約条件を確認するポイントを解説します。">
+<meta name="keywords" content="資産・お金／人生100年時代のリフォームナビ／第12回">
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-12.dc.html">
-<meta property="og:title" content="変動金利が上がる前に──繰り上げ返済か、価値を上げるリフォームか">
-<meta property="og:description" content="変動金利の仕組みを確かめ、繰り上げ返済と性能向上を同じ家計で考えます。">
+<meta property="og:title" content="住宅ローンの変動金利が1％違うと、家計はどう変わる？">
+<meta property="og:description" content="住宅ローンの変動金利1％の差を試算し、5年ルール・125％ルールの有無を含めて契約条件を確認するポイントを解説します。">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-09-22">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-12.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep12_fv_mortgage_review.png">
-<meta property="og:image:alt" content="自宅の窓辺で住宅ローンの資料を確認する50代の住まい手">
+<meta property="og:image:alt" content="住宅ローンの返済計画を確認する夫婦">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="ext-resource-dependency" content="uploads/ep12_fv_mortgage_review.png">
-<meta name="ext-resource-dependency" content="uploads/ep12_body01_rising_rate_slope.png">
+<meta name="ext-resource-dependency" content="uploads/ep12_body01_total_repayment_chart_v2.png">
 <meta name="ext-resource-dependency" content="uploads/ep12_body02_hidden_interest.png">
 <meta name="ext-resource-dependency" content="uploads/ep12_body03_renovated_living.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "変動金利が上がる前に──繰り上げ返済か、価値を上げるリフォームか",
-  "description": "変動金利の仕組みを確かめ、繰り上げ返済と性能向上を同じ家計で考えます。",
+  "headline": "住宅ローンの変動金利が1％違うと、家計はどう変わる？",
+  "description": "住宅ローンの変動金利1％の差を試算し、5年ルール・125％ルールの有無を含めて契約条件を確認するポイントを解説します。",
   "datePublished": "2026-09-22",
   "inLanguage": "ja",
   "mainEntityOfPage": "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-12.dc.html",
@@ -88,195 +88,141 @@
 
   <header style="padding:18px 0 28px;">
     <span style="display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;letter-spacing:0.1em;color:#fff;background:oklch(0.47 0.1 155);border-radius:999px;padding:6px 16px;margin-bottom:16px;">第12回</span>
-    <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.55;margin:0 0 14px;">変動金利が上がる前に──繰り上げ返済か、価値を上げるリフォームか</h1>
-    <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">金利を当てるのではなく、上がっても下がっても困らない家計と住まいをつくる</p>
+    <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.55;margin:0 0 14px;">住宅ローンの変動金利が1％違うと、家計はどう変わる？</h1>
+    <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">金利差が毎月返済と総返済額にどう響くか、比較モデルから考えます。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年9月22日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
       <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
       <image-slot id="ep12-author-avatar" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
-      <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
+      <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ</span>
     </div>
   </header>
 
-  <image-slot id="ep12-fv" src="uploads/ep12_fv_mortgage_review.png" shape="rounded" radius="18" alt="自宅の窓辺で住宅ローンの資料を確認する50代の住まい手" placeholder="自宅の窓辺で住宅ローンの資料を確認する50代の住まい手" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <image-slot id="ep12-fv" src="uploads/ep12_fv_mortgage_review.png" shape="rounded" radius="18" alt="住宅ローンの返済計画を確認する夫婦" placeholder="住宅ローンの返済計画を確認する夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
 
-  <div class="column-article-body" style="margin-top:32px;"><p>前回・第11回で「お金の三つの置き場所」の話をしました。今回はその各論、多くのご家庭にとって最大の関心事であろう<strong>「変動金利」</strong>の話です。</p>
-<p>まず、事実の確認から始めましょう。日本銀行は2024年にマイナス金利政策を解除し、以後、段階的に利上げを進めてきました。政策金利は2026年6月に1.0％程度へ引き上げられました（出典1）。「金利のない世界」が30年近く続いたあと、私たちは「金利のある世界」に戻ってきたわけです。</p>
-<p>住宅ローンの世界で、これはとても大きな出来事です。なぜなら、<strong>住宅金融支援機構の2026年1月調査では、住宅ローン利用者の75.0％が変動金利型を選んでいる</strong>からです（出典2）。変動金利は、その名の通り市場金利に合わせて動きます。低金利時代には「一番安い金利」として家計の味方でしたが、金利が上がる局面では、返済額がじわじわ増えていく可能性があります。</p>
-<p>こう書くと、不安になった方もいるかもしれません。でも、先にお伝えしておきます。<strong>変動金利には、返済額が急に跳ね上がらないようにする仕組み（激変緩和の仕組み）が組み込まれています。正しく理解すれば、慌てる必要はありません。</strong>同時に、その仕組みには知らないと怖い「落とし穴」もあります。今回はそこを丁寧に見たうえで、私たちにできる二つの備え――<strong>繰り上げ返済</strong>と、意外に思われるかもしれない<strong>「家の価値を上げるリフォーム」</strong>――を考えます。</p>
-<p>ファイナンシャルプランナー・深田晶恵さんの『住宅ローンはこうして借りなさい』が伝える本質は、住宅ローンは「借りたら終わり」ではなく、借りた後も家計と金利を点検し続けるものだということです（出典3）。金利を当てようとするのではなく、変化しても困りにくい状態をつくるところから始めます。</p>
-<hr></div>
+  <div class="column-article-body" style="margin-top:32px;"><p>住宅ローンを変動金利で返済していると、「金利が1％上がると、毎月返済と総返済額はどれだけ変わるのか」が気になります。この記事では、同じ借入額・返済期間で金利だけを変えた試算を示し、変動金利型でも金融機関や契約によって5年ルール・125％ルールの有無や条件が異なることを補足します。まず自分の契約内容を確認するためのポイントを整理します。</p></div>
 
   <aside style="background:oklch(0.95 0.03 150);border-radius:16px;padding:24px 26px;margin:0 0 36px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;color:oklch(0.35 0.09 155);">この記事のポイント</p>
-    <ul style="margin:0;padding-left:20px;font-size:15.5px;line-height:1.9;"><li><strong>住宅金融支援機構の2026年1月調査では、変動金利型が75.0％。</strong> 金利上昇はもはや「一部の人の話」ではありません（出典2）。</li>
-<li><strong>金利が0.25%上がると、3,000万円・35年ローンの毎月返済額は約3,500〜3,800円増える。</strong> 1回の上昇は小さくても、積み重なると効いてきます（試算・出典4）。</li>
-<li><strong>「5年ルール」「125%ルール」は、返済額の急増を防ぐ仕組みであって、支払いを免除する仕組みではない。</strong> 先送りされた利息は消えません。「未払利息」という落とし穴も知っておきましょう。</li></ul>
+    <ul style="margin:0;padding-left:20px;font-size:15.5px;line-height:1.9;"><li>住宅ローンは人生で最も高額な借入になることが多く、金利のわずかな差が総返済額に大きく影響する。</li>
+<li>「1％」という数字は小さく感じても、借入額・期間によっては数百万円単位の差になり得る。</li>
+<li>影響を実感しにくいのは、返済が長期間・毎月少しずつ発生するため。まず自分の借入条件を確認することが第一歩。</li></ul>
   </aside>
 
-  <p class="column-caution"><strong>ご確認ください：</strong>本記事は一般的な情報提供を目的としています。金利・税・制度・費用は条件や時点で変わります。金融・法律・税務上の判断は、最新の一次情報を確認し、必要に応じて専門家へご相談ください。</p>
-
-  <article><section class="column-article-body">
-<h2>1. いま、変動金利に何が起きているのか</h2>
-<p>変動金利の仕組みを、ざっくりおさらいします。変動金利は多くの場合、金融機関の「短期プライムレート」に連動し、短期プライムレートは日本銀行の政策金利の影響を受けます。つまり、<strong>日銀が利上げをすると、時間差をおいて変動金利も上がる</strong>のが基本の流れです。</p>
-<p>実際、2024年以降の利上げを受けて、各金融機関の変動金利の基準は段階的に引き上げられてきました。適用金利は金融機関や優遇条件で異なりますが、2024年以降は基準金利を引き上げる動きが続いています（出典4）。契約先から届く通知と返済予定表を確認することが出発点です。</p>
-<p>ここで大事なのは、<strong>「上がった」ことに驚くより、「どのくらいのペースで、いくら増えるのか」を数字で把握する</strong>ことです。恐怖は、たいてい「わからない」から生まれます。</p>
-<hr>
+<article><section class="column-article-body">
+<h2>1. 同じ家でも、借入条件で支払総額は変わる</h2>
+<p>同じ物件を購入しても、借入額・返済期間・金利タイプの組み合わせによって、支払総額は数百万円単位で変わることがあります。住宅ローンは、物件価格だけでなく、返済条件まで含めて確認することが大切です。</p>
+<p>とりわけ近年は、長く続いた低金利の局面から、金利の動向が注目される局面に移りつつあります。変動金利型の住宅ローンを利用している方にとって、「金利が今後どう動くか」は他人事ではありません。</p>
 </section>
 
 <section class="column-article-body">
-<h2>2. 金利が0.25%上がると、返済額はいくら増えるのか</h2>
-<p>具体的に試算してみましょう。<strong>借入残高3,000万円・返済期間35年・元利均等返済</strong>をモデルにします（試算・出典4）。</p>
+<h2>2. 金利1％の違いを数字で見る</h2>
+<p>具体的な試算で見てみましょう。<strong>借入額3,000万円、返済期間35年、元利均等返済、ボーナス払いなし</strong>という条件で、返済開始から完済まで金利が変わらない比較モデルとして本記事で試算します。手数料・保証料などは含みません。</p>
 <table>
 <thead>
 <tr>
 <th>金利</th>
-<th>毎月返済額</th>
-<th>総返済額</th>
+<th>毎月の返済額（目安）</th>
+<th>総返済額（目安）</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>0.5%</td>
-<td>約77,900円</td>
+<td>年0.5％</td>
+<td>約7万8千円</td>
 <td>約3,271万円</td>
 </tr>
 <tr>
-<td>0.75%</td>
-<td>約81,200円</td>
-<td>約3,412万円</td>
-</tr>
-<tr>
-<td>1.0%</td>
-<td>約84,700円</td>
-<td>約3,557万円</td>
-</tr>
-<tr>
-<td>1.25%</td>
-<td>約88,200円</td>
-<td>約3,705万円</td>
-</tr>
-<tr>
-<td>1.5%</td>
-<td>約91,900円</td>
+<td>年1.5％</td>
+<td>約9万2千円</td>
 <td>約3,858万円</td>
 </tr>
 <tr>
-<td>2.0%</td>
-<td>約99,400円</td>
-<td>約4,174万円</td>
+<td>年2.5％</td>
+<td>約10万7千円</td>
+<td>約4,504万円</td>
 </tr>
 </tbody></table>
-<p>※新規借入時の単純比較。実際の返済額の見直しには後述のルールが関わります。</p>
-<p>ご覧の通り、<strong>0.25%の上昇で毎月約3,500〜3,800円、年間だと4万円強の負担増</strong>です。1回分なら「外食を一度減らせば」という金額かもしれません。しかし0.5%なら年間8〜9万円、1%なら年間17万円前後。じわじわと、しかし確実に家計に効いてくる金額です。</p>
-<p>逆に言えば、<strong>金利が0.25%上がるたびに家計が壊れるわけではない</strong>、ということでもあります。パニックになる必要はない。ただし、放置していい話でもない。この「ほどよい危機感」が、変動金利と付き合う基本姿勢だと私は思います。</p>
-<hr>
+<p>金利が1％上がるごとに、毎月の返済額は1万〜1万5千円程度、総返済額では500万円以上変わる計算になります（試算条件により変動）。「1％」という数字だけを見ると小さく感じますが、35年という長い期間で積み重なると、決して小さくない差になることがわかります。</p>
 </section>
-<image-slot id="ep12-body1" src="uploads/ep12_body01_rising_rate_slope.png" shape="rounded" radius="16" alt="金利の緩やかな上昇を坂道と家で表したイラスト" placeholder="金利の緩やかな上昇を坂道と家で表したイラスト" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<image-slot id="ep12-body1" src="uploads/ep12_body01_total_repayment_chart_v2.png" shape="rounded" radius="16" alt="借入3,000万円、35年の比較モデルで金利別総返済額を示す横棒グラフ" placeholder="借入3,000万円、35年の比較モデルで金利別総返済額を示す横棒グラフ" style="width:100%;aspect-ratio:16/9;margin:8px 0 10px;"></image-slot>
+<p data-column-chart-note="12" style="font-size:13px;line-height:1.75;color:oklch(0.48 0.025 75);margin:0 0 36px;">出典：一般的な元利均等返済の計算式に基づく本記事の試算。注：借入3,000万円・35年、返済開始から完済まで同一金利とした比較モデルで、手数料・保証料などは含みません。将来の金利推移を予測するものではありません。</p>
 
 <section class="column-article-body">
-<h2>3. 知らないと怖い「5年ルール」と「125%ルール」の落とし穴</h2>
-<p>さて、ここからが今回の核心です。</p>
-<p>多くの変動金利型ローンには、二つのルールがあります（採用していない金融機関・商品もあります・出典3）。</p>
-<ul>
-<li><strong>5年ルール</strong>：金利が上がっても、毎月の返済額は5年間変わらない。</li>
-<li><strong>125%ルール</strong>：5年ごとの見直しで返済額が増える場合も、それまでの1.25倍が上限。</li>
-</ul>
-<p>「なんだ、優しい仕組みじゃないか」と思いますよね。たしかに、家計が急変しないための大切な激変緩和装置です。しかし、深田晶恵さんが繰り返し警告してきた通り、ここには重大な誤解の余地があります（出典3）。</p>
-<p><strong>ルールが抑えているのは「毎月の返済額」であって、「金利そのもの」ではない</strong>のです。</p>
-<p>金利が上がると、毎月返済額が同じでも、その内訳が変わります。利息の割合が増え、元本の減りが遅くなる。つまり、<strong>見た目の返済額の裏で、借金の減り方が悪くなっている</strong>わけです。先送りされた負担は、5年ごとの見直しや最終返済時に精算されます。</p>
-<p>極端なケースでは、金利上昇で毎月の返済額を利息が上回り、払っても払っても利息すら払いきれない<strong>「未払利息」</strong>が発生する可能性もあります。これは氷山と同じで、水面上（毎月の返済額）が静かでも、水面下で問題が育ちうる、ということです。</p>
-<p>こうしたリスクを避ける第一歩は、実に地味です。<strong>年に一度、ローンの残高証明や返済予定表を確認し、「元本がいくら減ったか」を見る。</strong>それだけで、水面下の変化に気づけるようになります。</p>
-<hr>
+<h2>3. なぜ影響を実感しにくいのか</h2>
+<p>金利変動の影響を実感しにくい理由はいくつかあります。</p>
+<p><strong>理由①：変化が毎月少しずつ起こる</strong>
+変動金利型の元利均等返済では、金利が見直されても毎月の返済額が急に大きく変わらないよう、5年ごとに返済額を見直す「5年ルール」や、見直し後も直前の1.25倍を超えないようにする「125％ルール」などの仕組みを設けている金融機関があります。このため、金利が上がっても実際の返済額の変化を体感しにくい場合があります。</p>
+<p><strong>理由②：返済額は変わらなくても、元本の減り方は変わる</strong>
+仮に毎月の返済額が変わらなくても、金利が上がれば返済額のうち利息が占める割合が増え、元本の減るペースは遅くなります。見た目の返済額だけでは、ローンの実態を把握しきれないことがあります。</p>
+<p><strong>理由③：将来の話として先送りしがち</strong>
+「まだ上がっていないから」「今は大丈夫」と、確認を先送りにしてしまうことも、影響を実感しにくくしている一因です。</p>
 </section>
-<image-slot id="ep12-body2" src="uploads/ep12_body02_hidden_interest.png" shape="rounded" radius="16" alt="見えにくい未払利息を水面下の氷山で表したイラスト" placeholder="見えにくい未払利息を水面下の氷山で表したイラスト" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<image-slot id="ep12-body2" src="uploads/ep12_body02_hidden_interest.png" shape="rounded" radius="16" alt="金利差による返済額を確認する様子" placeholder="金利差による返済額を確認する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
 
 <section class="column-article-body">
-<h2>4. 備えその1「守り」──繰り上げ返済・借り換え・家計の点検</h2>
-<p>守りの備えは、三つあります。</p>
-<p><strong>① 繰り上げ返済。</strong> 前回詳しくお話しした通り、金利が上がるほど繰り上げ返済の「確実なリターン」は大きくなります。残高3,000万円・残り25年・金利1.5%なら、100万円の繰り上げで利息軽減は約45万円（試算・出典4）。変動金利が上がっていく局面では、<strong>毎年少額ずつ繰り上げる</strong>「時間分散」の考え方も有効です。ただし生活防衛資金を削らないこと。ここは鉄則です。</p>
-<p><strong>② 借り換え・金利タイプの見直し。</strong> 変動から固定への借り換えは「金利上昇の保険を買う」行為です。保険なのでコスト（固定金利の高さ・諸費用）がかかります。2026年時点では変動と固定の金利差はなお大きく、「どちらが得か」は今後の金利がどこまで上がるか次第――つまり、誰にも断言できません（出典4）。損得だけでなく、<strong>「金利のニュースのたびに眠れなくなるかどうか」という心の平穏</strong>も、立派な判断材料だと私は思います。</p>
-<p><strong>③ 家計の固定費の点検。</strong> 金利上昇分を吸収する余地は、家計の中にあることが多いものです。通信費、使っていないサブスクリプション、保険の重複……。年間4〜8万円の負担増なら、固定費の見直しで相殺できるご家庭は少なくありません。</p>
-<hr>
+<h2>4. 今確認するのは3つだけ</h2>
+<p>すべてを一度に把握しようとせず、まずは次の3つを確認することをおすすめします。</p>
+<ol>
+<li><strong>自分のローンが変動金利か固定金利か、そのタイプ</strong>。契約時の書類や金融機関のマイページで確認できます。</li>
+<li><strong>現在の借入残高と、残りの返済期間</strong>。年に一度送られてくる返済予定表や残高証明で確認できます。</li>
+<li><strong>金利が上がった場合の返済額シミュレーション</strong>。多くの金融機関が公式サイトで簡易シミュレーターを提供しています。</li>
+</ol>
+<p>これらを確認したうえで、必要であれば繰り上げ返済や借り換えの検討、家計全体の見直しを考えるという順序になります。</p>
 </section>
 
 <section class="column-article-body">
-<h2>5. 備えその2「攻め」──“毎月の固定費”を下げるリフォームという発想</h2>
-<p>そして、もう一つの備えが「攻め」です。</p>
-<p>住宅ローンの返済額は、家計の「固定費」の代表です。ところが、持ち家にはもう一つ、見過ごされがちな固定費があります。<strong>光熱費</strong>です。そして光熱費は、金利と違って、<strong>自分の手で下げられる固定費</strong>なのです。</p>
-<p>第8回でお話しした通り、電気代には当面、上昇圧力がかかり続けると見るのが現実的です。断熱性能の低い家は、いわば「エネルギー価格の変動金利」を野ざらしで浴びている状態。窓の断熱改修や高効率給湯器への更新は、この“もう一つの変動リスク”を固定化する工事だと言えます。</p>
-<ul>
-<li>金利上昇への備え＝<strong>支出が増えないようにする守り</strong></li>
-<li>断熱・省エネ改修＝<strong>支出そのものを減らす攻め</strong></li>
-</ul>
-<p>しかも後者には、国の補助制度が使える年度が多く（・出典5）、健康面の便益や家の資産価値への好影響も期待できます（第11回参照）。「金利が怖いからリフォームどころではない」ではなく、<strong>「金利の時代だからこそ、毎月の固定費を下げる投資が効く」</strong>。この視点の転換を、ぜひ持ち帰っていただきたいのです。</p>
-<p>もちろん、順番は大切です。家計に無理のない範囲で、見積もりの適正さを見極めながら（第7回でお話しした通りです）、優先度の高い工事から。ローンを抱えたままのリフォーム資金計画は、リフォームローンの金利も含めて総合的な検討が必要ですので、迷ったら中立の専門家にご相談ください。</p>
+<h2>5. 急がず、家計と住まいの計画を見直す</h2>
+<p>金利の動向に不安を感じても、慌てて大きな決断をする必要はありません。借り換えには手数料がかかりますし、繰り上げ返済にはメリットとデメリットの両面があります（<a href="column-11.dc.html">第11回「50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？」</a>参照）。</p>
+<p>大切なのは、まず自分の状況を正確に把握し、そのうえで家計全体──修繕費の備え、老後の生活設計、教育費の終わりのタイミングなど──と合わせて検討することです。判断に迷う場合は、住宅金融支援機構の相談窓口や、独立系のファイナンシャルプランナーなど、中立な立場の専門家に相談することも選択肢です。</p>
 <hr>
 </section>
-<image-slot id="ep12-body3" src="uploads/ep12_body03_renovated_living.png" shape="rounded" radius="16" alt="性能を整えた明るいリビングで穏やかに過ごす夫婦" placeholder="性能を整えた明るいリビングで穏やかに過ごす夫婦" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<image-slot id="ep12-body3" src="uploads/ep12_body03_renovated_living.png" shape="rounded" radius="16" alt="住宅ローンの契約条件を確認する様子" placeholder="住宅ローンの契約条件を確認する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
 
-<section class="column-article-body">
-<h2>6. 金利を「当てる」のではなく、「どちらでも困らない」をつくる</h2>
-<p>最後に、身も蓋もない事実を一つ。<strong>金利の先行きを正確に予測できる人は、プロにもいません。</strong></p>
-<p>日銀がこの先どこまで利上げするのか、あるいは経済情勢の変化で立ち止まるのか。専門家の見立ても分かれています。私たちにできるのは、予測を当てることではなく、<strong>どちらに転んでも家計が壊れない態勢をつくること</strong>です。</p>
-<ul>
-<li>金利が上がっても → 繰り上げ返済の準備と固定費の削減で吸収できる。</li>
-<li>金利が上がらなくても → 手元資金と快適になった家が残る。</li>
-</ul>
-<p>こういう「どちらでも損しない備え」を、投資の世界では“後悔しない選択”と呼んだりします。変動金利という仕組みそのものは、敵ではありません。敵は「仕組みを知らないまま、なんとなく借り続けること」。返済予定表を年に一度眺める習慣から、始めてみませんか。</p>
-<hr>
-</section></article>
-
-  <section style="margin:44px 0;">
-    <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
-        <details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;">
-          <summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span class="faq-chevron" aria-hidden="true" style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform .2s;">＋</span></summary>
-          <p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p>
-        </details>
-      </sc-for>
-    </div>
-  </section>
+  <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
+<h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
+<ol>
+<li>我が家の住宅ローンは変動金利か固定金利か、正確に把握していますか。</li>
+<li>金利が1％上昇した場合、毎月の返済額がどのくらい変わるか、シミュレーションしたことがありますか。</li>
+<li>もし返済額が増えた場合、家計のどこを見直せば対応できそうか、話し合ったことがありますか。</li>
+</ol>
+</section>
 
   <aside style="background:oklch(0.96 0.025 70);border-radius:16px;padding:24px 26px;margin-bottom:36px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 12px;color:oklch(0.4 0.1 60);">この記事のまとめ</p>
-    <p style="font-size:15.5px;line-height:1.9;margin:0;">政策金利は約31年ぶりの水準となり、利用者の7割前後を占める変動金利は上昇局面に入った。0.25%の上昇で3,000万円・35年ローンの返済額は月3,500〜3,800円前後増える。 5年ルール・125%ルールは「先送り」の仕組みであり、支払い免除ではない。未払利息の可能性も含め、年1回の返済予定表チェックで水面下の変化を見る。 備えは守り（繰り上げ返済・借り換え検討・固定費点検）と攻め（光熱費を下げる断熱・省エネ改修）の二本立て。 金利を当てるのではなく、どちらに転んでも困らない家計をつくる。それが金利ある世界の歩き方。</p>
-  </aside>
+    <p style="font-size:15.5px;line-height:1.9;margin:0;">住宅ローンの金利1％の差は、35年という長期間では総返済額で数百万円規模になり得ます。金融機関によっては返済額の見直しに時間差が生じる場合もあります。まずは自分のローンのタイプ・残高・返済期間・返済額見直しの条件を確認し、金利上昇時のシミュレーションをしてみることが最初の一歩です。判断に迷う場合は、相談内容に応じた専門家への相談も検討してください。</p>
+</aside>
 
   <details style="margin-bottom:36px;">
     <summary style="font-size:13.5px;color:oklch(0.5 0.015 90);">出典・参考資料を見る</summary>
-    <ol style="font-size:12.5px; line-height:1.8; color:oklch(0.5 0.015 90); padding-left:20px; margin-top:10px;">
-<li>日本銀行の金融政策（2024年3月のマイナス金利政策解除以降の段階的利上げ、2026年の政策金利水準約1%・約31年ぶり）。日本銀行「金融政策決定会合」公表資料 <a href="https://www.boj.or.jp/">https://www.boj.or.jp/</a></li>
-<li>独立行政法人住宅金融支援機構「住宅ローン利用者の実態調査」（金利タイプ別利用状況：変動型が7割前後）。<a href="https://www.jhf.go.jp/">https://www.jhf.go.jp/</a></li>
-<li>深田晶恵『住宅ローンはこうして借りなさい』（ダイヤモンド社・改訂版）。5年ルール・125%ルールの仕組みと注意点、未払利息、借りた後の管理の考え方等。</li>
-<li>毎月返済額・総返済額・繰り上げ返済効果の試算（借入3,000万円・35年・元利均等での金利別比較、および残高3,000万円・残り25年・金利1.5%で100万円繰り上げ時の利息軽減約45万円）。編集部試算。<strong>注意：</strong> 実際の適用金利・優遇幅・返済方式により変動する目安。2026年時点の変動金利水準（優遇後1%前後）は</li>
-<li>住宅省エネ関連の補助制度（窓の断熱改修・高効率給湯器等への国の支援事業）。経済産業省・環境省・国土交通省の各年度事業。</li>
+<ol style="font-size:12.5px;line-height:1.8;color:oklch(0.5 0.015 90);padding-left:20px;margin-top:10px;">
+<li>国土交通省「住宅ローンの金利リスクの普及啓発について」。<a href="https://www.mlit.go.jp/jutakukentiku/house/mortgage-rate-risk.html">https://www.mlit.go.jp/jutakukentiku/house/mortgage-rate-risk.html</a></li>
+<li>試算は本記事で元利均等返済の計算式に基づき算出（返済開始から完済まで同一金利、手数料・保証料等を除く）。</li>
+
 </ol>
-<hr>
-  </details>
+<p>※本記事の試算は一例であり、実際の借入条件によって結果は異なります。借り換えや繰り上げ返済の判断は、契約中の金融機関または専門家にご確認ください。</p>
+</details>
 
   <section style="margin-bottom:36px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連する住まいの機能・設備を探す</p>
-    <div style="display:flex;flex-direction:column;gap:8px;font-size:14.5px;"><a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/suikonetsuhi/">家計のムダをなくしたい（水光熱費）</a>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14.5px;"><a href="https://www.cbl.or.jp/r-navi/search_part/energy/">家計のムダをなくしたい（水光熱費）</a>
 <a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/ijikanri/">維持管理費の負担を少なく</a>
-<a href="https://www.cbl.or.jp/r-navi/contents/tips/subsidy/">リフォームに関する補助制度等</a>
+<a href="https://www.cbl.or.jp/r-navi/contents/tips/support/">リフォームに関する補助制度等</a>
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
   </section>
 
   <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
     <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a>
-<a href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a>
-<a href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a>
-<a href="column-11.dc.html">【第11回】新NISAと住宅ローン、どっちが先？──50代の「お金の置き場所」を、住まいの目線で考える</a>
-<a href="column-13.dc.html">【第13回】円安が続くと、家はどうなる？──資材・光熱費・資産価値への影響を、3分の基礎から読み解く</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
+<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
+<a href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a>
+<a href="column-11.dc.html">【第11回】50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？</a></div>
   </section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
     <image-slot id="ep12-author-box" src="images/author-eisuke.png" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
-    <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
+    <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
   <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
@@ -292,13 +238,8 @@
 class Component extends DCLogic {
   renderVals() {
     return {
-      tags: ['変動金利 今後', '変動金利 上がったら', '住宅ローン 金利上昇 対策', '5年ルール 125%ルール 落とし穴'],
-      faqs: [
-        { q: '今すぐ固定金利に借り換えるべきですか？', a: '一律の正解はありません。固定への借り換えは「安心を買う保険」であり、保険料（金利差・諸費用）を払う価値があるかは、残高・残期間・家計の余力・ご自身の性格によって変わります。複数の金融機関の条件を比較し、必要なら中立の専門家に相談を。「みんなが借り換えているから」で動くのだけは避けましょう。' },
-        { q: '5年ルールがあるなら、5年間は何もしなくていいのでは？', a: '毎月の返済額が変わらなくても、内訳では利息が増え、元本の減りが遅くなっています。「返済額が同じ＝影響がない」ではありません。年1回の残高確認と、可能な範囲での繰り上げ返済・家計点検をおすすめします。' },
-        { q: '変動金利で借りたこと自体、失敗だったのでしょうか？', a: 'いいえ。低金利期に変動で借りた方は、その間の低い利息の恩恵をすでに受けています。過去の選択を悔やむより、「今の残高・残期間・金利」で、これからの最適解を考えるほうが建設的です。' },
-        { q: '金利上昇対策として、リフォームはどの工事から考えればいいですか？', a: '「毎月の固定費をどれだけ下げるか」の観点なら、熱の出入りが大きい窓まわりの断熱と、エネルギー消費の大きい給湯まわりが有力候補です（住まいの状態によります）。補助制度の対象になっていれば負担も抑えられます。見積もりの妥当性の見極め方は第7回をご覧ください。' }
-      ],
+      tags: ['資産・お金', '第12回'],
+      faqs: [],
     };
   }
 }
