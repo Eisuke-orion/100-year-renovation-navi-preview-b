@@ -105,6 +105,30 @@
     const episode = Number.parseInt(currentLabel.match(/第(\d+)回/)?.[1] || "", 10);
     return articleByEpisode.get(episode) || null;
   }
+  function isFrozenBaselineArticle(article = currentArticle()) {
+    return Boolean(article && article.episode >= 1 && article.episode <= 9);
+  }
+  function applyFrozenBaselineRelatedVisibility(root = document) {
+    const sections = root.querySelectorAll?.("[data-related-articles]") || [];
+    const asOf = activeDate();
+    for (const section of sections) {
+      let visibleInSection = 0;
+      const parsedLimit = Number.parseInt(section.dataset.relatedLimit || "", 10);
+      const linkLimit = Number.isInteger(parsedLimit) && parsedLimit > 0 ? parsedLimit : Number.POSITIVE_INFINITY;
+      for (const link of section.querySelectorAll("a[href]")) {
+        const visible = isPublished(link.getAttribute("href"), asOf) && visibleInSection < linkLimit;
+        link.hidden = !visible;
+        if (visible) {
+          link.removeAttribute("aria-hidden");
+          visibleInSection += 1;
+        } else {
+          link.setAttribute("aria-hidden", "true");
+        }
+      }
+      section.hidden = visibleInSection === 0;
+      section.dataset.publicationAsOf = asOf;
+    }
+  }
   function relatedArticlesFor(current, limit) {
     return [...new Set(current.related)]
       .map((episode) => articleByEpisode.get(episode))
@@ -185,11 +209,20 @@
   function applyArticleVisibility() {
     const article = currentArticle();
     if (!article) { document.documentElement.classList.remove("column-publication-pending"); return true; }
+    if (isFrozenBaselineArticle(article)) { document.documentElement.classList.remove("column-publication-pending"); return true; }
     if (!isPublished(article.file)) { renderUnpublishedPage(article); return false; }
     document.documentElement.classList.remove("column-publication-pending");
     return true;
   }
-  function refresh() { if (applyArticleVisibility()) { ensureRelatedSection(); applyPagination(); } }
+  function refresh() {
+    if (!applyArticleVisibility()) return;
+    if (isFrozenBaselineArticle()) {
+      applyFrozenBaselineRelatedVisibility();
+      return;
+    }
+    ensureRelatedSection();
+    applyPagination();
+  }
   function safeRefresh() {
     try { refresh(); }
     catch (error) {
@@ -213,7 +246,7 @@
     for (const delay of [50, 250, 1000, 2500]) window.setTimeout(safeRefresh, delay);
   }
   const current = currentArticle();
-  if (current && !isPublished(current.file)) {
+  if (current && !isFrozenBaselineArticle(current) && !isPublished(current.file)) {
     document.documentElement.classList.add("column-publication-pending");
     const style = document.createElement("style");
     style.textContent = "html.column-publication-pending body{visibility:hidden}";
@@ -223,7 +256,7 @@
     articles,
     dates: Object.freeze(Object.fromEntries(articles.map((article) => [article.file, article.publishDate]))),
     displayDate, isPublished, publishedArticles, internalUrl, ensureRelatedSection, applyPagination, dateInJapan,
-    relatedArticlesFor,
+    relatedArticlesFor, applyFrozenBaselineRelatedVisibility,
     previewDateParameter, previewThroughParameter,
   });
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, { once: true }); else start();
