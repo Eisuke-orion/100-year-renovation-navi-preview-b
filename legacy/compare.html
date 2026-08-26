@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>修正確認ページ｜テストサイトB</title>
+  <title>修正確認ページ｜今回の修正版</title>
   <style>
     :root {
       --ink: #26322d;
@@ -187,7 +187,7 @@
     <section class="hero">
       <p class="eyebrow">TEST SITE B / BEFORE &amp; AFTER</p>
       <h1>修正確認ページ</h1>
-      <p>修正前のテストサイトAと、修正後のテストサイトBを、対象ごとに確認できます。</p>
+      <p>前回納品分と、今回の修正版を、対象ごとに並べて確認できます。</p>
       <div class="notice">このページとリンク先はいずれも確認用テストサイトです。検索エンジンには登録しない設定です。</div>
     </section>
 
@@ -297,13 +297,13 @@
         <div class="compare-body">
           <div class="frames">
             <section class="pane">
-              <p class="pane-title before">修正前（テストサイトA）</p>
-              <button type="button" class="expand-button before" data-modal-url="${beforeUrl}" data-modal-label="${item.label}｜テストサイトA">テストサイトAを拡大して見る</button>
+              <p class="pane-title before">前回納品分</p>
+              <button type="button" class="expand-button before" data-modal-url="${beforeUrl}" data-modal-label="${item.label}｜前回納品分">前回納品分を拡大して見る</button>
               <iframe title="${item.label}の修正前" data-src="${beforeUrl}" loading="lazy"></iframe>
             </section>
             <section class="pane">
-              <p class="pane-title after">修正後（テストサイトB）</p>
-              <button type="button" class="expand-button after" data-modal-url="${afterUrl}" data-modal-label="${item.label}｜テストサイトB">テストサイトBを拡大して見る</button>
+              <p class="pane-title after">今回の修正版</p>
+              <button type="button" class="expand-button after" data-modal-url="${afterUrl}" data-modal-label="${item.label}｜今回の修正版">今回の修正版を拡大して見る</button>
               <iframe title="${item.label}の修正後" data-src="${afterUrl}" loading="lazy"></iframe>
             </section>
           </div>
