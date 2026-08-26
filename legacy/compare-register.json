@@ -1,7 +1,7 @@
 {
   "generated_at_jst": "2026-08-27",
   "original_group_count": 41,
-  "atomic_operation_count": 66,
+  "atomic_operation_count": 67,
   "rule": "1行=1対象位置=1変更操作。複数操作をまとめた旧41件台帳を提出の根拠にしない。",
   "public_b_base": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
   "records": [
@@ -462,6 +462,23 @@
       "discrepancy": null,
       "scope_note": "本文中の出典1、2も削除",
       "source_group_id": "18-02",
+      "atomicity": "one_target_one_operation"
+    },
+    {
+      "id": "18-05-TAISHIN",
+      "source_a_user_instruction": "第18回の関連情報に、ベターリビングつくば建築試験研究センターの建築物の耐震診断・評定業務を紹介する指定リンクを追加する。",
+      "source_a_confidence": "pdf_original_confirmed",
+      "source_b_jarvis_instruction": "指定URLを公式ページ名に沿った参考リンクとして追加する。",
+      "target": "第18回・関連する住まいの機能・設備を探す",
+      "expected_after": "【参考】ベターリビングつくば建築試験研究センターの建築物の耐震診断・補強設計と評定業務",
+      "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-18.dc.html",
+      "public_b_check_mode": "public_html_readback_2026-08-27",
+      "public_b_evidence": "公開B HTMLで指定URLと参考リンク名を確認",
+      "audit_status": "verified_public_html",
+      "legacy_claim": null,
+      "discrepancy": "正本PDF p70との最終直接照合で、公開Bと旧台帳の双方から漏れていたことを検出",
+      "scope_note": "事務局原本PDF p70。公式ページの現行名称も照合",
+      "source_group_id": "18-R07",
       "atomicity": "one_target_one_operation"
     },
     {
