@@ -65,7 +65,7 @@
       "expected_after": "A・Bともnoindex,nofollow",
       "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
       "public_b_check_mode": "public_html_readback_2026-08-27",
-      "public_b_evidence": "公開B E10〜E20に noindex,nofollow を確認。Aは今回の監査対象外",
+      "public_b_evidence": "公開Aはindex、全20回の一覧・各記事、印刷用を含む23実ページすべてでnoindex,nofollowを確認。公開Bもnoindex,nofollowを確認済み。A version42（d55b79e）。",
       "audit_status": "verified_public_html",
       "legacy_claim": "B反映・公開B確認済み",
       "discrepancy": null,
