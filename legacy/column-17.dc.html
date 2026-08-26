@@ -405,6 +405,8 @@
 </section>
 <image-slot id="ep17-body3" src="uploads/ep17_body03_showroom_materials.webp" shape="rounded" radius="16" alt="内装材のサンプルを比較する様子" placeholder="内装材のサンプルを比較する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
 
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
 <ol>
@@ -555,7 +557,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       tags: ['生成AI', '間取り', '家具配置', '家族会議'],
-      faqs: [],
+      faqs: [
+        { q: '生成AIに住まいの相談をしても大丈夫ですか？', a: '困りごとや希望を整理するたたき台には使えますが、構造・法令・安全性・施工可否・費用の確定は、必ず施工会社や専門家に確認します。' },
+        { q: 'AIに入力しない方がよい情報はありますか？', a: '住所、図面、家族の個人情報などは扱いに注意が必要です。利用するサービスの設定や規約を確認し、必要最小限の情報で整理します。' },
+      ],
     };
   }
 }

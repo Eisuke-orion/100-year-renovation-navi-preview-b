@@ -432,6 +432,8 @@
 </section>
 <image-slot id="ep12-body3" src="uploads/ep12_body03_renovated_living.webp" shape="rounded" radius="16" alt="住宅ローンの契約条件を確認する様子" placeholder="住宅ローンの契約条件を確認する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
 
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
 <ol>
@@ -581,7 +583,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       tags: ['住宅ローン', '変動金利', '固定金利', '家計'],
-      faqs: [],
+      faqs: [
+        { q: '変動金利なら、すぐに借り換えを考えるべきですか？', a: '借り換えには条件や費用があります。まず契約中の金利タイプ、残高、返済期間、返済額見直しの条件を確認し、金融機関や専門家に相談します。' },
+        { q: '金利が上がったとき、最初に確認することは何ですか？', a: '毎月返済額だけでなく、残高、残りの返済期間、家計で増額を受け止められる余力を確認します。記事の試算は一例なので、自分の条件で確かめます。' },
+      ],
     };
   }
 }

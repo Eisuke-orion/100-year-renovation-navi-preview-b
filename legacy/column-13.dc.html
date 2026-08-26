@@ -408,6 +408,8 @@
 <hr>
 </section></article>
 
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
 <ol>
@@ -568,7 +570,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       tags: ['円安', '住まいのコスト', '建築用材等', '光熱費'],
-      faqs: [],
+      faqs: [
+        { q: '円安になったら、リフォームを急ぐべきですか？', a: '為替の先行きは断定できません。急いで契約するより、工事の必要性、見積もりの比較、補助制度や省エネ改修の条件を確認して判断します。' },
+        { q: '住まいの費用に備えるため、今できることは？', a: '更新時期が近い設備や必要な修繕を整理し、複数の見積もりを取る時間を確保します。断熱・省エネ改修は、光熱費も含めて検討します。' },
+      ],
     };
   }
 }

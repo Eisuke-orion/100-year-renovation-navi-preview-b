@@ -408,6 +408,10 @@
 <hr>
 </section></article>
 
+  <section class="column-faqs" style="margin:44px 0;">
+    <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div>
+  </section>
+
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
 <ol>
@@ -558,7 +562,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       tags: ['子どもの独立', '夫婦の居場所', '寝室', '間取り'],
-      faqs: [],
+      faqs: [
+        { q: '子どもが独立したら、すぐにリフォームが必要ですか？', a: 'すぐに工事を決める必要はありません。まずは使われなくなった部屋、眠りや生活リズム、収納の使い方を夫婦で整理し、必要なことから検討します。' },
+        { q: '寝室を分けるのは、夫婦関係に問題があるからですか？', a: '生活時間や睡眠の質を整えるための選択肢の一つです。分ける・分けないを決める前に、互いに心地よく休める条件を話し合うことが大切です。' },
+      ],
     };
   }
 }

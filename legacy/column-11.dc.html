@@ -417,6 +417,8 @@
 </section>
 <image-slot id="ep11-body3" src="uploads/ep11_body03_insulated_window.webp" shape="rounded" radius="16" alt="修繕費と資産形成の配分を考える様子" placeholder="修繕費と資産形成の配分を考える様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
 
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
 <ol>
@@ -566,7 +568,10 @@ class Component extends DCLogic {
   renderVals() {
     return {
       tags: ['NISA', '住宅ローン', '修繕', '設備更新'],
-      faqs: [],
+      faqs: [
+        { q: 'NISAと住宅ローン返済は、どちらを優先すべきですか？', a: '一律の正解はありません。住宅ローンの金利・残高、生活防衛資金、修繕・設備更新の見込みを並べ、家計に無理がない順番を考えます。' },
+        { q: '修繕・設備更新費は、何から確認すればよいですか？', a: '外壁や屋根だけでなく、給湯設備などの更新時期と概算費用を確認します。投資や繰り上げ返済の前に、必要になりそうな費用を別枠で見積もります。' },
+      ],
     };
   }
 }
