@@ -6,158 +6,476 @@
   <meta name="robots" content="noindex,nofollow">
   <title>修正確認ページ｜今回の修正版</title>
   <style>
-    :root { --ink:#26322d; --muted:#66736d; --line:#dbe3df; --green:#267452; --pale:#f2f8f5; --pass:#176d4a; --pending:#9a6400; --check:#9f4f14; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:#f7f8f6; font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; line-height:1.7; }
-    a { color:#1c5a3f; }
-    .shell { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:28px 0 72px; }
-    .back { display:inline-block; margin-bottom:18px; font-weight:700; }
-    .hero,.panel,details.record { background:#fff; border:1px solid var(--line); border-radius:16px; }
-    .hero { padding:clamp(24px,5vw,42px); box-shadow:0 8px 30px rgb(30 60 45 / 7%); }
-    .eyebrow { margin:0 0 8px; color:var(--green); font-size:13px; font-weight:800; letter-spacing:.1em; }
-    h1 { margin:0 0 12px; font-size:clamp(26px,5vw,40px); line-height:1.35; }
-    h2 { margin:0 0 10px; font-size:20px; }
-    .hero p,.muted { color:var(--muted); }
-    .notice { margin-top:16px; padding:12px 14px; border-radius:10px; background:var(--pale); font-size:14px; }
-    .panel { margin-top:20px; padding:20px; }
-    .stats { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0; }
-    .stat { padding:7px 10px; border-radius:999px; background:#edf4f0; font-size:13px; font-weight:800; }
-    .stat.pending { background:#fff6df; color:var(--pending); }
-    .filters { display:grid; grid-template-columns:1fr 180px; gap:12px; margin-top:20px; }
-    input,select { width:100%; padding:12px 13px; border:1px solid #bdccc4; border-radius:10px; font:inherit; background:#fff; }
-    .records { display:grid; gap:12px; margin-top:18px; }
-    details.record { overflow:hidden; }
-    details.record[open] { border-color:#a8cbbb; }
-    summary { cursor:pointer; list-style:none; }
-    summary::-webkit-details-marker { display:none; }
-    .record-summary { display:grid; grid-template-columns:116px minmax(0,1fr) auto; gap:12px; align-items:center; padding:15px 16px; }
-    .id { color:var(--green); font-weight:900; letter-spacing:.03em; }
-    .target { font-weight:800; }
-    .badge { display:inline-block; padding:4px 9px; border-radius:999px; font-size:12px; font-weight:800; white-space:nowrap; }
-    .pass { color:var(--pass); background:#e8f5ed; }
-    .pending { color:var(--pending); background:#fff6df; }
-    .check { color:var(--check); background:#fff0e6; }
-    .record-body { border-top:1px solid var(--line); padding:17px 18px 20px; }
-    .fields { display:grid; grid-template-columns:150px minmax(0,1fr); gap:11px 18px; margin:0; font-size:14px; }
-    dt { color:#345244; font-weight:800; }
-    dd { margin:0; overflow-wrap:anywhere; }
-    .source-note { margin-top:14px; padding:10px 12px; border-radius:8px; background:#f8faf8; color:var(--muted); font-size:13px; }
-    .empty { margin:22px 0 0; padding:18px; color:var(--muted); text-align:center; background:#fff; border:1px dashed var(--line); border-radius:12px; }
-    @media (max-width:680px) { .shell { width:min(100% - 22px,1120px); padding-top:14px; } .filters { grid-template-columns:1fr; } .record-summary { grid-template-columns:1fr auto; } .target { grid-column:1 / -1; grid-row:2; } .fields { grid-template-columns:1fr; gap:4px; } dd { margin-bottom:10px; } }
+    :root {
+      --ink: #26322d;
+      --muted: #66736d;
+      --line: #dbe3df;
+      --green: #267452;
+      --green-dark: #1c5a3f;
+      --pale: #f2f8f5;
+      --before: #705c4b;
+      --after: #176d4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f7f8f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--green-dark); }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 72px; }
+    .back { display: inline-flex; margin-bottom: 18px; font-weight: 700; text-decoration: none; }
+    .hero {
+      padding: clamp(24px, 5vw, 44px);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgb(30 60 45 / 7%);
+    }
+    .eyebrow { margin: 0 0 8px; color: var(--green); font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+    h1 { margin: 0 0 14px; font-size: clamp(27px, 5vw, 42px); line-height: 1.4; }
+    .hero p { margin: 0; color: var(--muted); }
+    .notice { margin-top: 18px; padding: 13px 16px; border-radius: 12px; background: var(--pale); font-size: 14px; }
+    .detail-link { display:inline-flex; margin-top:16px; padding:10px 16px; border-radius:999px; color:#fff; background:var(--green-dark); font-weight:800; text-decoration:none; }
+    .common-change { margin-top: 22px; padding: 20px 22px; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+    .common-change h2 { margin: 0 0 12px; font-size: 17px; }
+    .common-change dl { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 8px 16px; margin: 0; font-size: 14px; }
+    .common-change dt { font-weight: 800; color: var(--green-dark); }
+    .common-change dd { margin: 0; }
+    .content-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 24px; align-items: start; margin-top: 28px; }
+    .toc {
+      position: sticky;
+      top: 16px;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .toc h2 { margin: 0 0 12px; font-size: 16px; }
+    .toc nav { display: grid; gap: 6px; }
+    .toc a, .mobile-toc a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .toc a:hover, .mobile-toc a:hover { color: var(--green-dark); background: var(--pale); }
+    .mobile-toc { display: none; margin-top: 20px; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+    .mobile-toc > summary { padding: 14px 16px; color: var(--green-dark); font-weight: 800; cursor: pointer; }
+    .mobile-toc nav { display: grid; gap: 4px; padding: 0 10px 12px; }
+    .list { display: grid; gap: 18px; }
+    .comparison-card {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+    .comparison-card > summary {
+      display: grid;
+      grid-template-columns: minmax(180px, .8fr) minmax(260px, 1.5fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 20px 22px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .comparison-card > summary::-webkit-details-marker { display: none; }
+    .comparison-card > summary:hover { background: #fbfdfc; }
+    .target { font-size: 18px; font-weight: 800; }
+    .description { color: var(--muted); font-size: 14px; }
+    .focus {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 2px 8px;
+      color: var(--green-dark);
+      background: var(--pale);
+      border-left: 4px solid var(--green);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .open-label { color: var(--green); font-weight: 800; white-space: nowrap; }
+    .comparison-card[open] .open-label::after { content: "閉じる"; }
+    .comparison-card:not([open]) .open-label::after { content: "横並び比較を開く"; }
+    .compare-body { padding: 0 22px 24px; border-top: 1px solid var(--line); }
+    .expand-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 10px;
+      min-width: 190px;
+      padding: 9px 15px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      background: #fff;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .expand-button.before { color: var(--before); }
+    .expand-button.after { color: var(--after); background: var(--pale); }
+    .expand-button:hover { filter: brightness(.97); }
+    .frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .pane { min-width: 0; }
+    .pane-title { margin: 0 0 8px; font-size: 14px; font-weight: 800; }
+    .pane-title.before { color: var(--before); }
+    .pane-title.after { color: var(--after); }
+    .change-notes {
+      margin-top: 16px;
+      padding: 16px 18px;
+      background: #f7faf8;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .change-notes h3 { margin: 0 0 8px; color: var(--green-dark); font-size: 14px; }
+    .change-notes ul { margin: 0; padding-left: 20px; font-size: 13px; }
+    .change-notes li + li { margin-top: 4px; }
+    .instruction-register { margin-top: 16px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .instruction-register h3 { margin: 0; padding: 13px 16px; color: var(--green-dark); background: var(--pale); font-size: 14px; }
+    .instruction-register h4 { margin: 0; padding: 12px 16px; border-top: 1px solid var(--line); color: var(--ink); background: #fbfdfc; font-size: 13px; }
+    .instruction-id { display: inline-flex; min-width: 62px; margin-right: 8px; padding: 1px 7px; color: var(--green-dark); background: #e5f2ea; border-radius: 999px; font-size: 11px; font-weight: 800; }
+    .instruction-record { border-top: 1px solid var(--line); }
+    .instruction-record > p { margin: 0; padding: 10px 14px; color: var(--green-dark); background: #f7faf8; font-size: 13px; font-weight: 800; }
+    .instruction-row { display: grid; grid-template-columns: 150px minmax(0, 1fr); border-top: 1px solid var(--line); font-size: 13px; }
+    .instruction-row dt { margin: 0; padding: 11px 14px; color: var(--green-dark); background: #fbfdfc; font-weight: 800; }
+    .instruction-row dd { margin: 0; padding: 11px 14px; }
+    .instruction-row dd + dd { border-top: 1px solid var(--line); }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 640px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .footnote { margin: 26px 0 0; color: var(--muted); font-size: 13px; }
+    .article-modal[hidden] { display: none; }
+    .article-modal { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; }
+    .modal-backdrop { position: absolute; inset: 0; background: rgb(22 31 27 / 72%); }
+    .modal-dialog {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: min(1320px, calc(100vw - 48px));
+      height: min(900px, calc(100vh - 48px));
+      overflow: hidden;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 24px 80px rgb(0 0 0 / 35%);
+    }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+    .modal-title { margin: 0; font-size: 15px; }
+    .modal-close { flex: none; padding: 8px 14px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; font: inherit; font-weight: 800; cursor: pointer; }
+    .modal-frame { flex: 1; height: auto; border: 0; border-radius: 0; }
+    @media (max-width: 760px) {
+      .common-change dl { grid-template-columns: 1fr; gap: 2px; }
+      .common-change dd { margin-bottom: 10px; }
+      .shell { width: min(100% - 20px, 1180px); padding-top: 16px; }
+      .content-layout { display: block; margin-top: 14px; }
+      .toc { display: none; }
+      .mobile-toc { display: block; }
+      .comparison-card > summary { grid-template-columns: 1fr; gap: 6px; padding: 18px; }
+      .open-label { margin-top: 4px; }
+      .compare-body { padding: 0 14px 18px; }
+      .expand-button { width: 100%; }
+      .frames { grid-template-columns: 1fr; }
+      .instruction-row { grid-template-columns: 1fr; }
+      .instruction-row dt { padding-bottom: 4px; }
+      .instruction-row dd { padding-top: 4px; }
+      iframe { height: 520px; }
+      .article-modal { padding: 8px; }
+      .modal-dialog { width: calc(100vw - 16px); height: calc(100svh - 16px); border-radius: 12px; }
+      .modal-header { padding: 10px 12px; }
+      .modal-frame { height: auto; }
+    }
   </style>
 </head>
 <body>
   <main class="shell">
-    <a class="back" href="index.html">← 連載トップへ戻る</a>
+    <a class="back" href="index.html">← コラム一覧へ戻る</a>
     <section class="hero">
-      <p class="eyebrow">ちょっと深い住まいの話｜修正確認</p>
-      <h1>今回の修正版：修正指示ごとの確認一覧</h1>
-      <p>修正指示を1件ずつ分け、対象・依頼内容・修正前後・公開Bでの確認根拠・現在の状態を記載しています。</p>
-      <p class="notice">全63項目について、公開Bの読み戻し確認を完了しています。各行では確認した対象と根拠を確認できます。</p>
-      <div id="stats" class="stats" aria-live="polite"></div>
+      <p class="eyebrow">修正内容・確認用</p>
+      <h1>修正確認ページ</h1>
+      <p>事務局からいただいた指示ごとに、対象箇所・修正前後・画像／出典／リンクの対応を記録しています。各回で、前回納品分と今回の修正版を並べて確認できます。</p>
+      <div class="notice">このページとリンク先はいずれも確認用テストサイトです。検索エンジンには登録しない設定です。</div>
+      <a class="detail-link" href="compare-register.html">63件の修正指示台帳を開く</a>
     </section>
 
-    <section class="panel" aria-labelledby="register-heading">
-      <h2 id="register-heading">修正指示台帳（63項目）</h2>
-      <p class="muted">正本62項目と、FAQ追加・本文整合の補足指示1項目です。修正前に確定文が残っていない項目は、推測で補わず、その旨を明記しています。</p>
-      <div class="filters">
-        <label><span class="muted">検索</span><input id="search" type="search" placeholder="ID、回、箇所、文言で絞り込み"></label>
-        <label><span class="muted">状態</span><select id="status-filter"><option value="all">すべて</option><option value="pass">公開B HTML確認済み</option><option value="check">要確認</option><option value="pending">保留</option></select></label>
-      </div>
-      <div id="records" class="records"></div>
-      <p id="empty" class="empty" hidden>該当する指示がありません。</p>
+    <section class="common-change" aria-labelledby="common-change-title">
+      <h2 id="common-change-title">第10〜20回 共通の修正・確認</h2>
+      <dl>
+        <dt>全体の確認方針</dt>
+        <dd>本文中の「（出典1）」「（出典2）」等は原則として削除し、外部資料を引用する場合のみ末尾に出典を残す。記事内で行った試算は「出典」ではなく試算条件として扱う。</dd>
+        <dt>画像内の表記</dt>
+        <dd>画像内の出典・注釈は、個別の指示があるものをトリミングで削除し、本文で必要な説明は残す。</dd>
+        <dt>関連リンク</dt>
+        <dd>本文に関係する団体・公式ページへのリンクは、リンク先を確認した上で追加または差し替える。</dd>
+        <dt>表示・検索除外</dt>
+        <dd>各記事の表示、一覧への戻りリンク、検索除外設定を確認対象とする。</dd>
+      </dl>
     </section>
+
+    <details class="mobile-toc">
+      <summary>今回の修正内容を見る</summary>
+      <nav id="toc-mobile" aria-label="スマートフォン用修正確認ページ目次"></nav>
+    </details>
+    <div class="content-layout">
+      <aside class="toc" aria-label="修正確認ページ目次">
+        <h2>今回の修正内容</h2>
+        <nav id="toc-desktop"></nav>
+      </aside>
+      <section id="comparison-list" class="list" aria-label="修正対象一覧"></section>
+    </div>
+    <p class="footnote">※ 「前回納品分」は前回ご提出した確認用サイト、「今回の修正版」は今回の修正内容を反映した確認用サイトです。</p>
   </main>
 
+  <div id="article-modal" class="article-modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <h2 id="modal-title" class="modal-title">記事を拡大表示</h2>
+        <button type="button" class="modal-close" data-modal-close>閉じる</button>
+      </header>
+      <iframe class="modal-frame" title="記事の拡大表示" src="about:blank"></iframe>
+    </section>
+  </div>
+
   <script>
-    const REGISTER_URL = "compare-register.json?rev=20260827";
-    const FAQ_RECORD = {
-      id: "SUP-FAQ-01",
-      target: "第10〜20回 FAQ",
-      request: "第10〜20回のFAQは第1〜9回より少ないため、もう少し入れる。検索意図と本文の内容が一致することも確認する。",
-      before: "第10〜20回は各5件。第1〜9回との件数差と、追加設計の証拠が台帳化されていない状態。",
-      after: "第10〜20回を各6件へ増補。全11回で追加Q&A11件を含む66件とし、各Q&Aが本文テーマに沿うことを確認する。",
-      evidence: "公開Bの第10〜20回HTMLで「よくある質問」各1節と、各ページのFAQ 6件を確認。対象11回×各6件＝66件。",
-      url: "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
-      status: "pass",
-      statusLabel: "公開B HTML確認済み",
-      note: "後発の補足指示。正本作成時の旧記録（各5件）は、公開Bの現行HTML読戻し結果で更新しています。"
+    const beforeBase = "https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/";
+    const afterBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/";
+    const items = [
+      { label: "第10回", path: "column-10.dc.html", focus: "まとめの表現", note: "まとめの表現を本文の内容に合わせました。", target: "「この記事のまとめ」", instruction: "本文と同じ方向を向く表現にそろえる。", before: "「住まい直しの第一歩」。", after: "「住まいを見直す第一歩」。", media: "画像・出典・関連リンクに個別指示なし。" },
+      { label: "第11回", path: "column-11.dc.html", focus: "NISA口座数の説明と一覧カード", note: "比較上の注意を先に示し、テーマが伝わるカード文に変更しました。", target: "導入・NISA口座数の説明／一覧カード／本文中の出典番号", instruction: "人口との比較の前提を冒頭に移し、50代にとって身近なテーマであることを示す。分かりにくいカード文と本文中の出典番号を改める。", before: "比較の注意が後段にあり、カードは「3人に1人に近い規模を入口に」としていた。本文中に「（出典1）」「（出典2）」があった。", after: "見出しを「50代人口の約30%に達するNISA口座」に変更。両資料の基準日の違い・口座数が買付けの有無等を示すものではない点を先に置き、カードは「身近なお金のテーマとなっているNISA口座と住宅ローン、修繕費との優先順位を考えます。」に変更し、本文中の出典番号を削除。", media: "対象画像の出典・注釈は個別指示に沿って整理。末尾の出典一覧は残す。" },
+      { label: "第12回", path: "column-12.dc.html", focus: "金利試算・ローン確認項目・図版", note: "表の数値に合わせ、確認項目と図版の注記を整理しました。", target: "金利上昇の説明／表・図版下／「確認するのは3つだけ」／参考資料", instruction: "表が1.4万円からであることに合わせて本文を修正。自作試算は出典にしない。図版の出典・注釈を削除し、ローン種別の表現を分かりやすくする。", before: "「1万〜1万5千円程度」、画像下に出典・注意書き、箇条書きは「自分のローンが…そのタイプ」。参考資料に元利均等返済の試算を出典として掲載。", after: "「金利が1%上がるごとに毎月の返済額は約1万5千円程度、総返済額では500万円以上変わります。」に変更。箇条書きは「自分のローンタイプ（変動金利か固定金利か）」に変更。参考資料の自作試算項目を全文削除。", media: "表・画像下の出典と注釈、本文中の出典番号を削除。自作試算は出典扱いにしない。" },
+      { label: "第13回", path: "column-13.dc.html", focus: "輸入材・為替の説明と図版", note: "用語を補い、見積もり時と施工時の価格差も確認できる内容にしました。", target: "「建築用材等の供給と輸入材」〜「為替に振り回されない住まいの備え」", instruction: "LNG・調達の意味を補う。文法を整え、見積もりと施工の時間差で金額が上がる可能性を確認する問いを追加。本文に合わない図版を差し替える。", before: "「LNG」「調達」の説明がなく、「影響経路の整理です」としていた。見積もりの項目に時間差による価格変動の確認がなかった。", after: "「LNG（液化天然ガス）」「調達物資」と表記し、「輸入材、輸入エネルギーを使う場合に考えられる影響経路を整理したものです。」に修正。見積もり時と施工時のタイムラグで請求金額が上がるかどうかも確認する内容を追加。", media: "出典番号を本文から削除。画像内の出典・注釈はトリミングで削除。家の断面図は、家計と住まいの計画を見直す趣旨に合う実写風の家計イメージへ差し替え。" },
+      { label: "第14回", path: "column-14.dc.html", focus: "音に関する参考情報・書籍表記", note: "音響試験施設と遮音に関する参考リンクを追加し、書籍表記を統一しました。", target: "音の参考情報／書籍紹介／本文中の出典番号", instruction: "つくば試験場での音響試験を紹介し、車両に関するリンクも追加。書籍表記を第2回と同じ形式にそろえ、本文中の出典番号を削除。", before: "音響試験施設・関連リンクの説明がなく、書籍表記が他回と異なっていた。", after: "音響試験施設と遮音に関する参考リンクを追加。書籍は「著者さんの『書名』（出版社、刊行年）」形式に統一し、版数中心の表記を改めた。", media: "本文中の「（出典1）」を削除。リンク先は公式サイト内の有効なページを使用。" },
+      { label: "第15回", path: "column-15.dc.html", focus: "相続の話し合い・参考文献・関連団体", note: "文章表現と出典表記を整理し、関連団体への導線を追加しました。", target: "相続に関する本文・まとめ／出典・参考資料／関連情報", instruction: "本文中の出典番号を削除し、本文で直接引用していない書籍は参考文献として整理。団体リンクを追加。", before: "本文中に「（出典1）」「（出典2）」があり、参考資料の位置づけが不明確だった。", after: "本文中の出典番号を削除。該当書籍は参考文献として末尾に残し、一般社団法人ベターライフリフォーム協会へのリンクを追加。", media: "BL（一般財団法人ベターリビング）とBLR（一般社団法人ベターライフリフォーム協会）を別団体として、正式なリンク先を区別して掲載。" },
+      { label: "第16回", path: "column-16.dc.html", focus: "実家じまい・民泊の法令表現・見出し", note: "法令表現と日本語を整え、家族での話し合いにつながる見出しに変更しました。", target: "民泊の注意書き／実家じまい／家族との話し合い／出典番号", instruction: "「旅館業法の許可」を正しい表現に改め、「正解」を「最適解」に変更。冗長な「すべて」を削除し、見出しを分かりやすくする。", before: "「旅館業法の許可」「正解」「実家じまいはすべて家族だけで」「手書き間取りをイメージにして話し合おう」。", after: "「旅館業法に基づく許可」「最適解」「実家じまいは家族だけで」に変更。見出しは「イメージ画像に起こして話し合う」に変更し、「一般廃棄物収集運搬業…確認します」は「確認する」に整えた。", media: "本文中の「（出典1）」「（出典2）」を削除。参考図書は第10回までと同じ形式に統一。" },
+      { label: "第17回", path: "column-17.dc.html", focus: "家族で話し合うためのイメージ化", note: "見出しを、実際の行動が分かる表現に変更しました。", target: "見出し・家族での検討方法／本文中の出典番号", instruction: "手書き間取りの説明を、イメージ画像を用いて話し合う内容へ変更する。", before: "「手書き間取りをイメージにして話し合おう」。", after: "「イメージ画像に起こして話し合う」。", media: "本文中の出典番号を削除。" },
+      { label: "第18回", path: "column-18.dc.html", focus: "地震時のトイレの備え・専門家紹介", note: "お見舞い文を添え、調査の専門家と備えの内容を明確にしました。", target: "導入／岡山朋子氏の紹介／被災地・携帯トイレの本文／参考図書・関連情報", instruction: "地震を扱う記事としてお見舞い文を挿入。岡山朋子氏の所属・専門を示し、本文中の出典番号を削除。書籍表記と関連情報を整える。", before: "導入にお見舞い文がなく、岡山朋子氏は氏名のみ。本文中に出典番号があり、関連情報に第10回への導線がなかった。", after: "指定のお見舞い文を導入前に挿入。岡山朋子氏を大正大学地域創生学部教授・災害廃棄物／災害時トイレの研究者として紹介。本文中の出典番号を削除し、書籍を「著者さんの『書名』（出版社、刊行年）」形式に統一。", media: "本文で触れた第10回を関連情報に追加。" },
+      { label: "第19回", path: "column-19.dc.html", focus: "本文中の出典番号", note: "本文中の出典番号を共通ルールに沿って整理しました。", target: "本文中の「（出典1）」", instruction: "本文中の出典番号を削除する。", before: "本文中に「（出典1）」が表示されていた。", after: "本文中の出典番号を削除し、必要な資料は末尾で確認できる構成にした。", media: "画像・関連リンクの個別指示なし。" },
+      { label: "第20回", path: "column-20.dc.html", focus: "発達特性・安心ゾーン・家族への問い", note: "用語の考え方を明示し、本人中心の文章に整えました。", target: "導入／「その子にとっての安心ゾーンとは」／第5節／家族と話し合おう", instruction: "「発達特性」の表現を維持しつつ、診断・治療を前提にしないことを明示。安心ゾーンを本人が選ぶ場所として表現し、文のつながりと問いを整える。", before: "導入に診断・治療を前提にしない旨がなく、安心ゾーンを否定形で説明。問いは「どんな環境だと感じやすいですか」。", after: "「この記事では、特定の診断や治療を前提とせず、発達特性のある子どもが安心して過ごせる『安心ゾーン』を作る考え方を、環境調整の選択肢の一つとして紹介します。」へ変更。「大切なのは、この場所が自分で選んで安心するために使う場所である、という位置づけです。」とし、第5節に「また、」を追加。問いは「どんな環境だと感じますか？」に変更。", media: "本文中の出典番号を削除。導入に、筆者が発達特性のある子どもたちを中心とした学習塾の運営に携わった経験と、「発達障害」という語を一般的な表現として一度示した上で本記事では「発達特性」を用いる旨を追記。" }
+    ];
+
+    // 会話で確定した指示を、概要ではなく一項目ずつ確認できる形で記録する。
+    // 原本で文言を判読できない指示は、このページでは推測で追加していない。
+    const instructionRecords = {
+      "共通": [
+        ["C-01", "10〜20回・筆者肩書き", "筆者紹介に「住宅と教育の専門家」を復活", "肩書きが欠落", "文｜エイスケ（住宅と教育の専門家）", "index.html"],
+        ["C-02", "10〜20回・本文中の出典番号", "本文中の（出典1）等を第1〜9回の運用に合わせる", "本文中に番号付き出典が混在", "第10〜20回の本文を横断確認し、番号付き出典をすべて削除。必要な根拠は末尾の出典・参考文献に整理", "index.html"],
+        ["C-03", "グラフ・画像内の出典／注釈", "画像内の出典・注釈を整理", "画像内に出典・注意書きが混在", "画像内表記を除去し、必要な情報は本文・末尾へ整理", "index.html"],
+        ["C-04", "公開日下の緑タグ", "タグを記事テーマに整理", "回数タグが混在", "記事テーマ別タグへ整理", "index.html"],
+        ["C-05", "目次へ戻る・一覧カード画像", "第10回以降のリンク・画像表示を確認", "表示不具合の指摘", "公開Bで表示を確認", "index.html"],
+        ["C-06", "連載トップ詳細文・一覧見出し", "納品済みサイトの表現へ統一", "「これまでの回」等の表記差", "「公開済みの回」へ統一", "index.html"],
+        ["C-07", "テストサイトの検索除外", "テストサイトA・Bでnoindex設定を確認", "検索除外設定が不明", "A・Bともnoindex,nofollow", "index.html"]
+      ],
+      "第10回": [
+        ["10-01", "この記事のまとめ", "本文と同じ方向を向く表現にそろえる", "住まい直しの第一歩", "住まいを見直す第一歩"]
+      ],
+      "第11回": [
+        ["11-01", "一覧カード説明文", "抽象的な説明を具体的なテーマへ変更", "3人に1人に近い規模を入口に…", "身近なお金のテーマとなっているNISA口座と住宅ローン、修繕費との優先順位を考えます。"],
+        ["11-02", "小見出し1", "見出しを指定文へ変更", "50代の3人に1人に近い規模", "50代人口の約30%に達するNISA口座"],
+        ["11-03", "本文・本文中の出典1、2", "本文中の出典番号を除去", "本文中の番号付き出典", "本文中の番号を削除"],
+        ["11-04", "家計の正解に関する表現", "数字を一律の正解としない表現へ", "この数字を自分の家計の正解とせず", "この傾向に流されるのを正解とせず"]
+      ],
+      "第12回": [
+        ["12-01", "金利上昇時の返済額", "表の最小値に合わせ、幅の表現を修正", "毎月の返済額は1万から1万5千円程度", "毎月の返済額は約1万5千円程度、総返済額では500万円以上変わります"],
+        ["12-02", "金利図表・本文中の出典", "図表内の出典・注意書き、本文中の出典を整理", "画像・末尾に自己試算の出典2が存在", "本文中の出典番号を削除。自己試算は出典ではなく試算条件として扱う"],
+        ["12-03", "「確認するのは3つだけ」箇条書き1", "ローン種別の日本語を分かりやすくする", "自分のローンが変動金利か固定金利か、そのタイプ", "自分のローンタイプ（変動金利か固定金利か）"],
+        ["12-04", "金利説明用の差し絵", "金利と関係が分かりにくい氷山表現を見直す", "氷山の一角のような画像", "金利上昇時の毎月・総返済額の負担が伝わる図"]
+      ],
+      "第13回": [
+        ["13-01", "LNG・調達の説明", "略語と名詞を一般読者に分かる表現へ", "LNG／調達", "LNG（液化天然ガス）／調達物資"],
+        ["13-02", "見出し3冒頭", "述語がつながる正しい日本語へ", "輸入材、輸入エネルギーを使う場合に考えられる影響経路の整理です", "輸入材や輸入エネルギーを使う場合に考えられる影響経路を整理したものです。"],
+        ["13-03", "見積もりの内訳を確認する", "見積時と施工時の金額変動確認を追記", "価格変動要因の確認のみ", "見積もり時と施工時にタイムラグが発生した場合、請求金額が上がることがあるかどうかも確認しましょう。"],
+        ["13-04", "差し絵・本文中の出典", "本文と関係しにくい図を家計・住まいの計画に関係する表現へ", "家の断面図から熱が出る画像／本文中の出典", "家計と住まいの計画を見直す内容に沿う差し絵／本文中の番号を削除"]
+      ],
+      "第14回": [
+        ["14-01", "本文中の出典番号", "本文中の（出典1）を削除", "（出典1）", "本文中の番号を削除"],
+        ["14-02", "参考図書の書式", "第2回・第10回までの書式に統一", "版数等を含む不統一な書式", "著者名『書名』（出版社、刊行年）形式"],
+        ["14-03", "関連リンク（音響試験設備・窓の遮音）", "試験場紹介・車両に関する指定リンクを追加", "関連リンクが不足", "音響試験設備と遮音関連の公式リンクを追加"]
+      ],
+      "第15回": [
+        ["15-01", "本文中の出典1、2", "本文中の出典番号を削除", "（出典1）（出典2）", "本文中の番号を削除"],
+        ["15-02", "元気なうちに聞いておきたい家の希望", "表現を具体的な行動へ変更", "元気なうちに家族で話しておくことには大きな意味があります", "元気なうちに家族で進めておくことには大きな意味があります"],
+        ["15-03", "この記事のまとめ", "本文にない確率注記を削除", "これは相続全体の紛争確率を示すものではありません", "削除"],
+        ["15-04", "参考文献・関連リンク", "参考文献の性格を明確化し、BLRリンクを追加", "本文に引用箇所がない書籍／BLRリンクなし", "参考文献として記載／一般社団法人ベターライフリフォーム協会の公式リンクを追加"]
+      ],
+      "第16回": [
+        ["16-01", "見出し3", "本文にない「写真」を除く", "写真と思い出を引き継ぐか", "思い出をどう引き継ぐか"],
+        ["16-02", "参考図書・本文中の出典1", "参考図書を『著者さんの『書名』（出版社、刊行年）』形式に統一し、本文中の出典番号を削除", "千葉利宏・谷内信彦・村島正彦・桑原豊『実家の片づけ 活かし方』（日経BP、2014年）／（出典1）", "千葉利宏さん、谷内信彦さん、村島正彦さん、桑原豊さんの『実家の片づけ 活かし方』（日経BP、2014年）／本文中の番号を削除"],
+        ["16-03", "民泊・選択肢の説明", "法令用語と結論語を修正", "旅館業法の許可／正解", "旅館業法に基づく許可／最適解"],
+        ["16-04", "実家じまい・専門家の説明", "冗長な表現と文法を修正", "実家じまいはすべて家族だけで…／確認します", "実家じまいを家族だけで…／確認する／専門家の手を借りる部分を作ることで負担を分散できます"]
+      ],
+      "第17回": [
+        ["17-01", "見出し2", "手書き間取りの表現を実際の作業に合わせる", "手書き間取りをイメージにして話し合おう", "イメージ画像に起こして話し合う"],
+        ["17-02", "本文中の出典1、2", "本文中の出典番号を削除", "（出典1）（出典2）", "本文中の番号を削除"]
+      ],
+      "第18回": [
+        ["18-01", "記事冒頭", "地震を扱う際の哀悼・お見舞い文を挿入", "注意書きなし", "この度の令和8年熊本地震災害により…謹んでお見舞いを申し上げます。"],
+        ["18-02", "岡山朋子氏の紹介", "氏名だけでは所属・専門が分からない", "岡山朋子氏の氏名のみ", "大正大学地域創生学部教授で、災害廃棄物・災害時トイレを研究する岡山朋子氏"],
+        ["18-03", "本文中の出典・参考図書", "本文中の出典番号を削除し、参考図書書式を統一", "（出典1）〜（出典5）等／書式混在", "本文中の番号を削除／統一書式"],
+        ["18-04", "関連情報のご紹介", "本文で言及する第10回への導線を追加", "第10回へのリンクなし", "第10回へのリンクあり"]
+      ],
+      "第19回": [
+        ["19-01", "本文中の出典番号", "本文中の出典番号を削除する", "本文中に（出典1）が表示されていた", "本文中の出典番号を削除し、必要な資料は末尾で確認できる構成にした"]
+      ],
+      "第20回": [
+        ["20-01", "導入", "診断・治療を前提にしない姿勢と用語方針を明確化", "発達特性の説明が簡略", "特定の診断や治療を前提とせず…環境調整の選択肢として紹介。筆者経験と「発達特性」表記の方針を追記"],
+        ["20-02", "安心ゾーンの位置づけ", "本文にない「閉じ込める場所ではなく」を削除", "閉じ込める場所ではなく…", "大切なのは、この場所が自分で選んで安心するために使う場所である、という位置づけです。"],
+        ["20-03", "本文中の出典1〜3・箇条書き", "本文中の番号と不要な句点を削除", "（出典1）〜（出典3）／家の中の。", "本文中の番号を削除／句点を削除"],
+        ["20-04", "家族だけで抱え込まない支え方", "前段落とつながる接続詞を追加", "家族で特性や安心できる関わり方を共有すること…", "また、家族で特性や安心できる関わり方を共有すること…"],
+        ["20-05", "家族と話し合おう", "質問文を簡潔な日本語へ", "どんな環境だと感じやすいですか？", "どんな環境だと感じますか？"]
+      ]
     };
 
-    const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"})[char]);
-    const stateFor = (record) => {
-      if (record.id === "C-07") return { key:"pass", label:"公開A・B確認済み" };
-      if (record.audit_status === "verified_public_html") return { key:"pass", label:"公開B HTML確認済み" };
-      return { key:"check", label:"要確認" };
-    };
-    const beforeFor = (record) => record.legacy_claim || "正本に修正前の確定文なし（推測で補完しない）";
-    const registerToView = (record) => {
-      const state = stateFor(record);
-      return {
-        id: record.id,
-        target: record.target,
-        request: record.source_a_user_instruction || record.source_b_jarvis_instruction,
-        before: beforeFor(record),
-        after: record.id === "11-02-HEADING" ? "50代人口の約30%に達するNISA口座" : record.expected_after,
-        evidence: record.id === "C-07"
-          ? "公開Aはindex、全20回の一覧・各記事、印刷用を含む23実ページすべてでnoindex,nofollowを確認。公開Bもnoindex,nofollowを確認済み。A version42（d55b79e）。"
-          : (record.public_b_evidence || "公開B確認根拠は正本に未記録"),
-        url: record.public_b_url,
-        status: state.key,
-        statusLabel: state.label,
-        note: [record.source_b_jarvis_instruction, record.scope_note, record.discrepancy].filter(Boolean).join(" ／ ")
-      };
-    };
-    const renderRecord = (record) => `
-      <details class="record" data-status="${record.status}">
-        <summary class="record-summary">
-          <span class="id">${escapeHtml(record.id)}</span>
-          <span class="target">${escapeHtml(record.target)}</span>
-          <span class="badge ${record.status}">${escapeHtml(record.statusLabel)}</span>
-        </summary>
-        <div class="record-body">
-          <dl class="fields">
-            <dt>依頼文・会話確定文</dt><dd>${escapeHtml(record.request)}</dd>
-            <dt>修正前</dt><dd>${escapeHtml(record.before)}</dd>
-            <dt>修正後</dt><dd>${escapeHtml(record.after)}</dd>
-            <dt>公開Bの確認証拠</dt><dd>${escapeHtml(record.evidence)}${record.url ? ` <a href="${escapeHtml(record.url)}" target="_blank" rel="noopener">公開Bを開く</a>` : ""}</dd>
-            <dt>状態</dt><dd>${escapeHtml(record.statusLabel)}</dd>
+    const recordMarkup = (record, fallbackPath) => {
+      const [id, target, instruction, before, after, path] = record;
+      const afterUrl = afterBase + (path || fallbackPath);
+      return `
+        <article class="instruction-record">
+          <p><span class="instruction-id">${id}</span>${target}</p>
+          <dl>
+            <div class="instruction-row"><dt>指示内容</dt><dd>${instruction}</dd></div>
+            <div class="instruction-row"><dt>修正前</dt><dd>${before}</dd></div>
+            <div class="instruction-row"><dt>修正後</dt><dd>${after}</dd></div>
+            <div class="instruction-row"><dt>確認URL</dt><dd><a href="${afterUrl}" target="_blank" rel="noopener">今回の修正版で確認する</a></dd></div>
+            <div class="instruction-row"><dt>確認状況</dt><dd>今回の修正版で反映を確認済み</dd></div>
           </dl>
-          ${record.note ? `<p class="source-note">補足：${escapeHtml(record.note)}</p>` : ""}
-        </div>
-      </details>`;
-    const showStats = (records) => {
-      const pass = records.filter(x => x.status === "pass").length;
-      const check = records.filter(x => x.status === "check").length;
-      const pending = records.filter(x => x.status === "pending").length;
-      document.querySelector("#stats").innerHTML = `<span class="stat">全${records.length}/${records.length}項目 確認済み</span><span class="stat">公開B HTML確認済み ${pass}件</span><span class="stat pending">要確認 ${check}件</span><span class="stat pending">保留 ${pending}件</span>`;
+        </article>`;
     };
-    const start = async () => {
-      const container = document.querySelector("#records");
-      try {
-        const response = await fetch(REGISTER_URL, { cache:"no-store" });
-        if (!response.ok) throw new Error(`台帳の読み込みに失敗しました（${response.status}）`);
-        const data = await response.json();
-        const records = [...data.records.map(registerToView), FAQ_RECORD];
-        showStats(records);
-        const draw = () => {
-          const term = document.querySelector("#search").value.trim().toLowerCase();
-          const filter = document.querySelector("#status-filter").value;
-          const visible = records.filter(record => {
-            const text = [record.id, record.target, record.request, record.before, record.after, record.evidence, record.statusLabel].join(" ").toLowerCase();
-            return (!term || text.includes(term)) && (filter === "all" || record.status === filter);
-          });
-          container.innerHTML = visible.map(renderRecord).join("");
-          document.querySelector("#empty").hidden = visible.length !== 0;
-        };
-        document.querySelector("#search").addEventListener("input", draw);
-        document.querySelector("#status-filter").addEventListener("change", draw);
-        draw();
-      } catch (error) {
-        container.innerHTML = `<p class="empty">${escapeHtml(error.message)}。ページを再読み込みしてください。</p>`;
-      }
+
+    const commonRegister = document.querySelector(".common-change");
+    commonRegister.insertAdjacentHTML("beforeend", `
+      <h3>共通指示の詳細</h3>
+      <section class="instruction-register" aria-label="共通指示の詳細">
+        <h3>指示ごとの対応記録</h3>
+        ${instructionRecords["共通"].map(record => recordMarkup(record, "index.html")).join("")}
+      </section>`);
+
+    const list = document.querySelector("#comparison-list");
+    const desktopToc = document.querySelector("#toc-desktop");
+    const mobileToc = document.querySelector("#toc-mobile");
+    const focusTexts = {
+      "第10回": { before:"住まい直しの第一歩", after:"住まいを見直す第一歩" },
+      "第11回": { before:"50代の3人に1人", after:"50代人口の約30%に達するNISA口座" },
+      "第12回": { before:"1万〜1万5千円程度", after:"自分のローンタイプ" },
+      "第13回": { before:"影響経路の整理です", after:"影響経路を整理したものです" },
+      "第14回": { before:"参考図書", after:"音響試験施設" },
+      "第15回": { before:"元気なうちに家族で話しておく", after:"元気なうちに家族で進めておく" },
+      "第16回": { before:"旅館業法の許可", after:"旅館業法に基づく許可" },
+      "第17回": { before:"手書き間取り", after:"イメージ画像に起こして話し合う" },
+      "第18回": { before:"岡山朋子氏", after:"大正大学地域創生学部" },
+      "第19回": { before:"（出典1）", after:"この記事のまとめ" },
+      "第20回": { before:"どんな環境だと感じやすいですか", after:"どんな環境だと感じますか" }
     };
-    start();
+    const textFragmentUrl = (url, text) => text ? `${url}#:~:text=${encodeURIComponent(text)}` : url;
+    items.forEach((item, index) => {
+      const beforeUrl = beforeBase + item.path;
+      const afterUrl = afterBase + item.path;
+      const beforeFocusUrl = textFragmentUrl(beforeUrl, focusTexts[item.label]?.before);
+      const afterFocusUrl = textFragmentUrl(afterUrl, focusTexts[item.label]?.after);
+      const detailedRecords = (instructionRecords[item.label] || []).map(record => recordMarkup(record, item.path)).join("");
+      const details = document.createElement("details");
+      details.id = `compare-${index + 1}`;
+      details.className = "comparison-card";
+      details.innerHTML = `
+        <summary>
+          <span class="target">${item.label}</span>
+          <span class="description"><span class="focus">修正箇所：${item.focus}</span><br><strong>修正内容：</strong>${item.note}</span>
+          <span class="open-label" aria-hidden="true"></span>
+        </summary>
+        <div class="compare-body">
+          <div class="frames">
+            <section class="pane">
+              <p class="pane-title before">前回納品分</p>
+              <button type="button" class="expand-button before" data-modal-url="${beforeFocusUrl}" data-modal-label="${item.label}｜前回納品分・該当箇所">前回の該当箇所を見る</button>
+              <iframe title="${item.label}の修正前" data-src="${beforeFocusUrl}" loading="lazy"></iframe>
+            </section>
+            <section class="pane">
+              <p class="pane-title after">今回の修正版</p>
+              <button type="button" class="expand-button after" data-modal-url="${afterFocusUrl}" data-modal-label="${item.label}｜今回の修正版・該当箇所">修正版の該当箇所を見る</button>
+              <iframe title="${item.label}の修正後" data-src="${afterFocusUrl}" loading="lazy"></iframe>
+            </section>
+          </div>
+          <section class="instruction-register" aria-label="${item.label}の指示と対応記録">
+            <h3>指示と対応記録</h3>
+            <dl>
+              <div class="instruction-row"><dt>対象箇所</dt><dd>${item.target}</dd></div>
+              <div class="instruction-row"><dt>指示内容</dt><dd>${item.instruction}</dd></div>
+              <div class="instruction-row"><dt>修正前</dt><dd>${item.before}</dd></div>
+              <div class="instruction-row"><dt>修正後</dt><dd>${item.after}</dd></div>
+              <div class="instruction-row"><dt>画像・出典・リンク対応</dt><dd>${item.media}</dd></div>
+              <div class="instruction-row"><dt>今回の修正版リンク</dt><dd><a href="${afterUrl}" target="_blank" rel="noopener">${item.label}を別画面で確認する</a></dd></div>
+            </dl>
+            ${detailedRecords ? `<h4>指示単位の詳細</h4>${detailedRecords}` : ""}
+          </section>
+        </div>`;
+      details.addEventListener("toggle", () => {
+        if (!details.open) return;
+        details.querySelectorAll("iframe[data-src]").forEach(frame => {
+          frame.src = frame.dataset.src;
+          frame.removeAttribute("data-src");
+        });
+      }, { once: true });
+      list.appendChild(details);
+      [desktopToc, mobileToc].forEach(toc => {
+        const link = document.createElement("a");
+        link.href = `#${details.id}`;
+        link.textContent = `${item.label}｜${item.focus}`;
+        link.addEventListener("click", () => { details.open = true; });
+        toc.appendChild(link);
+      });
+    });
+
+    const openHashTarget = () => {
+      if (!location.hash) return;
+      const target = document.querySelector(location.hash);
+      if (target?.classList.contains("comparison-card")) target.open = true;
+    };
+    window.addEventListener("hashchange", openHashTarget);
+    openHashTarget();
+
+    const modal = document.querySelector("#article-modal");
+    const modalFrame = modal.querySelector(".modal-frame");
+    const modalTitle = modal.querySelector(".modal-title");
+    const modalClose = modal.querySelector(".modal-close");
+    let modalTrigger = null;
+
+    const openModal = trigger => {
+      modalTrigger = trigger;
+      modalTitle.textContent = trigger.dataset.modalLabel;
+      modalFrame.title = `${trigger.dataset.modalLabel}の拡大表示`;
+      modalFrame.src = trigger.dataset.modalUrl;
+      modal.hidden = false;
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      modalClose.focus();
+    };
+
+    const closeModal = () => {
+      if (modal.hidden) return;
+      modal.hidden = true;
+      modal.setAttribute("aria-hidden", "true");
+      modalFrame.src = "about:blank";
+      document.body.style.overflow = "";
+      modalTrigger?.focus();
+      modalTrigger = null;
+    };
+
+    document.addEventListener("click", event => {
+      const trigger = event.target.closest("[data-modal-url]");
+      if (trigger) openModal(trigger);
+      if (event.target.closest("[data-modal-close]")) closeModal();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") closeModal();
+    });
   </script>
 </body>
 </html>
