@@ -86,7 +86,7 @@
 
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"})[char]);
     const stateFor = (record) => {
-      if (record.id === "C-07") return { key:"pending", label:"保留（A公開反映確認待ち）" };
+      if (record.id === "C-07") return { key:"pass", label:"公開A・B確認済み" };
       if (record.audit_status === "verified_public_html") return { key:"pass", label:"公開B HTML確認済み" };
       return { key:"check", label:"要確認" };
     };
@@ -100,7 +100,7 @@
         before: beforeFor(record),
         after: record.id === "11-02-HEADING" ? "50代人口の約30%に達するNISA口座" : record.expected_after,
         evidence: record.id === "C-07"
-          ? "公開Bはnoindex,nofollowを確認済み。Aの公開反映は別途確認後にPASSへ更新します。"
+          ? "公開Aはindex、全20回の一覧・各記事、印刷用を含む23実ページすべてでnoindex,nofollowを確認。公開Bもnoindex,nofollowを確認済み。A version42（d55b79e）。"
           : (record.public_b_evidence || "公開B確認根拠は正本に未記録"),
         url: record.public_b_url,
         status: state.key,
