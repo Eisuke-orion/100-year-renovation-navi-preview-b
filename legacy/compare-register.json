@@ -1,7 +1,7 @@
 {
   "generated_at_jst": "2026-08-27",
   "original_group_count": 41,
-  "atomic_operation_count": 65,
+  "atomic_operation_count": 66,
   "rule": "1行=1対象位置=1変更操作。複数操作をまとめた旧41件台帳を提出の根拠にしない。",
   "public_b_base": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
   "records": [
@@ -173,6 +173,23 @@
       "discrepancy": null,
       "scope_note": "会話確定文言",
       "source_group_id": "11-04",
+      "atomicity": "one_target_one_operation"
+    },
+    {
+      "id": "12-00-INTRO",
+      "source_a_user_instruction": "第12回冒頭は元の文章を維持し、「自分の返済」だけを「自分の住宅ローン返済」に変更する。指示以上に書き換えない。",
+      "source_a_confidence": "conversation_confirmed",
+      "source_b_jarvis_instruction": "前回納品分の冒頭へ戻し、指定された一語句のみ置換する。",
+      "target": "第12回・冒頭導入文",
+      "expected_after": "「変動金利が上がるかもしれない」というニュースを見ても、自分の住宅ローン返済にどう関わるのか、実感しづらいという方は多いのではないでしょうか。この記事では、金利1％の違いが毎月の返済額・総返済額にどう表れるかを具体的な試算で示し、今のうちに確認しておきたいポイントを整理します。",
+      "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-12.dc.html",
+      "public_b_check_mode": "public_html_readback_2026-08-27",
+      "public_b_evidence": "公開B HTMLで前回納品文を維持し、指定語句のみが置換されていることを確認",
+      "audit_status": "verified_public_html",
+      "legacy_claim": null,
+      "discrepancy": "指示以上の書き換えが入っていたため、前回納品文へ戻して指定語句のみ変更",
+      "scope_note": "会話確定。過剰修正の是正",
+      "source_group_id": "12-00",
       "atomicity": "one_target_one_operation"
     },
     {
