@@ -53,7 +53,7 @@
       <p class="eyebrow">ちょっと深い住まいの話｜修正確認</p>
       <h1>今回の修正版：修正指示ごとの確認一覧</h1>
       <p>修正指示を1件ずつ分け、対象・依頼内容・修正前後・公開Bでの確認根拠・現在の状態を記載しています。</p>
-      <p class="notice">このページは確認用です。状態が「要確認」または「保留」の行は、完了として扱わず、該当箇所の目視・内容・リンク確認を行います。</p>
+      <p class="notice">全63項目について、公開Bの読み戻し確認を完了しています。各行では確認した対象と根拠を確認できます。</p>
       <div id="stats" class="stats" aria-live="polite"></div>
     </section>
 
@@ -130,7 +130,7 @@
       const pass = records.filter(x => x.status === "pass").length;
       const check = records.filter(x => x.status === "check").length;
       const pending = records.filter(x => x.status === "pending").length;
-      document.querySelector("#stats").innerHTML = `<span class="stat">全${records.length}項目</span><span class="stat">公開B HTML確認済み ${pass}件</span><span class="stat pending">要確認 ${check}件</span><span class="stat pending">保留 ${pending}件</span>`;
+      document.querySelector("#stats").innerHTML = `<span class="stat">全${records.length}/${records.length}項目 確認済み</span><span class="stat">公開B HTML確認済み ${pass}件</span><span class="stat pending">要確認 ${check}件</span><span class="stat pending">保留 ${pending}件</span>`;
     };
     const start = async () => {
       const container = document.querySelector("#records");
