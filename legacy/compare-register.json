@@ -1,7 +1,7 @@
 {
   "generated_at_jst": "2026-08-27",
   "original_group_count": 41,
-  "atomic_operation_count": 63,
+  "atomic_operation_count": 64,
   "rule": "1行=1対象位置=1変更操作。複数操作をまとめた旧41件台帳を提出の根拠にしない。",
   "public_b_base": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
   "records": [
@@ -122,6 +122,23 @@
       "discrepancy": null,
       "scope_note": "共通出典ルール",
       "source_group_id": "11-03",
+      "atomicity": "one_target_one_operation"
+    },
+    {
+      "id": "11-04-LEAD",
+      "source_a_user_instruction": "第11回・小見出し4直後の「判断の前に」を「優先順位を決める前に」に修正する。",
+      "source_a_confidence": "conversation_confirmed",
+      "source_b_jarvis_instruction": "小見出し4直後の導入句を指定語句へ置換する。",
+      "target": "第11回・小見出し4直後の導入文",
+      "expected_after": "優先順位を決める前に、次の3つを確認しておくことをおすすめします。",
+      "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-11.dc.html",
+      "public_b_check_mode": "public_html_readback_2026-08-27",
+      "public_b_evidence": "公開B HTMLで指定の導入句への置換を確認",
+      "audit_status": "verified_public_html",
+      "legacy_claim": null,
+      "discrepancy": "旧63項目の原子指示台帳から漏れていたため、ユーザー再指摘を受け独立項目として追加",
+      "scope_note": "会話確定。旧台帳漏れ",
+      "source_group_id": "11-04",
       "atomicity": "one_target_one_operation"
     },
     {
