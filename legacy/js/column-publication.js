@@ -19,7 +19,7 @@
     { episode: 15, file: "column-15.dc.html", title: "家を持つ人のための相続の常識──「うちは大丈夫」と思う前に", publishDate: "2026-10-01", related: [1, 2, 4, 16] },
     { episode: 16, file: "column-16.dc.html", title: "実家じまいは、空っぽにすることじゃない──家族の記憶と、家の次の使い方を整える", publishDate: "2026-10-06", related: [1, 2, 4, 15] },
     { episode: 17, file: "column-17.dc.html", title: "住まいの悩みを生成AIで整理する──入力と得られる結果がわかる4つの使い方", publishDate: "2026-10-08", related: [1, 2, 7, 19] },
-    { episode: 18, file: "column-18.dc.html", title: "2016年熊本地震後、6避難所の調査で多かった困りごとは「トイレ」──被災地の教訓から、今日備えること", publishDate: "2026-10-13", related: [1, 2, 9, 13] },
+    { episode: 18, file: "column-18.dc.html", title: "地震直後、6避難所の調査で多かった困りごとはトイレ", publishDate: "2026-10-13", related: [1, 2, 9, 13] },
     { episode: 19, file: "column-19.dc.html", title: "家族が集まる場所は、リビングだけじゃない。成長に合わせて「つながり方」を変えられる家へ", publishDate: "2026-10-15", related: [1, 2, 3, 10] },
     { episode: 20, file: "column-20.dc.html", title: "その子の「安心ゾーン」は、家につくれる──発達特性のある子どもと家族を支える住まい", publishDate: "2026-10-20", related: [1, 2, 3, 14] },
   ]);
