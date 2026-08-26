@@ -12,7 +12,7 @@
     { episode: 8, file: "column-08.dc.html", title: "電気代が高く感じられる理由。窓と家電から始める節電", publishDate: "2026-09-08", related: [6, 7, 1, 9, 5, 2, 3, 4] },
     { episode: 9, file: "column-09.dc.html", title: "台風の前に、家族で決めておくこと。家の外・中・避難の備え", publishDate: "2026-09-10", related: [7, 4, 3, 6, 8, 1, 2, 5] },
     { episode: 10, file: "column-10.dc.html", title: "子どもが巣立ったあと、家はどう変える？──50代から考える夫婦の居場所", publishDate: "2026-09-15", related: [1, 2, 3, 19] },
-    { episode: 11, file: "column-11.dc.html", title: "50代人口の約3割に相当するNISA口座。住宅ローンが残るなら、何を優先する？", publishDate: "2026-09-17", related: [1, 2, 10, 12] },
+    { episode: 11, file: "column-11.dc.html", title: "50代人口の約3割に達するNISA口座。住宅ローンが残るなら、何を優先する？", publishDate: "2026-09-17", related: [1, 2, 10, 12] },
     { episode: 12, file: "column-12.dc.html", title: "住宅ローンの変動金利が1％違うと、家計はどう変わる？", publishDate: "2026-09-22", related: [1, 2, 7, 11] },
     { episode: 13, file: "column-13.dc.html", title: "円安で、家はどう変わる？──住まいのコストと、これからできる備え", publishDate: "2026-09-24", related: [1, 2, 8, 12] },
     { episode: 14, file: "column-14.dc.html", title: "住まいの「音」を負担に感じたら。家族で整える音環境のポイント", publishDate: "2026-09-29", related: [1, 2, 3, 20] },
