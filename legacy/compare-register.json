@@ -30,10 +30,10 @@
       "expected_after": "身近なお金のテーマとなっているNISA口座と住宅ローン・修繕費との優先順位を考えます。",
       "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/index.html",
       "public_b_check_mode": "public_html_readback_2026-08-27",
-      "public_b_evidence": "ローカルBの一覧カードをPDF原文の「住宅ローン・修繕費」へ修正済み。公開Bデプロイ後に読戻し確認する。",
-      "audit_status": "pending_deploy",
+      "public_b_evidence": "公開B cache-bust読戻しで「身近なお金のテーマとなっているNISA口座と住宅ローン・修繕費との優先順位を考えます。」を確認",
+      "audit_status": "verified_public_html",
       "legacy_claim": null,
-      "discrepancy": "公開Bへの反映待ち。",
+      "discrepancy": null,
       "scope_note": "原本PDF p.4 / Rect [277.4,26.3,496.5,116.2] の親FreeText注釈。"
     },
     {
