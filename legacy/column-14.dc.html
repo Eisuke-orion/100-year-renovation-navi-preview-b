@@ -7,8 +7,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>住まいの「音」を負担に感じたら。家族で整える音環境のポイント</title>
 <meta name="description" content="家の音を負担に感じるとき、発生源や伝わる経路を整理することが対策の入口になります。減らしたい音と残したい気配を分け、住まいの音環境を考えます。">
 <meta name="keywords" content="音・間取り／人生100年時代のリフォームナビ">
@@ -47,16 +45,11 @@
   }
 }
 </script>
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background:oklch(0.98 0.014 85); }
   a { color:oklch(0.42 0.1 155); text-decoration:none; }
@@ -78,7 +71,11 @@
   .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -344,15 +341,15 @@
     <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">在宅時間や生活時間帯が異なる家族にとって、住まいの音は心地よさにも負担にもなり得ます。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年9月29日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+      <span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">音</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">間取り</span>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep14-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="ep14-author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep14-fv" src="uploads/ep14_fv_sound_window_v2.webp" shape="rounded" radius="18" alt="道路に面した窓と穏やかな室内を対比した住まいの音環境" placeholder="道路に面した窓と穏やかな室内を対比した住まいの音環境" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep14-fv" src="uploads/ep14_fv_sound_window_v2.webp" alt="道路に面した窓と穏やかな室内を対比した住まいの音環境" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <div class="column-article-body" style="margin-top:32px;"><p>道路の走行音や設備音、家族の生活音を負担に感じることがあります。この記事では、音の発生源と伝わる経路を確かめ、減らしたい音と残したい家族の気配を分けて考える視点から、住まいの音環境の整え方を紹介します。</p></div>
 
@@ -380,7 +377,7 @@
 <p>これらの音がどこから、どのように伝わるかを知ることは、対策を考えるうえでの出発点になります。建築音響の分野では、音の伝わり方や遮音の仕組みについて体系的に整理されており、専門書としては木村翔さんの『建築音響と騒音防止計画』（彰国社、2012年）などが基礎的な知見をまとめています。</p>
 <p>ベターリビングのつくば建築試験研究センターには音響試験棟があり、壁・サッシ・ドア・換気口などの音響透過損失を測定する試験が行われています。音の悩みを考えるときは、製品名だけでなく、どの部位でどの性能を確かめるのかを見る視点も役立ちます。</p>
 </section>
-<image-slot id="ep14-body1" src="uploads/ep14_body01_sound_inventory_v2.webp" shape="rounded" radius="16" alt="家の中の音環境を見直す家族" placeholder="家の中の音環境を見直す家族" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep14-body1" src="uploads/ep14_body01_sound_inventory_v2.webp" alt="家の中の音環境を見直す家族" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>3. 減らしたい音、残したい気配</h2>
@@ -404,7 +401,7 @@
 </ul>
 <p>これらの効果の程度は、建物の構造や周辺環境によって異なるため、リフォームを検討する際は専門家による現地確認をおすすめします。</p>
 </section>
-<image-slot id="ep14-body2" src="uploads/ep14_body02_secondary_window_v2.webp" shape="rounded" radius="16" alt="生活音が重なるリビング" placeholder="生活音が重なるリビング" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep14-body2" src="uploads/ep14_body02_secondary_window_v2.webp" alt="生活音が重なるリビング" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>5. 窓だけでは解決できない音もある</h2>
@@ -423,9 +420,9 @@
 <p>家族で「どんな音が気になるか」「どんな気配は残したいか」を話し合うことが、住まいの音環境を整える最初の一歩になります。そのうえで、窓の改修など具体的な対策を検討する際は、複数の専門家に現地を見てもらい、優先順位を一緒に考えることをおすすめします。</p>
 <hr>
 </section>
-<image-slot id="ep14-body3" src="uploads/ep14_body03_family_sound_discussion_v2.webp" shape="rounded" radius="16" alt="音を和らげる落ち着いた居場所" placeholder="音を和らげる落ち着いた居場所" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
+<img id="ep14-body3" src="uploads/ep14_body03_family_sound_discussion_v2.webp" alt="音を和らげる落ち着いた居場所" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px"></article>
 
-  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>子どもの足音は、まず何を試せばよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">厚みのあるクッションマットを敷く、椅子の脚にフェルトを付ける、遊ぶ場所や時間を決めるなど、暮らしの中で試せる対策があります。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>マンションの生活音は、窓のリフォームで解決しますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">道路音には窓の対策が有効な場合がありますが、床や壁を伝わる音は別の対策が必要です。管理規約を確認し、必要に応じて専門家へ相談します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>隣の部屋から聞こえる声やテレビの音には、何ができますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">家具配置の見直しや音源を壁から離す工夫で変わる場合があります。壁の遮音や吸音を検討するときは、建物の構造を確認して専門家へ相談します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>道路音が気になるとき、窓以外に確認することは？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">窓のすき間、換気口、窓まわりの使い方も音の入り方に関わります。どの時間帯・どの場所で困るかを整理して、対策を選びます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>音のリフォームは、どこに相談すればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">音の種類、建物の構造、マンションの規約によって方法が変わります。施工事業者や建築の専門家に、困る場面を具体的に伝えて相談します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>生活音の相談前に、何を記録しておくとよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">音が気になる場所・時間帯・種類・聞こえてくる方向を整理します。減らしたい音と残したい家族の気配も分けて伝えると、窓・床・壁など確認すべき場所を絞りやすくなります。</p></details></div></section>
 
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
@@ -462,25 +459,14 @@
 <a href="https://www.cbl.or.jp/tbtl/about/home#6">つくば建築試験研究センター｜音響試験棟</a>
 <a href="https://www.cbl.or.jp/r-navi/search_part/window/#sash">窓・サッシの遮音性能</a></div>
   </section>
-
-  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
-<a href="column-03.dc.html">【第3回】家族の気配が通う家。子どもと暮らす住まいの考え方</a>
-<a href="column-20.dc.html">【第20回】その子の「安心ゾーン」は、家につくれる──発達特性のある子どもと家族を支える住まい</a></div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="20" href="column-20.dc.html">【第20回】その子の「安心ゾーン」は、家につくれる──発達特性のある子どもと家族を支える住まい</a><a data-related-episode="3" href="column-03.dc.html">【第3回】家族の気配が通う家。子どもと暮らす住まいの考え方</a><a data-related-episode="2" href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a><a data-related-episode="1" href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a></div></section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep14-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="ep14-author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
-  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
-    <a href="column-13.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
-    <a href="column-15.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-13.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-15.dc.html">次の回 →</a></nav>
 </div>
 <section class="check_history"></section>
 <div class="btn_totop"></div>
@@ -574,23 +560,6 @@
 		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
 </footer>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['音', '間取り'],
-      faqs: [
-        { q: '子どもの足音は、まず何を試せばよいですか？', a: '厚みのあるクッションマットを敷く、椅子の脚にフェルトを付ける、遊ぶ場所や時間を決めるなど、暮らしの中で試せる対策があります。' },
-        { q: 'マンションの生活音は、窓のリフォームで解決しますか？', a: '道路音には窓の対策が有効な場合がありますが、床や壁を伝わる音は別の対策が必要です。管理規約を確認し、必要に応じて専門家へ相談します。' },
-        { q: '隣の部屋から聞こえる声やテレビの音には、何ができますか？', a: '家具配置の見直しや音源を壁から離す工夫で変わる場合があります。壁の遮音や吸音を検討するときは、建物の構造を確認して専門家へ相談します。' },
-        { q: '道路音が気になるとき、窓以外に確認することは？', a: '窓のすき間、換気口、窓まわりの使い方も音の入り方に関わります。どの時間帯・どの場所で困るかを整理して、対策を選びます。' },
-        { q: '音のリフォームは、どこに相談すればよいですか？', a: '音の種類、建物の構造、マンションの規約によって方法が変わります。施工事業者や建築の専門家に、困る場面を具体的に伝えて相談します。' },
-        { q: '生活音の相談前に、何を記録しておくとよいですか？', a: '音が気になる場所・時間帯・種類・聞こえてくる方向を整理します。減らしたい音と残したい家族の気配も分けて伝えると、窓・床・壁など確認すべき場所を絞りやすくなります。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

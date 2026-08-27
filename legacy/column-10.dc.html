@@ -7,8 +7,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>子どもが巣立ったあと、家はどう変える？──50代から考える夫婦の居場所</title>
 <meta name="description" content="子どもの独立後、夫婦の暮らしに家をどう合わせるか。寝室を分ける選択肢や、それぞれの居場所と共用空間の両立の考え方を紹介します。">
 <meta name="keywords" content="家族・間取り／人生100年時代のリフォームナビ">
@@ -47,16 +45,11 @@
   }
 }
 </script>
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background:oklch(0.98 0.014 85); }
   a { color:oklch(0.42 0.1 155); text-decoration:none; }
@@ -78,7 +71,11 @@
   .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -344,15 +341,15 @@
     <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">子どもの独立を機に、夫婦二人の暮らしへ住まいを合わせ直す考え方を紹介します。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年9月15日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+      <span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">子どもの独立</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">夫婦の居場所</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">寝室</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">間取り</span>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep10-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="ep10-author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep10-fv" src="uploads/ep10_fv_next_stage_living_v2.webp" shape="rounded" radius="18" alt="明るいリビングでこれからの住まいを話す50代夫婦" placeholder="明るいリビングでこれからの住まいを話す50代夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep10-fv" src="uploads/ep10_fv_next_stage_living_v2.webp" alt="明るいリビングでこれからの住まいを話す50代夫婦" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <div class="column-article-body" style="margin-top:32px;"><p>子どもの独立後、夫婦二人の時間が急に増えたと感じる方は多いのではないでしょうか。子育てのために整えた家は、間取りも生活のリズムも「家族みんなで過ごすこと」を前提につくられていたかもしれません。この記事では、寝室のあり方や居場所のつくり方を切り口に、夫婦二人の暮らしに家を合わせ直す考え方を紹介します。リフォームを急かすものではなく、夫婦で家のこれからを話す入口として読んでいただければと思います。</p></div>
 
@@ -368,7 +365,7 @@
 <p>子どもが小さかった頃、家づくりや部屋の使い方の多くは「子育てのしやすさ」を軸に決められていたのではないでしょうか。リビングを広く取り、子ども部屋を確保し、家族全員が同じ時間に同じ場所で過ごすことを前提にした間取りが自然に選ばれてきました。</p>
 <p>子どもが独立すると、こうした前提が少しずつ崩れていきます。使われなくなった部屋、二人には広すぎるリビング、そして何より、夫婦二人だけで過ごす時間の長さが、これまでとは大きく変わります。これは家づくりが間違っていたということではなく、<strong>家が担う役割が、子育て期から夫婦二人の時期へと移り変わるタイミングを迎えた</strong>ということです。</p>
 </section>
-<image-slot id="ep10-body1" src="uploads/ep10_body01_former_child_room_v2.webp" shape="rounded" radius="16" alt="子どもの独立後に空いた部屋" placeholder="子どもの独立後に空いた部屋" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep10-body1" src="uploads/ep10_body01_former_child_room_v2.webp" alt="子どもの独立後に空いた部屋" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>2. 50代から変わる住まい方</h2>
@@ -382,7 +379,7 @@
 <p>就寝・起床時間、体感温度の好み、いびきや物音など、睡眠環境への希望は人によって異なります。年齢を重ねると、就寝時間や体調に関わる希望が夫婦それぞれで変わることもあります。</p>
 <p>厚生労働省の「健康づくりのための睡眠ガイド2023」でも、成人の健康維持において睡眠の質を確保することの重要性が示されています。寝室を分けることそのものを推奨するものではありませんが、「同じ部屋で寝ることが常に正解とは限らない」という前提に立てば、寝室のあり方を夫婦で見直すことは、関係を悪化させる選択ではなく、<strong>それぞれが快適に眠り、日中を元気に過ごすための工夫</strong>として捉えることができます。</p>
 </section>
-<image-slot id="ep10-body2" src="uploads/ep10_body02_separate_sleeping_spaces_v3.webp" shape="rounded" radius="16" alt="生活リズムに合わせて寝室を分けた50代夫婦" placeholder="生活リズムに合わせて寝室を分けた50代夫婦" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep10-body2" src="uploads/ep10_body02_separate_sleeping_spaces_v3.webp" alt="生活リズムに合わせて寝室を分けた50代夫婦" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>4. それぞれの居場所と、二人の共用空間</h2>
@@ -394,7 +391,7 @@
 <p>これらは「別々の部屋を新設する」ことだけを意味しません。同じリビングの中でも、一人がソファで、もう一人がダイニングテーブルで、それぞれ違うことをしながら同じ空間にいる、という過ごし方も一つの形です。大切なのは、「いつも一緒」か「完全に別々」かの二択で考えるのではなく、その時々の気分や体調に応じて距離感を調整できる余白を、家の中に残しておくことです。</p>
 <p>将来的に、子どもが家族を連れて帰省したり、一時的に親と同居したりする可能性がある場合も、今の段階からすべてを決めてしまう必要はありません。使われていない部屋を、来客や帰省にも対応できる「余白」として残しておく考え方は、<a href="column-19.dc.html">第19回「家族が集まる場所は、リビングだけじゃない。成長に合わせて『つながり方』を変えられる家へ」</a>でも詳しく取り上げます。</p>
 </section>
-<image-slot id="ep10-body3" src="uploads/ep10_body03_personal_shared_spaces_v3.webp" shape="rounded" radius="16" alt="夫婦それぞれの居場所と共用空間があるリビング" placeholder="夫婦それぞれの居場所と共用空間があるリビング" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep10-body3" src="uploads/ep10_body03_personal_shared_spaces_v3.webp" alt="夫婦それぞれの居場所と共用空間があるリビング" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>5. まず夫婦で話してみる</h2>
@@ -409,7 +406,7 @@
 </section></article>
 
   <section class="column-faqs" style="margin:44px 0;">
-    <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div>
+    <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>子どもが独立したら、すぐにリフォームが必要ですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">すぐに工事を決める必要はありません。まずは使われなくなった部屋、眠りや生活リズム、収納の使い方を夫婦で整理し、必要なことから検討します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>寝室を分けるのは、夫婦関係に問題があるからですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">生活時間や睡眠の質を整えるための選択肢の一つです。分ける・分けないを決める前に、互いに心地よく休める条件を話し合うことが大切です。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>空いた子ども部屋は、すぐに別の用途へ変えるべきですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">急いで決める必要はありません。帰省時の使い方、収納、趣味や仕事の場など、これからの暮らしに合う使い道を考えます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>夫婦それぞれの居場所は、どのように考えればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">一人で落ち着ける場所と、一緒に過ごしたい共用空間を分けて考えます。今の家で心地よい場所・使いにくい場所を挙げるところから始めます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>大掛かりな工事の前にできることはありますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">家具の配置、照明、収納、使われていない部屋の使い方を見直すだけでも変わる場合があります。必要な工事を絞るためにも、暮らし方の整理が先です。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>空いた子ども部屋を、帰省用に残しながら日常でも使えますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">帰省や来客に対応できる余白を残しつつ、普段は趣味や仕事の場所として使う方法があります。用途を一つに固定せず、夫婦の暮らしと将来の変化の両方を考えます。</p></details></div>
   </section>
 
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
@@ -444,25 +441,14 @@
 <a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム・SNS等）</a>
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
   </section>
-
-  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
-<a href="column-03.dc.html">【第3回】家族の気配が通う家。子どもと暮らす住まいの考え方</a>
-<a href="column-19.dc.html">【第19回】家族が集まる場所は、リビングだけじゃない。成長に合わせて「つながり方」を変えられる家へ</a></div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="19" href="column-19.dc.html">【第19回】家族が集まる場所は、リビングだけじゃない。成長に合わせて「つながり方」を変えられる家へ</a><a data-related-episode="3" href="column-03.dc.html">【第3回】家族の気配が通う家。子どもと暮らす住まいの考え方</a><a data-related-episode="2" href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a><a data-related-episode="1" href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a></div></section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep10-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="ep10-author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
-  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
-    <a href="column-09.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
-    <a href="column-11.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-09.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-11.dc.html">次の回 →</a></nav>
 </div>
 <section class="check_history"></section>
 <div class="btn_totop"></div>
@@ -556,23 +542,6 @@
 		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
 </footer>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['子どもの独立', '夫婦の居場所', '寝室', '間取り'],
-      faqs: [
-        { q: '子どもが独立したら、すぐにリフォームが必要ですか？', a: 'すぐに工事を決める必要はありません。まずは使われなくなった部屋、眠りや生活リズム、収納の使い方を夫婦で整理し、必要なことから検討します。' },
-        { q: '寝室を分けるのは、夫婦関係に問題があるからですか？', a: '生活時間や睡眠の質を整えるための選択肢の一つです。分ける・分けないを決める前に、互いに心地よく休める条件を話し合うことが大切です。' },
-        { q: '空いた子ども部屋は、すぐに別の用途へ変えるべきですか？', a: '急いで決める必要はありません。帰省時の使い方、収納、趣味や仕事の場など、これからの暮らしに合う使い道を考えます。' },
-        { q: '夫婦それぞれの居場所は、どのように考えればよいですか？', a: '一人で落ち着ける場所と、一緒に過ごしたい共用空間を分けて考えます。今の家で心地よい場所・使いにくい場所を挙げるところから始めます。' },
-        { q: '大掛かりな工事の前にできることはありますか？', a: '家具の配置、照明、収納、使われていない部屋の使い方を見直すだけでも変わる場合があります。必要な工事を絞るためにも、暮らし方の整理が先です。' },
-        { q: '空いた子ども部屋を、帰省用に残しながら日常でも使えますか？', a: '帰省や来客に対応できる余白を残しつつ、普段は趣味や仕事の場所として使う方法があります。用途を一つに固定せず、夫婦の暮らしと将来の変化の両方を考えます。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

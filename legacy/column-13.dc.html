@@ -7,8 +7,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>円安で、家はどう変わる？──住まいのコストと、これからできる備え</title>
 <meta name="description" content="円安は住まいの建築費・リフォーム費・光熱費にどう影響するのか。木材の輸入依存という構造から、慌てず備える方法を解説します。">
 <meta name="keywords" content="住まい・経済／人生100年時代のリフォームナビ">
@@ -25,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="ext-resource-dependency" content="uploads/ep13_fv_world_and_home.webp">
 <meta name="ext-resource-dependency" content="uploads/ep13_body01_timber_self_sufficiency_chart_v3.webp">
-<meta name="ext-resource-dependency" content="uploads/ep13_body02_household_budget_plan_v1.png">
+<meta name="ext-resource-dependency" content="uploads/ep13_body02_household_budget_plan_v1.webp">
 <meta name="ext-resource-dependency" content="uploads/ep13_body03_domestic_timber.webp">
 <script type="application/ld+json">
 {
@@ -47,16 +45,11 @@
   }
 }
 </script>
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background:oklch(0.98 0.014 85); }
   a { color:oklch(0.42 0.1 155); text-decoration:none; }
@@ -78,7 +71,11 @@
   .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -344,15 +341,15 @@
     <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">円安が住まいの費用へ届く経路と、補助制度を含む備え方を整理します。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年9月24日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+      <span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">円安</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">住まいのコスト</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">建築用材等</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">光熱費</span>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep13-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="ep13-author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep13-fv" src="uploads/ep13_fv_world_and_home.webp" shape="rounded" radius="18" alt="世界と住まいのコストのつながりを考える家族" placeholder="世界と住まいのコストのつながりを考える家族" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep13-fv" src="uploads/ep13_fv_world_and_home.webp" alt="世界と住まいのコストのつながりを考える家族" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <div class="column-article-body" style="margin-top:32px;"><p>「円安」という言葉はニュースで頻繁に聞くようになりましたが、それが自分の家計や住まいにどう関わるのか、具体的にイメージしづらいという方も多いのではないでしょうか。この記事では、円安が住宅の建築費・リフォーム費用・エネルギー費用にどう波及するかの構造を整理し、「円安だから急いで」ではなく、落ち着いて備える視点をお伝えします。</p></div>
 
@@ -374,7 +371,7 @@
 <p>林野庁の「令和6年木材需給表」によると、2024年の建築用材等の自給率は52.9％でした。丸太換算で、国内供給のおよそ半分を国産材が占める一方、輸入材も47.1％を占めます。この値は用途区分としての「建築用材等」の供給割合であり、個々の木造住宅に使われる木材の比率を示すものではありません。</p>
 <p>このように、建築用材等の国内供給は国産材だけで完結しているわけではありません。円安で輸入材の調達コストが上がると、建築やリフォームの資材価格へ波及する要因の一つになります。</p>
 </section>
-<image-slot id="ep13-body1" src="uploads/ep13_body01_timber_self_sufficiency_chart_v3.webp" shape="rounded" radius="16" alt="2024年の建築用材等に占める国産材52.9％と輸入材47.1％を示す横棒グラフ" placeholder="2024年の建築用材等に占める国産材52.9％と輸入材47.1％を示す横棒グラフ" style="width:100%;aspect-ratio:1672/730;margin:8px 0 10px;border-radius:16px;overflow:hidden;clip-path:inset(0 round 16px);"></image-slot>
+<img id="ep13-body1" src="uploads/ep13_body01_timber_self_sufficiency_chart_v3.webp" alt="2024年の建築用材等に占める国産材52.9％と輸入材47.1％を示す横棒グラフ" style="width:100%;aspect-ratio:1672/730;margin:8px 0 10px;border-radius:16px;overflow:hidden;clip-path:inset(0 round 16px);display:block;object-fit:cover;border-radius:16px">
 <p data-column-chart-note="13" style="font-size:13px;line-height:1.75;color:oklch(0.48 0.025 75);margin:0 0 36px;">出典：林野庁「令和6年（2024年）木材需給表」。注：建築用材等・丸太換算の値であり、個々の木造住宅に使われる木材の比率を示すものではありません。</p>
 
 <section class="column-article-body">
@@ -388,7 +385,7 @@
 <p><strong>③ 使い続けるとき（光熱費）</strong>
 日本はエネルギー自給率が低く、原油・LNGなどの多くを輸入に依存しています。円安がエネルギー価格に波及すれば、電気代やガス代など、住み続ける中で発生するコストにも影響し得ます。</p>
 </section>
-<image-slot id="ep13-body2" src="uploads/ep13_body02_household_budget_plan_v1.png" shape="rounded" radius="16" alt="家計簿や請求書を見ながら住まいの計画を話し合う様子" placeholder="家計簿や請求書を見ながら住まいの計画を話し合う様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep13-body2" src="uploads/ep13_body02_household_budget_plan_v1.webp" alt="家計簿や請求書を見ながら住まいの計画を話し合う様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>4. 為替に振り回されない住まいの備え</h2>
@@ -399,7 +396,7 @@
 <li><strong>断熱・省エネ性能を高める</strong>：エネルギー価格の変動が家計に与える影響そのものを小さくする、という方向の備えもあります。</li>
 </ul>
 </section>
-<image-slot id="ep13-body3" src="uploads/ep13_body03_domestic_timber.webp" shape="rounded" radius="16" alt="国産木材を加工する大工" placeholder="国産木材を加工する大工" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep13-body3" src="uploads/ep13_body03_domestic_timber.webp" alt="国産木材を加工する大工" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>5. 補助制度も確認して選択肢を増やす</h2>
@@ -408,7 +405,7 @@
 <hr>
 </section></article>
 
-  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>円安になったら、リフォームを急ぐべきですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">為替の先行きは断定できません。急いで契約するより、工事の必要性、見積もりの比較、補助制度や省エネ改修の条件を確認して判断します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>住まいの費用に備えるため、今できることは？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">更新時期が近い設備や必要な修繕を整理し、複数の見積もりを取る時間を確保します。断熱・省エネ改修は、光熱費も含めて検討します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>見積もりの金額が上がった理由は、どう確認しますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">材料、設備、施工範囲、数量、工期を分けて説明を受けます。変更点を同じ条件で比較できるよう、見積書の内訳を確認します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>省エネ改修は、円安への備えになりますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">為替そのものを防ぐ方法ではありませんが、断熱や省エネ設備は光熱費を含む長期の暮らしの費用を見直す選択肢になります。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>補助制度は、いつ確認すればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">制度には対象工事、契約・着工時期、予算上限などの条件があります。契約前に公式サイトと施工事業者へ最新条件を確認します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>国産材を選べば、円安の影響を受けませんか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">建築用材等の国内供給には国産材と輸入材の両方が含まれ、住宅には木材以外の設備や資材も使われます。国産材という理由だけで影響がなくなるとは言い切れないため、見積もりの材料・設備・調達条件を確認します。</p></details></div></section>
 
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
@@ -452,25 +449,14 @@
 <a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム・SNS等）</a>
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
   </section>
-
-  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
-<a href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a>
-<a href="column-12.dc.html">【第12回】住宅ローンの変動金利が1％違うと、家計はどう変わる？</a></div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="12" href="column-12.dc.html">【第12回】住宅ローンの変動金利が1％違うと、家計はどう変わる？</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="2" href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a><a data-related-episode="1" href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a></div></section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep13-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="ep13-author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
-  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
-    <a href="column-12.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
-    <a href="column-14.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-12.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-14.dc.html">次の回 →</a></nav>
 </div>
 <section class="check_history"></section>
 <div class="btn_totop"></div>
@@ -564,23 +550,6 @@
 		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
 </footer>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['円安', '住まいのコスト', '建築用材等', '光熱費'],
-      faqs: [
-        { q: '円安になったら、リフォームを急ぐべきですか？', a: '為替の先行きは断定できません。急いで契約するより、工事の必要性、見積もりの比較、補助制度や省エネ改修の条件を確認して判断します。' },
-        { q: '住まいの費用に備えるため、今できることは？', a: '更新時期が近い設備や必要な修繕を整理し、複数の見積もりを取る時間を確保します。断熱・省エネ改修は、光熱費も含めて検討します。' },
-        { q: '見積もりの金額が上がった理由は、どう確認しますか？', a: '材料、設備、施工範囲、数量、工期を分けて説明を受けます。変更点を同じ条件で比較できるよう、見積書の内訳を確認します。' },
-        { q: '省エネ改修は、円安への備えになりますか？', a: '為替そのものを防ぐ方法ではありませんが、断熱や省エネ設備は光熱費を含む長期の暮らしの費用を見直す選択肢になります。' },
-        { q: '補助制度は、いつ確認すればよいですか？', a: '制度には対象工事、契約・着工時期、予算上限などの条件があります。契約前に公式サイトと施工事業者へ最新条件を確認します。' },
-        { q: '国産材を選べば、円安の影響を受けませんか？', a: '建築用材等の国内供給には国産材と輸入材の両方が含まれ、住宅には木材以外の設備や資材も使われます。国産材という理由だけで影響がなくなるとは言い切れないため、見積もりの材料・設備・調達条件を確認します。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

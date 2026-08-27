@@ -7,8 +7,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>その子の「安心ゾーン」は、家につくれる──発達特性のある子どもと家族を支える住まい</title>
 <meta name="description" content="発達特性のある子どもが安心できる「安心ゾーン」を家につくる考え方を紹介。音・光・物の整え方と、家族で支える視点を解説します。">
 <meta name="keywords" content="家族・子育て／人生100年時代のリフォームナビ">
@@ -47,16 +45,11 @@
   }
 }
 </script>
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background:oklch(0.98 0.014 85); }
   a { color:oklch(0.42 0.1 155); text-decoration:none; }
@@ -78,7 +71,11 @@
   .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -344,15 +341,15 @@
     <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">発達特性のある子どもが自分で落ち着ける場所を、住まいの中に整える方法を紹介します。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年10月20日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+      <span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">発達特性</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">安心ゾーン</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">音</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">光</span>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep20-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="ep20-author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep20-fv" src="uploads/ep20_fv_calm_child_room.webp" shape="rounded" radius="18" alt="柔らかな光で落ち着ける子ども部屋" placeholder="柔らかな光で落ち着ける子ども部屋" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep20-fv" src="uploads/ep20_fv_calm_child_room.webp" alt="柔らかな光で落ち着ける子ども部屋" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <div class="column-article-body" style="margin-top:32px;"><p>音や光に敏感だったり、予定の変化に不安を感じやすかったりする子どもにとって、家の中に落ち着きを取り戻せる場所が助けになる場合があります。この記事では、特定の診断や治療を前提とせず、発達特性のある子どもが安心して過ごせる「安心ゾーン」を作る考え方を、環境調整の選択肢の一つとして紹介します。</p><p>私は以前、発達特性のある子どもたちを中心とした学習塾の運営に携わっていました。本記事では、一般に「発達障害」と表現されることのある特性について、個々の違いや暮らしの工夫に目を向けるため、「発達特性」という言葉を用います。</p></div>
 
@@ -375,7 +372,7 @@
 <p>梅永雄二監修・著『よくわかる！自閉症スペクトラムのための環境づくり──事例から学ぶ「構造化」ガイドブック』（Gakken、2016年）では、こうした特性に配慮した環境の整え方について、具体的な事例をもとに紹介されています。同書で扱われる「構造化」とは、物理的な環境、時間の流れ、活動の内容を、その子にとって分かりやすく示す工夫のことを指します。</p>
 <p>すべての子どもに同じ対応が当てはまるわけではなく、感じ方には大きな個人差があることを前提に、その子自身の様子を見ながら工夫を試すことが大切です。</p>
 </section>
-<image-slot id="ep20-body1" src="uploads/ep20_body01_soft_light.webp" shape="rounded" radius="16" alt="光の刺激を抑えた落ち着ける一角" placeholder="光の刺激を抑えた落ち着ける一角" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep20-body1" src="uploads/ep20_body01_soft_light.webp" alt="光の刺激を抑えた落ち着ける一角" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>3. 音・光・物の多さを整える</h2>
@@ -387,7 +384,7 @@
 </ul>
 <p>これらは発達特性のある子どもに限らず、子どもや大人にとっても過ごしやすさを考える際の工夫になります。「刺激の総量を減らし、見通しを持ちやすくする」という考え方を、その人に合う範囲で試します。</p>
 </section>
-<image-slot id="ep20-body2" src="uploads/ep20_body02_soft_sound_room.webp" shape="rounded" radius="16" alt="音の刺激を和らげた落ち着ける空間" placeholder="音の刺激を和らげた落ち着ける空間" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep20-body2" src="uploads/ep20_body02_soft_sound_room.webp" alt="音の刺激を和らげた落ち着ける空間" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>4. 本人が選べる一角と見通しをつくる</h2>
@@ -405,7 +402,7 @@
 <p>また、発達特性のある子どもの子育てを、親だけで抱え込まないことも大切です。本人と保護者の希望に沿って、親族や支援機関、医療・療育の専門家などと、無理のない支え方を話し合いましょう。</p>
 <p>また、家族で特性や安心できる関わり方を共有することと、特定の親族に経済的・物理的な支援を求めることは別です。本人と保護者の希望を中心に、無理のない協力の範囲を確認しましょう。</p>
 </section>
-<image-slot id="ep20-body3" src="uploads/ep20_body03_visible_storage.webp" shape="rounded" radius="16" alt="物の見通しをよくした収納" placeholder="物の見通しをよくした収納" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep20-body3" src="uploads/ep20_body03_visible_storage.webp" alt="物の見通しをよくした収納" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>6. 安心ゾーンは落ち着きを取り戻すための環境調整</h2>
@@ -413,7 +410,7 @@
 <hr>
 </section></article>
 
-  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>安心ゾーンは、特別な部屋を作らないといけませんか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">必ずしも特別な部屋は必要ではありません。本人が選べる一角をつくり、音・光・物の多さや見通しを整えることから考えます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>環境を整えるとき、最初に何を見ればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">本人が落ち着きにくい音・光・状況を観察し、本人と保護者の希望を聞きます。必要に応じて医療・療育などの専門家にも相談します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>音や光への感じ方は、子どもによって違いますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">感じ方には個人差があります。家族が決めつけず、本人が落ち着きにくい場面や、安心できる環境を観察して整えます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>物が多い部屋は、どう整えればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">全部をなくすのではなく、使う物と置き場所を分かりやすくし、視界に入る情報を減らします。本人が戻せる仕組みにすることも大切です。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>家だけで対応が難しいときは、どこに相談しますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">本人の困りごとに応じて、医療・療育・学校などの専門家に相談します。住まいの工事が必要な場合は、希望を共有して施工事業者にも確認します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>診断がなくても、家に安心ゾーンをつくれますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">この記事では特定の診断や治療を前提としていません。本人が落ち着きにくい場面や安心できる環境を観察し、本人と保護者の希望に沿って、音・光・物の多さなどを小さく整えるところから始めます。</p></details></div></section>
 
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
@@ -446,25 +443,14 @@
 <a href="https://www.cbl.or.jp/r-navi/search_theme/clean/air/">空気環境も清潔に</a>
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
   </section>
-
-  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
-<a href="column-03.dc.html">【第3回】家族の気配が通う家。子どもと暮らす住まいの考え方</a>
-<a href="column-14.dc.html">【第14回】住まいの「音」を負担に感じたら。家族で整える音環境のポイント</a></div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="14" href="column-14.dc.html">【第14回】住まいの「音」を負担に感じたら。家族で整える音環境のポイント</a><a data-related-episode="3" href="column-03.dc.html">【第3回】家族の気配が通う家。子どもと暮らす住まいの考え方</a><a data-related-episode="2" href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a><a data-related-episode="1" href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a></div></section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep20-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="ep20-author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
-  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
-    <a href="column-19.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
-    <span style="color: oklch(0.62 0.015 90);">第20回が現在の最新回です</span>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-19.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><span style="color:oklch(0.62 0.015 90)">第20回が現在の最新回です</span></nav>
 </div>
 <section class="check_history"></section>
 <div class="btn_totop"></div>
@@ -558,23 +544,6 @@
 		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
 </footer>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['発達特性', '安心ゾーン', '音', '光'],
-      faqs: [
-        { q: '安心ゾーンは、特別な部屋を作らないといけませんか？', a: '必ずしも特別な部屋は必要ではありません。本人が選べる一角をつくり、音・光・物の多さや見通しを整えることから考えます。' },
-        { q: '環境を整えるとき、最初に何を見ればよいですか？', a: '本人が落ち着きにくい音・光・状況を観察し、本人と保護者の希望を聞きます。必要に応じて医療・療育などの専門家にも相談します。' },
-        { q: '音や光への感じ方は、子どもによって違いますか？', a: '感じ方には個人差があります。家族が決めつけず、本人が落ち着きにくい場面や、安心できる環境を観察して整えます。' },
-        { q: '物が多い部屋は、どう整えればよいですか？', a: '全部をなくすのではなく、使う物と置き場所を分かりやすくし、視界に入る情報を減らします。本人が戻せる仕組みにすることも大切です。' },
-        { q: '家だけで対応が難しいときは、どこに相談しますか？', a: '本人の困りごとに応じて、医療・療育・学校などの専門家に相談します。住まいの工事が必要な場合は、希望を共有して施工事業者にも確認します。' },
-        { q: '診断がなくても、家に安心ゾーンをつくれますか？', a: 'この記事では特定の診断や治療を前提としていません。本人が落ち着きにくい場面や安心できる環境を観察し、本人と保護者の希望に沿って、音・光・物の多さなどを小さく整えるところから始めます。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

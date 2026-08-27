@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>台風の前に、家族で決めておくこと。家の外・中・避難の備え</title>
 <meta name="description" content="台風の前に家族で決めておきたい、家の外・中・避難の備え。怖がるだけでなく、平時から安心をつくる防災を考えます。">
 <meta property="og:title" content="台風の前に、家族で決めておくこと。家の外・中・避難の備え">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-09.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep10_fv_typhoon_preparation_disaster_prevention.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">怖がるためではなく、「備えておいたから大丈夫」と思える暮らしのために</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年9月10日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">防災の日</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">台風 備え</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">感震ブレーカー</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">ハザードマップ</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep10-fv" src="uploads/ep10_fv_typhoon_preparation_disaster_prevention.webp" shape="rounded" radius="18" placeholder="FV｜台風の前に、窓を守り持ち出し袋を確認して備える家族" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep10-fv" src="uploads/ep10_fv_typhoon_preparation_disaster_prevention.webp" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px" alt="">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     台風の季節になると、庭の植木鉢をしまい、窓にテープを貼り、「これで足りているだろうか」と考えることがあります。防災というと特別なグッズを大量にそろえることを想像しがちですが、本当に大切なのは、我が家の危険を知り、家族が動ける形にしておくことです。2019年の令和元年房総半島台風では、首都圏を中心に最大約93万4,900戸の大規模停電が発生しました。台風は事前に進路が分かるからこそ、数日前から準備できる災害でもあります。
@@ -335,7 +338,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">植木鉢や物干し竿など風で動くものは室内へ。ブロック塀や門柱にひび・傾き・ぐらつきがないか確認します。2018年の大阪府北部地震では、高槻市立小学校のブロック塀が倒れ、登校中の児童が亡くなる事故が起きました。古い塀を「見た目は大丈夫」と放置せず、道路に面している場合は早めに点検・相談することが大切です。</p>
   </article>
 
-  <image-slot id="ep10-img1" src="uploads/ep10_body01_outdoor_typhoon_safety.webp" shape="rounded" radius="16" placeholder="古いブロック塀のひび・傾きを点検する人（安全意識）" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep10-img1" src="uploads/ep10_body01_outdoor_typhoon_safety.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">2. 家の中で守るべきものは「人の逃げ道」</h2>
@@ -353,7 +356,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">大切なのは、自宅周辺の浸水深や土砂災害のリスクを確認し、どのタイミングでどこへ移動するかを家族で決めることです。浸水深0.5m未満でも避難が遅れると移動が難しくなり、3m以上や家屋倒壊等氾濫想定区域では早期の立ち退き避難が必要になる場合があります。「何mなら必ず自宅」と一律に決めず、自治体のハザードマップと避難情報を確認してください。</p>
   </article>
 
-  <image-slot id="ep10-img2" src="uploads/ep10_body02_furniture_earthquake_safety.webp" shape="rounded" radius="16" placeholder="家族でハザードマップを見て、浸水の深さ（レベル）を確認する" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep10-img2" src="uploads/ep10_body02_furniture_earthquake_safety.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">6. 「マイ・タイムライン」で迷いを減らす</h2>
@@ -366,20 +369,44 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">避難路と集合場所を歩いて確認する、災害用伝言ダイヤル（171）や災害用伝言板（web171）など安否確認の方法を一度試す、離れて暮らす親には災害時の連絡方法と避難先を確認する。防災訓練は、家族を怖がらせる行事ではなく、いざというときに互いを助けやすくするコミュニケーションです。</p>
   </article>
 
-  <image-slot id="ep10-img3" src="uploads/ep10_body03_family_hazard_map_training.webp" shape="rounded" radius="16" placeholder="親子で避難経路を実際に歩いてみる「家庭の防災訓練」" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep10-img3" src="uploads/ep10_body03_family_hazard_map_training.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>まず何から始めればいいですか？</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">寝室・廊下・玄関の危険な家具や物を確認し、屋外の飛びやすい物を片づけるところからです。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>感震ブレーカーは必ず必要ですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">住まいの地域、建物、分電盤、家族構成で優先度は変わります。消防庁の案内を確認し、必要に応じて電気工事店へ相談してください。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>ハザードマップで浸水区域なら、必ず避難所へ行くべきですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">避難先は避難所だけではありません。親族宅・知人宅・安全な宿泊施設なども含め、自治体の情報と建物の安全性をもとに早めに決めてください。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>どこまで備蓄すればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">最低3日分、できれば1週間分を目安に、飲料水は1人1日3リットル。家族の食事・介護用品などを優先してください。</p>
+        </details>
+
     </div>
   </section>
 
@@ -409,30 +436,17 @@
       <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a>
     </div>
   </section>
-
-  <section data-related-articles hidden style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
-      <a href="column-07.dc.html">【第7回】リフォームで失敗しないために――契約前に家族で相談する</a>
-      <a href="column-04.dc.html">【第4回】実家じまい――親が元気なうちに家族で話し合う</a>
-      <a href="column-03.dc.html">【第3回】子どもと暮らす住まい――家族のコミュニケーション。防災訓練もその一つです</a>
-      <a href="column-02.dc.html">【第2回】片づく家――備蓄の置き場所を家族で決めておく</a>
-    </div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="7" href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a><a data-related-episode="5" href="column-05.dc.html">【第5回】マンションの老いにどう備えるか。長く暮らすための住まいの条件</a></div></section>
 
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <a href="column-08.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-10.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-08.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-10.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -529,21 +543,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['防災の日', '台風 備え', '感震ブレーカー', 'ハザードマップ'],
-      faqs: [
-        { q: 'まず何から始めればいいですか？', a: '寝室・廊下・玄関の危険な家具や物を確認し、屋外の飛びやすい物を片づけるところからです。' },
-        { q: '感震ブレーカーは必ず必要ですか？', a: '住まいの地域、建物、分電盤、家族構成で優先度は変わります。消防庁の案内を確認し、必要に応じて電気工事店へ相談してください。' },
-        { q: 'ハザードマップで浸水区域なら、必ず避難所へ行くべきですか？', a: '避難先は避難所だけではありません。親族宅・知人宅・安全な宿泊施設なども含め、自治体の情報と建物の安全性をもとに早めに決めてください。' },
-        { q: 'どこまで備蓄すればいいですか？', a: '最低3日分、できれば1週間分を目安に、飲料水は1人1日3リットル。家族の食事・介護用品などを優先してください。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

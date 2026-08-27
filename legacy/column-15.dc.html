@@ -7,8 +7,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>家を持つ人のための相続の常識──「うちは大丈夫」と思う前に</title>
 <meta name="description" content="家庭裁判所で扱われた遺産分割事件には、遺産価額5,000万円以下の事案も多く含まれます。家を持つ人が元気なうちに知っておきたい相続の基本を解説します。">
 <meta name="keywords" content="相続・住まい／人生100年時代のリフォームナビ">
@@ -47,16 +45,11 @@
   }
 }
 </script>
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background:oklch(0.98 0.014 85); }
   a { color:oklch(0.42 0.1 155); text-decoration:none; }
@@ -78,7 +71,11 @@
   .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -344,15 +341,15 @@
     <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">相続の備えが必要かどうかは、財産額だけでは判断できません。持ち家がある家庭で、元気なうちに確認したい基本を整理します。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年10月1日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+      <span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">相続</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">遺産分割</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">実家</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">家族</span>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep15-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="ep15-author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep15-fv" src="uploads/ep15_fv_inheritance_calculation.webp" shape="rounded" radius="18" alt="家と相続財産を整理するイメージ" placeholder="家と相続財産を整理するイメージ" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep15-fv" src="uploads/ep15_fv_inheritance_calculation.webp" alt="家と相続財産を整理するイメージ" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <div class="column-article-body" style="margin-top:32px;"><p>「うちには大した財産がないから、相続の備えは必要ない」と言えるかどうかは、財産額だけでは判断できません。この記事では、相続を「亡くなった後の手続き」としてではなく、元気なうちに家族で住まいの希望を聞いておくテーマとして捉え直し、家を持つ人が知っておきたい相続の基本的な考え方を紹介します。</p></div>
 
@@ -368,7 +365,7 @@
 <p>最高裁判所が公表する司法統計によると、令和7年に家庭裁判所で認容または調停成立した遺産分割事件（「分割をしない」を除く）のうち、遺産価額が1,000万円以下だった事件は全体の約35.3％、5,000万円以下まで含めると約77.6％でした。</p>
 <p>この統計は、家庭裁判所で認容または調停成立した遺産分割事件の内訳を示すもので、相続全体で争いが起きる確率を示すものではありません。遺産価額5,000万円以下の事案も含まれていることから、財産額だけで備えの要否を決めず、家をどのように引き継ぐかを家族で確認しておくことが大切です。</p>
 </section>
-<image-slot id="ep15-body1" src="uploads/ep15_body01_deduction_umbrella.webp" shape="rounded" radius="16" alt="傘で守られた家のイメージ" placeholder="傘で守られた家のイメージ" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep15-body1" src="uploads/ep15_body01_deduction_umbrella.webp" alt="傘で守られた家のイメージ" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>2. お金は分けられても、家は分けにくい</h2>
@@ -386,7 +383,7 @@
 <p>兄弟姉妹の関係が良好でも、相続では、それぞれの生活状況やこれまでの経緯によって意見が分かれる場合があります。たとえば、実家の近くに住んで親の介護を担ってきた人と、遠方で独立した生活を送ってきた人とでは、実家に対する思い入れや、公平さの感じ方が異なることがあります。</p>
 <p>これは誰が悪いという話ではなく、立場によって事情や公平さの捉え方が異なる場合があるということです。だからこそ、感情的な対立が深まる前に、早い段階で希望をすり合わせておくことが重要になります。</p>
 </section>
-<image-slot id="ep15-body2" src="uploads/ep15_body02_assessed_value.webp" shape="rounded" radius="16" alt="異なる評価額を表す複数の家の模型" placeholder="異なる評価額を表す複数の家の模型" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep15-body2" src="uploads/ep15_body02_assessed_value.webp" alt="異なる評価額を表す複数の家の模型" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>4. 元気なうちに聞いておきたい家の希望</h2>
@@ -410,7 +407,7 @@
 </ul>
 <p>相談内容が複数の分野にまたがる場合は、一人の専門家だけで完結させようとせず、必要に応じてほかの専門家と連携できる相談先を確認しましょう。</p>
 </section>
-<image-slot id="ep15-body3" src="uploads/ep15_body03_home_handover.webp" shape="rounded" radius="16" alt="世代間で家を引き継ぐイメージ" placeholder="世代間で家を引き継ぐイメージ" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep15-body3" src="uploads/ep15_body03_home_handover.webp" alt="世代間で家を引き継ぐイメージ" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>6. 相続前の対話が選択肢を増やす</h2>
@@ -418,7 +415,7 @@
 <hr>
 </section></article>
 
-  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>相続の話は、いつ始めればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">親が元気で意思を確認しやすい時期に、家をどうしたいかを聞くところから始めます。急がせるためではなく、選択肢を残すための話し合いです。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>相続の相談は、誰に頼めばよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">税務、登記、相続人間の調整など、困りごとで相談先が異なります。必要に応じて税理士、司法書士、弁護士などへ確認します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>家以外の財産が少なければ、相続の準備は不要ですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">家は現金のように分けにくいため、住み続ける人、売却するか、管理を誰が担うかで話し合いが必要になる場合があります。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>親に家の将来を聞くとき、何から話せばよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">住み続けたいか、誰に引き継いでほしいか、困っている管理や修繕があるかなど、本人の希望を聞くところから始めます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>相続が始まってからでも、家の方針は決められますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">決めることはできますが、相続人間の調整や手続きが重なることがあります。元気なうちの対話は、選べる方法を増やすために役立ちます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>相続した家を共有名義にするときの注意点はありますか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">一見公平に見えても、物件全体の売却や活用に共有者全員の同意が必要になるなど、後の判断が複雑になる場合があります。家をどう使うかまで家族で確認し、必要に応じて専門家へ相談します。</p></details></div></section>
 
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
@@ -452,25 +449,14 @@
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a>
 <a href="https://blr.jp/">一般社団法人ベターライフリフォーム協会｜リフォームショップ検索</a></div>
   </section>
-
-  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
-<a href="column-04.dc.html">【第4回】実家じまいは、親が元気なうちに。家族で考えるこれからの住まい</a>
-<a href="column-16.dc.html">【第16回】実家じまいは、空っぽにすることじゃない──家族の記憶と、家の次の使い方を整える</a></div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="16" href="column-16.dc.html">【第16回】実家じまいは、空っぽにすることじゃない──家族の記憶と、家の次の使い方を整える</a><a data-related-episode="4" href="column-04.dc.html">【第4回】実家じまいは、親が元気なうちに。家族で考えるこれからの住まい</a><a data-related-episode="2" href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a><a data-related-episode="1" href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a></div></section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep15-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="ep15-author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
-  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
-    <a href="column-14.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
-    <a href="column-16.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-14.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-16.dc.html">次の回 →</a></nav>
 </div>
 <section class="check_history"></section>
 <div class="btn_totop"></div>
@@ -564,23 +550,6 @@
 		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
 </footer>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['相続', '遺産分割', '実家', '家族'],
-      faqs: [
-        { q: '相続の話は、いつ始めればよいですか？', a: '親が元気で意思を確認しやすい時期に、家をどうしたいかを聞くところから始めます。急がせるためではなく、選択肢を残すための話し合いです。' },
-        { q: '相続の相談は、誰に頼めばよいですか？', a: '税務、登記、相続人間の調整など、困りごとで相談先が異なります。必要に応じて税理士、司法書士、弁護士などへ確認します。' },
-        { q: '家以外の財産が少なければ、相続の準備は不要ですか？', a: '家は現金のように分けにくいため、住み続ける人、売却するか、管理を誰が担うかで話し合いが必要になる場合があります。' },
-        { q: '親に家の将来を聞くとき、何から話せばよいですか？', a: '住み続けたいか、誰に引き継いでほしいか、困っている管理や修繕があるかなど、本人の希望を聞くところから始めます。' },
-        { q: '相続が始まってからでも、家の方針は決められますか？', a: '決めることはできますが、相続人間の調整や手続きが重なることがあります。元気なうちの対話は、選べる方法を増やすために役立ちます。' },
-        { q: '相続した家を共有名義にするときの注意点はありますか？', a: '一見公平に見えても、物件全体の売却や活用に共有者全員の同意が必要になるなど、後の判断が複雑になる場合があります。家をどう使うかまで家族で確認し、必要に応じて専門家へ相談します。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

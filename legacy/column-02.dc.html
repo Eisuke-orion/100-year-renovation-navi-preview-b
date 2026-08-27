@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>片づかないのは、あなたのせいじゃない。収納と動線で変わる家</title>
 <meta name="description" content="片づかない理由を家族の性格ではなく、収納と動線の設計から考えます。暮らしの流れを整えて、無理なく片づく住まいへ。">
 <meta property="og:title" content="片づかないのは、あなたのせいじゃない。収納と動線で変わる家">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-02.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep02_fv_storage_flow_v2.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">『人生がときめく片づけの魔法』に、工務店の視点を一つ足す</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年8月18日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">片づかない原因</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">片づく家</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">片づけの考え方</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">家事動線</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep02-fv" src="uploads/ep02_fv_storage_flow_v2.webp" shape="rounded" radius="18" alt="玄関収納からリビング・ダイニングへ無理なく移動できる住まいで、収納を見直す夫婦" placeholder="FV｜収納と動線を見直し、暮らしを整える夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep02-fv" src="uploads/ep02_fv_storage_flow_v2.webp" alt="玄関収納からリビング・ダイニングへ無理なく移動できる住まいで、収納を見直す夫婦" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     「また散らかってる……。どうして私は片づけられないんだろう」――そう自分を責めてしまうこと、ありませんか。私自身、子どもの頃から片づけが苦手で「自分は片づけられない人間だ」と思い込んでいました。ところが収納がたっぷりあるマンションに住んだ途端、まったく散らからなくなったのです。「片づけられない"人"がいるんじゃない。片づく"家"があるだけなんだ」――今回は、この確信を裏づけてくれた一冊を軸に、家の"仕組み"という視点をお話しします。
@@ -340,7 +343,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">片づけの定番書が教えてくれるのは主に「モノとの向き合い方」。私が足したいのは「そのモノを、家のどこに、どう収めるか」という設計・動線の話です。定位置が使う場所のすぐ近くにあるかどうかで、片づく家になるかが決まります。「モノを選ぶ技術」と「家の仕組み」は、片づけの両輪なのです。</p>
   </article>
 
-  <image-slot id="ep02-img1" src="uploads/ep02_body01_storage_flow_v2.webp" shape="rounded" radius="16" alt="キッチンとダイニングの近くに日用品をしまえる収納を設けた住まい" placeholder="使う場所の近くに収納を設けた、キッチン・ダイニング" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep02-img1" src="uploads/ep02_body01_storage_flow_v2.webp" alt="キッチンとダイニングの近くに日用品をしまえる収納を設けた住まい" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">3. 散らかる家に共通する、3つの落とし穴</h2>
@@ -362,27 +365,59 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">築年数の古いお家は、そもそも収納が少なかったり、コンセントの数が足りなかったりします。まずは収納ラックで足せないかを検討し、コンセントも配置換えや電源タップで当面しのげます。それでも毎日ストレスに感じるなら「リフォームしたらいくらかかるか」だけでも概算を出しておく。今すぐやらなくても"予算を知っておく"だけで心の整理がつきます（信頼できる業者の選び方は第7回で）。</p>
   </article>
 
-  <image-slot id="ep02-img2" src="uploads/ep02_body02_entry_storage_v2.webp" shape="rounded" radius="16" alt="玄関扉のすぐそばの収納へ、帰宅後に外出用品をしまう女性" placeholder="玄関近くに収納を設け、帰宅後すぐにしまえる動線" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep02-img2" src="uploads/ep02_body02_entry_storage_v2.webp" alt="玄関扉のすぐそばの収納へ、帰宅後に外出用品をしまう女性" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">7. 片づく家は、家族の心にも効く</h2>
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">「片づけなさい！」ではなく「見える化」を。おもちゃ箱に"きれいに片づいた状態の写真"を貼っておくと、子どもは「いつも、この状態にすればいい」とひと目で理解できます。片づく仕組みは、家族のイライラを減らし、子どもの自立心を育て、気軽に人を招ける家をつくります。第1回でお伝えした「人が集まる家」も、実は片づけと無関係ではないのです。</p>
   </article>
 
-  <image-slot id="ep02-img3" src="uploads/ep02_body03_living_storage_v2.webp" shape="rounded" radius="16" alt="リビングで日用品を手の届きやすい高さの収納へ戻す夫婦" placeholder="日用品を低い収納に戻し、リビングを整える夫婦" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep02-img3" src="uploads/ep02_body03_living_storage_v2.webp" alt="リビングで日用品を手の届きやすい高さの収納へ戻す夫婦" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>片づけても、すぐにリバウンドしてしまいます。</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">意志の問題ではなく、仕組みが整っていない可能性が高いです。「モノの住所」と「使う場所の近くにしまう」を見直すと、リバウンドしにくくなります。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>片づけの定番書と、この記事の違いは何ですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">対立するものではなく両輪です。定番書は「モノとの向き合い方」を、この記事は「家の仕組み（動線・収納の配置）」を扱います。両方そろうと片づけはぐっとラクになります。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>収納が少ない家は、どうすればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">まず&quot;使用頻度で分ける&quot;&quot;7〜8割にとどめる&quot;を試し、それでも足りなければラックで住所を足す。根本的に足りない場合は、収納を足すリフォームの概算を出しておくのがおすすめです。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>家族が協力してくれません。</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">まずは「よく行方不明になるモノ」だけ、家族で定位置を決めるのがおすすめ。子どもには、片づいた状態の写真を貼る&quot;見える化&quot;が効きます。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>収納グッズは、買わないほうがいいのですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「買うな」ではなく「順番」の問題です。仕組みを整える前に増やすと、かえって散らかります。まずタダでできる住所決めから、が鉄則です。</p>
+        </details>
+
     </div>
   </section>
 
@@ -408,30 +443,17 @@
       <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a>
     </div>
   </section>
-
-  <section data-related-articles hidden style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
-      <a href="column-07.dc.html">【第7回】失敗しないリフォーム――収納を足す工事を検討するときの業者選び</a>
-      <a href="column-03.dc.html">【第3回】家族の気配が通う家――子どもと家族が自然に顔を合わせる間取り</a>
-      <a href="column-10.dc.html">【第10回】50代からの住まい――家族構成の変化に合わせて収納と動線を見直す</a>
-      <a href="column-01.dc.html">【第1回】住まいの価値観――「人が集まる家」＝無形資産という考え方の総論</a>
-    </div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="9" href="column-09.dc.html">【第9回】台風の前に、家族で決めておくこと。家の外・中・避難の備え</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="7" href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a></div></section>
 
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <a href="column-01.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-03.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-01.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-03.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -528,22 +550,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['片づかない原因', '片づく家', '片づけの考え方', '家事動線'],
-      faqs: [
-        { q: '片づけても、すぐにリバウンドしてしまいます。', a: '意志の問題ではなく、仕組みが整っていない可能性が高いです。「モノの住所」と「使う場所の近くにしまう」を見直すと、リバウンドしにくくなります。' },
-        { q: '片づけの定番書と、この記事の違いは何ですか？', a: '対立するものではなく両輪です。定番書は「モノとの向き合い方」を、この記事は「家の仕組み（動線・収納の配置）」を扱います。両方そろうと片づけはぐっとラクになります。' },
-        { q: '収納が少ない家は、どうすればいいですか？', a: 'まず"使用頻度で分ける""7〜8割にとどめる"を試し、それでも足りなければラックで住所を足す。根本的に足りない場合は、収納を足すリフォームの概算を出しておくのがおすすめです。' },
-        { q: '家族が協力してくれません。', a: 'まずは「よく行方不明になるモノ」だけ、家族で定位置を決めるのがおすすめ。子どもには、片づいた状態の写真を貼る"見える化"が効きます。' },
-        { q: '収納グッズは、買わないほうがいいのですか？', a: '「買うな」ではなく「順番」の問題です。仕組みを整える前に増やすと、かえって散らかります。まずタダでできる住所決めから、が鉄則です。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

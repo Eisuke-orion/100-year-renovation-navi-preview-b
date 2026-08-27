@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>リフォームで失敗しないために。見積もりと業者選びの基本</title>
 <meta name="description" content="リフォームの見積もりと業者選びで失敗しないために、適正価格の見極め方、比較のポイント、信頼できる相談先を紹介します。">
 <meta property="og:title" content="リフォームで失敗しないために。見積もりと業者選びの基本">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-07.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep08_fv_trusted_remodeling_consultation.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">「適正価格」を見抜き、信頼できる業者と出会うために</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年9月3日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">リフォーム 失敗しない</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">リフォーム 適正価格</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">業者選び</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">クーリングオフ</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep08-fv" src="uploads/ep08_fv_trusted_remodeling_consultation.webp" shape="rounded" radius="18" placeholder="FV｜施主と、誠実な職人が見積書を前に穏やかに相談する場面" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep08-fv" src="uploads/ep08_fv_trusted_remodeling_consultation.webp" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px" alt="">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     まず一番大切なことを。リフォーム業界で働く人の大多数は、真面目で誠実です。私は実家の工務店で10年、現場に立ってきました。この記事は「リフォームは怖い」と身構えてもらうためのものではありません。それでも「この金額、適正なんだろうか」という不安は自然なもの。今回は、暮らす人が安心していい業者と出会うための知識を、業界の内側からお届けします。
@@ -340,7 +343,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">突然の「無料点検」から不安を煽り契約を勧める「点検商法」、「今日だけ大幅値引き」といった即決を促す誘い文句。出てきたら、いったん立ち止まる合図です。対処はシンプル、「その場では決めない」。信頼できる事業者であれば、考える時間を求めても、いやな顔ひとつせず受け止めてくれます。</p>
   </article>
 
-  <image-slot id="ep08-img1" src="uploads/ep08_body01_remodeling_estimate_compare.webp" shape="rounded" radius="16" placeholder="玄関先の訪問販売に、落ち着いて対応する住まい手（中立的な注意喚起）" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep08-img1" src="uploads/ep08_body01_remodeling_estimate_compare.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">3. 身を守る知識②――もし契約しても、あきらめない（クーリングオフ）</h2>
@@ -350,7 +353,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">①建設業許可があるか（建築一式工事以外は500万円未満など、軽微な工事を除いて必要／出典3）②リフォーム瑕疵保険に対応できるか③住宅リフォーム事業者団体登録制度の登録団体に所属しているか④相見積もりを最低2〜3社から⑤見積書の「中身」を見る――「一式」ばかりでなく「数量・単価・仕様」が明記されているか⑥施工実績とアフター保証。適正価格とは最安値ではなく"内容に見合った価格"のことです。</p>
   </article>
 
-  <image-slot id="ep08-img2" src="uploads/ep08_body02_remodeling_site_check.webp" shape="rounded" radius="16" placeholder="『数量・単価・仕様』が明記された見積書の内訳を確認する図" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep08-img2" src="uploads/ep08_body02_remodeling_site_check.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">5. 契約前チェックリスト</h2>
@@ -367,20 +370,60 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">訪問販売の勧誘は、日中ひとりで過ごすことの多いご高齢者や、人を信じやすい親御さんが狙われやすいのも事実です。だからこそ「家の工事や大きな契約の話が来たら、その場で返事をせず、必ず一度相談してね」――離れて暮らす親御さんと、この約束を交わしておいてください。頭ごなしに止めるのではなく、断る"口実"を家族がそっと用意してあげるわけです。電話のそばに消費者ホットライン「188」をメモしておくのもおすすめです（第4回・第6回の見守りの総仕上げ）。</p>
   </article>
 
-  <image-slot id="ep08-img3" src="uploads/ep08_body03_safe_remodeled_home.webp" shape="rounded" radius="16" placeholder="離れて暮らす親と、契約前に電話で相談し合う家族" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep08-img3" src="uploads/ep08_body03_safe_remodeled_home.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>突然の「無料点検」と言われたら、どうすればいいですか？</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">突然の訪問による点検の申し出は、いったん立ち止まって対応するのが安心です。本当に点検が必要と感じたら、自分で選んだ信頼できる業者に、あらためて依頼するのが確実です。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>その場で契約してしまいました。取り消せますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">訪問販売なら、契約書面を受け取った日から8日以内はクーリングオフで無条件解除できます。書面が交付されていない・不備がある場合は8日を過ぎても解除できる可能性があります。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>提示された価格が適正か、どう判断すればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">相見積もりを2〜3社から、同じ条件で取って比べるのが基本です。ただし最安値が正解とは限りません。内訳の明確さや工事内容とのバランスで判断してください。迷うときは、住宅リフォーム・紛争処理支援センター（すまいるダイヤル）の「リフォームの見積書に関する相談」も活用できます（https://www.chord.or.jp/reform/index.html）。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>見積書のどこを見れば安心できますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「一式」表記ばかりで内訳がわかりにくい見積書は、内容を尋ねましょう。工事項目ごとに「数量・単価・仕様」が明記された見積書が安心です。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>信頼できる業者か、契約前に確認できる客観指標はありますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">あります。建設業許可の有無、リフォーム瑕疵保険の登録事業者かどうか、住宅リフォーム事業者団体登録制度の登録団体に所属しているか、施工実績やアフター保証の明確さなど。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>高齢の親が心配です。何をすればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「大きな契約の前は、必ず一度、家族に相談する」と約束しておくのが最も効果的です。電話のそばに消費者ホットライン「188」をメモしておくのも有効です。</p>
+        </details>
+
     </div>
   </section>
 
@@ -410,29 +453,17 @@
       <a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム・SNS等）</a>
     </div>
   </section>
-
-  <section data-related-articles hidden style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
-      <a href="column-06.dc.html">【第6回】一年を通じて快適な家――窓リフォームを検討する際は業者選びとあわせて</a>
-      <a href="column-04.dc.html">【第4回】実家じまい――「親の見守り」。離れた親の安否確認にもつながります</a>
-      <a href="column-02.dc.html">【第2回】片づく家――収納を足す工事を検討するときの業者選び</a>
-    </div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="9" href="column-09.dc.html">【第9回】台風の前に、家族で決めておくこと。家の外・中・避難の備え</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a><a data-related-episode="5" href="column-05.dc.html">【第5回】マンションの老いにどう備えるか。長く暮らすための住まいの条件</a></div></section>
 
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <a href="column-06.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-08.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-06.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-08.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -529,23 +560,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['リフォーム 失敗しない', 'リフォーム 適正価格', '業者選び', 'クーリングオフ'],
-      faqs: [
-        { q: '突然の「無料点検」と言われたら、どうすればいいですか？', a: '突然の訪問による点検の申し出は、いったん立ち止まって対応するのが安心です。本当に点検が必要と感じたら、自分で選んだ信頼できる業者に、あらためて依頼するのが確実です。' },
-        { q: 'その場で契約してしまいました。取り消せますか？', a: '訪問販売なら、契約書面を受け取った日から8日以内はクーリングオフで無条件解除できます。書面が交付されていない・不備がある場合は8日を過ぎても解除できる可能性があります。' },
-        { q: '提示された価格が適正か、どう判断すればいいですか？', a: '相見積もりを2〜3社から、同じ条件で取って比べるのが基本です。ただし最安値が正解とは限りません。内訳の明確さや工事内容とのバランスで判断してください。迷うときは、住宅リフォーム・紛争処理支援センター（すまいるダイヤル）の「リフォームの見積書に関する相談」も活用できます（https://www.chord.or.jp/reform/index.html）。' },
-        { q: '見積書のどこを見れば安心できますか？', a: '「一式」表記ばかりで内訳がわかりにくい見積書は、内容を尋ねましょう。工事項目ごとに「数量・単価・仕様」が明記された見積書が安心です。' },
-        { q: '信頼できる業者か、契約前に確認できる客観指標はありますか？', a: 'あります。建設業許可の有無、リフォーム瑕疵保険の登録事業者かどうか、住宅リフォーム事業者団体登録制度の登録団体に所属しているか、施工実績やアフター保証の明確さなど。' },
-        { q: '高齢の親が心配です。何をすればいいですか？', a: '「大きな契約の前は、必ず一度、家族に相談する」と約束しておくのが最も効果的です。電話のそばに消費者ホットライン「188」をメモしておくのも有効です。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

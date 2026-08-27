@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>家は資産か、負債か。暮らしから考える住まいの価値</title>
 <meta name="description" content="家の価値を売値だけでなく、暮らしや家族への引き継ぎまで含めて考えます。『LIFE SHIFT』を手がかりに、本当に価値ある住まいを見つめます。">
 <meta property="og:title" content="家は資産か、負債か。暮らしから考える住まいの価値">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-01.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep01_fv_asset_value_home.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">ー「よりよい住まいを」本当に価値ある家とは？</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年8月10日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">住まい方</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">家 資産 負債</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">LIFE SHIFT</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">実家 引き継ぎ</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep01-fv" src="uploads/ep01_fv_asset_value_home.webp" shape="rounded" radius="18" placeholder="FV｜手入れの行き届いた明るいリビングでくつろぐ50代夫婦" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep01-fv" src="uploads/ep01_fv_asset_value_home.webp" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px" alt="">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     車を買うとき、かなりの人は「数年後にいくらで売れるか」を気にします。一方、戸建てを買うときに、手放すときのことまで意識する人は、意外と多くありません。<br/><br/>
@@ -342,7 +345,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">リンダ・グラットンとアンドリュー・スコットによる『LIFE SHIFT―100年時代の人生戦略』（東洋経済新報社、2016年）は、人生100年時代には「有形資産」だけでは幸せに生きられないと説きます。有形資産＝お金・貯蓄・不動産。無形資産＝仕事のスキルや仲間（生産性資産）、健康や家族・友人との関係（活力資産）、変化に対応する力（変身資産）。家は有形資産であると同時に、家族が健やかに暮らし絆が育つ「活力資産」を生み出す装置でもあるのです。</p>
   </article>
 
-  <image-slot id="ep01-img1" src="uploads/ep01_body01_home_value_resale.webp" shape="rounded" radius="16" placeholder="一戸建てと、ゆるやかに下がる価値の折れ線グラフの概念図" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep01-img1" src="uploads/ep01_body01_home_value_resale.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">3. 「買った家に一生住む」とは限らない――変身資産としての住まい</h2>
@@ -352,7 +355,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">家を「負債」にしてしまうのは、住まい方の中でも「管理」と「引き継ぎ」です。判断の基準を持てないまま先送りにし、負担を大きくしてしまう。そして意外にも「資産価値が高い家」ほど、相続税という重荷を引き継ぐ人にのしかけることがあります（相続や実家の畳み方は第4回で詳しく）。</p>
   </article>
 
-  <image-slot id="ep01-img2" src="uploads/ep01_body02_tangible_intangible_assets.webp" shape="rounded" radius="16" placeholder="天秤の片方に硬貨（有形資産）、もう片方に家族と健康（無形資産）" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep01-img2" src="uploads/ep01_body02_tangible_intangible_assets.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">5. 「実家がある」というのは、幸福なことだ</h2>
@@ -367,7 +370,7 @@
     </ul>
   </article>
 
-  <image-slot id="ep01-img3" src="uploads/ep01_body03_multigenerational_dining.webp" shape="rounded" radius="16" placeholder="三世代が集まって食卓を囲む、人が自然と集まる家" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep01-img3" src="uploads/ep01_body03_multigenerational_dining.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">7. 「よりよい住まいを」――ベターリビング半世紀の理念</h2>
@@ -377,15 +380,47 @@
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>家は築20年で価値がなくなるのでは？</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">かつての評価慣行ではそう扱われましたが、実際は築20年前後の中古戸建ても活発に取引されています。国も評価の見直しを進めており、手入れと性能次第で価値は残せる時代に向かっています。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>省エネ住宅は、売るとき本当に有利ですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">有利に働きやすいです。性能が&quot;見える化&quot;され、住宅ローン減税などで省エネ住宅の買い手が優遇されるため、需要がつきやすくなります。ただし立地や市況が土台にある点は変わりません。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>立地が良くない家は、価値を上げられませんか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">立地は変えられませんが、価値は立地だけでは決まりません。健康や家族の絆を育む「暮らしの価値」は、どんな家でも高められます。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>資産価値が高い家なら、安心では？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">一概には言えません。評価額が高い家ほど相続税が子や孫の重荷になり、兄弟間トラブルの火種になることもあります。早めの「引き継ぎの備え」が大切です（第4回）。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>何から考え始めればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「わが家は、10年後・30年後の自分たちを幸せにするか」と問うことから。有形資産（価値）と無形資産（暮らし・絆）の両面で我が家を眺めてみてください。</p>
+        </details>
+
     </div>
   </section>
 
@@ -416,19 +451,17 @@
   </section>
 
 
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="9" href="column-09.dc.html">【第9回】台風の前に、家族で決めておくこと。家の外・中・避難の備え</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="7" href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a></div></section>
+
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <span style="color: oklch(0.7 0.015 90);">← 前の回</span>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-02.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><span style="color:oklch(0.7 0.015 90)">← 前の回</span><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-02.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -525,22 +558,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['住まい方', '家 資産 負債', 'LIFE SHIFT', '実家 引き継ぎ'],
-      faqs: [
-        { q: '家は築20年で価値がなくなるのでは？', a: 'かつての評価慣行ではそう扱われましたが、実際は築20年前後の中古戸建ても活発に取引されています。国も評価の見直しを進めており、手入れと性能次第で価値は残せる時代に向かっています。' },
-        { q: '省エネ住宅は、売るとき本当に有利ですか？', a: '有利に働きやすいです。性能が"見える化"され、住宅ローン減税などで省エネ住宅の買い手が優遇されるため、需要がつきやすくなります。ただし立地や市況が土台にある点は変わりません。' },
-        { q: '立地が良くない家は、価値を上げられませんか？', a: '立地は変えられませんが、価値は立地だけでは決まりません。健康や家族の絆を育む「暮らしの価値」は、どんな家でも高められます。' },
-        { q: '資産価値が高い家なら、安心では？', a: '一概には言えません。評価額が高い家ほど相続税が子や孫の重荷になり、兄弟間トラブルの火種になることもあります。早めの「引き継ぎの備え」が大切です（第4回）。' },
-        { q: '何から考え始めればいいですか？', a: '「わが家は、10年後・30年後の自分たちを幸せにするか」と問うことから。有形資産（価値）と無形資産（暮らし・絆）の両面で我が家を眺めてみてください。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

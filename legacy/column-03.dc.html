@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>家族の気配が通う家。子どもと暮らす住まいの考え方</title>
 <meta name="description" content="子ども部屋を早く与えることが本当に正解なのか。家族の気配が通う間取りと、子どもの育ちを支える住まいを考えます。">
 <meta property="og:title" content="家族の気配が通う家。子どもと暮らす住まいの考え方">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-03.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep04_fv_family_connection_living_stairs.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">「理想の子ども部屋」が、実は子育ての落とし穴かもしれない</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年8月20日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">子どもが育つ家</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">子ども部屋 間取り</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">家族 コミュニケーション</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">リビング学習</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep04-fv" src="uploads/ep04_fv_family_connection_living_stairs.webp" shape="rounded" radius="18" alt="リビング階段とキッチンが同じ空間につながり、親子が自然に顔を合わせる住まい" placeholder="FV｜リビング階段があり、家族が自然にすれ違う開放的な住まい" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep04-fv" src="uploads/ep04_fv_family_connection_living_stairs.webp" alt="リビング階段とキッチンが同じ空間につながり、親子が自然に顔を合わせる住まい" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     「学校から近いこと」「子ども部屋は2階に、それぞれ独立した個室で」「勉強に集中できるよう部屋にはテレビもエアコンも」――どれも子どもを思う親心そのものです。ただ、住まいと子どもの育ちの関係を考えるようになって、私はこう思うようになりました。"よかれと思って整えた理想の条件"が、子育ての面ではむしろ落とし穴になっていることが、けっこうある。この記事を通して問いかけたいのは一つです。あなたの家は「家族のコミュニケーションが自然に生まれる住まい」になっていますか？
@@ -341,7 +344,7 @@
   </article>
 
   <figure style="margin:8px 0 36px;">
-    <image-slot id="ep04-img1" src="uploads/ep04_body01_family_route_comparison_v2.webp" shape="rounded" radius="16" alt="玄関脇の階段へ直行する動線と、LDKを通って階段へ向かう動線を、同じ縮尺の二つの平面図で比較" placeholder="玄関から階段への二つの帰宅動線を比べた平面図" style="width:100%;aspect-ratio:3/2;"></image-slot>
+    <img id="ep04-img1" src="uploads/ep04_body01_family_route_comparison_v2.webp" alt="玄関脇の階段へ直行する動線と、LDKを通って階段へ向かう動線を、同じ縮尺の二つの平面図で比較" style="width:100%;aspect-ratio:3/2;display:block;object-fit:cover;border-radius:16px">
     <figcaption style="font-size:12.5px; line-height:1.7; color:oklch(0.5 0.015 90); margin:8px 4px 0;">Aは玄関から階段へ直行。BはLDKを通って階段へ。間取りの優劣ではなく、家族が顔を合わせる場所の違いを比べる図です。</figcaption>
   </figure>
 
@@ -353,7 +356,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">玄関は、家族が毎日通る場所です。季節の花や木の実、行事にまつわる小物などを一つ置けば、親子で四季の変化について話すきっかけになります。飾ること自体に特別な効果を求めるのではなく、暮らしの中で家族が同じものを見て、言葉を交わせる小さな接点として考えます。</p>
   </article>
 
-  <image-slot id="ep04-img2" src="uploads/ep04_body02_living_room_learning.webp" shape="rounded" radius="16" alt="ダイニングで学ぶ子どもの近くで、家事や読書をしながら過ごす家族" placeholder="ダイニングで学ぶ子どもと、近くにいる家族の気配" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep04-img2" src="uploads/ep04_body02_living_room_learning.webp" alt="ダイニングで学ぶ子どもの近くで、家事や読書をしながら過ごす家族" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">5. 家族の接点は「動線」でつくれる</h2>
@@ -373,20 +376,52 @@
     </ul>
   </article>
 
-  <image-slot id="ep04-img3" src="uploads/ep04_body03_seasonal_entryway_child_growth.webp" shape="rounded" radius="16" alt="季節の花を飾った玄関から、登校する子どもを見送る家族" placeholder="玄関の片隅に季節の花を一輪飾った、静かなしつらえ" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep04-img3" src="uploads/ep04_body03_seasonal_entryway_child_growth.webp" alt="季節の花を飾った玄関から、登校する子どもを見送る家族" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>結局、家づくりで一番大事なことは何ですか？</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「家族のコミュニケーションが自然に生まれる住まいか」という一点です。成績・読書・感性はその土台の上に乗るもの。立派な子ども部屋より、家族が気配を分け合える設計を優先してください。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>間取りが子どもの育ちに影響することはありますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">間取りが直接の原因になると証明したデータはありません。ただ、玄関から自室へ直行できる動線は、家族が顔を合わせる機会を少なくしやすい面があります。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>子ども部屋は個室で与えないほうがいいのでしょうか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">個室そのものが悪いわけではありません。ポイントは、個室が「家族から切り離される装置」にならないこと。可動間仕切りで成長に合わせて調整できる設計が現実的です。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>玄関に季節のものを飾ると、本当に子どもの感性が育ちますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">飾りと子どもの成長に直接の因果があるとは言えません。季節の変化に親子で気づき、言葉を交わす小さなきっかけとして取り入れる考え方です。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>うちの子が全然本を読みません。読解力が心配です。</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">本を読むことを強制するのではなく、図鑑やマンガも含め、家族が集まる場所に手に取りやすい本を置く方法があります。大人が本を楽しむ姿も、本に触れるきっかけの一つになります。</p>
+        </details>
+
     </div>
   </section>
 
@@ -416,19 +451,17 @@
   </section>
 
 
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="9" href="column-09.dc.html">【第9回】台風の前に、家族で決めておくこと。家の外・中・避難の備え</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="7" href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a></div></section>
+
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <a href="column-02.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-04.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-02.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-04.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -525,22 +558,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['子どもが育つ家', '子ども部屋 間取り', '家族 コミュニケーション', 'リビング学習'],
-      faqs: [
-        { q: '結局、家づくりで一番大事なことは何ですか？', a: '「家族のコミュニケーションが自然に生まれる住まいか」という一点です。成績・読書・感性はその土台の上に乗るもの。立派な子ども部屋より、家族が気配を分け合える設計を優先してください。' },
-        { q: '間取りが子どもの育ちに影響することはありますか？', a: '間取りが直接の原因になると証明したデータはありません。ただ、玄関から自室へ直行できる動線は、家族が顔を合わせる機会を少なくしやすい面があります。' },
-        { q: '子ども部屋は個室で与えないほうがいいのでしょうか？', a: '個室そのものが悪いわけではありません。ポイントは、個室が「家族から切り離される装置」にならないこと。可動間仕切りで成長に合わせて調整できる設計が現実的です。' },
-        { q: '玄関に季節のものを飾ると、本当に子どもの感性が育ちますか？', a: '飾りと子どもの成長に直接の因果があるとは言えません。季節の変化に親子で気づき、言葉を交わす小さなきっかけとして取り入れる考え方です。' },
-        { q: 'うちの子が全然本を読みません。読解力が心配です。', a: '本を読むことを強制するのではなく、図鑑やマンガも含め、家族が集まる場所に手に取りやすい本を置く方法があります。大人が本を楽しむ姿も、本に触れるきっかけの一つになります。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

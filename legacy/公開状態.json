@@ -1,0 +1,126 @@
+{
+  "release": 20,
+  "order": "descending",
+  "related": {
+    "column-01.dc.html": [
+      9,
+      8,
+      7,
+      6
+    ],
+    "column-02.dc.html": [
+      9,
+      8,
+      7,
+      6
+    ],
+    "column-03.dc.html": [
+      9,
+      8,
+      7,
+      6
+    ],
+    "column-04.dc.html": [
+      9,
+      8,
+      7,
+      6
+    ],
+    "column-05.dc.html": [
+      9,
+      8,
+      7,
+      6
+    ],
+    "column-06.dc.html": [
+      9,
+      8,
+      7,
+      5
+    ],
+    "column-07.dc.html": [
+      9,
+      8,
+      6,
+      5
+    ],
+    "column-08.dc.html": [
+      9,
+      7,
+      6,
+      5
+    ],
+    "column-09.dc.html": [
+      8,
+      7,
+      6,
+      5
+    ],
+    "column-10.dc.html": [
+      19,
+      3,
+      2,
+      1
+    ],
+    "column-11.dc.html": [
+      12,
+      10,
+      2,
+      1
+    ],
+    "column-12.dc.html": [
+      11,
+      7,
+      2,
+      1
+    ],
+    "column-13.dc.html": [
+      12,
+      8,
+      2,
+      1
+    ],
+    "column-14.dc.html": [
+      20,
+      3,
+      2,
+      1
+    ],
+    "column-15.dc.html": [
+      16,
+      4,
+      2,
+      1
+    ],
+    "column-16.dc.html": [
+      15,
+      4,
+      2,
+      1
+    ],
+    "column-17.dc.html": [
+      19,
+      7,
+      2,
+      1
+    ],
+    "column-18.dc.html": [
+      13,
+      9,
+      2,
+      1
+    ],
+    "column-19.dc.html": [
+      10,
+      3,
+      2,
+      1
+    ],
+    "column-20.dc.html": [
+      14,
+      3,
+      2,
+      1
+    ]
+  }
+}

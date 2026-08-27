@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>実家じまいは、親が元気なうちに。家族で考えるこれからの住まい</title>
 <meta name="description" content="空き家900万戸時代を迎え、実家じまいを親が元気なうちに考えるための視点を、家族の会話と住まいの整理から紹介します。">
 <meta property="og:title" content="実家じまいは、親が元気なうちに。家族で考えるこれからの住まい">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-04.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep05_fv_family_home_closure.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">空き家900万戸時代の、一番現実的な備え</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年8月25日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">実家じまい</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">空き家問題</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">固定資産税</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">相続登記義務化</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep05-fv" src="uploads/ep05_fv_family_home_closure.webp" shape="rounded" radius="18" placeholder="FV｜郵便物があふれ、庭木が伸びた空き家の外観" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep05-fv" src="uploads/ep05_fv_family_home_closure.webp" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px" alt="">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     毎日1万歩の散歩が日課の私は、最近どうしても目に留まる家があります。郵便受けにチラシが溢れ、庭木は伸び放題――明らかに誰も住んでいない家です。これは他人事ではありません。今回は、家を"畳む"話。重いテーマですが、公的なデータと一冊の本を手がかりに、できるだけ誠実に、煽らずに整理します。先に一番大事なことを言っておきます。実家じまいは、親が元気なうちに考え始めるほど、ラクで、安く、円満に済みます。
@@ -337,7 +340,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">総務省「令和5年住宅・土地統計調査」（2023年）によると、全国の空き家は900万2千戸で過去最多、空き家率は13.8%で過去最高となりました。ざっくり言えば7〜8軒に1軒が空き家。この30年でおよそ2倍に増えました。7〜8軒に1軒――これは誰の実家にも起こりうる、ごく身近な課題なのです。</p>
   </article>
 
-  <image-slot id="ep05-img1" src="uploads/ep05_body01_vacant_home_management.webp" shape="rounded" radius="16" placeholder="『7〜8軒に1軒が空き家』を家のアイコンで表した図" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep05-img1" src="uploads/ep05_body01_vacant_home_management.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">2. "その日"は、親が亡くなった日ではない――実家が「宙に浮く」瞬間</h2>
@@ -352,7 +355,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">理由は一つひとつ、「合理的な判断」の積み重ねです。①相続で名義が宙に浮く（取得経緯は相続が約55〜58%）②子世代が遠方に住んでいる③解体費用が重い（木造30坪で90〜180万円程度が目安）④そして最大の罠――更地にすると「住宅用地特例」が外れ、固定資産税が一気に跳ね上がります。税制が「空き家でも建物を残しておいたほうが得」という方向に、人々を静かに誘導してきたのです。</p>
   </article>
 
-  <image-slot id="ep05-img2" src="uploads/ep05_body02_family_belongings_sorting.webp" shape="rounded" radius="16" placeholder="実家の将来を、家族がお茶を囲んで話し合う場面" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep05-img2" src="uploads/ep05_body02_family_belongings_sorting.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">5. しかし、放置のコストは上がり続けている</h2>
@@ -365,20 +368,68 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">理由は三つ。①選択肢が多く残っている（生前贈与という道も）②手続きが圧倒的にスムーズ（判断力があるうちなら本人の意思で進められる）③モノと思い出を一緒に片づけられる。そしてもう一つ、現場で見た怖い話――ご高齢の親御さんが家族に相談なく、本来は必要のない高額なリフォーム工事や、相場より大きく安い価格での売却を、その場で決めてしまう場面に何度も出会いました。親御さんの判断を頭ごなしに否定するのではなく、「大きな契約の前には一度みんなに相談してね」と約束しておくだけで、防げたはずのトラブルはぐっと減らせます。</p>
   </article>
 
-  <image-slot id="ep05-img3" src="uploads/ep05_body03_reused_family_home.webp" shape="rounded" radius="16" placeholder="古い写真を一緒に見返しながら生前整理を進める親子" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep05-img3" src="uploads/ep05_body03_reused_family_home.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="7">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>実家じまいは、いつから考え始めればいいですか？</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「親が元気で、判断力があるうち」が最適です。実家は施設入所などで住まなくなった時点から実質空き家になり、名義も判断も宙に浮きがちです。盆や正月に「この家を将来どうするか」を家族で口に出すことから始めましょう。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>親が施設に入りました。実家はどうすればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">親御さんの意思確認ができるうちに、家族で方針を話し合っておくのが理想です。固定資産税や管理の負担が続く点も踏まえ、早めに専門家へ相談するのも有効です。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>空き家を放置すると、具体的に何が起きますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">2023年改正の空家法により「管理不全空家」に指定され勧告を受けると、住宅用地特例が外れて固定資産税が最大約6倍になり得ます。ただし段階を踏む仕組みで、いきなり跳ね上がるわけではありません。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>「更地にすると税金が上がる」というのは本当ですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">本当です。住宅が建つ土地は「住宅用地特例」で固定資産税が最大6分の1に軽減されており、解体して更地にするとこの特例が外れて税額が上がります。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>相続登記の義務化で、放置している実家はどうなりますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">2024年4月から、相続で不動産を取得したと知った日から3年以内の登記が義務化されました。過去の相続も対象で、2027年3月31日までの登記が必要です。まず実家の名義を確認してください。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>生前贈与で早めに実家を引き継ぐのはアリですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">選択肢の一つです。親が判断できるうちに動けるのが利点ですが、贈与税や兄弟間の公平性など注意点も多く、税理士など専門家に相談を。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>高齢の親が、家族に相談せず本来必要のない高額リフォームを契約しないか心配です。</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">親御さんの判断を頭ごなしに止めるのではなく、家族がふだんから実家の状況を共有し「大きな契約の前は一度みんなに相談する」と約束しておくのが、もっとも有効な予防策です。</p>
+        </details>
+
     </div>
   </section>
 
@@ -408,29 +459,17 @@
       <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a>
     </div>
   </section>
-
-  <section data-related-articles hidden style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
-      <a href="column-05.dc.html">【第5回】限界マンション――マンションの空き家は、今回の続きにあたります</a>
-      <a href="column-10.dc.html">【第10回】50代からの住まい――親の見守りや同居も見据えて家を使い継ぐ</a>
-      <a href="column-01.dc.html">【第1回】住まいの価値観――そもそも「いい家」とは何かを問い直す回</a>
-    </div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="9" href="column-09.dc.html">【第9回】台風の前に、家族で決めておくこと。家の外・中・避難の備え</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="7" href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a></div></section>
 
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <a href="column-03.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-05.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-03.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-05.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -527,24 +566,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['実家じまい', '空き家問題', '固定資産税', '相続登記義務化'],
-      faqs: [
-        { q: '実家じまいは、いつから考え始めればいいですか？', a: '「親が元気で、判断力があるうち」が最適です。実家は施設入所などで住まなくなった時点から実質空き家になり、名義も判断も宙に浮きがちです。盆や正月に「この家を将来どうするか」を家族で口に出すことから始めましょう。' },
-        { q: '親が施設に入りました。実家はどうすればいいですか？', a: '親御さんの意思確認ができるうちに、家族で方針を話し合っておくのが理想です。固定資産税や管理の負担が続く点も踏まえ、早めに専門家へ相談するのも有効です。' },
-        { q: '空き家を放置すると、具体的に何が起きますか？', a: '2023年改正の空家法により「管理不全空家」に指定され勧告を受けると、住宅用地特例が外れて固定資産税が最大約6倍になり得ます。ただし段階を踏む仕組みで、いきなり跳ね上がるわけではありません。' },
-        { q: '「更地にすると税金が上がる」というのは本当ですか？', a: '本当です。住宅が建つ土地は「住宅用地特例」で固定資産税が最大6分の1に軽減されており、解体して更地にするとこの特例が外れて税額が上がります。' },
-        { q: '相続登記の義務化で、放置している実家はどうなりますか？', a: '2024年4月から、相続で不動産を取得したと知った日から3年以内の登記が義務化されました。過去の相続も対象で、2027年3月31日までの登記が必要です。まず実家の名義を確認してください。' },
-        { q: '生前贈与で早めに実家を引き継ぐのはアリですか？', a: '選択肢の一つです。親が判断できるうちに動けるのが利点ですが、贈与税や兄弟間の公平性など注意点も多く、税理士など専門家に相談を。' },
-        { q: '高齢の親が、家族に相談せず本来必要のない高額リフォームを契約しないか心配です。', a: '親御さんの判断を頭ごなしに止めるのではなく、家族がふだんから実家の状況を共有し「大きな契約の前は一度みんなに相談する」と約束しておくのが、もっとも有効な予防策です。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

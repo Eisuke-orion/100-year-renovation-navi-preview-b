@@ -8,8 +8,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>マンションの老いにどう備えるか。長く暮らすための住まいの条件</title>
 <meta name="description" content="マンションの建物と管理の老いにどう備えるか。長く安心して暮らすために、修繕、管理組合、住民の合意形成を考えます。">
 <meta property="og:title" content="マンションの老いにどう備えるか。長く暮らすための住まいの条件">
@@ -17,16 +15,11 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/column-05.dc.html">
 <meta property="og:image" content="https://cbl-rnavi-column.yuuuzo.chatgpt.site/legacy/uploads/ep06_fv_long_life_condominium.webp">
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background: oklch(0.98 0.014 85); }
   a { color: oklch(0.42 0.1 155); text-decoration: none; }
@@ -37,7 +30,11 @@
   details > summary:hover { background:oklch(0.98 0.02 150); }
   details[open] .faq-chevron { transform:rotate(45deg); }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -305,17 +302,23 @@
     <p style="font-size:16px; line-height:1.9; color: oklch(0.42 0.015 90); margin:0 0 18px;">「限界マンション」という次の空き家問題</p>
     <p style="font-size:13px; color:oklch(0.52 0.015 90); margin:0 0 18px;">公開日：2026年8月27日</p>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4">
-        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">{{ t }}</span>
-      </sc-for>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">限界マンション</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">マンション 老朽化</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">区分所有法改正</span>
+
+        <span style="font-size:12.5px; background: oklch(0.95 0.03 150); color: oklch(0.4 0.09 155); border-radius:999px; padding:5px 13px;">修繕積立金</span>
+
     </div>
     <div style="display:flex; align-items:center; gap:12px; padding-top:4px; border-top:1px solid oklch(0.9 0.02 85); padding-top:16px;">
-      <image-slot id="author-avatar" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="author-avatar" src="images/author-eisuke.webp" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
       <span style="font-size:13.5px; color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep06-fv" src="uploads/ep06_fv_long_life_condominium.webp" shape="rounded" radius="18" placeholder="FV｜夕暮れ、一部の窓だけに明かりがともる古い分譲マンション" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep06-fv" src="uploads/ep06_fv_long_life_condominium.webp" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px" alt="">
 
   <p style="font-size:17px; line-height:2; margin:32px 0;">
     前回・第4回では「戸建ての実家じまい」をお話ししました。今回はその続き、「マンションの空き家」です。先に、この記事の芯を言っておきます。戸建ての空き家は「畳みにくい」問題ですが、マンションの空き家は「そもそも畳めない」問題です。なぜそうなるのか、公的データと一冊の本を手がかりに、できるだけ誠実に、煽らずに整理します。
@@ -340,7 +343,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">米山秀隆さんの『限界マンション 次に来る空き家問題』（日本経済新聞出版社、2015年）は、区分所有権を"時限爆弾"と表現しました。核心は「2つの老い」――建物の老いと住民の老い。建物と人が同時に老いることで管理組合が機能しなくなり、半ば放置された「限界マンション」化がじわじわ進みます。</p>
   </article>
 
-  <image-slot id="ep06-img1" src="uploads/ep06_body01_condo_aging_repairs.webp" shape="rounded" radius="16" placeholder="一棟の建物を大勢で分け合って持つ『区分所有』の概念図" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep06-img1" src="uploads/ep06_body01_condo_aging_repairs.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">3. 数字で見る――築古マンションは、これから一気に増える</h2>
@@ -350,7 +353,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">①お金が足りない――修繕積立金が計画に対して不足しているマンションは約36.6%。②建替えはほとんど実現しない――原則5分の4以上の賛成が必要で、1戸あたり約1000万円の追加負担も相場とされ、全国約694万戸に対し建替え実績は累計297件・約2.4万戸（国土交通省調べ、2024年4月時点）。③そして決められなくなる――空室・相続で頭数が集まらなくなる。「直すお金もない、壊す合意も取れない、決める人も集まらない」――これが限界マンションの終着点です。</p>
   </article>
 
-  <image-slot id="ep06-img2" src="uploads/ep06_body02_condo_management_meeting.webp" shape="rounded" radius="16" placeholder="築40年以上のマンションが年々増えることを示す棒グラフ" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep06-img2" src="uploads/ep06_body02_condo_management_meeting.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">5. 2026年、区分所有法が変わった――大きな前進、でも課題は残る</h2>
@@ -360,7 +363,7 @@
     <p style="font-size:16.5px; line-height:1.95; margin:0 0 16px;">見るべきは「建物」より、まず「お金」と「人」です。①修繕積立金は足りているか②長期修繕計画があるか・更新されているか③管理状態と管理組合が生きているか。「積立金が安い＝お得」ではなく、将来の大規模修繕でお金が足りなくなる"赤信号"かもしれません。</p>
   </article>
 
-  <image-slot id="ep06-img3" src="uploads/ep06_body03_condo_common_area_check.webp" shape="rounded" radius="16" placeholder="修繕積立金・長期修繕計画・管理状態を確認するチェックリスト" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;"></image-slot>
+  <img id="ep06-img3" src="uploads/ep06_body03_condo_common_area_check.webp" style="width:100%;aspect-ratio:16/10;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px" alt="">
 
   <article>
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:21px; margin:0 0 16px;">7. 生前贈与という選択肢――戸建ても、マンションも</h2>
@@ -370,15 +373,55 @@
   <section style="margin:44px 0;">
     <h2 style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:19px; margin:0 0 18px;">よくある質問</h2>
     <div style="display:flex; flex-direction:column; gap:10px;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+
         <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
           <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
-            <span>{{ f.q }}</span>
+            <span>「限界マンション」とは何ですか？</span>
             <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
           </summary>
-          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">{{ f.a }}</p>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">建物の老朽化と住民の高齢化という「2つの老い」が同時に進み、空室が増え、管理組合が十分に機能せず、修繕も建替えもできないまま半ば放置されていくマンションを指します。</p>
         </details>
-      </sc-for>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>築40年を超えたら、もう住めないのですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">いいえ。適切に修繕を重ねれば、それ以上長く住めます。問題は「適切な修繕を続けられるか」で、鍵は修繕積立金と管理組合の状態です。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>古くなったら建替えればいいのでは？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">現実には非常に難しいです。原則5分の4以上の合意が必要で、1戸あたり約1000万円規模の追加負担も生じます。建替え実績は累計297件・約2.4万戸にとどまります。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>2026年の区分所有法改正で、問題は解決しますか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">2026年4月に施行され、建替えの決議要件が緩和されたことで、合意形成の前進が期待されます。ただし建替えの費用問題そのものは残るため、最終的には各マンションの積立状況と合意形成が課題となります。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>マンションを買うとき・相続するとき、何を見ればいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">「建物」より先に「お金」と「人」です。修繕積立金が計画に対して不足していないか、長期修繕計画が更新されているか、管理組合が機能しているか。</p>
+        </details>
+
+        <details style="background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:12px; padding:0; overflow:hidden;">
+          <summary style="display:flex; align-items:center; justify-content:space-between; gap:12px; font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; color:oklch(0.3 0.015 90); padding:16px 20px; cursor:pointer; list-style:none;">
+            <span>生前贈与と相続、どちらがいいですか？</span>
+            <span class="faq-chevron" style="flex:none; width:24px; height:24px; border-radius:50%; background:oklch(0.95 0.03 150); color:oklch(0.4 0.09 155); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; transition:transform .2s;">＋</span>
+          </summary>
+          <p style="font-size:15px; line-height:1.85; margin:0; padding:0 20px 18px; color:oklch(0.42 0.015 90);">一概には言えません。生前贈与は親が元気なうちに確実に引き継げる利点がある一方、税負担や兄弟間の公平性の懸念があります。専門家への相談をおすすめします。</p>
+        </details>
+
     </div>
   </section>
 
@@ -407,29 +450,17 @@
       <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a>
     </div>
   </section>
-
-  <section data-related-articles hidden style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:15px; margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex; flex-direction:column; gap:10px; font-size:14.5px;">
-      <a href="column-07.dc.html">【第7回】失敗しないリフォーム――業者選びの知識</a>
-      <a href="column-04.dc.html">【第4回】実家じまい――戸建ての空き家と「住まいの終活」</a>
-      <a href="column-01.dc.html">【第1回】住まいの価値観――そもそも「いい家」とは何かを問い直す回</a>
-    </div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="9" href="column-09.dc.html">【第9回】台風の前に、家族で決めておくこと。家の外・中・避難の備え</a><a data-related-episode="8" href="column-08.dc.html">【第8回】電気代が高く感じられる理由。窓と家電から始める節電</a><a data-related-episode="7" href="column-07.dc.html">【第7回】リフォームで失敗しないために。見積もりと業者選びの基本</a><a data-related-episode="6" href="column-06.dc.html">【第6回】「夏をむねとすべし」は今も正解？一年を通じて快適な家</a></div></section>
 
   <div style="display:flex; align-items:center; gap:16px; background:#fff; border:1px solid oklch(0.89 0.02 85); border-radius:16px; padding:22px; margin-bottom:36px;">
-    <image-slot id="author-box" src="images/author-eisuke.webp" shape="circle" placeholder="著者" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="author-box" src="images/author-eisuke.webp" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%" alt="">
     <div>
       <p style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700; font-size:14.5px; margin:0 0 6px;">この記事を書いた人｜エイスケ</p>
       <p style="font-size:13px; line-height:1.75; color:oklch(0.48 0.015 90); margin:0;">1986年生まれ、40歳。実家の建築業・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方のプロの視点から「豊かな暮らし」をテーマに忖度なく切り込みます。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p>
     </div>
   </div>
 
-  <nav class="column-pagination" style="display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; padding-top:24px; border-top:1px solid oklch(0.88 0.02 85); font-size:14px;">
-    <a href="column-04.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif; font-weight:700;">目次に戻る</a>
-    <a href="column-06.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-04.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-06.dc.html">次の回 →</a></nav>
 
 </div>
 <section class="check_history"></section>
@@ -526,23 +557,6 @@
 
 
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['限界マンション', 'マンション 老朽化', '区分所有法改正', '修繕積立金'],
-      faqs: [
-        { q: '「限界マンション」とは何ですか？', a: '建物の老朽化と住民の高齢化という「2つの老い」が同時に進み、空室が増え、管理組合が十分に機能せず、修繕も建替えもできないまま半ば放置されていくマンションを指します。' },
-        { q: '築40年を超えたら、もう住めないのですか？', a: 'いいえ。適切に修繕を重ねれば、それ以上長く住めます。問題は「適切な修繕を続けられるか」で、鍵は修繕積立金と管理組合の状態です。' },
-        { q: '古くなったら建替えればいいのでは？', a: '現実には非常に難しいです。原則5分の4以上の合意が必要で、1戸あたり約1000万円規模の追加負担も生じます。建替え実績は累計297件・約2.4万戸にとどまります。' },
-        { q: '2026年の区分所有法改正で、問題は解決しますか？', a: '2026年4月に施行され、建替えの決議要件が緩和されたことで、合意形成の前進が期待されます。ただし建替えの費用問題そのものは残るため、最終的には各マンションの積立状況と合意形成が課題となります。' },
-        { q: 'マンションを買うとき・相続するとき、何を見ればいいですか？', a: '「建物」より先に「お金」と「人」です。修繕積立金が計画に対して不足していないか、長期修繕計画が更新されているか、管理組合が機能しているか。' },
-        { q: '生前贈与と相続、どちらがいいですか？', a: '一概には言えません。生前贈与は親が元気なうちに確実に引き継げる利点がある一方、税負担や兄弟間の公平性の懸念があります。専門家への相談をおすすめします。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>

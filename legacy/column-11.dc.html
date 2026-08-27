@@ -7,8 +7,6 @@
 <link href="css/column-overrides.css" rel="stylesheet" />
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="../js/common.js"></script>
-<script src="js/publication-config.js"></script>
-<script src="js/column-publication.js"></script>
 <title>50代人口の約3割に達するNISA口座。住宅ローンが残るなら、何を優先する？</title>
 <meta name="description" content="50代人口約1,845万人に対し、NISA口座は約553万口座。3人に1人に近い規模を入口に、住宅ローン・修繕費との優先順位を考えます。">
 <meta name="keywords" content="資産・お金／人生100年時代のリフォームナビ">
@@ -47,16 +45,11 @@
   }
 }
 </script>
-<script src="./support.js"></script>
 <script src="./column-nav.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="./image-slot.js"></script>
 <style>
   body { margin:0; background:oklch(0.98 0.014 85); }
   a { color:oklch(0.42 0.1 155); text-decoration:none; }
@@ -78,7 +71,11 @@
   .column-caution { font-size:13.5px; line-height:1.8; color:oklch(0.42 0.04 75); background:oklch(0.96 0.025 70); border-radius:12px; padding:16px 18px; margin:22px 0 34px; }
   @media (max-width:600px) { .column-article-body table { display:block; overflow-x:auto; white-space:nowrap; } }
 </style>
-</helmet>
+
+</head>
+<body>
+
+
 <header>
 	<div class="inner">
 		<div class="wrap_search">
@@ -344,15 +341,15 @@
     <p style="font-size:16px;line-height:1.9;color:oklch(0.42 0.015 90);margin:0 0 18px;">「3人に1人に近い」規模を入口に、自分の家計の優先順位を考えます。</p>
     <p style="font-size:13px;color:oklch(0.52 0.015 90);margin:0 0 18px;">公開日：2026年9月17日</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-      <sc-for list="{{ tags }}" as="t" hint-placeholder-count="4"><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">{{ t }}</span></sc-for>
+      <span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">NISA</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">住宅ローン</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">修繕</span><span style="font-size:12.5px;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);border-radius:999px;padding:5px 13px;">設備更新</span>
     </div>
     <div style="display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid oklch(0.9 0.02 85);">
-      <image-slot id="ep11-author-avatar" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:40px;height:40px;flex:none;"></image-slot>
+      <img id="ep11-author-avatar" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:40px;height:40px;flex:none;display:block;object-fit:cover;border-radius:50%">
       <span style="font-size:13.5px;color:oklch(0.48 0.015 90);">文｜エイスケ（住宅と教育の専門家）</span>
     </div>
   </header>
 
-  <image-slot id="ep11-fv" src="uploads/ep11_fv_finance_table.webp" shape="rounded" radius="18" alt="住宅ローンと資産形成の優先順位を考える50代" placeholder="住宅ローンと資産形成の優先順位を考える50代" style="width:100%;aspect-ratio:16/9;"></image-slot>
+  <img id="ep11-fv" src="uploads/ep11_fv_finance_table.webp" alt="住宅ローンと資産形成の優先順位を考える50代" style="width:100%;aspect-ratio:16/9;display:block;object-fit:cover;border-radius:18px">
 
   <div class="column-article-body" style="margin-top:32px;"><p>両資料の基準日は約1か月ずれています。また、口座数は買付けの有無や新規開始人数を示すものではありません。この2つを単純に比べると、NISA口座数は50代人口の約30.0％に相当します。言い換えれば、50代にとってNISAが身近なテーマになっていることを感じさせる数字です。この記事では、この数字を入口に、住宅ローン、修繕・設備更新費、資産形成の優先順位を考えます。</p></div>
 
@@ -376,7 +373,7 @@
 <p>新NISA（少額投資非課税制度）は2024年に制度が拡充され、年間投資枠や非課税保有期間が広がりました。ただし、50代全体の口座規模と、「自分の家計にとって今それが最優先か」という判断は分けて考える必要があります。</p>
 <p>周囲の利用状況は、資産形成を考え始めるきっかけにはなります。しかし、住宅ローンを返済しながらの資産形成では、ローンの金利、家の維持費、「元本割れしても取り返せる時間があるか」という年齢的な事情まで、あわせて考える必要があります。</p>
 </section>
-<image-slot id="ep11-body1" src="uploads/ep11_body01_nisa_account_share_chart_v3.webp" shape="rounded" radius="16" alt="50代人口約1,845万人とNISA口座約553万口座を比較し、口座数が人口の約30.0％に相当することを示す横棒グラフ" placeholder="50代人口約1,845万人とNISA口座約553万口座を比較し、口座数が人口の約30.0％に相当することを示す横棒グラフ" style="width:100%;aspect-ratio:1672/760;margin:8px 0 10px;border-radius:16px;overflow:hidden;clip-path:inset(0 round 16px);"></image-slot>
+<img id="ep11-body1" src="uploads/ep11_body01_nisa_account_share_chart_v3.webp" alt="50代人口約1,845万人とNISA口座約553万口座を比較し、口座数が人口の約30.0％に相当することを示す横棒グラフ" style="width:100%;aspect-ratio:1672/760;margin:8px 0 10px;border-radius:16px;overflow:hidden;clip-path:inset(0 round 16px);display:block;object-fit:cover;border-radius:16px">
 <p data-column-chart-note="11" style="font-size:13px;line-height:1.75;color:oklch(0.48 0.025 75);margin:0 0 36px;">出典：金融庁「NISA口座の利用状況調査」／総務省統計局「人口推計」。注：基準日は異なります。口座数は実際の投資人数・新規開始人数を示しません。553万1,813口座÷1,844万9千人＝約30.0％。人口は2020年国勢調査基準の確定値で、2025年国勢調査集計後に更新予定です。</p>
 
 <section class="column-article-body">
@@ -401,7 +398,7 @@
 <p><strong>③ 修繕・設備更新費の見込み</strong>
 築年数や設備の状況によって、今後数年でどの程度の修繕・設備更新費がかかりそうか、大まかにでも把握しておくことが重要です。見込みが立たないまま資金を投資に回すと、いざというときに住宅ローンとは別の借り入れが必要になることもあります。</p>
 </section>
-<image-slot id="ep11-body2" src="uploads/ep11_body02_certainty_balance.webp" shape="rounded" radius="16" alt="住宅ローン残高と家計を確認する様子" placeholder="住宅ローン残高と家計を確認する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot>
+<img id="ep11-body2" src="uploads/ep11_body02_certainty_balance.webp" alt="住宅ローン残高と家計を確認する様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px">
 
 <section class="column-article-body">
 <h2>5. 自分の優先順位を決める</h2>
@@ -415,9 +412,9 @@
 <p>この順番は絶対的なものではなく、家計の状況、リスクへの考え方、住宅ローン控除の残り期間などによって変わります。判断に迷う場合は、特定の金融商品を売る立場にない、独立系のファイナンシャルプランナーや、住宅金融支援機構の相談窓口など、中立な立場の専門家に相談することをおすすめします。</p>
 <hr>
 </section>
-<image-slot id="ep11-body3" src="uploads/ep11_body03_insulated_window.webp" shape="rounded" radius="16" alt="修繕費と資産形成の配分を考える様子" placeholder="修繕費と資産形成の配分を考える様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;"></image-slot></article>
+<img id="ep11-body3" src="uploads/ep11_body03_insulated_window.webp" alt="修繕費と資産形成の配分を考える様子" style="width:100%;aspect-ratio:16/9;margin:8px 0 36px;display:block;object-fit:cover;border-radius:16px"></article>
 
-  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><sc-for list="{{ faqs }}" as="f"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>{{ f.q }}</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">{{ f.a }}</p></details></sc-for></div></section>
+  <section class="column-faqs" style="margin:44px 0;"><h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">よくある質問</h2><div style="display:flex;flex-direction:column;gap:10px;"><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>NISAと住宅ローン返済は、どちらを優先すべきですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">一律の正解はありません。住宅ローンの金利・残高、生活防衛資金、修繕・設備更新の見込みを並べ、家計に無理がない順番を考えます。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>修繕・設備更新費は、何から確認すればよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">外壁や屋根だけでなく、給湯設備などの更新時期と概算費用を確認します。投資や繰り上げ返済の前に、必要になりそうな費用を別枠で見積もります。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>生活防衛資金とは何ですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">収入減や急な支出に備える、日常の生活費とは別の資金です。投資や繰り上げ返済を考える前に、家計で無理なく確保できる額を確認します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>繰り上げ返済をするときの注意点は？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">返済期間や利息を減らせる場合がある一方、手元資金が減ります。金利、団体信用生命保険、教育費や住まいの更新費を含めて判断します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>家計の優先順位は、誰と話し合えばよいですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">ローン返済や住まいの更新が家計に影響する場合は、家族で数字と希望を共有します。個別の資産配分や税務は、必要に応じて専門家に相談します。</p></details><details style="background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:12px;padding:0;overflow:hidden;"><summary style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:oklch(0.3 0.015 90);padding:16px 20px;cursor:pointer;list-style:none;"><span>50代のNISA口座数が約30％なら、投資を優先すべきですか？</span><span style="flex:none;width:24px;height:24px;border-radius:50%;background:oklch(0.95 0.03 150);color:oklch(0.4 0.09 155);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">＋</span></summary><p style="font-size:15px;line-height:1.85;margin:0;padding:0 20px 18px;color:oklch(0.42 0.015 90);">この割合は口座の規模を示す単純比較で、実際の投資人数や個々の家計での優先順位を示すものではありません。住宅ローン、生活防衛資金、修繕・設備更新費を確認してから判断します。</p></details></div></section>
 
   <section class="column-family-questions" style="margin:44px 0;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:24px 26px;">
 <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:0 0 18px;">家族と話し合おう</h2>
@@ -450,25 +447,14 @@
 <a href="https://www.cbl.or.jp/r-navi/contents/tips/dept/">参加メーカー情報検索（ショールーム・SNS等）</a>
 <a href="https://www.cbl.or.jp/blsys/blnintei/index">ベターリビングが認定する優良住宅部品（BL部品）について</a></div>
   </section>
-
-  <section data-related-articles hidden data-related-limit="4" style="margin-bottom:44px;">
-    <p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px;">関連情報のご紹介</p>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;"><a href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a>
-<a href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a>
-<a href="column-10.dc.html">【第10回】子どもが巣立ったあと、家はどう変える？──50代から考える夫婦の居場所</a>
-<a href="column-12.dc.html">【第12回】住宅ローンの変動金利が1％違うと、家計はどう変わる？</a></div>
-  </section>
+  <section data-related-articles data-related-order="descending" data-related-count="4" data-publication-release="20" style="margin-bottom:44px"><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;margin:0 0 14px">関連記事</p><div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px"><a data-related-episode="12" href="column-12.dc.html">【第12回】住宅ローンの変動金利が1％違うと、家計はどう変わる？</a><a data-related-episode="10" href="column-10.dc.html">【第10回】子どもが巣立ったあと、家はどう変える？──50代から考える夫婦の居場所</a><a data-related-episode="2" href="column-02.dc.html">【第2回】片づかないのは、あなたのせいじゃない。収納と動線で変わる家</a><a data-related-episode="1" href="column-01.dc.html">【第1回】家は資産か、負債か。暮らしから考える住まいの価値</a></div></section>
 
   <div style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid oklch(0.89 0.02 85);border-radius:16px;padding:22px;margin-bottom:36px;">
-    <image-slot id="ep11-author-box" src="images/author-eisuke.webp" shape="circle" alt="著者エイスケ" placeholder="著者エイスケ" style="width:56px;height:56px;flex:none;"></image-slot>
+    <img id="ep11-author-box" src="images/author-eisuke.webp" alt="著者エイスケ" style="width:56px;height:56px;flex:none;display:block;object-fit:cover;border-radius:50%">
     <div><p style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:0 0 6px;">この記事を書いた人｜エイスケ</p><p style="font-size:13px;line-height:1.75;color:oklch(0.48 0.015 90);margin:0;">1986年生まれ。実家の工務店・不動産に10年間従事したのち、教育の世界へ。住宅と教育、両方の視点から「豊かな暮らし」をテーマに執筆します。※本コラムは筆者個人の見解・経験に基づくものです。最終的な判断は各分野の専門家にご相談ください。</p></div>
   </div>
 
-  <nav class="column-pagination" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px;">
-    <a href="column-10.dc.html">← 前の回</a>
-    <a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;">目次に戻る</a>
-    <a href="column-12.dc.html">次の回 →</a>
-  </nav>
+  <nav class="column-pagination" data-publication-release="20" aria-label="コラム前後ナビゲーション" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid oklch(0.88 0.02 85);font-size:14px"><a href="column-10.dc.html">← 前の回</a><a href="index.html" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700">目次に戻る</a><a href="column-12.dc.html">次の回 →</a></nav>
 </div>
 <section class="check_history"></section>
 <div class="btn_totop"></div>
@@ -562,23 +548,6 @@
 		<div class="box_logo_bl"><a href="https://www.cbl.or.jp/" target="_blank"><img src="https://www.cbl.or.jp/r-navi/img/logo_bl.svg"></a></div>
 </footer>
 
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      tags: ['NISA', '住宅ローン', '修繕', '設備更新'],
-      faqs: [
-        { q: 'NISAと住宅ローン返済は、どちらを優先すべきですか？', a: '一律の正解はありません。住宅ローンの金利・残高、生活防衛資金、修繕・設備更新の見込みを並べ、家計に無理がない順番を考えます。' },
-        { q: '修繕・設備更新費は、何から確認すればよいですか？', a: '外壁や屋根だけでなく、給湯設備などの更新時期と概算費用を確認します。投資や繰り上げ返済の前に、必要になりそうな費用を別枠で見積もります。' },
-        { q: '生活防衛資金とは何ですか？', a: '収入減や急な支出に備える、日常の生活費とは別の資金です。投資や繰り上げ返済を考える前に、家計で無理なく確保できる額を確認します。' },
-        { q: '繰り上げ返済をするときの注意点は？', a: '返済期間や利息を減らせる場合がある一方、手元資金が減ります。金利、団体信用生命保険、教育費や住まいの更新費を含めて判断します。' },
-        { q: '家計の優先順位は、誰と話し合えばよいですか？', a: 'ローン返済や住まいの更新が家計に影響する場合は、家族で数字と希望を共有します。個別の資産配分や税務は、必要に応じて専門家に相談します。' },
-        { q: '50代のNISA口座数が約30％なら、投資を優先すべきですか？', a: 'この割合は口座の規模を示す単純比較で、実際の投資人数や個々の家計での優先順位を示すものではありません。住宅ローン、生活防衛資金、修繕・設備更新費を確認してから判断します。' },
-      ],
-    };
-  }
-}
-</script>
+
 </body>
 </html>
