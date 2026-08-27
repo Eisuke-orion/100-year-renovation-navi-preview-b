@@ -204,7 +204,7 @@
       <p>このページは、修正件数を並べるためではなく、事務局・理事長からいただいたご指摘をどのように受け止め、前回納品分から何をどう改善したかを、同じ箇所を見比べながら確認していただくために作成しました。各回の前回納品分と今回の修正版を並べ、指摘の意図、対応方針、実際の変更内容まで確認できます。</p>
       <p>事務局からの具体的な修正指示は、指定箇所と修正結果を一件ずつ記録しています。理事長からの本質的なご指摘は、指摘原文だけでなく、どのような意図と解釈したか、その理由、具体的にどう反映したかも併せて記載します。</p>
       <div class="notice">このページとリンク先はいずれも確認用テストサイトです。検索エンジンには登録しない設定です。</div>
-      <a class="detail-link" href="compare-register.html">68件の修正指示台帳を開く</a>
+      <a class="detail-link" href="compare-register.html">正本PDF 65件の修正指示台帳を開く</a>
     </section>
 
     <section class="common-change" aria-labelledby="common-change-title">
@@ -413,6 +413,7 @@
               <div class="instruction-row"><dt>修正後</dt><dd>${item.after}</dd></div>
               <div class="instruction-row"><dt>画像・出典・リンク対応</dt><dd>${item.media}</dd></div>
               <div class="instruction-row"><dt>今回の修正版リンク</dt><dd><a href="${afterUrl}" target="_blank" rel="noopener">${item.label}を別画面で確認する</a></dd></div>
+              <div class="instruction-row"><dt>正本PDFの原子台帳</dt><dd><a href="compare-register.html?query=${encodeURIComponent(item.label)}">${item.label}の原本注釈・公開B証拠を見る</a></dd></div>
             </dl>
             ${detailedRecords ? `<h4>指示単位の詳細</h4>${detailedRecords}` : ""}
           </section>

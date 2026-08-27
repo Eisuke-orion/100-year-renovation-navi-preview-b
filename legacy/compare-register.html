@@ -61,7 +61,7 @@
 
     <section class="panel" aria-labelledby="register-heading">
       <h2 id="register-heading">修正指示台帳</h2>
-      <p class="muted">正本67項目と、FAQ追加・本文整合の補足指示1項目です。修正前に確定文が残っていない項目は、推測で補わず、その旨を明記しています。</p>
+      <p class="muted">正本PDFの親注釈（FreeText）65件を、1注釈＝1行で記録しています。会話で追加・上書きされた指示は補足行として分離しています。PDFページと注釈座標、対象原文、公開Bの確認根拠を各行で確認できます。</p>
       <div class="filters">
         <label><span class="muted">検索</span><input id="search" type="search" placeholder="ID、回、箇所、文言で絞り込み"></label>
         <label><span class="muted">状態</span><select id="status-filter"><option value="all">すべて</option><option value="pass">公開B HTML確認済み</option><option value="check">要確認</option><option value="pending">保留</option></select></label>
@@ -72,27 +72,15 @@
   </main>
 
   <script>
-    const REGISTER_URL = "compare-register.json?rev=20260827";
-    const FAQ_RECORD = {
-      id: "SUP-FAQ-01",
-      target: "第10〜20回 FAQ",
-      request: "第10〜20回のFAQは第1〜9回より少ないため、もう少し入れる。検索意図と本文の内容が一致することも確認する。",
-      before: "第10〜20回は各5件。第1〜9回との件数差と、追加設計の証拠が台帳化されていない状態。",
-      after: "第10〜20回を各6件へ増補。全11回で追加Q&A11件を含む66件とし、各Q&Aが本文テーマに沿うことを確認する。",
-      evidence: "公開Bの第10〜20回HTMLで「よくある質問」各1節と、各ページのFAQ 6件を確認。対象11回×各6件＝66件。",
-      url: "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
-      status: "pass",
-      statusLabel: "公開B HTML確認済み",
-      note: "後発の補足指示。正本作成時の旧記録（各5件）は、公開Bの現行HTML読戻し結果で更新しています。"
-    };
+    const REGISTER_URL = "compare-register.json?rev=20260827-pdf65";
 
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"})[char]);
     const stateFor = (record) => {
-      if (record.id === "C-07") return { key:"pass", label:"公開A・B確認済み" };
       if (record.audit_status === "verified_public_html") return { key:"pass", label:"公開B HTML確認済み" };
+      if (String(record.audit_status || "").startsWith("pending")) return { key:"pending", label:"保留（未実装・再確認待ち）" };
       return { key:"check", label:"要確認" };
     };
-    const beforeFor = (record) => record.legacy_claim || "正本に修正前の確定文なし（推測で補完しない）";
+    const beforeFor = (record) => record.target_original || record.legacy_claim || "正本に修正前の確定文なし（推測で補完しない）";
     const registerToView = (record) => {
       const state = stateFor(record);
       return {
@@ -100,14 +88,14 @@
         target: record.target,
         request: record.source_a_user_instruction || record.source_b_jarvis_instruction,
         before: beforeFor(record),
-        after: record.id === "11-02-HEADING" ? "50代人口の約30%に達するNISA口座" : record.expected_after,
-        evidence: record.id === "C-07"
-          ? "公開Aはindex、全20回の一覧・各記事、印刷用を含む23実ページすべてでnoindex,nofollowを確認。公開Bもnoindex,nofollowを確認済み。A version42（d55b79e）。"
-          : (record.public_b_evidence || "公開B確認根拠は正本に未記録"),
+        after: record.expected_after,
+        evidence: record.public_b_evidence || "公開B確認根拠は未記録",
         url: record.public_b_url,
         status: state.key,
         statusLabel: state.label,
-        note: [record.source_b_jarvis_instruction, record.scope_note, record.discrepancy].filter(Boolean).join(" ／ ")
+        pdf: record.pdf_page ? `p.${record.pdf_page} / Rect [${(record.pdf_rect || []).join(", ")}]` : "会話確定の補足指示",
+        instructionB: record.source_b_jarvis_instruction || "未記録",
+        note: [record.scope_note, record.discrepancy].filter(Boolean).join(" ／ ")
       };
     };
     const renderRecord = (record) => `
@@ -119,8 +107,10 @@
         </summary>
         <div class="record-body">
           <dl class="fields">
-            <dt>依頼文・会話確定文</dt><dd>${escapeHtml(record.request)}</dd>
-            <dt>修正前</dt><dd>${escapeHtml(record.before)}</dd>
+            <dt>PDF原本位置</dt><dd>${escapeHtml(record.pdf)}</dd>
+            <dt>対象原文・対象箇所</dt><dd>${escapeHtml(record.before)}</dd>
+            <dt>A：確定指示</dt><dd>${escapeHtml(record.request)}</dd>
+            <dt>B：作業指示</dt><dd>${escapeHtml(record.instructionB)}</dd>
             <dt>修正後</dt><dd>${escapeHtml(record.after)}</dd>
             <dt>公開Bの確認証拠</dt><dd>${escapeHtml(record.evidence)}${record.url ? ` <a href="${escapeHtml(record.url)}" target="_blank" rel="noopener">公開Bを開く</a>` : ""}</dd>
             <dt>状態</dt><dd>${escapeHtml(record.statusLabel)}</dd>
@@ -132,7 +122,7 @@
       const pass = records.filter(x => x.status === "pass").length;
       const check = records.filter(x => x.status === "check").length;
       const pending = records.filter(x => x.status === "pending").length;
-      document.querySelector("#stats").innerHTML = `<span class="stat">全${records.length}/${records.length}項目 確認済み</span><span class="stat">公開B HTML確認済み ${pass}件</span><span class="stat pending">要確認 ${check}件</span><span class="stat pending">保留 ${pending}件</span>`;
+      document.querySelector("#stats").innerHTML = `<span class="stat">全${records.length}項目</span><span class="stat">公開B HTML確認済み ${pass}件</span><span class="stat pending">要確認 ${check}件</span><span class="stat pending">保留 ${pending}件</span>`;
     };
     const start = async () => {
       const container = document.querySelector("#records");
@@ -140,8 +130,10 @@
         const response = await fetch(REGISTER_URL, { cache:"no-store" });
         if (!response.ok) throw new Error(`台帳の読み込みに失敗しました（${response.status}）`);
         const data = await response.json();
-        const records = [...data.records.map(registerToView), FAQ_RECORD];
+        const records = [...(data.records || []), ...(data.supplemental_records || [])].map(registerToView);
         showStats(records);
+        const requestedQuery = new URLSearchParams(location.search).get("query");
+        if (requestedQuery) document.querySelector("#search").value = requestedQuery;
         const draw = () => {
           const term = document.querySelector("#search").value.trim().toLowerCase();
           const filter = document.querySelector("#status-filter").value;
