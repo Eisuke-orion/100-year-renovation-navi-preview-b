@@ -1671,9 +1671,9 @@
       "target_original": "OGPタグは存在するが、og:imageが旧確認用ドメインを参照して404。OGP確認資料は未作成。",
       "expected_after": "全11記事のOGP画像を1200×630px JPEGで用意し、OGP・canonical・構造化データのURLを揃え、確認一覧を次回納品物へ追加。",
       "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/ogp-check.html",
-      "public_b_check_mode": "pending_public_verification",
-      "public_b_evidence": "公開Bへの反映後に、全11記事のタグ・画像HTTP取得・確認一覧表示を検証する。",
-      "audit_status": "pending_public_verification",
+      "public_b_check_mode": "public_html_and_image_readback_2026-09-04",
+      "public_b_evidence": "公開Bで第10〜20回のOGPメタデータを読み戻し、全11記事のog:url・og:image・canonical・構造化データの一致、OGP画像11点のHTTP 200・1200×630px表示、PC・スマートフォンの確認一覧、CSVダウンロードを確認。",
+      "audit_status": "verified_public_html",
       "legacy_claim": null,
       "discrepancy": null,
       "scope_note": "2026-09-04受領の事務局追加メッセージ。"
