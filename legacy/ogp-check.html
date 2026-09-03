@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>第10〜20回 OGP確認一覧</title>
+  <style>
+    :root { --ink:#26352f; --muted:#65716c; --green:#39745f; --bg:#f7f3ea; --line:#ded8cc; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--bg); font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif; }
+    main { width:min(1120px,calc(100% - 28px)); margin:auto; padding:32px 0 56px; }
+    .back { color:var(--green); font-weight:700; text-decoration:none; }
+    header { margin:20px 0 28px; padding:28px; background:#fff; border-radius:20px; }
+    h1 { margin:0 0 12px; font-size:clamp(26px,4vw,40px); }
+    header p { margin:8px 0; color:var(--muted); line-height:1.8; }
+    .summary { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .badge { padding:7px 12px; border-radius:999px; background:#edf4f0; color:var(--green); font-size:13px; font-weight:700; }
+    .download { margin-top:18px; padding:11px 18px; border:0; border-radius:999px; color:#fff; background:var(--green); font:inherit; font-size:14px; font-weight:800; cursor:pointer; }
+    .download:disabled { cursor:wait; opacity:.5; }
+    #status { margin:0 0 18px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+    article { overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:18px; box-shadow:0 8px 24px rgb(38 53 47 / 6%); }
+    article img { display:block; width:100%; aspect-ratio:1200/630; object-fit:cover; background:#eee; }
+    .body { padding:20px; }
+    .episode { margin:0 0 8px; color:var(--green); font-weight:800; font-size:13px; }
+    h2 { margin:0 0 10px; font-size:19px; line-height:1.55; }
+    .description { margin:0 0 16px; color:#4f5d57; font-size:14px; line-height:1.75; }
+    dl { display:grid; grid-template-columns:86px minmax(0,1fr); gap:7px 10px; margin:0; padding-top:15px; border-top:1px solid #ece8df; font-size:12px; line-height:1.55; }
+    dt { color:var(--muted); font-weight:700; }
+    dd { min-width:0; margin:0; overflow-wrap:anywhere; }
+    .ok { color:var(--green); font-weight:800; }
+    .error { color:#a33; font-weight:800; }
+    .article-link { display:inline-block; margin-top:16px; color:var(--green); font-size:13px; font-weight:800; }
+    @media (max-width:760px) { main { padding-top:20px; } header { padding:22px; } .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="compare.html">← 修正確認ページへ戻る</a>
+    <header>
+      <h1>第10〜20回 OGP確認一覧</h1>
+      <p>各記事に設定したOGP画像・タイトル・説明文・URLをまとめています。画像はSNS共有向けの1200×630px、JPEG形式です。</p>
+      <p>ここに表示される内容は各記事HTMLのOGP設定から直接取得しています。</p>
+      <div class="summary"><span class="badge">対象：第10〜20回</span><span class="badge">画像：1200×630px</span><span class="badge">形式：JPEG</span></div>
+      <button id="download" class="download" type="button" disabled>OGP一覧CSVをダウンロード</button>
+    </header>
+    <p id="status" role="status">OGP設定を読み込んでいます…</p>
+    <section id="cards" class="grid" aria-label="OGP確認一覧"></section>
+  </main>
+  <script>
+    const cards = document.getElementById('cards');
+    const status = document.getElementById('status');
+    const download = document.getElementById('download');
+    const records = [];
+    const meta = (doc, key) => doc.querySelector(`meta[property="${key}"],meta[name="${key}"]`)?.content || '';
+    const addRow = (dl, label, value, className = '') => {
+      const dt = document.createElement('dt');
+      const dd = document.createElement('dd');
+      dt.textContent = label;
+      dd.textContent = value;
+      if (className) dd.className = className;
+      dl.append(dt, dd);
+    };
+    const render = async episode => {
+      const page = `column-${String(episode).padStart(2,'0')}.dc.html`;
+      const response = await fetch(page, { cache:'no-store' });
+      if (!response.ok) throw new Error(`${page}: HTTP ${response.status}`);
+      const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const title = meta(doc, 'og:title');
+      const description = meta(doc, 'og:description');
+      const url = meta(doc, 'og:url');
+      const imageUrl = meta(doc, 'og:image');
+      const alt = meta(doc, 'og:image:alt');
+      const width = meta(doc, 'og:image:width');
+      const height = meta(doc, 'og:image:height');
+      const type = meta(doc, 'og:image:type');
+
+      const card = document.createElement('article');
+      const image = document.createElement('img');
+      image.src = imageUrl;
+      image.alt = alt;
+      const body = document.createElement('div');
+      body.className = 'body';
+      const episodeLabel = document.createElement('p');
+      episodeLabel.className = 'episode';
+      episodeLabel.textContent = `第${episode}回`;
+      const heading = document.createElement('h2');
+      heading.textContent = title;
+      const descriptionText = document.createElement('p');
+      descriptionText.className = 'description';
+      descriptionText.textContent = description;
+      const dl = document.createElement('dl');
+      addRow(dl, '画像サイズ', `${width} × ${height}px`);
+      addRow(dl, '画像形式', type);
+      addRow(dl, 'ページURL', url);
+      addRow(dl, '画像URL', imageUrl);
+      addRow(dl, '画像取得', '確認中');
+      const imageStatus = dl.lastElementChild;
+      image.addEventListener('load', () => { imageStatus.textContent = 'HTTP取得・表示OK'; imageStatus.className = 'ok'; });
+      image.addEventListener('error', () => { imageStatus.textContent = '画像を取得できません'; imageStatus.className = 'error'; });
+      const link = document.createElement('a');
+      link.className = 'article-link';
+      link.href = page;
+      link.textContent = '記事を開く →';
+      body.append(episodeLabel, heading, descriptionText, dl, link);
+      card.append(image, body);
+      cards.append(card);
+      return { episode:`第${episode}回`, title, description, pageUrl:url, imageUrl, width, height, type, alt };
+    };
+    const csvCell = value => `"${String(value).replaceAll('"','""')}"`;
+    download.addEventListener('click', () => {
+      const headers = ['回','OGPタイトル','OGP説明文','ページURL','画像URL','幅','高さ','画像形式','代替テキスト'];
+      const rows = records.map(item => [item.episode,item.title,item.description,item.pageUrl,item.imageUrl,item.width,item.height,item.type,item.alt]);
+      const csv = '\uFEFF' + [headers,...rows].map(row => row.map(csvCell).join(',')).join('\r\n');
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8'}));
+      link.download = 'column-10-20-ogp-list.csv';
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
+    (async () => {
+      try {
+        for (let episode = 10; episode <= 20; episode += 1) records.push(await render(episode));
+        download.disabled = false;
+        status.textContent = '全11記事のOGP設定を読み込みました。';
+      } catch (error) {
+        status.textContent = `読み込みエラー：${error.message}`;
+        status.className = 'error';
+      }
+    })();
+  </script>
+</body>
+</html>

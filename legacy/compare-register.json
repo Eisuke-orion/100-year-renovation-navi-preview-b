@@ -1659,6 +1659,26 @@
       "scope_note": "後発の会話確定指示。"
     },
     {
+      "id": "SUP-OGP-01",
+      "pdf_page": null,
+      "pdf_rect": null,
+      "annotation_type": "office_message_supplement",
+      "atomicity": "one_later_office_instruction_one_operation",
+      "source_a_user_instruction": "今回もOGPを確認したいため、OGP設定内容が分かる資料を次回納品時に一緒に提出する。",
+      "source_a_confidence": "office_message_confirmed",
+      "source_b_jarvis_instruction": "第10〜20回のOGP設定を有効な確認用URLへ統一し、OGP画像・タイトル・説明文・URL・画像サイズを一覧表示する確認ページを追加する。",
+      "target": "第10〜20回 OGP設定・確認資料",
+      "target_original": "OGPタグは存在するが、og:imageが旧確認用ドメインを参照して404。OGP確認資料は未作成。",
+      "expected_after": "全11記事のOGP画像を1200×630px JPEGで用意し、OGP・canonical・構造化データのURLを揃え、確認一覧を次回納品物へ追加。",
+      "public_b_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/ogp-check.html",
+      "public_b_check_mode": "pending_public_verification",
+      "public_b_evidence": "公開Bへの反映後に、全11記事のタグ・画像HTTP取得・確認一覧表示を検証する。",
+      "audit_status": "pending_public_verification",
+      "legacy_claim": null,
+      "discrepancy": null,
+      "scope_note": "2026-09-04受領の事務局追加メッセージ。"
+    },
+    {
       "id": "C-07",
       "pdf_page": null,
       "pdf_rect": null,
