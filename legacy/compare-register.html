@@ -61,7 +61,7 @@
 
     <section class="panel" aria-labelledby="register-heading">
       <h2 id="register-heading">修正指示台帳</h2>
-      <p class="muted">正本PDFの親注釈（FreeText）65件を、1注釈＝1行で記録しています。会話で追加・上書きされた指示は補足行として分離しています。PDFページと注釈座標、対象原文、公開Bの確認根拠を各行で確認できます。</p>
+      <p class="muted">第一稿PDFの親注釈65件に加え、第2稿PDFの赤字21件と理事長コメント2件を、1指示＝1行で記録しています。会話で追加・上書きされた指示は補足行として分離しています。PDFページと注釈座標、対象原文、公開Bの確認根拠を各行で確認できます。</p>
       <div class="filters">
         <label><span class="muted">検索</span><input id="search" type="search" placeholder="ID、回、箇所、文言で絞り込み"></label>
         <label><span class="muted">状態</span><select id="status-filter"><option value="all">すべて</option><option value="pass">公開B HTML確認済み</option><option value="check">要確認</option><option value="pending">保留</option></select></label>
@@ -72,7 +72,7 @@
   </main>
 
   <script>
-    const REGISTER_URL = "compare-register.json?rev=20260827-pdf65";
+    const REGISTER_URL = "compare-register.json?rev=20260905-second-draft";
 
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"})[char]);
     const stateFor = (record) => {
@@ -130,7 +130,7 @@
         const response = await fetch(REGISTER_URL, { cache:"no-store" });
         if (!response.ok) throw new Error(`台帳の読み込みに失敗しました（${response.status}）`);
         const data = await response.json();
-        const records = [...(data.records || []), ...(data.supplemental_records || [])].map(registerToView);
+        const records = [...(data.records || []), ...(data.second_draft_records || []), ...(data.supplemental_records || [])].map(registerToView);
         showStats(records);
         const requestedQuery = new URLSearchParams(location.search).get("query");
         if (requestedQuery) document.querySelector("#search").value = requestedQuery;
