@@ -225,10 +225,10 @@
     <section class="hero">
       <p class="eyebrow">公開前B 修正内容・確認用</p>
       <h1>修正確認ページ B</h1>
-      <p>このページでは、2026年9月3日受領の「第10〜20回 第2稿修正指示」21件と理事長コメント2件、計23件について、修正前のテストサイトAと今回の修正版Bを同じ回ごとに見比べられます。</p>
-      <p>赤字コメントの文言整理、図版の見切れ防止、第11回の修繕・設備更新費に関する表現統一を反映しています。</p>
-      <div class="notice">更新日：2026年9月6日。このページとリンク先はいずれも公開前Bの確認用テストサイトです。検索エンジンには登録しない設定です。</div>
-      <a class="detail-link" href="#latest-register">今回の23件を確認する</a>
+      <p>このページでは、「第10-20回第3稿修正指示_1.pdf」の追加修正8件について、修正前のテストサイトAと今回の修正版Bを同じ回ごとに見比べられます。</p>
+      <p>第13回のグラフ表記、第14回のFVと参考文献、第15回の参考文献と注記、第16回の本文中の著者表記を更新しました。前回の第2稿・理事長コメント23件は別枠で残しています。</p>
+      <div class="notice">更新日：2026年9月10日。このページとリンク先はいずれも公開前Bの確認用テストサイトです。検索エンジンには登録しない設定です。</div>
+      <a class="detail-link" href="#latest-register">今回追加の8件を確認する</a>
       <a class="detail-link" href="ogp-check.html">第10〜20回のOGP確認一覧を開く</a>
     </section>
 
@@ -236,23 +236,30 @@
       <h2 id="common-change-title">今回の確認範囲</h2>
       <dl>
         <dt>今回の原本</dt>
-        <dd>第10〜20回 第2稿修正指示PDF 21件、コメント0828眞鍋理事長 Word 2件、計23件。</dd>
+        <dd>第10-20回第3稿修正指示_1.pdf 8件。</dd>
         <dt>今回の表示</dt>
-        <dd>D2-001〜D2-021、CHAIR-001〜CHAIR-002を原子単位で掲載し、対象回・対象箇所・対応内容・確認状態を確認できます。</dd>
-        <dt>旧第1稿</dt>
-        <dd>旧第1稿由来の記録は今回の23件に含めず、この確認ページの一覧から除外しています。原本別の過去記録は別台帳で管理します。</dd>
+        <dd>T3-001〜T3-008を原子単位で掲載し、対象回・対象箇所・対応内容・確認状態を確認できます。</dd>
+        <dt>前回までの記録</dt>
+        <dd>第2稿PDF 21件と理事長コメントWord 2件は、今回追加の8件と混同しないよう下段の別枠に分離しています。旧第1稿由来の記録は原本別の詳細台帳で管理します。</dd>
         <dt>AとB</dt>
         <dd>Aは前回納品分、Bは今回の修正版です。各回のカードを押すと、A/Bを横並びで表示します。</dd>
       </dl>
     </section>
 
     <section id="latest-register" class="latest-register" aria-labelledby="latest-register-title">
-      <h2 id="latest-register-title">今回の修正指示 23件</h2>
-      <p class="latest-register-intro">第2稿PDF 21件と理事長コメントWord 2件だけを表示します。各項目の確認リンクは公開前Bを開きます。</p>
-      <p id="latest-register-status" class="register-status" role="status">23件の確認状態を読み込んでいます…</p>
-      <div id="latest-register-list" class="atomic-list" aria-label="今回の修正指示23件"></div>
+      <h2 id="latest-register-title">今回追加の第3稿修正指示 8件</h2>
+      <p class="latest-register-intro">第3稿PDFの赤字・矢印を原子単位で表示します。各項目の確認リンクは公開前Bを開きます。</p>
+      <p id="latest-register-status" class="register-status" role="status">8件の確認状態を読み込んでいます…</p>
+      <div id="latest-register-list" class="atomic-list" aria-label="今回追加の第3稿修正指示8件"></div>
+    </section>
+
+    <section id="previous-register" class="latest-register" aria-labelledby="previous-register-title">
+      <h2 id="previous-register-title">前回の第2稿・理事長コメント 23件</h2>
+      <p class="latest-register-intro">第2稿PDF 21件と理事長コメントWord 2件を、今回の第3稿8件とは別に表示します。</p>
+      <p id="previous-register-status" class="register-status" role="status">23件の確認状態を読み込んでいます…</p>
+      <div id="previous-register-list" class="atomic-list" aria-label="前回の第2稿・理事長コメント23件"></div>
       <section class="supplemental-record" aria-labelledby="episode18-detail-title">
-        <h3 id="episode18-detail-title">第18回の補足確認（23件の件数外）</h3>
+        <h3 id="episode18-detail-title">第18回の補足確認（前回23件の件数外）</h3>
         <article class="atomic-record">
           <div class="atomic-record-header"><span class="atomic-id">QA-EP18-ALT</span><span class="atomic-episode">第18回</span><span class="status-pill">公開前Bで確認済み</span></div>
           <dl>
@@ -299,9 +306,10 @@
       { label: "第10回", path: "column-10.dc.html", focus: "空いた子ども部屋のFAQ", note: "「帰省時の使い方」を「家族の帰省時」へ具体化しました。", target: "よくある質問", instruction: "後段の「使い道」と重ならず、誰の帰省か分かる表現にする。", before: "帰省時の使い方、収納…", after: "家族の帰省時、収納…", media: "画像・リンクの変更なし。" },
       { label: "第11回", path: "column-11.dc.html", focus: "導入・NISAの説明・FAQ・修繕設備更新", note: "D2-002に従い、導入を初稿の全文へ戻しました。FAQと修繕・設備更新費の既存対応は維持しています。", target: "導入／第1節／グラフ／FAQ／家族向け設問", instruction: "書き出しは初稿へ戻す。FAQ見出しは指示文を使用し、費用名称は『修繕・設備更新費』へ統一する。", before: "『両資料の基準日は約1か月ずれています。』から始まる導入／50代人口に対するNISA口座数が約30％なら／費用名称が混在", after: "『50代人口は約1,845万人。それに対し、』から始まる初稿の導入／50代の約30％がNISA口座を所持しているなら／修繕・設備更新費に統一", media: "本文画像・OGP画像は変更せず、既存画像を維持。" },
       { label: "第12回", path: "column-12.dc.html", focus: "返済額FAQ・依存画像指定", note: "「毎月返済額」を「毎月の返済額」に整え、実表示画像と依存素材指定を一致させました。", target: "よくある質問／納品用依存素材", instruction: "助詞を補い、実際に表示する画像を納品対象として指定する。", before: "毎月返済額だけでなく／旧画像名を依存素材として指定", after: "毎月の返済額だけでなく／ep12_body03_household_plan_v2.webpを指定", media: "現行画像は変更せず、誤使用防止のため旧グラフ2点を公開領域から削除。" },
-      { label: "第13回", path: "column-13.dc.html", focus: "為替FAQ・グラフ・代替テキスト", note: "「為替」を「為替変動」と具体化し、図版の見切れを防止し、FVのaltを実画像に合わせました。", target: "よくある質問／建築用材等のグラフ／FV alt", instruction: "何を防ぐ方法ではないか明確にし、図の右端が切れないようにする。代替テキストは画像内容と一致させる。", before: "為替そのもの／固定比率での画像表示／画像にいない家族を記載", after: "為替変動そのもの／角丸画像を自然比率で表示／世界地図と住まいの画像内容を説明", media: "OGP画像は変更せず、og:image:altとFV altのみを修正。" },
-      { label: "第14回", path: "column-14.dc.html", focus: "音対策FAQ・代替テキスト", note: "5つの質問文を明確にし、本文画像2点のaltを実画像に合わせました。", target: "よくある質問／本文画像 alt", instruction: "足音対策・音対策・相談内容が明確になる質問文へ変更し、代替テキストは画像内容と一致させる。", before: "曖昧な質問／画像内容と一致しないalt", after: "相談内容が分かる質問／窓の防音確認・家族の話し合いを説明するalt", media: "画像ファイル自体は変更なし。" },
-      { label: "第16回", path: "column-16.dc.html", focus: "文体・参考図書表記", note: "文体をです・ます調に統一し、著者名から敬称と不要な助詞を外しました。", target: "第3節／第6節／出典", instruction: "他の記載と書き方をそろえる。", before: "確認する。／著者名＋さん、さんの『書名』", after: "確認します。／著者名を中黒で連記＋『書名』", media: "リンク先の変更なし。" },
+      { label: "第13回", path: "column-13.dc.html", focus: "建築用材等グラフの補足表記", note: "グラフから消えていた「建築用材等・丸太換算」と割合の説明文を復元しました。", target: "建築用材等のグラフ", instruction: "消えている2つの補足表記が必要か確認する。", before: "補足表記2点が欠落", after: "建築用材等・丸太換算／建築用材等の国内供給に占める割合です。", media: "既存グラフ画像、数値、出典、画像直下の注記は維持。" },
+      { label: "第14回", path: "column-14.dc.html", focus: "FVの車の向き・参考文献", note: "FVの車の進行方向を左右反転し、木村翔氏の参考文献から敬称・助詞と不要な説明文を削除しました。", target: "FV画像／出典・参考資料2番", instruction: "車が逆走に見えない向きにする。参考文献から『さんの』と説明文を取る。", before: "車が逆走に見える向き／木村翔さんの／専門書の説明文", after: "FVを左右反転／木村翔『建築音響と騒音防止計画』（彰国社、2012年）。", media: "画像ファイル自体とOGP画像は変更せず、FVの表示方向のみ変更。" },
+      { label: "第15回", path: "column-15.dc.html", focus: "参考文献表記・末尾注記", note: "参考文献を他の記載と同じ書誌形式へそろえ、不要との指摘がある末尾注記を削除しました。", target: "出典・参考資料3番／直後の注記", instruction: "参考文献の書き方をそろえ、一般的な情報提供に関する注記を削除する。", before: "参考文献：税理士法人レガシィ…／相続専門税理士による実務的な視点。／※本記事は一般的な情報提供…", after: "天野隆さん、天野大輔さんの『【最新版】やってはいけない「実家」の相続』（青春出版社、2024年）。／注記を削除", media: "既存リンク・記事画像・OGP画像の変更なし。" },
+      { label: "第16回", path: "column-16.dc.html", focus: "本文中の複数著者表記", note: "第3節の書籍紹介を第2稿の書き方へ戻し、4名に敬称と助詞を付けました。", target: "第3節「思い出をどう引き継ぐか」の書籍紹介", instruction: "第2稿の『○○さん、○○さん…の』形式へ戻す。", before: "千葉利宏・谷内信彦・村島正彦・桑原豊『実家の片づけ 活かし方』", after: "千葉利宏さん、谷内信彦さん、村島正彦さん、桑原豊さんの『実家の片づけ 活かし方』", media: "末尾の出典一覧・リンク・画像は変更なし。" },
       { label: "第17回", path: "column-17.dc.html", focus: "AI入力例と結果のラベル", note: "4例すべてのラベルを「AIへの入力例」「得られる結果」に統一しました。", target: "導入／第2〜5節", instruction: "導入と各節の呼び方をそろえる。", before: "入力例／入力すること／得られるもの", after: "AIへの入力例／得られる結果", media: "画像・リンクの変更なし。" },
       { label: "第18回", path: "column-18.dc.html", focus: "FV・OGP代替テキスト", note: "人物数を断定しないaltへ変更しました。", target: "FV alt／og:image:alt", instruction: "代替テキストを実際の画像内容に合わせる。", before: "災害用トイレの備蓄を確認する家族", after: "災害用トイレの備蓄を確認する様子", media: "OGP画像・記事画像は変更せず、altのみ変更。" },
       { label: "第19回", path: "column-19.dc.html", focus: "帰省時のFAQ", note: "誰の帰省か分かるよう「家族の帰省時」に変更しました。", target: "よくある質問", instruction: "帰省の主体を明確にする。", before: "帰省時は宿泊場所", after: "家族の帰省時は宿泊場所", media: "画像・リンクの変更なし。" },
@@ -314,50 +322,61 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#39;");
-    const renderLatestRecords = async () => {
+    const atomicRecordMarkup = (record, source) => {
+      const [episode, location = ""] = String(record.target || "").split(/：(.*)/s);
+      const confirmation = record.audit_status === "verified_public_html"
+        ? "公開前Bで反映確認済み"
+        : "要確認";
+      return `
+        <article class="atomic-record" data-instruction-id="${escapeHtml(record.id)}">
+          <div class="atomic-record-header">
+            <span class="atomic-id">${escapeHtml(record.id)}</span>
+            <span class="atomic-episode">${escapeHtml(episode)}</span>
+            <span class="status-pill">${confirmation}</span>
+          </div>
+          <dl>
+            <dt>原本</dt><dd>${escapeHtml(source)}</dd>
+            <dt>原文の指摘</dt><dd>${escapeHtml(record.source_a_user_instruction)}</dd>
+            <dt>対象箇所</dt><dd>${escapeHtml(location || record.target)}</dd>
+            <dt>対応内容</dt><dd>${escapeHtml(record.source_b_jarvis_instruction)}</dd>
+            <dt>確認状態</dt><dd>${confirmation}</dd>
+            <dt>確認リンク</dt><dd><a href="${escapeHtml(record.public_b_url)}" target="_blank" rel="noopener">対象回の公開前Bを開く</a></dd>
+          </dl>
+        </article>`;
+    };
+    const renderRegisters = async () => {
       const status = document.querySelector("#latest-register-status");
       const target = document.querySelector("#latest-register-list");
+      const previousStatus = document.querySelector("#previous-register-status");
+      const previousTarget = document.querySelector("#previous-register-list");
       try {
         const response = await fetch("compare-register.json", { cache: "no-store" });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const register = await response.json();
-        const records = Array.isArray(register.second_draft_records) ? register.second_draft_records : [];
-        if (records.length !== 23) throw new Error(`23件ではなく${records.length}件を取得`);
-        target.innerHTML = records.map(record => {
-          const [episode, location = ""] = String(record.target || "").split(/：(.*)/s);
+        const records = Array.isArray(register.third_draft_records) ? register.third_draft_records : [];
+        const previousRecords = Array.isArray(register.second_draft_records) ? register.second_draft_records : [];
+        if (records.length !== 8) throw new Error(`第3稿8件ではなく${records.length}件を取得`);
+        if (previousRecords.length !== 23) throw new Error(`前回23件ではなく${previousRecords.length}件を取得`);
+        target.innerHTML = records.map(record => atomicRecordMarkup(record, `第3稿修正指示PDF p.${record.pdf_page}`)).join("");
+        previousTarget.innerHTML = previousRecords.map(record => {
           const source = record.id.startsWith("CHAIR-")
             ? "理事長コメントWord"
             : `第2稿修正指示PDF p.${record.pdf_page}`;
-          const confirmation = record.audit_status === "verified_public_html"
-            ? "公開前Bで反映確認済み"
-            : "要確認";
-          return `
-            <article class="atomic-record" data-instruction-id="${escapeHtml(record.id)}">
-              <div class="atomic-record-header">
-                <span class="atomic-id">${escapeHtml(record.id)}</span>
-                <span class="atomic-episode">${escapeHtml(episode)}</span>
-                <span class="status-pill">${confirmation}</span>
-              </div>
-              <dl>
-                <dt>原本</dt><dd>${escapeHtml(source)}</dd>
-                <dt>原文の指摘</dt><dd>${escapeHtml(record.source_a_user_instruction)}</dd>
-                <dt>対象箇所</dt><dd>${escapeHtml(location || record.target)}</dd>
-                <dt>対応内容</dt><dd>${escapeHtml(record.source_b_jarvis_instruction)}</dd>
-                <dt>確認状態</dt><dd>${confirmation}</dd>
-                <dt>確認リンク</dt><dd><a href="${escapeHtml(record.public_b_url)}" target="_blank" rel="noopener">対象回の公開前Bを開く</a></dd>
-              </dl>
-            </article>`;
+          return atomicRecordMarkup(record, source);
         }).join("");
-        status.textContent = "23件（PDF 21件＋Word 2件）を読み込み、全件の確認状態を表示しています。";
+        status.textContent = "第3稿PDFの8件を読み込み、全件の確認状態を表示しています。";
+        previousStatus.textContent = "前回23件（PDF 21件＋Word 2件）を読み込み、今回の8件と分離して表示しています。";
       } catch (error) {
-        status.textContent = `23件の読み込みを確認できません：${error.message}`;
+        status.textContent = `第3稿8件の読み込みを確認できません：${error.message}`;
         status.classList.add("error");
+        previousStatus.textContent = `前回23件の読み込みを確認できません：${error.message}`;
+        previousStatus.classList.add("error");
       }
     };
-    renderLatestRecords();
+    renderRegisters();
 
-    // 旧第1稿の内部参照用アーカイブ。今回の23件一覧には表示しない。
-    // 今回の表示データは compare-register.json の second_draft_records だけを使用する。
+    // 旧第1稿の内部参照用アーカイブ。今回の第3稿8件一覧には表示しない。
+    // 今回の表示データは compare-register.json の third_draft_records だけを使用する。
     const legacyInstructionRecords = {
       "共通": [
         ["C-01", "10〜20回・筆者肩書き", "筆者紹介に「住宅と教育の専門家」を復活", "肩書きが欠落", "文｜エイスケ（住宅と教育の専門家）", "index.html"],
@@ -441,9 +460,25 @@
         ["11-04", "修繕・設備更新費", "理事長コメントと追加確認に合わせ費用名称を統一", "家の修繕費／住まいの更新費／家の維持費が混在", "修繕・設備更新費"]
       ],
       "第12回": [["12-01", "返済額FAQ", "助詞を補う", "毎月返済額", "毎月の返済額"]],
-      "第13回": [["13-01", "為替FAQ", "対象を明確化", "為替そのもの", "為替変動そのもの"]],
-      "第14回": [["14-01", "音対策FAQ", "5つの質問を明確な日本語へ整理", "足音・道路音・相談の曖昧な質問", "足音対策・音対策・相談内容が分かる質問"]],
-      "第16回": [["16-01", "本文・参考図書", "文体と書誌表記を統一", "確認する。／著者名＋さん", "確認します。／敬称なしの著者名"]],
+      "第13回": [
+        ["T3-001", "建築用材等グラフ", "消えていた区分名を復元", "区分名なし", "建築用材等・丸太換算"],
+        ["T3-002", "建築用材等グラフ", "消えていた割合の説明を復元", "説明文なし", "建築用材等の国内供給に占める割合です。"],
+        ["13-01", "為替FAQ", "対象を明確化", "為替そのもの", "為替変動そのもの"]
+      ],
+      "第14回": [
+        ["T3-003", "FV画像", "逆走に見えないよう表示方向を変更", "車両が逆走に見える向き", "FVを左右反転"],
+        ["T3-004", "参考文献2番", "『さんの』を削除", "木村翔さんの", "木村翔"],
+        ["T3-005", "参考文献2番", "不要な説明文を削除", "建築音響の基礎、遮音構造に関する専門書。", "削除"],
+        ["14-01", "音対策FAQ", "5つの質問を明確な日本語へ整理", "足音・道路音・相談の曖昧な質問", "足音対策・音対策・相談内容が分かる質問"]
+      ],
+      "第15回": [
+        ["T3-006", "参考文献3番", "他の記載と同じ書誌形式へ統一", "参考文献：税理士法人レガシィ…／説明文", "天野隆さん、天野大輔さんの『書名』（出版社、年）。"],
+        ["T3-007", "参考文献直後の注記", "不要との指摘に従い削除", "※本記事は一般的な情報提供を目的としており…", "削除"]
+      ],
+      "第16回": [
+        ["T3-008", "第3節の書籍紹介", "第2稿の複数著者表記へ戻す", "千葉利宏・谷内信彦・村島正彦・桑原豊『書名』", "千葉利宏さん、谷内信彦さん、村島正彦さん、桑原豊さんの『書名』"],
+        ["16-01", "本文・参考図書", "文体と書誌表記を統一", "確認する。／著者名＋さん", "確認します。／敬称なしの著者名"]
+      ],
       "第17回": [["17-01", "第2〜5節", "ラベルを統一", "入力すること／得られるもの", "AIへの入力例／得られる結果"]],
       "第19回": [["19-01", "帰省時のFAQ", "帰省の主体を明確化", "帰省時は宿泊場所", "家族の帰省時は宿泊場所"]],
       "第20回": [["20-01", "第5節冒頭", "不要な接続詞を削除", "また、発達特性のある…", "発達特性のある…"]]
@@ -472,9 +507,10 @@
       "第10回": { before:"帰省時の使い方", after:"家族の帰省時" },
       "第11回": { before:"両資料の基準日は約1か月ずれています", after:"50代人口は約1,845万人" },
       "第12回": { before:"毎月返済額だけでなく", after:"毎月の返済額だけでなく" },
-      "第13回": { before:"為替そのものを防ぐ方法", after:"為替変動そのものを防ぐ方法" },
-      "第14回": { before:"子どもの足音は", after:"足音対策は" },
-      "第16回": { before:"自治体の案内で確認する", after:"自治体の案内で確認します" },
+      "第13回": { before:"林野庁の「令和6年木材需給表」", after:"林野庁の「令和6年木材需給表」" },
+      "第14回": { before:"木村翔さんの", after:"木村翔『建築音響と騒音防止計画』" },
+      "第15回": { before:"参考文献：税理士法人レガシィ", after:"天野隆さん、天野大輔さんの" },
+      "第16回": { before:"千葉利宏・谷内信彦", after:"千葉利宏さん、谷内信彦さん" },
       "第17回": { before:"入力すること", after:"AIへの入力例" },
       "第19回": { before:"帰省時は宿泊場所", after:"家族の帰省時は宿泊場所" },
       "第20回": { before:"また、発達特性のある子どもの子育て", after:"発達特性のある子どもの子育て" }

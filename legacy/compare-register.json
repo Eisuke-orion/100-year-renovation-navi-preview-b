@@ -1,5 +1,5 @@
 {
-  "generated_at_jst": "2026-09-06",
+  "generated_at_jst": "2026-09-10",
   "source_pdf": {
     "path": "/Users/eisuke/Downloads/10回-20回第一稿修正依頼.pdf",
     "page_count": 84,
@@ -10,10 +10,11 @@
   "source_documents": [
     {"name":"10回-20回第一稿修正依頼.pdf","instruction_count":65},
     {"name":"第10-20回第2稿修正指示.pdf","instruction_count":21},
-    {"name":"コメント0828眞鍋理事長.docx","instruction_count":2}
+    {"name":"コメント0828眞鍋理事長.docx","instruction_count":2},
+    {"name":"第10-20回第3稿修正指示_1.pdf","instruction_count":8}
   ],
-  "atomic_operation_count": 88,
-  "rule": "第一稿65件、第2稿21件、理事長コメント2件を、1指示＝1行で記録。会話による追加・上書きは補足行として分離。",
+  "atomic_operation_count": 96,
+  "rule": "第一稿65件、第2稿21件、理事長コメント2件、第3稿8件を、1指示＝1行で記録。会話による追加・上書きは補足行として分離。",
   "public_b_base": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/",
   "records": [
     {
@@ -1641,6 +1642,16 @@
       "discrepancy": null,
       "scope_note": "原本PDF p.83 / Rect [216.2,553.1,508.8,611.0] の親FreeText注釈。"
     }
+  ],
+  "third_draft_records": [
+    {"id":"T3-001","pdf_page":34,"annotation_type":"FreeText","source_a_user_instruction":"建築用材等・丸太換算 消えてますが大丈夫ですか？","source_b_jarvis_instruction":"グラフ内に「建築用材等・丸太換算」を復元","target":"第13回：建築用材等グラフの区分名","target_original":"区分名が表示されていない","expected_after":"建築用材等・丸太換算","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-13.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.34／赤字コメントと矢印の対象位置を目視確認"},
+    {"id":"T3-002","pdf_page":34,"annotation_type":"FreeText","source_a_user_instruction":"建築用材等の国内供給に占める割合です。消えてますが大丈夫ですか？","source_b_jarvis_instruction":"グラフ内に「建築用材等の国内供給に占める割合です。」を復元","target":"第13回：建築用材等グラフの割合説明","target_original":"割合の説明文が表示されていない","expected_after":"建築用材等の国内供給に占める割合です。","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-13.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.34／赤字コメントと矢印の対象位置を目視確認"},
+    {"id":"T3-003","pdf_page":40,"annotation_type":"FreeText","source_a_user_instruction":"逆走してませんか？","source_b_jarvis_instruction":"FVの車両が逆走に見えないよう画像表示を左右反転","target":"第14回：FV画像の車の進行方向","target_original":"車両が逆走に見える向き","expected_after":"FV画像を左右反転した表示","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-14.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.40／赤字コメントと矢印の対象画像を目視確認。画像ファイル・OGP画像は変更なし"},
+    {"id":"T3-004","pdf_page":47,"annotation_type":"FreeText","source_a_user_instruction":"さんの、トル","source_b_jarvis_instruction":"参考文献2番の「さんの」を削除","target":"第14回：出典・参考資料2番の著者表記","target_original":"木村翔さんの『建築音響と騒音防止計画』","expected_after":"木村翔『建築音響と騒音防止計画』","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-14.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.47／赤線の対象文字列を目視確認"},
+    {"id":"T3-005","pdf_page":47,"annotation_type":"FreeText","source_a_user_instruction":"不要では？","source_b_jarvis_instruction":"参考文献2番末尾の説明文を削除","target":"第14回：出典・参考資料2番の説明文","target_original":"建築音響の基礎、遮音構造に関する専門書。","expected_after":"説明文を削除","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-14.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.47／赤線と矢印の対象文を目視確認"},
+    {"id":"T3-006","pdf_page":56,"annotation_type":"FreeText","source_a_user_instruction":"他と書き方揃えてください。","source_b_jarvis_instruction":"参考文献3番を他項目と同じ「著者名の『書名』（出版社、年）。」形式へ統一","target":"第15回：出典・参考資料3番の書誌表記","target_original":"参考文献：税理士法人レガシィ、天野隆さん、天野大輔さんの『【最新版】やってはいけない「実家」の相続』（青春出版社、2024年）。相続専門税理士による実務的な視点。","expected_after":"天野隆さん、天野大輔さんの『【最新版】やってはいけない「実家」の相続』（青春出版社、2024年）。","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-15.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.56／赤線と矢印で書誌表記の対象範囲を目視確認"},
+    {"id":"T3-007","pdf_page":56,"annotation_type":"FreeText","source_a_user_instruction":"不要では？","source_b_jarvis_instruction":"出典一覧直後の一般的な情報提供に関する注記を削除","target":"第15回：出典・参考資料直後の注記","target_original":"※本記事は一般的な情報提供を目的としており、個別の相続税務・法務判断については税理士・司法書士・弁護士など専門家にご相談ください。","expected_after":"注記を削除","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-15.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.56／赤線と矢印の対象段落を目視確認"},
+    {"id":"T3-008","pdf_page":60,"annotation_type":"FreeText","source_a_user_instruction":"2稿での書き方のほうが良いかと。○○さん、○○さん、○○さんの","source_b_jarvis_instruction":"本文中の4名の著者表記を第2稿の「各著者名＋さん、…さんの」形式へ戻す","target":"第16回：第3節の書籍紹介にある複数著者表記","target_original":"千葉利宏・谷内信彦・村島正彦・桑原豊『実家の片づけ 活かし方』","expected_after":"千葉利宏さん、谷内信彦さん、村島正彦さん、桑原豊さんの『実家の片づけ 活かし方』","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-16.dc.html","public_b_evidence":"2026-09-10ローカル実装済み。公開B読戻し前。","audit_status":"pending_public_readback","scope_note":"第3稿PDF p.60〜61／ページをまたぐ赤線と矢印の対象本文を目視確認。末尾の出典一覧は変更対象外"}
   ],
   "second_draft_records": [
     {"id":"D2-001","pdf_page":13,"annotation_type":"FreeText","source_a_user_instruction":"使い方、が後ろの使い道とかぶるので「家族の帰省時」等で良いのでは？","source_b_jarvis_instruction":"「帰省時の使い方」を「家族の帰省時」へ変更","target":"第10回：空いた子ども部屋のFAQ","target_original":"帰省時の使い方","expected_after":"家族の帰省時","public_b_url":"https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/column-10.dc.html","public_b_evidence":"2026-09-05公開B読戻しで対象箇所を確認済み。","audit_status":"verified_public_html","scope_note":"第2稿PDF p.13"},
