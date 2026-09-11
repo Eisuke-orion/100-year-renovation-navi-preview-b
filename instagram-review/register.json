@@ -9,7 +9,7 @@
     "note": "PDF注釈22件と理事長コメント6件を原子単位で整理。画像修正は1080×1350pxで反映済み。"
   },
   "records": [
-    {"id":"PDF-01","source":"1-16修正指示.pdf","page":1,"theme":"投稿1","target":"表紙ラベル","instruction":"初めての投稿ではないので別の文言にしては？ 人生100年ナビサイト など。","interpretation":"継続運用中のアカウントに『はじめまして』は不適切。","response":"表紙およびカルーセルのラベルを『人生100年ナビ』へ変更。","status":"対応済み","before":"assets/01-cover-before.jpg","after":"assets/01-cover-after.jpg"},
+    {"id":"PDF-01","source":"1-16修正指示.pdf","page":1,"theme":"投稿1","target":"表紙ラベル","instruction":"初めての投稿ではないので別の文言にしては？ 人生100年ナビサイト など。","interpretation":"継続運用中のアカウントに『はじめまして』は不適切。","response":"ユーザーの追加指示により、表紙および中面5枚のラベルを『リフォーム応援ナビ』へ変更。","status":"対応済み","before":"assets/01-cover-before.jpg","after":"assets/01-cover-after.jpg"},
     {"id":"PDF-02","source":"1-16修正指示.pdf","page":1,"theme":"投稿1","target":"4枚目 解説","instruction":"少しずつ整えられます。","interpretation":"断定を抑え、段階的に整えられることを伝える。","response":"『整えていけます。』を『少しずつ整えられます。』へ変更。","status":"対応済み","before":"assets/01-d3-before.jpg","after":"assets/01-d3-after.jpg"},
     {"id":"PDF-03","source":"1-16修正指示.pdf","page":1,"theme":"投稿1","target":"6枚目 見出し","instruction":"表現変えてほしいです。良品だけでもよいのでは？","interpretation":"『認定良品』はBL制度の正式な呼称ではない。","response":"『認定良品を』を『優良住宅部品を』へ変更。","status":"対応済み","before":"assets/01-d5-before.jpg","after":"assets/01-d5-after.jpg"},
     {"id":"PDF-04","source":"1-16修正指示.pdf","page":1,"theme":"投稿2","target":"6枚目 見出し・解説","instruction":"表現変えてほしいです。住宅設備としては？","interpretation":"カテゴリ案内として自然な表現にする。","response":"『住宅設備を選ぶなら』を『住宅設備のことなら』へ変更し、『認定良品』を『優良住宅部品』へ修正。","status":"対応済み","before":"assets/02-d5-before.jpg","after":"assets/02-d5-after.jpg"},

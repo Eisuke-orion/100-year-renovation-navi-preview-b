@@ -35,7 +35,7 @@
       const images=r.before&&r.after?`<div class="comparison"><figure class="figure"><img loading="lazy" src="${r.before}" alt="${esc(r.theme)} ${esc(r.target)} 修正前"><figcaption>修正前</figcaption></figure><figure class="figure"><img loading="lazy" src="${r.after}" alt="${esc(r.theme)} ${esc(r.target)} 修正後"><figcaption>修正後</figcaption></figure></div>`:'';
       return `<article class="card"><div class="meta"><span class="id">${esc(r.id)}</span><span class="tag">${esc(r.source)} p.${esc(r.page)}</span><span class="tag">${esc(r.target)}</span><span class="status ${cls}">${esc(r.status)}</span></div><dl><dt>指示原文</dt><dd class="instruction">${esc(r.instruction)}</dd><dt>解釈</dt><dd>${esc(r.interpretation)}</dd><dt>対応内容</dt><dd>${esc(r.response)}</dd></dl>${images}</article>`;
     }
-    fetch('register.json?rev=20260911').then(r=>r.json()).then(j=>{data=j;document.querySelector('#summary').innerHTML=[['指示・確認事項',j.summary.total+'件'],['対応済み',j.summary.completed+'件'],['対応不要',j.summary.no_change+'件'],['方針回答',j.summary.policy_answer+'件']].map(x=>`<div class="stat"><strong>${x[1]}</strong>${x[0]}</div>`).join('');draw()}).catch(e=>{document.querySelector('#content').textContent='台帳の読み込みに失敗しました。'});
+    fetch('register.json?rev=20260911-label2').then(r=>r.json()).then(j=>{data=j;document.querySelector('#summary').innerHTML=[['指示・確認事項',j.summary.total+'件'],['対応済み',j.summary.completed+'件'],['対応不要',j.summary.no_change+'件'],['方針回答',j.summary.policy_answer+'件']].map(x=>`<div class="stat"><strong>${x[1]}</strong>${x[0]}</div>`).join('');draw()}).catch(e=>{document.querySelector('#content').textContent='台帳の読み込みに失敗しました。'});
   </script>
 </body>
 </html>
