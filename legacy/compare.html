@@ -232,6 +232,17 @@
       <a class="detail-link" href="ogp-check.html">第10〜20回のOGP確認一覧を開く</a>
     </section>
 
+
+    <section class="common-change" id="linkfix-20260911" aria-labelledby="linkfix-title">
+      <h2 id="linkfix-title">2026年9月11日 追加のリンク修正</h2>
+      <p>第10回の「家計のムダをなくしたい（水光熱費）」について、給湯器のページに移動していたリンクを、ご指定の家計のテーマページへ修正しました。同じ不備があった第11・12・13・16・18回も修正しています。本文・図版・OGP画像は変更していません。</p>
+      <p>変更先：<a href="https://www.cbl.or.jp/r-navi/search_theme/kakei/">家計のムダをなくしたい</a></p>
+      <ul><li>LINK-001：<a href="column-10.dc.html">第10回</a> 関連する住まいの機能・設備を探す ― 家計テーマへのリンクに修正</li><li>LINK-002：<a href="column-11.dc.html">第11回</a> 関連する住まいの機能・設備を探す ― 家計テーマへのリンクに修正</li><li>LINK-003：<a href="column-12.dc.html">第12回</a> 関連する住まいの機能・設備を探す ― 家計テーマへのリンクに修正</li><li>LINK-004：<a href="column-13.dc.html">第13回</a> 関連する住まいの機能・設備を探す ― 家計テーマへのリンクに修正</li><li>LINK-005：<a href="column-16.dc.html">第16回</a> 関連する住まいの機能・設備を探す ― 家計テーマへのリンクに修正</li><li>LINK-006：<a href="column-18.dc.html">第18回</a> 関連する住まいの機能・設備を探す ― 家計テーマへのリンクに修正</li><li>LINK-007：<a href="column-17.dc.html">第17回</a> 出典・参考資料 ― 同じAI事業者ガイドライン第1.2版の総務省公開PDFへ変更</li></ul>
+      <p>第10回は事務局の直接指示、他の6件は横断確認とユーザー追加承認による対応です。第17回のPDFは表紙の版数・発行日・発行者を確認しました。</p>
+      <p>要確認・未変更：第6・13回の資源エネルギー庁の出典は、公式検索で同じURLと資料名が確認できるものの、直接アクセスがエラーとなっています。正常に開く同一資料の掲載先は未確認です。</p>
+      <p>下段の第3稿8件・第2稿等23件と今回のリンク修正7件は別の記録です。各回カードのA/B比較は引き続き操作できます。</p>
+    </section>
+
     <section class="common-change" aria-labelledby="common-change-title">
       <h2 id="common-change-title">今回の確認範囲</h2>
       <dl>
@@ -303,17 +314,17 @@
     const beforeBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview/legacy/";
     const afterBase = "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/";
     const items = [
-      { label: "第10回", path: "column-10.dc.html", focus: "空いた子ども部屋のFAQ", note: "「帰省時の使い方」を「家族の帰省時」へ具体化しました。", target: "よくある質問", instruction: "後段の「使い道」と重ならず、誰の帰省か分かる表現にする。", before: "帰省時の使い方、収納…", after: "家族の帰省時、収納…", media: "画像・リンクの変更なし。" },
+      { label: "第10回", path: "column-10.dc.html", focus: "空いた子ども部屋のFAQ", note: "「帰省時の使い方」を「家族の帰省時」へ具体化しました。", target: "よくある質問", instruction: "後段の「使い道」と重ならず、誰の帰省か分かる表現にする。", before: "帰省時の使い方、収納…", after: "家族の帰省時、収納…", media: "画像は変更なし。関連リンクは2026年9月11日の追加修正を反映。" },
       { label: "第11回", path: "column-11.dc.html", focus: "導入・NISAの説明・FAQ・修繕設備更新", note: "D2-002に従い、導入を初稿の全文へ戻しました。FAQと修繕・設備更新費の既存対応は維持しています。", target: "導入／第1節／グラフ／FAQ／家族向け設問", instruction: "書き出しは初稿へ戻す。FAQ見出しは指示文を使用し、費用名称は『修繕・設備更新費』へ統一する。", before: "『両資料の基準日は約1か月ずれています。』から始まる導入／50代人口に対するNISA口座数が約30％なら／費用名称が混在", after: "『50代人口は約1,845万人。それに対し、』から始まる初稿の導入／50代の約30％がNISA口座を所持しているなら／修繕・設備更新費に統一", media: "本文画像・OGP画像は変更せず、既存画像を維持。" },
       { label: "第12回", path: "column-12.dc.html", focus: "返済額FAQ・依存画像指定", note: "「毎月返済額」を「毎月の返済額」に整え、実表示画像と依存素材指定を一致させました。", target: "よくある質問／納品用依存素材", instruction: "助詞を補い、実際に表示する画像を納品対象として指定する。", before: "毎月返済額だけでなく／旧画像名を依存素材として指定", after: "毎月の返済額だけでなく／ep12_body03_household_plan_v2.webpを指定", media: "現行画像は変更せず、誤使用防止のため旧グラフ2点を公開領域から削除。" },
       { label: "第13回", path: "column-13.dc.html", focus: "建築用材等グラフの補足表記", note: "グラフから消えていた「建築用材等・丸太換算」と割合の説明文を、注釈と同じ13pxで復元しました。", target: "建築用材等のグラフ", instruction: "消えている2つの補足表記を復元し、通常または注釈相当の文字サイズにする。", before: "補足表記2点が欠落", after: "建築用材等・丸太換算／建築用材等の国内供給に占める割合です。（13px）", media: "既存グラフ画像、数値、出典、画像直下の注記は維持。" },
       { label: "第14回", path: "column-14.dc.html", focus: "FVの車の向き・参考文献", note: "FVの車の進行方向を左右反転し、木村翔氏の参考文献から敬称・助詞と不要な説明文を削除しました。", target: "FV画像／出典・参考資料2番", instruction: "車が逆走に見えない向きにする。参考文献から『さんの』と説明文を取る。", before: "車が逆走に見える向き／木村翔さんの／専門書の説明文", after: "FVを左右反転／木村翔『建築音響と騒音防止計画』（彰国社、2012年）。", media: "画像ファイル自体とOGP画像は変更せず、FVの表示方向のみ変更。" },
       { label: "第15回", path: "column-15.dc.html", focus: "参考文献表記・末尾注記", note: "参考文献を敬称・助詞なしの書誌形式へそろえ、不要との指摘がある末尾注記を削除しました。", target: "出典・参考資料3番／直後の注記", instruction: "出典・参考資料内の著者名に「さん」「さんの」を付けず、一般的な情報提供に関する注記を削除する。", before: "参考文献：税理士法人レガシィ…／天野隆さん、天野大輔さんの…／説明文／※本記事は一般的な情報提供…", after: "天野隆・天野大輔『【最新版】やってはいけない「実家」の相続』（青春出版社、2024年）。／注記を削除", media: "既存リンク・記事画像・OGP画像の変更なし。" },
       { label: "第16回", path: "column-16.dc.html", focus: "本文中の複数著者表記", note: "第3節の書籍紹介を第2稿の書き方へ戻し、4名に敬称と助詞を付けました。", target: "第3節「思い出をどう引き継ぐか」の書籍紹介", instruction: "第2稿の『○○さん、○○さん…の』形式へ戻す。", before: "千葉利宏・谷内信彦・村島正彦・桑原豊『実家の片づけ 活かし方』", after: "千葉利宏さん、谷内信彦さん、村島正彦さん、桑原豊さんの『実家の片づけ 活かし方』", media: "末尾の出典一覧・リンク・画像は変更なし。" },
-      { label: "第17回", path: "column-17.dc.html", focus: "AI入力例と結果のラベル", note: "4例すべてのラベルを「AIへの入力例」「得られる結果」に統一しました。", target: "導入／第2〜5節", instruction: "導入と各節の呼び方をそろえる。", before: "入力例／入力すること／得られるもの", after: "AIへの入力例／得られる結果", media: "画像・リンクの変更なし。" },
+      { label: "第17回", path: "column-17.dc.html", focus: "AI入力例と結果のラベル", note: "4例すべてのラベルを「AIへの入力例」「得られる結果」に統一しました。", target: "導入／第2〜5節", instruction: "導入と各節の呼び方をそろえる。", before: "入力例／入力すること／得られるもの", after: "AIへの入力例／得られる結果", media: "画像は変更なし。関連リンクは2026年9月11日の追加修正を反映。" },
       { label: "第18回", path: "column-18.dc.html", focus: "FV・OGP代替テキスト", note: "人物数を断定しないaltへ変更しました。", target: "FV alt／og:image:alt", instruction: "代替テキストを実際の画像内容に合わせる。", before: "災害用トイレの備蓄を確認する家族", after: "災害用トイレの備蓄を確認する様子", media: "OGP画像・記事画像は変更せず、altのみ変更。" },
-      { label: "第19回", path: "column-19.dc.html", focus: "帰省時のFAQ", note: "誰の帰省か分かるよう「家族の帰省時」に変更しました。", target: "よくある質問", instruction: "帰省の主体を明確にする。", before: "帰省時は宿泊場所", after: "家族の帰省時は宿泊場所", media: "画像・リンクの変更なし。" },
-      { label: "第20回", path: "column-20.dc.html", focus: "第5節冒頭", note: "段落冒頭の不要な「また、」を削除しました。", target: "第5節", instruction: "接続詞を削除する。", before: "また、発達特性のある…", after: "発達特性のある…", media: "画像・リンクの変更なし。" }
+      { label: "第19回", path: "column-19.dc.html", focus: "帰省時のFAQ", note: "誰の帰省か分かるよう「家族の帰省時」に変更しました。", target: "よくある質問", instruction: "帰省の主体を明確にする。", before: "帰省時は宿泊場所", after: "家族の帰省時は宿泊場所", media: "画像は変更なし。関連リンクは2026年9月11日の追加修正を反映。" },
+      { label: "第20回", path: "column-20.dc.html", focus: "第5節冒頭", note: "段落冒頭の不要な「また、」を削除しました。", target: "第5節", instruction: "接続詞を削除する。", before: "また、発達特性のある…", after: "発達特性のある…", media: "画像は変更なし。関連リンクは2026年9月11日の追加修正を反映。" }
     ];
 
     const escapeHtml = value => String(value ?? "")
