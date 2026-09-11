@@ -2163,42 +2163,48 @@
         "episode": 10,
         "origin": "事務局からの直接指示",
         "location": "関連する住まいの機能・設備を探す",
-        "status": "修正・公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 移動先の家計ページのタイトル・見出しを確認。"
       },
       {
         "id": "LINK-002",
         "episode": 11,
         "origin": "ユーザー依頼の横断確認で発見した同一不備",
         "location": "関連する住まいの機能・設備を探す",
-        "status": "修正・公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 移動先の家計ページのタイトル・見出しを確認。"
       },
       {
         "id": "LINK-003",
         "episode": 12,
         "origin": "ユーザー依頼の横断確認で発見した同一不備",
         "location": "関連する住まいの機能・設備を探す",
-        "status": "修正・公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 移動先の家計ページのタイトル・見出しを確認。"
       },
       {
         "id": "LINK-004",
         "episode": 13,
         "origin": "ユーザー依頼の横断確認で発見した同一不備",
         "location": "関連する住まいの機能・設備を探す",
-        "status": "修正・公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 移動先の家計ページのタイトル・見出しを確認。"
       },
       {
         "id": "LINK-005",
         "episode": 16,
         "origin": "ユーザー依頼の横断確認で発見した同一不備",
         "location": "関連する住まいの機能・設備を探す",
-        "status": "修正・公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 移動先の家計ページのタイトル・見出しを確認。"
       },
       {
         "id": "LINK-006",
         "episode": 18,
         "origin": "ユーザー依頼の横断確認で発見した同一不備",
         "location": "関連する住まいの機能・設備を探す",
-        "status": "修正・公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 移動先の家計ページのタイトル・見出しを確認。"
       },
       {
         "id": "LINK-007",
@@ -2209,7 +2215,8 @@
         "old_url": "https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20260331_report.html",
         "required_url": "https://www.soumu.go.jp/main_content/001064279.pdf",
         "evidence": "総務省公開PDFのHTTP 200、表紙のAI事業者ガイドライン第1.2版・令和8年3月31日・総務省 経済産業省を目視確認",
-        "status": "公開確認待ち"
+        "status": "公開B・Cと納品ファイルで確認済み",
+        "verification": "2026-09-11 公開URLのHTTP 200・noindex,nofollow、PC1440pxとスマートフォン390pxでリンクを実操作。 総務省PDFのHTTP 200・PDF形式応答、表紙の版数と発行日を目視確認。"
       }
     ],
     "pending": [
@@ -2228,6 +2235,6 @@
         "reason": "公式検索で同URL・日本のエネルギー2025の2.安定供給を確認。HTML版と同刊行物PDFともHTTP 403。別年度や別資料への置換は行わない。"
       }
     ],
-    "note": "既存PDF由来の指示件数とは分離。検証結果は公開後の読戻しで記録。"
+    "note": "既存PDF由来の指示件数とは分離。公開B・Cを再読込し、リンク実操作・HTTP・robotsを検証。要確認2件は未変更。"
   }
 }
