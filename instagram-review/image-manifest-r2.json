@@ -1,0 +1,209 @@
+[
+  {
+    "post": 1,
+    "slug": "01_fixed_introduction",
+    "files": [
+      "assets/full-r2/01_fixed_introduction-01_cover.jpg",
+      "assets/full-r2/01_fixed_introduction-02_detail.jpg",
+      "assets/full-r2/01_fixed_introduction-03_detail.jpg",
+      "assets/full-r2/01_fixed_introduction-04_detail.jpg",
+      "assets/full-r2/01_fixed_introduction-05_detail.jpg",
+      "assets/full-r2/01_fixed_introduction-06_detail.jpg",
+      "assets/full-r2/01_fixed_introduction-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 2,
+    "slug": "02_fixed_topics",
+    "files": [
+      "assets/full-r2/02_fixed_topics-01_cover.jpg",
+      "assets/full-r2/02_fixed_topics-02_detail.jpg",
+      "assets/full-r2/02_fixed_topics-03_detail.jpg",
+      "assets/full-r2/02_fixed_topics-04_detail.jpg",
+      "assets/full-r2/02_fixed_topics-05_detail.jpg",
+      "assets/full-r2/02_fixed_topics-06_detail.jpg",
+      "assets/full-r2/02_fixed_topics-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 3,
+    "slug": "03_contractor",
+    "files": [
+      "assets/full-r2/03_contractor-01_cover.jpg",
+      "assets/full-r2/03_contractor-02_detail.jpg",
+      "assets/full-r2/03_contractor-03_detail.jpg",
+      "assets/full-r2/03_contractor-04_detail.jpg",
+      "assets/full-r2/03_contractor-05_detail.jpg",
+      "assets/full-r2/03_contractor-06_detail.jpg",
+      "assets/full-r2/03_contractor-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 4,
+    "slug": "04_energy",
+    "files": [
+      "assets/full-r2/04_energy-01_cover.jpg",
+      "assets/full-r2/04_energy-02_detail.jpg",
+      "assets/full-r2/04_energy-03_detail.jpg",
+      "assets/full-r2/04_energy-04_detail.jpg",
+      "assets/full-r2/04_energy-05_detail.jpg",
+      "assets/full-r2/04_energy-06_detail.jpg",
+      "assets/full-r2/04_energy-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 5,
+    "slug": "05_disaster",
+    "files": [
+      "assets/full-r2/05_disaster-01_cover.jpg",
+      "assets/full-r2/05_disaster-02_detail.jpg",
+      "assets/full-r2/05_disaster-03_detail.jpg",
+      "assets/full-r2/05_disaster-04_detail.jpg",
+      "assets/full-r2/05_disaster-05_detail.jpg",
+      "assets/full-r2/05_disaster-06_detail.jpg",
+      "assets/full-r2/05_disaster-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 6,
+    "slug": "06_summer",
+    "files": [
+      "assets/full-r2/06_summer-01_cover.jpg",
+      "assets/full-r2/06_summer-02_detail.jpg",
+      "assets/full-r2/06_summer-03_detail.jpg",
+      "assets/full-r2/06_summer-04_detail.jpg",
+      "assets/full-r2/06_summer-05_detail.jpg",
+      "assets/full-r2/06_summer-06_detail.jpg",
+      "assets/full-r2/06_summer-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 7,
+    "slug": "07_condo",
+    "files": [
+      "assets/full-r2/07_condo-01_cover.jpg",
+      "assets/full-r2/07_condo-02_detail.jpg",
+      "assets/full-r2/07_condo-03_detail.jpg",
+      "assets/full-r2/07_condo-04_detail.jpg",
+      "assets/full-r2/07_condo-05_detail.jpg",
+      "assets/full-r2/07_condo-06_detail.jpg",
+      "assets/full-r2/07_condo-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 8,
+    "slug": "08_jikka",
+    "files": [
+      "assets/full-r2/08_jikka-01_cover.jpg",
+      "assets/full-r2/08_jikka-02_detail.jpg",
+      "assets/full-r2/08_jikka-03_detail.jpg",
+      "assets/full-r2/08_jikka-04_detail.jpg",
+      "assets/full-r2/08_jikka-05_detail.jpg",
+      "assets/full-r2/08_jikka-06_detail.jpg",
+      "assets/full-r2/08_jikka-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 9,
+    "slug": "09_children",
+    "files": [
+      "assets/full-r2/09_children-01_cover.jpg",
+      "assets/full-r2/09_children-02_detail.jpg",
+      "assets/full-r2/09_children-03_detail.jpg",
+      "assets/full-r2/09_children-04_detail.jpg",
+      "assets/full-r2/09_children-05_detail.jpg",
+      "assets/full-r2/09_children-06_detail.jpg",
+      "assets/full-r2/09_children-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 10,
+    "slug": "10_storage",
+    "files": [
+      "assets/full-r2/10_storage-01_cover.jpg",
+      "assets/full-r2/10_storage-02_detail.jpg",
+      "assets/full-r2/10_storage-03_detail.jpg",
+      "assets/full-r2/10_storage-04_detail.jpg",
+      "assets/full-r2/10_storage-05_detail.jpg",
+      "assets/full-r2/10_storage-06_detail.jpg",
+      "assets/full-r2/10_storage-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 11,
+    "slug": "11_value",
+    "files": [
+      "assets/full-r2/11_value-01_cover.jpg",
+      "assets/full-r2/11_value-02_detail.jpg",
+      "assets/full-r2/11_value-03_detail.jpg",
+      "assets/full-r2/11_value-04_detail.jpg",
+      "assets/full-r2/11_value-05_detail.jpg",
+      "assets/full-r2/11_value-06_detail.jpg",
+      "assets/full-r2/11_value-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 12,
+    "slug": "12_memo",
+    "files": [
+      "assets/full-r2/12_memo-01_cover.jpg",
+      "assets/full-r2/12_memo-02_detail.jpg",
+      "assets/full-r2/12_memo-03_detail.jpg",
+      "assets/full-r2/12_memo-04_detail.jpg",
+      "assets/full-r2/12_memo-05_detail.jpg",
+      "assets/full-r2/12_memo-06_detail.jpg",
+      "assets/full-r2/12_memo-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 13,
+    "slug": "13_family",
+    "files": [
+      "assets/full-r2/13_family-01_cover.jpg",
+      "assets/full-r2/13_family-02_detail.jpg",
+      "assets/full-r2/13_family-03_detail.jpg",
+      "assets/full-r2/13_family-04_detail.jpg",
+      "assets/full-r2/13_family-05_detail.jpg",
+      "assets/full-r2/13_family-06_detail.jpg",
+      "assets/full-r2/13_family-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 14,
+    "slug": "14_equipment",
+    "files": [
+      "assets/full-r2/14_equipment-01_cover.jpg",
+      "assets/full-r2/14_equipment-02_detail.jpg",
+      "assets/full-r2/14_equipment-03_detail.jpg",
+      "assets/full-r2/14_equipment-04_detail.jpg",
+      "assets/full-r2/14_equipment-05_detail.jpg",
+      "assets/full-r2/14_equipment-06_detail.jpg",
+      "assets/full-r2/14_equipment-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 15,
+    "slug": "15_parent_home",
+    "files": [
+      "assets/full-r2/15_parent_home-01_cover.jpg",
+      "assets/full-r2/15_parent_home-02_detail.jpg",
+      "assets/full-r2/15_parent_home-03_detail.jpg",
+      "assets/full-r2/15_parent_home-04_detail.jpg",
+      "assets/full-r2/15_parent_home-05_detail.jpg",
+      "assets/full-r2/15_parent_home-06_detail.jpg",
+      "assets/full-r2/15_parent_home-07_cta.jpg"
+    ]
+  },
+  {
+    "post": 16,
+    "slug": "16_memory",
+    "files": [
+      "assets/full-r2/16_memory-01_cover.jpg",
+      "assets/full-r2/16_memory-02_detail.jpg",
+      "assets/full-r2/16_memory-03_detail.jpg",
+      "assets/full-r2/16_memory-04_detail.jpg",
+      "assets/full-r2/16_memory-05_detail.jpg",
+      "assets/full-r2/16_memory-06_cta.jpg"
+    ]
+  }
+]

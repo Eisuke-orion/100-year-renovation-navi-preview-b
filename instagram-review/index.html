@@ -17,25 +17,28 @@
   </style>
 </head>
 <body>
-  <header><div class="wrap"><div class="eyebrow">人生100年時代のリフォーム応援ナビ</div><h1>Instagram投稿 修正確認</h1><p class="lead">PDF注釈と理事長コメントを、原文・解釈・対応内容・確認状態に分けて一覧化しています。画像修正がある項目は、修正前後を1枚ずつ確認できます。</p><div class="summary" id="summary"></div></div></header>
+  <header><div class="wrap"><div class="eyebrow">人生100年時代のリフォーム応援ナビ</div><h1>Instagram投稿 修正確認</h1><p class="lead">全28項目に比較画像を掲載しています。写真・文字・キャプション・投稿方針を、項目ごとに確認できます。画像をタップすると1枚ずつ拡大して開きます。</p><div class="summary" id="summary"></div></div></header>
   <main><div class="wrap"><div class="toolbar" id="toolbar"></div><div id="content"></div><p class="note">画像はInstagramフィード推奨の縦型4:5（1080×1350px）で制作。公開用リンクは各回の公開準備が整うまでコラムトップページを仮設定しています。</p></div></main>
   <script>
     const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     let data,active='すべて';
-    const groups=['すべて','全体方針',...Array.from({length:16},(_,i)=>`投稿${i+1}`)];
+    const rev='20260911-r2', groups=['すべて','今回の6項目','要確認','全体方針',...Array.from({length:16},(_,i)=>`投稿${i+1}`)];
+    const asset=s=>esc(s)+(s.includes('?')?'&amp;':'?')+'rev='+rev;
     function draw(){
-      const records=data.records.filter(r=>active==='すべて'||r.theme===active);
-      document.querySelector('#toolbar').innerHTML=groups.filter(g=>g==='すべて'||data.records.some(r=>r.theme===g)).map(g=>`<button class="filter" aria-pressed="${g===active}" data-group="${g}">${g}</button>`).join('');
+      const records=data.records.filter(r=>active==='すべて'||(active==='今回の6項目'?Boolean(r.followup):active==='要確認'?r.status==='要確認':r.theme===active));
+      document.querySelector('#toolbar').innerHTML=groups.filter(g=>['すべて','今回の6項目'].includes(g)||(g==='要確認'?data.records.some(r=>r.status==='要確認'):data.records.some(r=>r.theme===g))).map(g=>`<button class="filter" aria-pressed="${g===active}" data-group="${g}">${g}</button>`).join('');
       document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{active=b.dataset.group;draw()});
       const by={};records.forEach(r=>(by[r.theme]??=[]).push(r));
       document.querySelector('#content').innerHTML=Object.entries(by).map(([theme,items])=>`<section><h2 class="group-title">${esc(theme)} <small>（${items.length}件）</small></h2><div class="cards">${items.map(card).join('')}</div></section>`).join('');
     }
     function card(r){
-      const cls=r.status==='方針回答'?'policy':r.status==='対応不要'?'nochange':'';
-      const images=r.before&&r.after?`<div class="comparison"><figure class="figure"><img loading="lazy" src="${r.before}" alt="${esc(r.theme)} ${esc(r.target)} 修正前"><figcaption>修正前</figcaption></figure><figure class="figure"><img loading="lazy" src="${r.after}" alt="${esc(r.theme)} ${esc(r.target)} 修正後"><figcaption>修正後</figcaption></figure></div>`:'';
-      return `<article class="card"><div class="meta"><span class="id">${esc(r.id)}</span><span class="tag">${esc(r.source)} p.${esc(r.page)}</span><span class="tag">${esc(r.target)}</span><span class="status ${cls}">${esc(r.status)}</span></div><dl><dt>指示原文</dt><dd class="instruction">${esc(r.instruction)}</dd><dt>解釈</dt><dd>${esc(r.interpretation)}</dd><dt>対応内容</dt><dd>${esc(r.response)}</dd></dl>${images}</article>`;
+      const cls=r.status==='方針回答'?'policy':r.status==='対応不要'||r.status==='要確認'?'nochange':'';
+      const pairs=r.comparisons||[{before:r.before,after:r.after}];
+      const images=pairs.map(p=>`${p.label?`<h3>${esc(p.label)}</h3>`:''}<div class="comparison">${[['before',r.beforeLabel||'修正前'],['after',r.afterLabel||'修正後']].map(([key,label])=>`<figure class="figure"><a href="${asset(p[key])}" target="_blank" rel="noopener"><img loading="lazy" src="${asset(p[key])}" alt="${esc(r.id)} ${esc(r.theme)} ${esc(p.label||r.target)} ${esc(label)}"></a><figcaption>${esc(label)} · タップで拡大</figcaption></figure>`).join('')}</div>`).join('');
+      const reference=r.reference?`<div class="note"><a href="${esc(r.reference.url)}" target="_blank" rel="noopener">${esc(r.reference.label)}</a><p>${esc(r.reference.note)}</p><a href="${asset(r.reference.image)}" target="_blank" rel="noopener"><img src="${asset(r.reference.image)}" alt="公式資料のBLマーク図版" style="max-width:440px;width:100%;height:auto"></a></div>`:'';
+      return `<article class="card" id="${esc(r.id)}"><div class="meta"><span class="id">${esc(r.id)}</span><span class="tag">${esc(r.source)} p.${esc(r.page)}</span><span class="tag">${esc(r.target)}</span><span class="status ${cls}">${esc(r.status)}</span></div><dl><dt>指示原文</dt><dd class="instruction">${esc(r.instruction)}</dd>${r.followup?`<dt>追加指示</dt><dd class="instruction">${esc(r.followup)}</dd>`:''}<dt>解釈</dt><dd>${esc(r.interpretation)}</dd><dt>対応内容</dt><dd>${esc(r.response)}</dd></dl>${images}${reference}${r.afterText?`<details class="note"><summary>キャプション本文を読む</summary><p>${esc(r.afterText)}</p></details>`:''}</article>`;
     }
-    fetch('register.json?rev=20260911-label2').then(r=>r.json()).then(j=>{data=j;document.querySelector('#summary').innerHTML=[['指示・確認事項',j.summary.total+'件'],['対応済み',j.summary.completed+'件'],['対応不要',j.summary.no_change+'件'],['方針回答',j.summary.policy_answer+'件']].map(x=>`<div class="stat"><strong>${x[1]}</strong>${x[0]}</div>`).join('');draw()}).catch(e=>{document.querySelector('#content').textContent='台帳の読み込みに失敗しました。'});
+    fetch('register.json?rev='+rev).then(r=>r.json()).then(j=>{data=j;document.querySelector('#summary').innerHTML=[['指示・確認事項',j.summary.total+'件'],['比較画像',j.summary.comparison_count+'/'+j.summary.total+'件'],['対応済み',j.summary.completed+'件'],['要確認',j.summary.pending+'件']].map(x=>`<div class="stat"><strong>${x[1]}</strong>${x[0]}</div>`).join('');draw();if(location.hash)document.getElementById(location.hash.slice(1))?.scrollIntoView()}).catch(e=>{document.querySelector('#content').textContent='台帳の読み込みに失敗しました。'});
   </script>
 </body>
 </html>
