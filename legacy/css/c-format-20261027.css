@@ -1,0 +1,17 @@
+/* C-only, referenced only by the scoped episode30/candidate pages and indexes. */
+.c-format-status{max-width:1040px;margin:16px auto 24px;padding:14px 18px;border-left:4px solid #786b50;border-radius:7px;background:#f1eadc;color:#4d5748;font:14px/1.8 system-ui,sans-serif;overflow-wrap:anywhere}
+.c-format-template .c-format-subtitle{font-family:'Zen Maru Gothic',sans-serif;font-size:19px;line-height:1.7;margin:0 0 12px;color:#57684d}
+.c-format-template nav.c-toc{display:block;position:static;inset:auto;width:auto;height:auto;z-index:auto;overflow:visible}
+.c-format-template nav.c-toc a{opacity:1}
+.c-format-template .column-article-body section{scroll-margin-top:120px}
+.c-format-template [data-summary-content] ul,.c-format-template [data-summary-content] ol{margin:0;padding-left:22px;font-size:15.5px;line-height:1.9}
+.c-format-template [data-summary-content] li{margin-bottom:8px}
+.c-format-template .c-sources .c-table{max-width:100%;overflow-x:auto}
+.c-format-template .c-sources td{overflow-wrap:anywhere;white-space:normal}
+.c-format-template .c-table{max-width:100%}
+.c-format-template .c-hero img{object-fit:contain;height:auto}
+.c-format-template.c-index{max-width:1120px}
+.c-format-template.c-index .c-review-card{margin:16px 0}
+@media(max-width:640px){.c-format-status{font-size:13px;margin:12px 0 20px}.c-format-template .c-sources .c-table table{min-width:0!important}.c-format-template .c-sources td{width:100%;max-width:100%}}
+/* C's fixed menu must not cover TOC targets; episode30 has legacy inline 35px. */
+.c-format-template article [id^="section-"]{scroll-margin-top:120px!important}
