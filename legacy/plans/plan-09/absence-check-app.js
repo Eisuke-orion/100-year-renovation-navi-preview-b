@@ -8,26 +8,26 @@
   const phases = {leave: '出発前', visit: '見回り', return: '帰宅前'};
   const tasks = {
     leave: [
-      ['l-lock', '玄関・窓の戸締まり', '勝手口、浴室・トイレの小窓、2階の窓も確認。換気のために窓を開けたまま出かけないようにします。'],
-      ['l-outside', '合鍵・脚立などを片付ける', '屋外に置いた合鍵は回収し、脚立やはしごは片付けます。見回り用の鍵は、頼む人へ直接渡しましょう。'],
-      ['l-delivery', '郵便・新聞・定期便の受け取り方', '停止や回収を手配し、チラシの回収も依頼。郵便の不在届による保管は最長30日なので、長く空けるときは郵便局へ相談しましょう。'],
-      ['l-food', '食品・ごみ・冷蔵庫を整える', '傷みやすい食品とごみを片付けます。冷蔵庫をどうするか決め、設備の説明書も確認しましょう。'],
-      ['l-utilities', '残す電源と水道・ガスの扱い', '留守中に使う設備と、止める設備を確認。洗濯機の給水栓は閉め、使わない家電は説明書に従って扱います。ガスメーターの操作は契約先へ確認しましょう。'],
-      ['l-next', '次の見回りと連絡方法を決める', '次に行く人と日、鍵、異常時の連絡先を家族で共有します。マンションは長期不在の届出方法も管理会社に確認しましょう。']
+      ['l-lock', '玄関・窓の戸締まり', '勝手口、浴室・トイレの小窓、2階の窓も確かめます。換気のためでも、窓は閉めて出かけましょう。'],
+      ['l-outside', '合鍵・脚立などを片付ける', '屋外の合鍵を回収し、脚立やはしごを片付けます。見回りを頼む人には、鍵を直接渡しましょう。'],
+      ['l-delivery', '郵便・新聞・定期便の受け取り方', '停止や回収を手配し、チラシの回収も頼みます。不在届で郵便物を預かってもらえるのは最長30日。長く空けるときは郵便局に相談しましょう。'],
+      ['l-food', '食品・ごみ・冷蔵庫', '傷みやすい食品とごみを片付けます。冷蔵庫をどうするか決め、設備の説明書も確認しましょう。'],
+      ['l-utilities', '電源・水道・ガス', '使い続ける設備と、止める設備を確認します。洗濯機の給水栓は閉め、使わない家電は説明書どおりに扱います。ガスメーターの操作は契約先に確認してください。'],
+      ['l-next', '見回りの日と担当を決める', '見回りの日・担当者・鍵・異常時の連絡先を家族で確認します。マンションは、長期不在の届出方法も管理会社に聞いておきましょう。']
     ],
     visit: [
-      ['v-outside', '外から確認し、配達物を回収', '庭・外壁・窓・鍵を確認。こじ開けられた形跡があれば入らず、安全な場所から110番へ。屋根など高い場所は業者に任せます。'],
-      ['v-inside', '壁・天井の変化を確認し、記録', '染み、湿り、においを確認。前回と同じ場所を写真に撮ると比べやすくなります。写真はこのアプリには保存しません。'],
-      ['v-air', '天候と安全を確かめて換気', '人がいる間に窓を開け、押入れなどにも風を通します。雨・強風などで難しい場合は無理をせず、未確認のまま次の対応を相談しましょう。'],
-      ['v-water', '水まわりの状態と管理方法を確認', '台所・洗面・浴室・トイレの漏れや湿りを確認。通水してよいか分からない場合は、設備の設定と管理方法を先に確認してください。'],
-      ['v-close', '開けた窓を施錠し、設定を戻す', '水道・電源は家族で決めた設定へ戻します。玄関を閉めたあと、外からもひと回り確認しましょう。'],
-      ['v-report', '家族に報告し、次の予定を決める', '変化がなくても、写真と一言を家族へ。異常があれば次の対応を相談し、次回の見回り日を更新しましょう。']
+      ['v-outside', '家の外を見て、配達物を回収', '庭・外壁・窓・鍵を外から確認。こじ開けられた形跡があれば家に入らず、安全な場所から110番へ。屋根など高い場所の確認は業者に任せます。'],
+      ['v-inside', '壁や天井の変化を見る', '染み、湿り、においを確かめます。写真は前回と同じ場所を撮ると見比べやすくなります。このアプリには写真を保存できません。'],
+      ['v-air', '天候と安全を確かめて換気', '人がいる間に窓を開け、押入れにも風を通します。雨や強風で難しいときは無理をせず、「あとで確認」にして次の対応を相談しましょう。'],
+      ['v-water', '水まわりを確かめる', '台所・洗面・浴室・トイレの漏れや湿りを確認。通水してよいか分からない場合は、設備の設定と管理方法を先に確認してください。'],
+      ['v-close', '開けた窓を施錠し、設定を戻す', '水道・電源は、家族で決めた設定に戻します。玄関を閉めたあと、外もひと回りして確かめましょう。'],
+      ['v-report', '家族へ報告する', '「変わりなし」でも、写真と一言を家族へ。異常があれば対応を相談し、次の見回り日を決めましょう。']
     ],
     return: [
-      ['r-contract', '止めていた契約の再開を確認', '電気・水道・ガスの開始日と、立ち会いの要否を確認します。止めていなければ「対象外」を選べます。'],
-      ['r-equipment', '説明書に従い設備を試す', '水抜きした設備は再使用手順を確認。水漏れや異音がないか、お湯・暖房が使えるかを確かめます。異常があれば使用を止め、相談してください。'],
-      ['r-life', '冷蔵庫・トイレ・寝具を整える', '換気をし、戻った日から暮らせる状態にします。冷蔵庫の再使用も、機種の説明書に従って準備しましょう。'],
-      ['r-route', '通路・段差・夜の明かりを確認', '玄関から寝室・トイレまでの通路を空けます。帰宅後の歩き方や暮らし方に合わせ、必要なものを家族で確認しましょう。']
+      ['r-contract', '電気・水道・ガスの再開', '開始日と、立ち会いが必要かを確認します。止めていた契約がなければ「対象外」を選べます。'],
+      ['r-equipment', '説明書を見ながら設備を試す', '水抜きした設備は、再び使う手順を説明書で確認します。水漏れや異音がないか、お湯や暖房が使えるかを確かめます。異常があれば使用を止め、相談してください。'],
+      ['r-life', '冷蔵庫・トイレ・寝具の準備', '換気をして、帰宅した日から使えるように準備します。冷蔵庫を再び使うときは、機種の説明書に従ってください。'],
+      ['r-route', '通り道・段差・夜の明かり', '玄関から寝室・トイレまでの通路を空けます。帰ってからの歩き方や暮らしに合わせ、必要なものを家族で確かめましょう。']
     ]
   };
   const ids = Object.values(tasks).flat().map((t) => t[0]);
@@ -65,10 +65,10 @@
   }
   function description(task) {
     if (task[0] === 'l-food') {
-      return '傷みやすい食品を使い切り、ごみを収集日に合わせて出します。' + ({unknown:'冷蔵庫を使い続けるか、止めるかも決めましょう。',keep:'冷蔵庫を使い続けるため、必要な電源を残します。',off:'冷蔵庫は食品・製氷用の水・氷を片付け、清掃と乾燥を。停止方法は説明書に従ってください。',none:'冷蔵庫がなくても、食品やごみの残りがないかを確認しましょう。'}[state.fridge]);
+      return '傷みやすい食品は使い切り、ごみは収集日に合わせて出します。' + ({unknown:'冷蔵庫を使い続けるか、止めるかも決めます。',keep:'冷蔵庫用の電源は残しておきます。',off:'冷蔵庫は食品・製氷用の水・氷を片付け、清掃して乾かします。止め方は説明書に従ってください。',none:'食品やごみが残っていないか確かめます。'}[state.fridge]);
     }
     if (task[0] === 'v-water') {
-      return '台所・洗面・浴室・トイレの漏れや湿りを確認。' + ({unknown:'通水してよいか分からないため、設備の設定と管理方法を先に確認しましょう。確認できるまでチェックを付けずに残してください。',usable:'異常がなければ水を流し、排水の様子を見ながら排水トラップの水も補います。漏れや異常があれば通水を止め、相談してください。',winterized:'水抜き・止水中なので、通常の通水は行いません。凍結対策を崩さないよう、決めた管理方法・説明書に沿った確認をしてください。'}[state.water]);
+      return '台所・洗面・浴室・トイレで、漏れや湿りを確かめます。' + ({unknown:'水を流す前に、設備の設定と管理方法を確認してください。分かるまでは「あとで確認」にしておきましょう。',usable:'異常がなければ水を流し、排水の様子を見ながら排水トラップの水も補います。漏れや異常があれば通水を止め、相談してください。',winterized:'水抜き・止水中は、通常の通水をしないでください。凍結対策を崩さず、決めた管理方法と説明書に沿って確かめます。'}[state.water]);
     }
     return task[2];
   }
@@ -84,7 +84,7 @@
   }
   function saveStatus() {
     const timestamp = state.savedAt ? new Date(state.savedAt).toLocaleString('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
-    $('ac-save-status').textContent = notice || (dirty ? '変更はまだ保存されていません。「この端末に保存」を押してください。' : timestamp ? '保存済み：' + timestamp : 'まだ保存していません。');
+    $('ac-save-status').textContent = notice || (dirty ? '未保存の変更があります。ページを閉じたり再読み込みしたりすると消えます。' : timestamp ? '保存済み：' + timestamp : 'まだ保存していません。');
     $('ac-save-status').dataset.error = String(storageError);
   }
   function markDirty() {dirty = true; notice = ''; saveStatus();}
@@ -104,28 +104,28 @@
     $('ac-step-label').textContent = phases[state.phase] + (atEnd ? 'の振り返り' : 'の確認　' + (index + 1) + ' / ' + c.total);
     $('ac-remaining').textContent = '残り ' + c.remaining + ' 項目';
     $('ac-progress').max = c.total; $('ac-progress').value = c.done + c.skip;
-    $('ac-equipment-note').textContent = {unknown:'水道・凍結対策は未確認です。通水できる状態かを先に確認しましょう。',usable:'通水できる設定です。漏れや異常があれば通水を止め、相談してください。',winterized:'水抜き・止水中です。見回りでも、決めた凍結対策・管理方法を優先してください。'}[state.water];
+    $('ac-equipment-note').textContent = {unknown:'水道・凍結対策は未確認です。水を流してよい状態か、先に確かめてください。',usable:'水を流せる設定です。漏れや異常があれば通水を止め、相談してください。',winterized:'水抜き・止水中です。見回りのときも、決めた凍結対策・管理方法に従ってください。'}[state.water];
     const container = $('ac-task-list'); container.replaceChildren();
     container.hidden = atEnd; $('ac-results').hidden = !atEnd; $('ac-date-block').hidden = !atEnd;
     $('ac-previous').disabled = index === 0;
-    $('ac-review').textContent = atEnd ? '最初の項目を見直す' : '途中のまとめを見る';
+    $('ac-review').textContent = atEnd ? '最初の項目を見直す' : 'ここまでの確認を見る';
     if (atEnd) renderResults();
     else {
       const task = tasks[state.phase][index];
       const status = state.checks[task[0]] || 'pending';
       const card = element('div','', 'ac-task'); card.dataset.task = task[0]; card.dataset.status = status;
-      const badge = element('p',{done:'✓ 確認済み',skip:'対象外にしました',pending:'これから確認',later:'あとで確認'}[status] || 'これから確認','ac-task-state');
+      const badge = element('p',{done:'✓ 確認済み',skip:'対象外',pending:'これから確認',later:'あとで確認'}[status] || 'これから確認','ac-task-state');
       const heading = element('h3',task[1]); heading.id = 'ac-task-heading'; heading.tabIndex = -1;
       const desc = element('p',description(task),'ac-task-description');
       card.append(badge,heading,desc);
       if (['l-utilities','v-water','r-equipment'].includes(task[0])) {
         const caution = element('div','', 'ac-caution');
-        caution.append(element('strong','電源や水道は、まとめて止めないで。'),element('p','24時間換気、防犯設備、給湯器の凍結予防などに電源が必要な場合があります。説明書と家ごとの管理方法を優先してください。'));
-        const link = element('a','記事の設備の説明を見る'); link.href = '#section-2'; caution.append(link); card.append(caution);
+        caution.append(element('strong','電源や水道は、まとめて止めないでください。'),element('p','24時間換気、防犯設備、給湯器の凍結予防などに電源が必要な場合があります。説明書と家ごとの管理方法を優先してください。'));
+        const link = element('a','設備について記事で読む'); link.href = '#section-2'; caution.append(link); card.append(caution);
       }
       const actions = element('div','', 'ac-answer-actions');
-      actions.append(button('✓ 確認したので次へ',() => answer(task,'done'),'ac-primary'),button('あとで確認する',() => answer(task,'later')),button('この家は対象外',() => answer(task,'skip'),'ac-skip'));
-      card.append(actions,element('p','確認できないことは「あとで確認する」で残せます。','ac-small'));
+      actions.append(button('✓ 確認した',() => answer(task,'done'),'ac-primary'),button('あとで確認',() => answer(task,'later')),button('この項目は対象外',() => answer(task,'skip'),'ac-skip'));
+      card.append(actions,element('p','迷ったら「あとで確認」。','ac-small'));
       container.append(card);
     }
     updateDate(); saveStatus();
@@ -134,21 +134,21 @@
     const box = $('ac-results'); box.replaceChildren();
     const c = count(state.phase);
     const remaining = tasks[state.phase].filter((task) => !['done','skip'].includes(state.checks[task[0]]));
-    const title = c.remaining === 0 ? (c.done ? '確認、おつかれさまでした。' : '対象外の項目を整理しました。') : '次に確認することが、整理できました。';
+    const title = c.remaining === 0 ? (c.done ? 'この場面のチェックが終わりました。' : 'すべて「対象外」になっています。') : 'まだ確認していない項目';
     box.append(element('h3',title),element('p','確認済み ' + c.done + ' ／ 対象外 ' + c.skip + ' ／ 残り ' + c.remaining,'ac-result-count'));
     if (remaining.length) {
-      box.append(element('p','今すぐできない項目は、家族や専門家に相談して進めましょう。'));
+      box.append(element('p','残りは、家族や専門家に相談しながら確かめましょう。'));
       const list = element('ul','', 'ac-result-list');
       remaining.forEach((task) => {const item = element('li'); item.append(button(task[1] + ' →',() => goTo(tasks[state.phase].indexOf(task)))); list.append(item);}); box.append(list);
-    } else box.append(element('p','この場面の残りはありません。「対象外」にした項目は、家の状況に合っているか一度見直しましょう。'));
+    } else box.append(element('p','「対象外」にした項目も、この家に当てはまらないか見直しておきましょう。'));
     const next = element('div','', 'ac-next-action');
     next.append(element('strong','次にすること'));
     let message;
-    if (state.phase === 'return') message = '家族と帰宅日や必要なものを共有し、戻る日に合わせて準備しましょう。異常があった設備は、使用前に専門家へ相談してください。';
-    else if (!state.nextDate) message = '次に見に行く人と日を決めましょう。日付は下に記録できます。';
-    else message = '次の見回り日を家族と共有しましょう。担当者・鍵・連絡先も、別途確認しておきます。';
-    if (state.water === 'unknown') message += ' 水道・凍結対策はまだ未確認です。通水や設備操作の前に、管理方法を確認してください。';
-    if (state.water === 'winterized') message += ' 水抜き・止水中の設備は、決めた管理方法を引き継ぎましょう。';
+    if (state.phase === 'return') message = '帰宅日と必要なものを家族に伝え、準備しましょう。異常があった設備は、使う前に専門家へ相談してください。';
+    else if (!state.nextDate) message = '次の見回りは、誰がいつ行きますか？ 決まった日を下にメモできます。';
+    else message = '次の見回り日を家族に伝え、担当者・鍵・連絡先も確かめておきましょう。';
+    if (state.water === 'unknown') message += ' 水道・凍結対策は未確認です。水を流したり設備を動かしたりする前に、管理方法を確認してください。';
+    if (state.water === 'winterized') message += ' 水抜き・止水中の設備は、管理方法も引き継いでください。';
     next.append(element('p',message)); box.append(next);
     const done = tasks[state.phase].filter((task) => ['done','skip'].includes(state.checks[task[0]]));
     if (done.length) {
@@ -162,7 +162,7 @@
   $('ac-previous').addEventListener('click',() => {goTo(Math.max(0,state.cursors[state.phase]-1));});
   $('ac-review').addEventListener('click',() => {goTo(state.cursors[state.phase] >= tasks[state.phase].length ? 0 : tasks[state.phase].length);});
   $('ac-next-date').addEventListener('change',(event) => {const value = event.target.value; if(value && !validDate(value)){event.target.setCustomValidity('2000年から2100年の有効な日付を選んでください。'); event.target.reportValidity(); return;} event.target.setCustomValidity(''); state.nextDate = value; markDirty(); updateDate(); if (state.cursors[state.phase] >= tasks[state.phase].length) renderResults();});
-  ['water','fridge'].forEach((name) => {$('ac-' + name).addEventListener('change',(event) => {state[name] = event.target.value; (name === 'water' ? ['l-utilities','v-water','r-equipment'] : ['l-food','r-life']).forEach((id) => {delete state.checks[id];}); markDirty(); notice = '設備の設定を変更しました。関連する項目は未確認に戻しました。変更後の記録を保存してください。'; render();});});
+  ['water','fridge'].forEach((name) => {$('ac-' + name).addEventListener('change',(event) => {state[name] = event.target.value; (name === 'water' ? ['l-utilities','v-water','r-equipment'] : ['l-food','r-life']).forEach((id) => {delete state.checks[id];}); markDirty(); notice = '設定を変えたため、関係する項目は未確認に戻りました。変更を残すには保存してください。'; render();});});
   $('ac-save').addEventListener('click',() => {
     if (!$('ac-next-date').checkValidity()) {state.cursors[state.phase] = tasks[state.phase].length; render(); $('ac-next-date').reportValidity(); return;}
     try {const next = {...state,savedAt:new Date().toISOString()}; localStorage.setItem(key,JSON.stringify(next)); state = next; dirty = false; storageError = false; notice = ''; saveStatus();}
@@ -170,12 +170,12 @@
   });
   $('ac-reset-phase').addEventListener('click',() => {
     if(!window.confirm('「' + phases[state.phase] + '」のチェックと対象外をすべて未確認に戻します。ほかの場面・設備設定・次の予定日は残ります。やり直しますか？')) return;
-    tasks[state.phase].forEach((task) => {delete state.checks[task[0]];}); state.cursors[state.phase] = 0; markDirty(); notice = 'この場面を未確認に戻しました。次の予定日も確認し、変更後の記録を保存してください。'; render();
+    tasks[state.phase].forEach((task) => {delete state.checks[task[0]];}); state.cursors[state.phase] = 0; markDirty(); notice = 'この場面を未確認に戻しました。次の予定日も確かめて、変更を保存してください。'; render();
   });
   $('ac-delete').addEventListener('click',() => {
     if(!window.confirm('3つの場面のチェック、設備設定、予定日と、このアプリの保存データをすべて消します。元に戻せません。最初から始めますか？')) return;
     try{localStorage.removeItem(key);}catch(e){notice = '保存データを削除できませんでした。ブラウザーの設定を確認してください。今の記録は残しています。'; storageError = true; saveStatus(); return;}
-    state = defaults(); dirty = false; storageError = false; $('ac-next-date').setCustomValidity(''); syncInputs(); notice = 'このアプリの保存データと、画面の記録をすべて消しました。'; render();
+    state = defaults(); dirty = false; storageError = false; $('ac-next-date').setCustomValidity(''); syncInputs(); notice = 'このアプリの保存データと画面の記録を消しました。'; render();
   });
   window.addEventListener('beforeunload',(event) => {if (dirty) {event.preventDefault(); event.returnValue = '';}});
   window.addEventListener('storage',(event) => {if(event.key === key){notice = '別のタブで保存データが変更されました。この画面を保存すると上書きされます。別のタブの記録を使う場合は、再読み込みしてください。'; saveStatus();}});
