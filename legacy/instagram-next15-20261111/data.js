@@ -6,7 +6,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-02/index.html",
     "id": "next15-20261111-V01",
     "proposal_id": "V01",
-    "publication_number": null,
+    "publication_number": 33,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V01-01.png",
@@ -74,7 +74,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V01-06.png",
         "sha256": "a8815e00139eac2deb132be16e20c726b91e13e368235cdad86e968dc60dfb47"
       }
-    ]
+    ],
+    "episode_label": "第33回"
   },
   {
     "title": "「固定金利」は、いつまで固定？",
@@ -83,7 +84,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-32/index.html",
     "id": "next15-20261111-V02",
     "proposal_id": "V02",
-    "publication_number": null,
+    "publication_number": 34,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V02-01.png",
@@ -151,7 +152,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V02-06.png",
         "sha256": "3b0f54801cc388e61d1507673f14dcef45c29c8058497ec15d9f4b762253bde2"
       }
-    ]
+    ],
+    "episode_label": "第34回"
   },
   {
     "title": "内窓を付ける前に、開けてみよう",
@@ -160,7 +162,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-01/index.html",
     "id": "next15-20261111-V03",
     "proposal_id": "V03",
-    "publication_number": null,
+    "publication_number": 35,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V03-01.png",
@@ -228,7 +230,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V03-06.png",
         "sha256": "4f793b3339cbe39d853ec83c168baee99d8b6157921ff75a386bf34ce233b920"
       }
-    ]
+    ],
+    "episode_label": "第35回"
   },
   {
     "title": "留守の実家、電源を切る前に",
@@ -237,7 +240,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-09/index.html",
     "id": "next15-20261111-V04",
     "proposal_id": "V04",
-    "publication_number": null,
+    "publication_number": 36,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V04-01.png",
@@ -305,7 +308,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V04-06.png",
         "sha256": "6e631a23dfd9205d6d0326b7175651ef549091bdd12c26a5608e7e778f110d34"
       }
-    ]
+    ],
+    "episode_label": "第36回"
   },
   {
     "title": "停電用の電源、何につなぐ？",
@@ -314,7 +318,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-12/index.html",
     "id": "next15-20261111-V05",
     "proposal_id": "V05",
-    "publication_number": null,
+    "publication_number": 37,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V05-01.png",
@@ -382,7 +386,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V05-06.png",
         "sha256": "48767bbbf0bed56b439ae46979b70b05f6634be7d47729f217d36ad5ec803a40"
       }
-    ]
+    ],
+    "episode_label": "第37回"
   },
   {
     "title": "換気フィルター、洗う前の確認",
@@ -391,7 +396,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-19/index.html",
     "id": "next15-20261111-V06",
     "proposal_id": "V06",
-    "publication_number": null,
+    "publication_number": 38,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V06-01.png",
@@ -459,7 +464,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V06-06.png",
         "sha256": "058c10c6f96da5fe3208a6cf05b935bc76d52758a843c8b7048860034cd256b7"
       }
-    ]
+    ],
+    "episode_label": "第38回"
   },
   {
     "title": "水まわり工事の前に、配管の予定",
@@ -468,7 +474,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-10/index.html",
     "id": "next15-20261111-V07",
     "proposal_id": "V07",
-    "publication_number": null,
+    "publication_number": 39,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V07-01.png",
@@ -536,7 +542,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V07-06.png",
         "sha256": "f480dd9771afea3811e54019c930935f9a352fed95651768ba945ff3b3c8ad06"
       }
-    ]
+    ],
+    "episode_label": "第39回"
   },
   {
     "title": "ビデオ通話、顔が暗く映るなら",
@@ -545,7 +552,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-18/index.html",
     "id": "next15-20261111-V08",
     "proposal_id": "V08",
-    "publication_number": null,
+    "publication_number": 40,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V08-01.png",
@@ -613,7 +620,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V08-06.png",
         "sha256": "4e77dd1dfde795aca9e6b3eb0d495da0828a6b1541ef6157d4584b7384125377"
       }
-    ]
+    ],
+    "episode_label": "第40回"
   },
   {
     "title": "住み替えの内覧、帰り道も歩こう",
@@ -622,7 +630,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-04/index.html",
     "id": "next15-20261111-V09",
     "proposal_id": "V09",
-    "publication_number": null,
+    "publication_number": 41,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V09-01.png",
@@ -690,7 +698,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V09-06.png",
         "sha256": "025b03c26c0be36ad3b542580cd8b3c6e1ed110e56b58e9fe84b2143cf999724"
       }
-    ]
+    ],
+    "episode_label": "第41回"
   },
   {
     "title": "引き渡しの日、自分の手で一度",
@@ -699,7 +708,7 @@ window.RNAVI_NEXT15 = [
     "column_url": "https://eisuke-orion.github.io/100-year-renovation-navi-preview-b/legacy/plans/plan-34/index.html",
     "id": "next15-20261111-V10",
     "proposal_id": "V10",
-    "publication_number": null,
+    "publication_number": 42,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V10-01.png",
@@ -767,7 +776,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V10-06.png",
         "sha256": "a4c37bfbb5bfddeecda58e21941fba3c1743bf9af4062d701f7b4ec86a0fda43"
       }
-    ]
+    ],
+    "episode_label": "第42回"
   },
   {
     "title": "職人さんへのお茶、どうする？",
@@ -776,7 +786,7 @@ window.RNAVI_NEXT15 = [
     "column_url": null,
     "id": "next15-20261111-V11",
     "proposal_id": "V11",
-    "publication_number": null,
+    "publication_number": 43,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V11-01.png",
@@ -844,7 +854,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V11-06.png",
         "sha256": "52a9b1313c2faa49c75067368d8082682afeabd5e4f4c21700f5109df07cc290"
       }
-    ]
+    ],
+    "episode_label": "第43回"
   },
   {
     "title": "壁紙の色、家の光で比べよう",
@@ -853,7 +864,7 @@ window.RNAVI_NEXT15 = [
     "column_url": null,
     "id": "next15-20261111-V12",
     "proposal_id": "V12",
-    "publication_number": null,
+    "publication_number": 44,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V12-01.png",
@@ -921,7 +932,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V12-06.png",
         "sha256": "b49e42a0123d6d09a82b8663bc3509f1e592f000bd0878c6751cde7f135f75e3"
       }
-    ]
+    ],
+    "episode_label": "第44回"
   },
   {
     "title": "コンセント、使う場所から決める",
@@ -930,7 +942,7 @@ window.RNAVI_NEXT15 = [
     "column_url": null,
     "id": "next15-20261111-V13",
     "proposal_id": "V13",
-    "publication_number": null,
+    "publication_number": 45,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V13-01.png",
@@ -998,7 +1010,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V13-06.png",
         "sha256": "dcae4ab152cfced0ae692a58d0cdeea00ab34d1c3f013e0817b0e90abecf7c4c"
       }
-    ]
+    ],
+    "episode_label": "第45回"
   },
   {
     "title": "工事中の「ついでに」、頼む前に",
@@ -1007,7 +1020,7 @@ window.RNAVI_NEXT15 = [
     "column_url": null,
     "id": "next15-20261111-V14",
     "proposal_id": "V14",
-    "publication_number": null,
+    "publication_number": 46,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V14-01.png",
@@ -1075,7 +1088,8 @@ window.RNAVI_NEXT15 = [
         "image": "images/V14-06.png",
         "sha256": "3b95b6ae653f4ad575dc927d23b7ea962babb2f493486c2a82c7f42be9d0b397"
       }
-    ]
+    ],
+    "episode_label": "第46回"
   },
   {
     "title": "工事の日、ペットの居場所は？",
@@ -1084,7 +1098,7 @@ window.RNAVI_NEXT15 = [
     "column_url": null,
     "id": "next15-20261111-V15",
     "proposal_id": "V15",
-    "publication_number": null,
+    "publication_number": 47,
     "publication_date": null,
     "review_status": "クライアント確認用（修正版）",
     "image": "images/V15-01.png",
@@ -1152,6 +1166,7 @@ window.RNAVI_NEXT15 = [
         "image": "images/V15-06.png",
         "sha256": "ce8a4eeea4a13c038dffa146bfa70b6088398e72156d2ad1c17334b438bb3596"
       }
-    ]
+    ],
+    "episode_label": "第47回"
   }
 ];
