@@ -1,7 +1,7 @@
 {
   "created": "2026-11-11",
   "status": "クライアント確認用（修正版）",
-  "design_version": "2026-11-11-approved-v3-footer-20261022-r4",
+  "design_version": "2026-11-11-approved-v3-footer-20261022-r5-composition",
   "posts": [
     {
       "title": "浴室に干すなら、使う時間から",
@@ -104,7 +104,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V02-01.png",
-          "sha256": "1ba44b3e555d7f0e01c6c4adf85a186c2b0136a4fd5084bdcd582b1781384c3c"
+          "sha256": "0536f8cfdc93a98b97f0ee4e6fb4281c7f32c78558d4375c6d7383812ca12fa4"
         },
         {
           "heading": "全期間固定は、完済まで",
@@ -416,7 +416,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V06-01.png",
-          "sha256": "24acf346bcfe0380a028859507ef94a3af9b047bc81d391c30fe82e0cc0e37d0"
+          "sha256": "3c2b99992a9ffbc3c1d0cbc92e57d9c8dc6ecb34d7be64a82832b28060b3a4fd"
         },
         {
           "heading": "まず、型番から説明書を探す",
@@ -806,7 +806,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V11-01.png",
-          "sha256": "1a66d89767a3bea4b91879cfe9d4baa1f7c58704d4ce31d4a1b2a0cf3007312b"
+          "sha256": "4dcea7214c922effa0b8b7686c38bb739c81d10d2b9496398cce64450fe628f8"
         },
         {
           "heading": "飲み物の扱いを先に聞く",
@@ -924,7 +924,7 @@
           "page": 5,
           "display_number": "04 / 04",
           "image": "images/V12-05.png",
-          "sha256": "312933bb891649e912eb92b8212851aeca34ead2a4cf97ccba8c4969ce9de882"
+          "sha256": "8466c67fb66060bafba3249389664d0a466f22d26ed49c5a7d04acd84135db74"
         },
         {
           "heading": "保存して、サンプルが来たら",
@@ -962,7 +962,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V13-01.png",
-          "sha256": "7b08dda35c8396afdfbc684b20c4f656e73e669008b7cf147c768d99dafba1f1"
+          "sha256": "8e121a755dea4499f66df12766512d431e3689497ce11d3c77fb5517961db363"
         },
         {
           "heading": "いつもの家電を並べて考える",
@@ -972,7 +972,7 @@
           "page": 2,
           "display_number": "01 / 04",
           "image": "images/V13-02.png",
-          "sha256": "63d0f63561bcb6eae5d7b3806daedca9b0b494468302dfbe5e11524e10ee1d74"
+          "sha256": "c207e0110d2751680cdf84d458a049c858bb1231fe407fef002b9803124b3538"
         },
         {
           "heading": "同時に使うものも伝える",
@@ -992,7 +992,7 @@
           "page": 4,
           "display_number": "03 / 04",
           "image": "images/V13-04.png",
-          "sha256": "918e3480bd14fb550a6313d67f4ce3a0eca73b3439f8e5965ebe0cec19be6445"
+          "sha256": "e785239d37481b2b23be330b08db28903bb20bdfca20bbbc12f602ed805175aa"
         },
         {
           "heading": "コードが通路を横切らない？",
@@ -1040,7 +1040,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V14-01.png",
-          "sha256": "767d0db5391dd72b6059875b1489c55a68ea1cfa92c3dc4410c5e09b69b4d5bf"
+          "sha256": "ce4d983962cc46048298c9c348569a74f5a469d2c440f0518acb72e363954143"
         },
         {
           "heading": "どこを、どう変えたい？",
