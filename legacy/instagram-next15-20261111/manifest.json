@@ -1,7 +1,7 @@
 {
   "created": "2026-11-11",
   "status": "クライアント確認用（修正版）",
-  "design_version": "2026-11-11-approved-v3-footer-20261022-r5-composition",
+  "design_version": "2026-11-11-r6-visual-consistency",
   "posts": [
     {
       "title": "浴室に干すなら、使う時間から",
@@ -378,7 +378,7 @@
           "page": 5,
           "display_number": "04 / 04",
           "image": "images/V05-05.png",
-          "sha256": "d146f3a573bd0961aa8624e7b514aed837aef47436f4b2f8f58e5920c7458158"
+          "sha256": "61dc2574e9a2967242cfb83b3742ce3c0745e56d14c9b36e48278bfd5afa6792"
         },
         {
           "heading": "保存して、購入前の４項目",
@@ -534,7 +534,7 @@
           "page": 5,
           "display_number": "04 / 04",
           "image": "images/V07-05.png",
-          "sha256": "7db4afda27a56816d13f9386e2556fe578d0b21a221a4833f280283df57a2a91"
+          "sha256": "f8e49db702703c77aeefaa8b735e479e979f26f02d56e1a364102303cc30819e"
         },
         {
           "heading": "保存して、契約前に見比べる",
@@ -572,7 +572,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V08-01.png",
-          "sha256": "b088f5844a6097875da4d83cac6160fba3a1edf7d7f37fb4bd645e853a27040b"
+          "sha256": "bd207adca5c5fdb319f28cd6305274961cf8d69ede24859470ce3bba1d411a20"
         },
         {
           "heading": "明るい窓を背にしていませんか",
@@ -622,7 +622,7 @@
           "page": 6,
           "display_number": null,
           "image": "images/V08-06.png",
-          "sha256": "4e77dd1dfde795aca9e6b3eb0d495da0828a6b1541ef6157d4584b7384125377"
+          "sha256": "90fc2e8053c3e97ea1ad9c8d19c3883f563914c2ff1824cb6c324631ea47ee4b"
         }
       ],
       "episode_label": "第40回"
@@ -738,7 +738,7 @@
           "page": 2,
           "display_number": "01 / 04",
           "image": "images/V10-02.png",
-          "sha256": "2d07de414ed88fa335f546db9de5e4db11adf47f39ddab15a617bc3fa0f99d7a"
+          "sha256": "c8f9a31fb375cd563f6c8bbdb998b6a837f78c2876f4b7f234bf111639fa9260"
         },
         {
           "heading": "開く・流す・押すを試す",
@@ -972,7 +972,7 @@
           "page": 2,
           "display_number": "01 / 04",
           "image": "images/V13-02.png",
-          "sha256": "c207e0110d2751680cdf84d458a049c858bb1231fe407fef002b9803124b3538"
+          "sha256": "ccf7e258be60cf1157c7d5a1ce5fe5f836aaea483a9aa99e6a46009e0c044ff2"
         },
         {
           "heading": "同時に使うものも伝える",
@@ -1118,7 +1118,7 @@
           "page": 1,
           "display_number": null,
           "image": "images/V15-01.png",
-          "sha256": "bd420ecb50bf82a918ec22d7945b81b932d366c5ae38b9e726ee53eef4d47cb0"
+          "sha256": "fe2d217dc50b6f604337d76ad7e34a37ee96f55746710182a852582d4a6c6968"
         },
         {
           "heading": "どんな工事で、どこが開く？",
@@ -1168,7 +1168,7 @@
           "page": 6,
           "display_number": null,
           "image": "images/V15-06.png",
-          "sha256": "ce8a4eeea4a13c038dffa146bfa70b6088398e72156d2ad1c17334b438bb3596"
+          "sha256": "733a5f3a592481b94a7c06f9a6ce3a3c4399906810addfc14dd58037de70a261"
         }
       ],
       "episode_label": "第47回"
