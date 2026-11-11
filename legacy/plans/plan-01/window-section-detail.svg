@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="740" viewBox="0 0 800 740" role="img" aria-labelledby="title desc">
+  <title id="title">既存窓の室内側に内窓を取り付ける仕組み</title>
+  <desc id="desc">窓を横から見た模式断面。左が屋外、右が室内。既存窓を残し、その室内側の窓枠に別の窓である内窓を追加する。二つの窓の間にできる空気層と内窓により、熱が伝わりにくくなる。複層ガラスの中空層を示した図ではない。</desc>
+  <defs>
+    <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#76afc3"/><stop offset=".45" stop-color="#e5f5fa"/><stop offset="1" stop-color="#9cc7d6"/></linearGradient>
+    <linearGradient id="outer" x1="0" x2="1"><stop stop-color="#c1ccd0"/><stop offset=".45" stop-color="#eef2f3"/><stop offset="1" stop-color="#aab9bf"/></linearGradient>
+    <linearGradient id="inner" x1="0" x2="1"><stop stop-color="#e2d4bb"/><stop offset=".55" stop-color="#fffaf0"/><stop offset="1" stop-color="#d1bd9a"/></linearGradient>
+    <linearGradient id="air"><stop stop-color="#edf2db"/><stop offset=".5" stop-color="#f9f8d8"/><stop offset="1" stop-color="#edf2db"/></linearGradient>
+    <pattern id="wall" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M-3 3L3-3M0 14L14 0M11 17L17 11" stroke="#e1dbd0" stroke-width="2"/></pattern>
+    <marker id="arrow" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M8 4L0 0V8Z" fill="#80904d"/></marker>
+    <style>text{font-family:'Noto Sans CJK JP','Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;fill:#293d35}.label{font-size:34px;font-weight:700}.sub{font-size:24px}.leader{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.detail{fill:none;stroke-width:2}</style>
+  </defs>
+  <rect width="800" height="740" rx="14" fill="#fff"/>
+  <text x="400" y="48" text-anchor="middle" font-size="32" font-weight="700">今ある窓の内側に、内窓を追加</text>
+  <rect x="280" y="66" width="240" height="38" rx="19" fill="#f0f3ee"/>
+  <text x="400" y="93" text-anchor="middle" font-size="22" fill="#54624f">横から見た模式断面</text>
+
+  <!-- Labels follow the physical order: outside / existing window / gap / added window / room. -->
+  <text x="235" y="151" text-anchor="middle" class="label" fill="#4d6875">既存窓</text>
+  <text x="235" y="183" text-anchor="middle" class="sub">そのまま残す</text>
+  <path d="M235 194V235" class="leader" stroke="#738a94"/>
+  <text x="563" y="151" text-anchor="middle" class="label" fill="#85633d">内窓</text>
+  <text x="563" y="183" text-anchor="middle" class="sub">室内側に追加</text>
+  <path d="M563 194V235" class="leader" stroke="#a58c66"/>
+
+  <rect x="32" y="230" width="179" height="363" rx="14" fill="#edf6fa"/>
+  <rect x="294" y="254" width="218" height="322" fill="url(#air)"/>
+  <rect x="604" y="230" width="164" height="363" rx="14" fill="#fcf1df"/>
+  <text x="111" y="370" text-anchor="middle" class="label" fill="#4e7c93">屋外</text>
+  <text x="691" y="370" text-anchor="middle" class="label" fill="#956336">室内</text>
+  <path d="M75 396H148M88 384L74 396 88 408" class="leader" stroke="#81a7ba"/>
+  <path d="M656 396H729M716 384L730 396 716 408" class="leader" stroke="#c49b68"/>
+
+  <!-- Existing timber opening, with the outer window at the exterior and inner window on the room side. -->
+  <path d="M211 226H626V253H211Z" fill="#e7d5b5" stroke="#b6a17e" stroke-width="2"/>
+  <path d="M222 234H618M295 243H511" stroke="#c8b28e" stroke-width="1.5"/>
+  <path d="M211 579H644V612H211Z" fill="#e7d5b5" stroke="#b6a17e" stroke-width="2"/>
+  <path d="M222 590H630M250 600H604" stroke="#c8b28e" stroke-width="1.5"/>
+  <path d="M211 613H622V643H211Z" fill="#f5f2eb" stroke="#d5cdc0" stroke-width="2"/>
+  <path d="M211 613H622V643H211Z" fill="url(#wall)"/>
+
+  <!-- Outer window. Glass seats into its own sash; hollow frame profiles are schematic. -->
+  <path d="M198 236H290V273H273V307H225V274H198Z" fill="url(#outer)" stroke="#607985" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M210 247H278V262H264V294H234V263H210Z" fill="#f8fafb" stroke="#869ba4" stroke-width="2"/>
+  <path d="M240 285H258V546H240Z" fill="url(#glass)" stroke="#6797aa" stroke-width="2"/>
+  <path d="M243 295V537" stroke="#fff" stroke-width="3" opacity=".8"/>
+  <path d="M236 285H242V310H236ZM256 285H262V310H256Z" fill="#526d79"/>
+  <path d="M225 529H240V544H258V529H273V558H291V579H198V557H225Z" fill="url(#outer)" stroke="#607985" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M235 554H263V569H210V565H235Z" fill="#f8fafb" stroke="#869ba4" stroke-width="2"/>
+  <path d="M236 523H242V545H236ZM256 523H262V545H256Z" fill="#526d79"/>
+
+  <!-- Added inner window: a separate complete assembly, not an extra pane inside the existing frame. -->
+  <path d="M512 253H613V277H594V309H533V277H512Z" fill="url(#inner)" stroke="#94784f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M523 263H601V271H584V295H544V271H523Z" fill="#fffcf4" stroke="#b69b71" stroke-width="2"/>
+  <path d="M555 286H573V546H555Z" fill="url(#glass)" stroke="#6797aa" stroke-width="2"/>
+  <path d="M558 296V537" stroke="#fff" stroke-width="3" opacity=".8"/>
+  <path d="M550 286H556V309H550ZM572 286H578V309H572Z" fill="#7e745f"/>
+  <path d="M533 529H555V545H573V529H594V557H613V579H512V557H533Z" fill="url(#inner)" stroke="#94784f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M543 554H584V569H523V565H543Z" fill="#fffcf4" stroke="#b69b71" stroke-width="2"/>
+  <path d="M550 523H556V545H550ZM572 523H578V545H572Z" fill="#7e745f"/>
+
+  <!-- The indicated gap is between two independent windows. -->
+  <text x="403" y="356" text-anchor="middle" font-size="29" font-weight="700">窓と窓の間の</text>
+  <text x="403" y="402" text-anchor="middle" font-size="40" font-weight="700" fill="#687939">空気層</text>
+  <path d="M309 436H495" stroke="#80904d" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <path d="M298 425V448M506 425V448" stroke="#9aa86e" stroke-width="2"/>
+  <path d="M643 600H693V565" class="leader" stroke="#aa9474"/>
+  <text x="692" y="543" text-anchor="middle" font-size="23">窓枠</text>
+
+  <rect x="32" y="668" width="736" height="52" rx="10" fill="#f0f4ea"/>
+  <text x="400" y="703" text-anchor="middle" font-size="27" font-weight="700">内窓と間の空気層が、熱の伝わりを抑える</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="820" viewBox="0 0 900 820" role="img" aria-labelledby="title desc">
+<title id="title">冬の換気口、ふさいでも大丈夫？ 架空の質問・回答例</title>
+<desc id="desc">質問サイト風のオリジナル画面。質問者の「冷たい風が入るので寒い間だけ閉めてもいい？」という疑問に、24時間換気に必要な給気口は開けて使い、風が体に当たる位置を変えてみると答えています。</desc>
+<defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#152a44" flood-opacity=".09"/></filter></defs>
+<g font-family="'Noto Sans CJK JP','Noto Sans JP','Hiragino Kaku Gothic ProN',Meiryo,sans-serif">
+<rect width="900" height="820" rx="14" fill="#eef1f5"/>
+<path d="M14 0H886A14 14 0 0 1 900 14V88H0V14A14 14 0 0 1 14 0" fill="#fff"/>
+<text x="30" y="53" fill="#b53b42" font-size="34" font-weight="700">住まいの質問箱</text>
+<rect x="599" y="23" width="273" height="39" rx="5" fill="#f5eceb"/>
+<text x="735.5" y="50" text-anchor="middle" font-size="21" font-weight="700" fill="#7d4446">架空の質問・回答例</text>
+<path d="M0 88H900" stroke="#dfe3e8"/>
+<text x="31" y="128" font-size="22" fill="#5e7391">住まい・暮らし</text><text x="203" y="128" font-size="22" fill="#9aa7b7">›</text><text x="230" y="128" font-size="22" fill="#5e7391">住宅設備・換気</text>
+<g filter="url(#shadow)"><rect x="24" y="152" width="852" height="330" rx="7" fill="#fff" stroke="#dfe4eb"/></g>
+<circle cx="68" cy="198" r="23" fill="#e5eaf1"/><circle cx="68" cy="192" r="8" fill="#8d9aae"/><path d="M54 213Q56 201 68 201Q80 201 82 213" fill="#8d9aae"/>
+<text x="105" y="206" font-size="23" fill="#4f5d70">質問者さん</text>
+<rect x="715" y="178" width="127" height="37" rx="4" fill="#e4f2e9"/><text x="778.5" y="204" text-anchor="middle" font-size="21" font-weight="700" fill="#367352">解決済み</text>
+<text x="48" y="274" font-size="36" font-weight="700" fill="#263343">冬の換気口、ふさいでも大丈夫？</text>
+<text x="48" y="329" font-size="28" fill="#333e4c">換気口から冷たい風が入ってきます。</text>
+<text x="48" y="372" font-size="28" fill="#333e4c">寒い間だけ閉めてもいいのでしょうか。</text>
+<path d="M48 409H852" stroke="#e8ebef"/>
+<text x="49" y="451" font-size="22" fill="#7b8796">換気口・冬の寒さについての質問</text>
+<g filter="url(#shadow)"><rect x="24" y="502" width="852" height="285" rx="7" fill="#fff" stroke="#dfe4eb"/></g>
+<path d="M31 502H869A7 7 0 0 1 876 509V558H24V509A7 7 0 0 1 31 502" fill="#f9f3dd"/>
+<path d="M48 520L57 530L66 517L75 530L84 520L81 541H51Z" fill="#b88b24"/><text x="104" y="540" font-size="23" font-weight="700" fill="#806024">ベストアンサー（例）</text>
+<text x="48" y="611" font-size="29" font-weight="700" fill="#25374d">24時間換気に必要な給気口は、</text>
+<text x="48" y="655" font-size="29" font-weight="700" fill="#25374d">開けて使うのが基本です。</text>
+<text x="48" y="707" font-size="26" fill="#404b59">湿気やにおいを外へ出すための入口です。</text>
+<text x="48" y="749" font-size="26" fill="#404b59">寒いときは、風が体に当たる位置を変えてみて。</text>
+</g></svg>

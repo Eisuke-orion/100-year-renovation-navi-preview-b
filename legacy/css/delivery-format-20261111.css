@@ -1,0 +1,10 @@
+/* Only selected delivery pages and their index load this restoration. */
+.column-tags{align-items:center;line-height:1.5}
+.column-faqs summary::-webkit-details-marker{display:none}
+.column-faqs summary::marker{content:""}
+.c-main>.column-faqs,.c-main>.column-family-questions{padding-top:0;padding-bottom:0}
+.c-main>.column-family-questions{padding:24px 26px}
+.c-main>.column-family-questions p{font-size:15.5px;line-height:1.9;margin:0}
+.c-card-tags{font-size:12.5px!important;line-height:1.8;color:oklch(0.4 0.09 155);margin:10px 0!important}
+.column-faqs summary:focus-visible{outline:2px solid #405e49;outline-offset:-3px}
+@media(max-width:600px){.column-faqs summary{padding:16px!important}.c-main>.column-family-questions{padding:20px}.column-pagination{row-gap:16px!important}}

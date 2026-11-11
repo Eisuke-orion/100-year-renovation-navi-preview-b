@@ -1,0 +1,164 @@
+{
+  "updated": "2026-11-11",
+  "environment": "B",
+  "baseline_commit": "803fd07435ad4b5ce992d282479ccc7d161255d0",
+  "production_publication_date": null,
+  "selected": [
+    {
+      "episode": 31,
+      "former_episode": 31,
+      "candidate_id": "plan-02",
+      "title": "冬の浴室と脱衣室を暖かく",
+      "path": "plans/plan-02/index.html",
+      "tags": [
+        "浴室・脱衣室",
+        "寒さ対策",
+        "暖房乾燥機"
+      ]
+    },
+    {
+      "episode": 32,
+      "former_episode": 32,
+      "candidate_id": "plan-32",
+      "title": "住宅ローン、固定と変動どっち？金利の1％で変わる「本当の買い物額」",
+      "path": "plans/plan-32/index.html",
+      "tags": [
+        "住宅ローン",
+        "固定金利・変動金利",
+        "家計"
+      ]
+    },
+    {
+      "episode": 33,
+      "former_episode": 33,
+      "candidate_id": "plan-01",
+      "title": "窓の結露、換気だけでいい？",
+      "path": "plans/plan-01/index.html",
+      "tags": [
+        "結露",
+        "窓・断熱",
+        "換気"
+      ]
+    },
+    {
+      "episode": 34,
+      "former_episode": 34,
+      "candidate_id": "plan-09",
+      "title": "実家をしばらく空けるとき",
+      "path": "plans/plan-09/index.html",
+      "tags": [
+        "実家・空き家",
+        "維持管理",
+        "家族"
+      ]
+    },
+    {
+      "episode": 35,
+      "former_episode": 35,
+      "candidate_id": "plan-12",
+      "title": "冬の停電対策",
+      "path": "plans/plan-12/index.html",
+      "tags": [
+        "防災・停電",
+        "冬の備え",
+        "暖房"
+      ]
+    },
+    {
+      "episode": 36,
+      "former_episode": 36,
+      "candidate_id": "plan-19",
+      "title": "換気口、ふさいでいませんか？",
+      "path": "plans/plan-19/index.html",
+      "tags": [
+        "換気",
+        "空気環境",
+        "寒さ対策"
+      ]
+    },
+    {
+      "episode": 37,
+      "former_episode": 37,
+      "candidate_id": "plan-10",
+      "title": "マンションの修繕計画と積立金、どこを読む？",
+      "path": "plans/plan-10/index.html",
+      "tags": [
+        "マンション",
+        "長期修繕計画",
+        "修繕積立金"
+      ]
+    },
+    {
+      "episode": 38,
+      "former_episode": 38,
+      "candidate_id": "plan-18",
+      "title": "本がなんとなく読みづらい？ 暮らしに合う照明選び",
+      "path": "plans/plan-18/index.html",
+      "tags": [
+        "照明",
+        "読書",
+        "暮らし"
+      ]
+    },
+    {
+      "episode": 39,
+      "former_episode": 39,
+      "candidate_id": "plan-04",
+      "title": "住み替えかリフォームか",
+      "path": "plans/plan-04/index.html",
+      "tags": [
+        "住み替え",
+        "リフォーム",
+        "住まいの費用"
+      ]
+    },
+    {
+      "episode": 40,
+      "former_episode": 44,
+      "candidate_id": "plan-34",
+      "title": "工事が終わったら何を確認する？引き渡し当日に聞いておきたいこと",
+      "path": "plans/plan-34/index.html",
+      "tags": [
+        "リフォーム",
+        "引き渡し",
+        "点検・保証"
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "former_episode": 40,
+      "next_episode": null,
+      "candidate_id": "plan-06",
+      "title": "水道の使用量が増えたら",
+      "path": "plans/plan-06/index.html",
+      "baseline_sha256": "b73518c5cd347e0dced792443139a219353333343b26e44e6c888955729d2b11"
+    },
+    {
+      "former_episode": 41,
+      "next_episode": null,
+      "candidate_id": "plan-31",
+      "title": "初めてのリフォーム、何から進める？相談から完成までの道しるべ",
+      "path": "plans/plan-31/index.html",
+      "baseline_sha256": "3d6f77a996cb0f69fc7706dc672b40696a89348181ddd5579c83fe13a601d45a"
+    },
+    {
+      "former_episode": 42,
+      "next_episode": null,
+      "candidate_id": "plan-03",
+      "title": "住宅ローンの金利通知、どこを見る？",
+      "path": "plans/plan-03/index.html",
+      "baseline_sha256": "31130efc7071ade6cfd26341a739d5edc7044daf0dca99042cdf97a42502e309"
+    },
+    {
+      "former_episode": 43,
+      "next_episode": null,
+      "candidate_id": "plan-33",
+      "title": "見積もりどおりで終わる？追加費用で慌てないための確認ポイント",
+      "path": "plans/plan-33/index.html",
+      "baseline_sha256": "6c3af2d9440ab422e5be1e869ee0ddcd221b5589dfd37159090622cc34eb560e"
+    }
+  ],
+  "preserved_reference_episodes": "1–30",
+  "other_candidates_preserved": 20
+}
