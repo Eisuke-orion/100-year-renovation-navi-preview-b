@@ -1,0 +1,99 @@
+/* Article 34: local-only absence checklist. All rules are scoped. */
+#absence-check-app{--ac-ink:#263d35;--ac-green:#315d4b;--ac-soft:#eef4ee;--ac-line:#bdcdbf;--ac-muted:#4e6157;color:var(--ac-ink);background:#fff;border:2px solid var(--ac-green);border-radius:20px;margin:44px 0;padding:28px;font-family:'Noto Sans JP',sans-serif;font-size:16px;line-height:1.8;scroll-margin-top:110px;overflow-wrap:anywhere}
+#absence-check-app *{box-sizing:border-box}
+#absence-check-app [hidden]{display:none!important}
+#absence-check-app p{font-size:16px;line-height:1.8;margin:0 0 12px}
+#absence-check-app h2{color:var(--ac-ink);font-size:30px;line-height:1.5;border:0;padding:0;margin:6px 0 14px;font-family:'Zen Maru Gothic',sans-serif}
+#absence-check-app h3{font-size:20px;margin:0;line-height:1.6}
+#absence-check-app .ac-kicker{font-size:14px;letter-spacing:.04em;font-weight:700;color:var(--ac-green);margin:0}
+#absence-check-app .ac-intro{margin-bottom:22px}
+#absence-check-app .ac-mobile-break{display:none}
+#absence-check-app button,#absence-check-app input,#absence-check-app select{font:inherit;color:inherit}
+#absence-check-app button{cursor:pointer;min-height:48px;border:1px solid var(--ac-green);border-radius:8px;background:#fff;padding:10px 14px;line-height:1.6;touch-action:manipulation}
+#absence-check-app button:hover{background:#e9f0e9}
+#absence-check-app :is(button,input,select,summary,a):focus-visible{outline:3px solid #aa621b;outline-offset:3px}
+#absence-check-app a{color:#285340;text-decoration:underline;text-underline-offset:3px}
+#absence-check-app .ac-phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:20px}
+#absence-check-app .ac-phases button{font-size:18px;font-weight:700;border:2px solid var(--ac-green);padding:12px 6px}
+#absence-check-app .ac-phases button[aria-pressed="true"]{color:#fff;background:var(--ac-green)}
+#absence-check-app .ac-phases span{display:block;font-size:14px;font-weight:400}
+#absence-check-app .ac-dashboard{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--ac-soft);padding:22px;border-radius:12px}
+#absence-check-app .ac-overline{font-weight:700;font-size:15px;margin:0}
+#absence-check-app .ac-remaining{font-size:27px;font-weight:700;margin:2px 0}
+#absence-check-app .ac-detail{font-size:13px;margin:0 0 8px}
+#absence-check-app progress{display:block;width:100%;height:12px;accent-color:var(--ac-green)}
+#absence-check-app .ac-visit-date label{display:block;font-weight:700;margin:0 0 8px}
+#absence-check-app input[type="date"],#absence-check-app select{display:block;min-width:0;width:100%;min-height:48px;background:#fff;border:1px solid #7c9383;border-radius:6px;padding:9px 10px;font-size:16px}
+#absence-check-app #ac-date-status{font-size:14px;margin:8px 0 0}
+#absence-check-app #ac-date-status[data-overdue="true"]{color:#893d18;font-weight:700}
+#absence-check-app .ac-small{font-size:14px;color:var(--ac-muted);line-height:1.8;margin:12px 0}
+#absence-check-app .ac-equipment{border:1px solid var(--ac-line);border-radius:8px;margin:20px 0;overflow:hidden}
+#absence-check-app summary{padding:14px 16px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:700;cursor:pointer;list-style:none;background:#f5f7f2}
+#absence-check-app summary::-webkit-details-marker{display:none}
+#absence-check-app details[open] summary span{transform:rotate(45deg)}
+#absence-check-app .ac-equipment-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px 16px 0}
+#absence-check-app .ac-equipment label{display:block;font-weight:700}
+#absence-check-app .ac-equipment select{margin-top:7px;font-weight:400}
+#absence-check-app .ac-equipment>.ac-small{padding:0 16px}
+#absence-check-app .ac-caution{border-left:4px solid #b47836;background:#fff5e6;border-radius:0 8px 8px 0;padding:17px 19px;margin-bottom:22px}
+#absence-check-app .ac-caution p{font-size:14px;margin:6px 0 10px}
+#absence-check-app .ac-caution a{font-size:14px}
+#absence-check-app #ac-equipment-note{font-weight:700}
+#absence-check-app .ac-list-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+#absence-check-app .ac-filter{display:flex;align-items:center;gap:9px;min-height:48px;font-size:15px;cursor:pointer}
+#absence-check-app input[type="checkbox"]{width:24px;height:24px;accent-color:var(--ac-green);flex-shrink:0;margin:0;cursor:pointer}
+#absence-check-app .ac-task{border:1px solid var(--ac-line);border-radius:10px;margin:0 0 12px;padding:0;background:#fff}
+#absence-check-app .ac-task[data-status="done"]{background:#f1f6f0;border-color:#9ab19c}
+#absence-check-app .ac-task[data-status="skip"]{background:#f4f4f0;border-style:dashed}
+#absence-check-app .ac-task-label{display:flex;gap:12px;align-items:flex-start;padding:18px;cursor:pointer;min-height:60px;font-size:18px;font-weight:700;line-height:1.6}
+#absence-check-app .ac-task-label input{margin-top:3px}
+#absence-check-app .ac-task-copy{padding:0 18px 16px 54px}
+#absence-check-app .ac-task-copy p{font-size:15px;line-height:1.9;margin:0 0 10px}
+#absence-check-app .ac-task-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#absence-check-app .ac-task-state{font-size:14px;font-weight:700}
+#absence-check-app .ac-task-bottom button{font-size:14px;min-height:44px;border-color:#8c9d91;padding:7px 11px}
+#absence-check-app .ac-task-bottom button[aria-pressed="true"]{background:#e4e7df;border:2px solid #5b6a5e}
+#absence-check-app .ac-empty{padding:20px;border:1px solid var(--ac-line);background:var(--ac-soft);border-radius:10px}
+#absence-check-app .ac-save-area{border-top:2px solid var(--ac-line);padding-top:24px;margin-top:24px}
+#absence-check-app button.ac-primary{background:var(--ac-green);color:#fff;font-weight:700;font-size:18px;min-height:54px;width:100%;border:0}
+#absence-check-app button.ac-primary:hover{background:#244d3c}
+#absence-check-app .ac-save-status{font-size:15px;font-weight:700;margin:12px 0}
+#absence-check-app .ac-secondary-actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+#absence-check-app .ac-secondary-actions button{font-size:14px;flex:1 1 200px}
+#absence-check-app .ac-footnote{border-top:1px solid var(--ac-line);padding-top:16px;color:var(--ac-muted);font-size:13px;margin:20px 0 0}
+.ac-jump-link{display:flex;justify-content:space-between;align-items:center;gap:14px;border:2px solid #315d4b!important;background:#fff;border-radius:10px;padding:16px 20px;margin:24px 0;color:#315d4b!important;font-weight:700;line-height:1.7;text-decoration:none!important;min-height:56px}.ac-jump-link small{display:block;font-weight:400;font-size:14px}.ac-jump-link:focus-visible{outline:3px solid #aa621b;outline-offset:3px}
+@media(max-width:600px){#absence-check-app{padding:20px 16px;border-radius:16px;margin:32px -8px}#absence-check-app h2{font-size:27px}#absence-check-app .ac-mobile-break{display:block}#absence-check-app .ac-dashboard{grid-template-columns:1fr;padding:18px;gap:18px}#absence-check-app .ac-visit-date{border-top:1px solid var(--ac-line);padding-top:14px}#absence-check-app .ac-equipment-fields{grid-template-columns:1fr}#absence-check-app .ac-task-label{padding:16px 14px;gap:10px;font-size:17px}#absence-check-app .ac-task-copy{padding:0 14px 16px 48px}#absence-check-app .ac-caution{padding:14px}#absence-check-app .ac-secondary-actions{flex-direction:column}#absence-check-app .ac-secondary-actions button{flex:auto}.ac-jump-link{padding:14px 16px}}
+@media(prefers-reduced-motion:reduce){#absence-check-app *{scroll-behavior:auto!important}}
+/* Progressive flow: one task at a time, then a practical summary. */
+#absence-check-app .ac-step-status{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:10px 0 8px}
+#absence-check-app .ac-step-status p{font-size:14px;margin:0;font-weight:700}
+#absence-check-app #ac-progress{margin-bottom:22px}
+#absence-check-app .ac-task{padding:24px;margin:0}
+#absence-check-app .ac-task h3{font-size:23px;margin:8px 0 18px;scroll-margin-top:110px}
+#absence-check-app .ac-task-description{font-size:17px;line-height:1.9;margin:0 0 20px}
+#absence-check-app .ac-task-state{font-size:14px;color:var(--ac-green)}
+#absence-check-app .ac-answer-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+#absence-check-app .ac-answer-actions .ac-primary{grid-column:1/-1}
+#absence-check-app .ac-answer-actions button{font-size:16px;min-height:52px}
+#absence-check-app .ac-answer-actions .ac-skip{border-color:#a4b2a5;color:#4c6054;background:#f7f8f5}
+#absence-check-app .ac-step-nav{display:flex;justify-content:space-between;gap:10px;margin:14px 0 22px}
+#absence-check-app .ac-step-nav button{font-size:14px;padding:8px 12px;border-color:#b0bdb1}
+#absence-check-app button:disabled{opacity:.45;cursor:default}
+#absence-check-app .ac-visit-date{border:1px solid var(--ac-line);border-radius:10px;padding:20px;margin:22px 0}
+#absence-check-app .ac-visit-date small{font-size:13px;font-weight:400;padding-left:6px}
+#absence-check-app .ac-visit-date input{max-width:290px}
+#absence-check-app #ac-results{padding:24px;background:#f0f5ed;border:1px solid var(--ac-line);border-radius:10px;scroll-margin-top:110px}
+#absence-check-app #ac-results h3{font-size:23px;margin-bottom:16px}
+#absence-check-app .ac-result-count{font-weight:700;font-size:16px}
+#absence-check-app .ac-result-list{padding:0;margin:16px 0;list-style:none}
+#absence-check-app .ac-result-list li{margin:0 0 8px}
+#absence-check-app .ac-result-list button{width:100%;text-align:left;min-height:48px;font-size:15px}
+#absence-check-app .ac-next-action{border-top:1px solid var(--ac-line);padding-top:16px;margin-top:20px}
+#absence-check-app .ac-next-action p{margin:8px 0 0}
+#absence-check-app .ac-result-review{margin-top:16px}
+#absence-check-app .ac-result-review summary{padding:12px 0;background:transparent;font-size:15px;text-decoration:underline}
+#absence-check-app .ac-storage-info summary{background:transparent;padding:6px 0;font-size:14px}
+#absence-check-app .ac-caution{margin:18px 0 0}
+#absence-check-app .ac-equipment{margin:18px 0}
+#absence-check-app .ac-save-area{padding-top:20px;margin-top:20px}
+@media(max-width:600px){#absence-check-app .ac-task{padding:18px 14px}#absence-check-app .ac-task h3,#absence-check-app #ac-results h3{font-size:21px}#absence-check-app .ac-answer-actions{grid-template-columns:1fr}#absence-check-app .ac-answer-actions .ac-primary{grid-column:auto}#absence-check-app .ac-task-description{font-size:16px}#absence-check-app #ac-results{padding:20px 16px}#absence-check-app .ac-step-nav button{padding:8px;font-size:13px}}
