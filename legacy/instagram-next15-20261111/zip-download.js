@@ -1,4 +1,4 @@
-(()=>{'use strict';const assetVersion='2026-11-11-r6-visual-consistency';const assetUrl=p=>p+(p.includes('?')?'&':'?')+'v='+encodeURIComponent(assetVersion);
+(()=>{'use strict';const assetVersion='20261112-discovery-r8-2';const assetUrl=p=>p+(p.includes('?')?'&':'?')+'v='+encodeURIComponent(assetVersion);
 const encoder=new TextEncoder();const table=Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
 const crc32=bytes=>{let c=0xffffffff;for(const b of bytes)c=table[(c^b)&255]^(c>>>8);return(c^0xffffffff)>>>0;};
 const header=(size,fields)=>{const b=new Uint8Array(size),v=new DataView(b.buffer);for(const [offset,value,width]of fields){if(width===2)v.setUint16(offset,value,true);else v.setUint32(offset,value,true);}return b;};
