@@ -79,7 +79,9 @@
 .equipment-row img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:10px}
 .equipment-row figcaption{font-size:12px;line-height:1.6;color:#596452;margin-top:6px}
 .column-article-body .equipment-row h3{grid-area:title;margin:0;font-size:20px;line-height:1.6}
-.column-article-body .equipment-row p{grid-area:copy;margin:0}
+.column-article-body .equipment-row>p,.column-article-body .equipment-row>.equipment-copy{grid-area:copy;margin:0;min-width:0}
+.column-article-body .equipment-copy>p{margin:0}
+.column-article-body .equipment-copy>p+p{margin-top:12px}
 .equipment-row a:focus-visible{outline:3px solid #496848;outline-offset:3px}
 .column-article-body .section-source{margin:12px 0 0;font-size:12px;line-height:1.7;color:#687160;text-align:right}
 .section-source a{text-decoration:underline}
@@ -416,7 +418,7 @@
 <div class="equipment-row">
 <figure><a href="ecocute-equipment.webp" target="_blank" rel="noopener" aria-label="エコキュートのタンクと室外機の画像を拡大"><img src="ecocute-equipment.webp" alt="屋外に設置されたエコキュート。右の背の高い貯湯タンクと、左のファンが付いたヒートポンプユニット" width="640" height="640" loading="lazy" decoding="async"/></a><figcaption>貯湯タンクと室外機</figcaption></figure>
 <h3>貯湯タンクにためたお湯</h3>
-<p>エコキュートやハイブリッド給湯機など、貯湯タンクにお湯をためて使う給湯設備があります。機種によっては、断水しておらず、タンクにお湯が残っていれば、停電中でも蛇口などからお湯を使える場合があります。断水時には、タンク内の水を非常用取水栓から生活用水として取り出せる機種もあります。やけどに注意し、自宅の機種の説明書で手順を確認しましょう。飲み水は別に備えておきましょう。</p><p class="note">停電時の給湯に非常用電源が必要な機種もあります。たとえばリンナイのハイブリッド給湯器は、ポータブル電源等から電気を供給して使います。<a href="https://www.rinnai.co.jp/safety/blackout/" target="_blank" rel="noopener noreferrer">メーカーの停電時の案内</a>と、自宅の機種の取扱説明書を確認してください。</p>
+<div class="equipment-copy"><p>エコキュートやハイブリッド給湯機など、貯湯タンクにお湯をためて使う給湯設備があります。機種によっては、断水しておらず、タンクにお湯が残っていれば、停電中でも蛇口などからお湯を使える場合があります。断水時には、タンク内の水を非常用取水栓から生活用水として取り出せる機種もあります。やけどに注意し、自宅の機種の説明書で手順を確認しましょう。飲み水は別に備えておきましょう。</p><p class="note">停電時の給湯に非常用電源が必要な機種もあります。たとえばリンナイのハイブリッド給湯器は、ポータブル電源等から電気を供給して使います。<a href="https://www.rinnai.co.jp/safety/blackout/" target="_blank" rel="noopener noreferrer">メーカーの停電時の案内</a>と、自宅の機種の取扱説明書を確認してください。</p></div>
 </div>
 <div class="equipment-row">
 <figure><a href="portable-power.webp" target="_blank" rel="noopener" aria-label="ポータブル電源の画像を拡大"><img src="portable-power.webp" alt="持ち手のあるポータブル電源と、USBケーブルでつないだスマートフォン。横にLEDランタンを備えている" width="640" height="640" loading="lazy" decoding="async"/></a><figcaption>持ち運べる蓄電池</figcaption></figure>
